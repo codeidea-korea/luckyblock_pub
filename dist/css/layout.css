@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+:root {
+    --primary-color:#f1c24c;
+}
+
+body {font-family: Poppins, Arial, Helvetica, 'sans-serif'; color:#fff; background:#202022; }
+
+.inner {width:1200px; max-width:100%; margin:0 auto; padding:40px; }
+
+
+
+
+/* --------------------------------------
+    FOOTER
+-------------------------------------- */ 
+footer {background-color:#101010; }
+
+
