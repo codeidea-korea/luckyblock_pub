@@ -1,7 +1,7 @@
-<footer>
+<footer class="px-4 md:px-10">
     <div class="inner py-10">
-        <div class="flex justify-between gap-5 pb-10">
-            <div class="flex flex-col text-base gap-3 whitespace-nowrap font-medium">
+        <div class="flex-wrap flex justify-between gap-5 pb-10">
+            <div class="flex flex-col text-sm md:text-base gap-3 whitespace-nowrap font-medium">
                 <h6 class="text-primary font-bold">Casino</h6>
                 <a href="javascript:;">Bitcoin Casino</a>
                 <a href="javascript:;">Bitcoin Sportsbook</a>
@@ -16,7 +16,7 @@
                 <a href="javascript:;">Solana Casino</a>
                 <a href="javascript:;">Doge Casino</a>
             </div>
-            <div class="flex flex-col text-base gap-3 whitespace-nowrap font-medium">
+            <div class="flex flex-col text-sm md:text-base gap-3 whitespace-nowrap font-medium">
                 <h6 class="text-base text-primary font-bold">Games</h6>
                 <a href="javascript:;">Live Bitcoin Casino</a>
                 <a href="javascript:;">Bitcoin Blackjack</a>
@@ -33,7 +33,7 @@
                 <a href="javascript:;">Pragmatic Play Casino</a>
                 <a href="javascript:;">Novomatic Casino</a>
             </div>
-            <div class="flex flex-col text-base gap-3 whitespace-nowrap font-medium">
+            <div class="flex flex-col text-sm md:text-base gap-3 whitespace-nowrap font-medium">
                 <h6 class="text-base text-primary font-bold">Support</h6>
                 <a href="javascript:;">Privacy Policy</a>
                 <a href="javascript:;">General Terms & Conditions</a>
@@ -44,15 +44,27 @@
             </div>
             <div>
                 <div class="dropdown inline-block" data-tw-placement="bottom-start"> 
-                    <button class="dropdown-toggle btn btn-secondary" aria-expanded="false" data-tw-toggle="dropdown"> 
-                        <svg viewBox="0 0 24 24" class="svg-icon w-4 h-4 text-white"><use href="./dist/images/icon-defs.svg#global"></use></svg>
-                        
-                        English <i data-lucide="chevron-down" class="w-4 h-4 ml-2"></i> 
+                    <button class="dropdown-toggle btn btn-dark text-base" aria-expanded="false" data-tw-toggle="dropdown"> 
+                        <svg viewBox="0 0 24 24" class="svg-icon w-6 h-6 mr-2 text-white"><use href="./dist/images/icon-defs.svg#global"></use></svg>
+                        English 
+                        <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 ml-4 text-white"><use href="./dist/images/icon-defs.svg#arrow_down"></use></svg>
                     </button>
                     <div class="dropdown-menu">
-                        <div class="dropdown-content">
-                            <div class="p-2">
-                                
+                        <div class="dropdown-content !p-0">
+                            <div class="overflow-y-auto scrollbar w-[150px] max-h-96 bg-dark rounded-md">
+                                <a href="javascript:;" class="block text-base hover:bg-sub p-2">Deutsch</a>
+                                <a href="javascript:;" class="block text-base hover:bg-sub p-2">Español</a>
+                                <a href="javascript:;" class="block text-base hover:bg-sub p-2">Français</a>
+                                <a href="javascript:;" class="block text-base hover:bg-sub p-2">Italiano</a>
+                                <a href="javascript:;" class="block text-base hover:bg-sub p-2">Portugues</a>
+                                <a href="javascript:;" class="block text-base hover:bg-sub p-2">Русский</a>
+                                <a href="javascript:;" class="block text-base hover:bg-sub p-2">日本語</a>
+                                <a href="javascript:;" class="block text-base hover:bg-sub p-2">Türkçe</a>
+                                <a href="javascript:;" class="block text-base hover:bg-sub p-2">中国人</a>
+                                <a href="javascript:;" class="block text-base hover:bg-sub p-2">عربي</a>
+                                <a href="javascript:;" class="block text-base hover:bg-sub p-2">한국어</a>
+                                <a href="javascript:;" class="block text-base hover:bg-sub p-2">Tiếng Việt</a>
+                                <a href="javascript:;" class="block text-base hover:bg-sub p-2">ภาษาไทย</a>
                             </div>
                         </div>
                     </div>
@@ -77,7 +89,7 @@
         <div class="py-5 text-xs text-center font-bold">
             <p>LUCKYBLOCK.com is operated by Entretenimiento Rojo B.V., a company registered in the Commercial Register of Curaçao with number 152924 and address Emancipatie Boulevard Dominico F. “Don” Martina 31, Willemstad, Curaçao. Entretenimiento Rojo B.V. is duly licensed through a <span class="text-primary underline">sublicense granted by C.I.L. Curaçao Interactive Licensing N.V.</span>, pursuant to Master Gaming License #5536/JAZ issued by the Governor of Curaçao.</p>
         </div>
-        <div class="flex items-center justify-center gap-3 py-5">
+        <div class="flex items-center justify-center gap-5 py-5">
             <img src="./dist/images/footer/license.png" alt="">
             <img src="./dist/images/footer/18.svg" alt="">
             <img src="./dist/images/footer/gaming.svg" alt="">

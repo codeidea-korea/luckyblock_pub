@@ -2,13 +2,76 @@
 
 :root {
     --primary-color:#f1c24c;
+    --primary-gradient:linear-gradient(0deg,rgb(221,137,10),rgb(255,218,119));
+    --primary-gradient-hover:linear-gradient(0deg,rgb(237,153,28),rgb(255,234,180)); 
+    --back-color:#202022;
+    --sub-color:#6a6a6a;
+    --back2-color:#201f22;
 }
 
-body {font-family: Poppins, Arial, Helvetica, 'sans-serif'; color:#fff; background:#202022; }
+body {font-family: Poppins, Arial, Helvetica, 'sans-serif'; color:#fff; background:var(--back-color); }
 
-.inner {width:1200px; max-width:100%; margin:0 auto; padding:40px; }
+::-webkit-scrollbar {width:12px; -webkit-appearance:none; }
+::-webkit-scrollbar-thumb {background:#3d3d3d; border-radius:5px; width:20px; }
+::-webkit-scrollbar-track {background:var(--back-color); }
+
+.inner {width:1200px; max-width:100%; margin:0 auto; }
+
+.bg-sub {background:var(--sub-color); }
+.hover\:bg-sub:hover {background:var(--sub-color);}
+.bg-back2 {background:var(--back2-color); }
+
+.btn {transition:all 0.2s; }
+
+.btn-gradient-primary{border:0 none; background: var(--primary-gradient); color: #070708; font-weight:bold; }
+.btn-gradient-primary:hover {background:var(--primary-gradient-hover); }
+
+.btn-transparent {border:0 none; background:transparent; color:#fff; }
+.btn-transparent:hover {background:#787878; }
+
+/* svg 공통 */
+.svg-icon {fill:currentColor !important; }
+.svg-icon use {width:100%; height:100%; }
+
+/* 스크롤바 커스텀 */
+.scrollbar {scrollbar-color: #3D3D3D var(--back-color); scrollbar-width: thin; }
+.noscrollbar::-webkit-scrollbar {display:none; }
 
 
+
+/* --------------------------------------
+    WRAP
+-------------------------------------- */ 
+#wrap.fold .content {width:calc(100% - 56px); }
+.content {width:calc(100% - 240px); transition:width 0.4s; }
+
+@media all and (max-width:1280px){
+    #wrap.fold .content, .content {width:100%; }
+}
+
+/* --------------------------------------
+side-nav
+-------------------------------------- */ 
+.side_menu {position:relative; }
+.side_menu .side_btn {z-index:101; position:absolute; top:45px; right:-15px; width:34px; height:34px; border-radius:50%; background-color:#7f7f7f; }
+.side_menu .side_btn svg {width:34px; height:34px; transform:rotate(90deg); }
+.side-nav {z-index:100; position:sticky; top:0; max-height:100vh; transition:width 0.4s; }
+.side-nav .side-menu .side-menu__title {white-space:nowrap; }
+.side-nav .fold_show {display:none; }
+
+#wrap.fold .side-nav {width:56px; }
+#wrap.fold .side_menu .side_btn:not(.fold_show) {display:none; }
+#wrap.fold .side-nav .fold_show {display:block; }
+#wrap.fold .side-nav .fold_hide {display:none; }
+#wrap.fold .side-nav .side-menu .side-menu__title {display:none; }
+
+@media all and (max-width:1280px){
+    .side_menu {display:none; }
+}
+/* --------------------------------------
+    HEADER
+-------------------------------------- */ 
+header {z-index:100; position:sticky; top:0; box-shadow:#0003 0 4px 6px -1px, #0000001f 0 2px 4px -1px; background:var(--back-color); }
 
 
 /* --------------------------------------
@@ -17,3 +80,16 @@ body {font-family: Poppins, Arial, Helvetica, 'sans-serif'; color:#fff; backgrou
 footer {background-color:#101010; }
 
 
+/* --------------------------------------
+    LOADING
+-------------------------------------- */ 
+.initial-loader {z-index:1000; opacity:1; position: fixed; left:0; top:0; display: flex; align-items: center; justify-content: center; width: 100%; height:100%; background:var(--back-color); transition:top 0.5s, opacity 0.5s; }
+.initial-loader.close {opacity:0; top:-100%; }
+.initial-progress-bar-container { width: 240px; height: 4px; border-radius: 4px; background-color: #FFF; position: absolute; z-index: 1; }
+.initial-progress-bar { height: 4px; border-radius: 4px; background-color: var(--primary-color); z-index: 2; animation-duration: 10s; animation-name: changeWidth; animation-iteration-count: infinite; }
+.initial-loader-logo-container { position: relative; bottom: 30px; display: flex; align-items: center; justify-content: center; }
+
+@keyframes changeWidth {
+    from { width: 1%; }
+    to { width: 100%; }
+}
