@@ -2,11 +2,24 @@
 
 :root {
     --primary-color:#f1c24c;
+    --primary-soft-color:#ffdd9a; 
+    --primary-dark-color:#e8a430; 
     --primary-gradient:linear-gradient(0deg,rgb(221,137,10),rgb(255,218,119));
     --primary-gradient-hover:linear-gradient(0deg,rgb(237,153,28),rgb(255,234,180)); 
+    --footer-color:#101010;
     --back-color:#202022;
-    --sub-color:#6a6a6a;
     --back2-color:#201f22;
+    --provider-color:#343434;
+    --sub-color:#6a6a6a;
+    --gray-color:#b6b7b7;
+    --gray2-color:#a9aeb3;
+
+    --tit-color:#ececec;
+    --txt-color:#959ca0;
+    --blue-color:#4c7bf1;
+    
+    --black-gradient:linear-gradient(rgb(18, 19, 22) 8.75%, rgb(37, 39, 43) 100%);
+    --black2-gradient:linear-gradient(180deg,#1F2124 0%,#0F1012CC 100%); 
 }
 
 body {font-family: Poppins, Arial, Helvetica, 'sans-serif'; color:#fff; background:var(--back-color); }
@@ -17,9 +30,22 @@ body {font-family: Poppins, Arial, Helvetica, 'sans-serif'; color:#fff; backgrou
 
 .inner {width:1200px; max-width:100%; margin:0 auto; }
 
+.color-softP {color:var(--primary-soft-color); }
+.color-darkP {color:var(--primary-dark-color); }
+.color-sub {color:var(--sub-color); }
+.color-gray {color:var(--gray-color); }
+.color-gray2 {color:var(--gray2-color); }
+.color-tit {color:var(--tit-color); }
+.color-txt {color:var(--txt-color); }
+.color-blue {color:var(--blue-color); }
+
 .bg-sub {background:var(--sub-color); }
 .hover\:bg-sub:hover {background:var(--sub-color);}
 .bg-back2 {background:var(--back2-color); }
+.bg-footer {background:var(--footer-color); }
+.bg-provider {background-color:var(--provider-color);}
+.bg-gradient-black {background:var(--black-gradient); }
+.bg-gradient-black2 {background:var(--black2-gradient); }
 
 .btn {transition:all 0.2s; }
 
@@ -39,23 +65,46 @@ body {font-family: Poppins, Arial, Helvetica, 'sans-serif'; color:#fff; backgrou
 
 
 
+/* 
+        **레이아웃 및 공통으로 쓰여지는 레이아웃**
+        WRAP
+        SIDE_MENU
+        QUICK_MENU
+        HEADER
+        LOADING
+
+        SWIPER
+        CASINO_ITEM
+        ACCORDION
+        TYPOGRAPHY
+
+
+
+*/
+
 /* --------------------------------------
     WRAP
 -------------------------------------- */ 
 #wrap.fold .content {width:calc(100% - 56px); }
-.content {width:calc(100% - 240px); transition:width 0.4s; }
+.content {width:calc(100% - 240px); margin-left:auto; transition:width 0.2s; }
+.content .content_box {padding:0 40px; }
 
 @media all and (max-width:1280px){
+    .content {width:calc(100% - 56px); }
+}
+@media all and (max-width:767px){
     #wrap.fold .content, .content {width:100%; }
+    .content .content_box {padding:0 16px; }
 }
 
 /* --------------------------------------
-side-nav
+    SIDE_MENU
 -------------------------------------- */ 
-.side_menu {position:relative; }
-.side_menu .side_btn {z-index:101; position:absolute; top:45px; right:-15px; width:34px; height:34px; border-radius:50%; background-color:#7f7f7f; }
+.side_menu {z-index:200; position:relative; }
+.side_menu .side_bg {position:fixed; left:0; top:0; display:none; width:100%; height:100%; background-color:rgba(0,0,0,0.5); cursor:pointer; }
+.side_menu .side_btn {z-index:101; position:fixed; top:45px; left:225px; width:34px; height:34px; border-radius:50%; background-color:#7f7f7f; }
 .side_menu .side_btn svg {width:34px; height:34px; transform:rotate(90deg); }
-.side-nav {z-index:100; position:sticky; top:0; max-height:100vh; transition:width 0.4s; }
+.side-nav {z-index:100; position:sticky; top:0; max-height:100vh; transition:width 0.2s; }
 .side-nav .side-menu .side-menu__title {white-space:nowrap; }
 .side-nav .fold_show {display:none; }
 
@@ -66,18 +115,34 @@ side-nav
 #wrap.fold .side-nav .side-menu .side-menu__title {display:none; }
 
 @media all and (max-width:1280px){
-    .side_menu {display:none; }
+    .side_menu {position:fixed; }
+    .side_menu .side_bg {display:block; }
+    #wrap.fold .side_bg {display:none; }
+}
+
+@media all and (max-width:767px){
+    .side_menu {left:-100%; width:100%; transition:left 0.5s; }
+    .side_menu .side_bg {display:none; }
+    .side_menu .side_btn {display:none; }
+    .side_menu .side-nav {width:100%; padding:10px 20px; }
+    .side_menu.open {left:0; }
+}
+
+/* --------------------------------------
+    QUICK_MENU
+-------------------------------------- */ 
+.quick_menu {z-index:100; position:fixed; left:0; bottom:0; display:none; width:100%; height:56px; background:#171717; }
+.quick_menu ul {display:grid; grid-template-columns:repeat(5,1fr); width:100%; height:100%; }
+.quick_menu ul a {display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; height:100%; }
+
+@media all and (max-width:767px){
+    .quick_menu {display:block; }
 }
 /* --------------------------------------
     HEADER
 -------------------------------------- */ 
 header {z-index:100; position:sticky; top:0; box-shadow:#0003 0 4px 6px -1px, #0000001f 0 2px 4px -1px; background:var(--back-color); }
 
-
-/* --------------------------------------
-    FOOTER
--------------------------------------- */ 
-footer {background-color:#101010; }
 
 
 /* --------------------------------------
@@ -93,3 +158,52 @@ footer {background-color:#101010; }
     from { width: 1%; }
     to { width: 100%; }
 }
+
+
+/* --------------------------------------
+    SWIPER
+-------------------------------------- */ 
+.mySwiper .pagination span.swiper-pagination-bullet {width:8px; height:8px; background-color:#fff; opacity:1;}
+.mySwiper .pagination span.swiper-pagination-bullet.swiper-pagination-bullet-active {background-color:var(--primary-color);}
+
+.casinoSwiper {position:relative; }
+.casinoSwiper .arrow {z-index:10; position:absolute; top:50%; transform:translateY(-50%); }
+.casinoSwiper .arrow.prev {left:0; }
+.casinoSwiper .arrow.next {right:0; }
+
+
+/* --------------------------------------
+    CASINO_ITEM
+-------------------------------------- */ 
+.casinoSwiper li.swiper-wrapper {width:180px; }
+.casino_item {overflow:hidden; border-radius:4px; }
+.casino_item.hover_normal {transform:translateY(0); transition:transform 0.4s; }
+.casino_item.hover_normal:hover {transform:translateY(-5px); }
+
+
+
+/* --------------------------------------
+    ACCORDION
+-------------------------------------- */ 
+.accordion .accordion-item:last-child {margin-bottom:0 !important; }
+.accordion .accordion-item:first-child {margin-top:0 !important; }
+.accordion .accordion-header {position:relative; z-index:10; }
+.accordion .accordion-button {padding:10px 20px !important; color:#fff !important; background-color:var(--provider-color);}
+.accordion .accordion-button .arrow {transform:rotate(180deg); transition:all 0.4s; }
+.accordion .accordion-button.collapsed .arrow {transform:rotate(0deg); }
+.accordion .accordion-body {padding:15px 20px; background-color:#2e2e2e; }
+
+
+
+/* --------------------------------------
+    TYPOGRAPHY
+-------------------------------------- */ 
+.typography_box h1 {margin-bottom:20px; font-size:32px; font-weight:bold; }
+.typography_box h2 {margin-bottom:20px; font-size:27px; font-weight:bold; }
+.typography_box h3 {margin-bottom:20px; font-size:21px; font-weight:bold; }
+.typography_box p {margin-bottom:16px; font-size:16px; }
+.typography_box ul {margin:0 0 10px 20px; list-style:disc;}
+.typography_box ul li {font-size:18px; }
+.typography_box a {text-decoration:underline; }
+
+

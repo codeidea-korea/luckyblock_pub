@@ -4,3 +4,13 @@
         **공통으로 크게 쓰여지지 않는 레이아웃**
 */
 
+/* 메인 > provider */
+.provider_box {position:relative; display:block; width:100%; padding-bottom:90%; }
+.provider_box img {position:absolute; left:0; top:0; right:0; bottom:0; max-width:60%; margin:auto; }
+
+/* 메인 > started */
+.main_started {border:1px solid #494949; background:url('../images/main/started_bg.png') no-repeat center center / cover;}
+
+@media all and (max-width:767px){
+    .main_started {background:url('../images/main/started_bg_mo.png') no-repeat center center / cover;}
+}

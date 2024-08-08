@@ -1,22 +1,29 @@
 
 <div class="side_menu">
+    <div class="side_bg" onclick="sideToggle()"></div>
+    
     <button class="side_btn" onclick="sideToggle()">
-        <svg viewBox="0 0 8 13" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#arrow_down"></use></svg>
+        <svg viewBox="0 0 8 13" class="svg-icon w-6 h-6"><use xlink:href="./dist/images/icon-defs.svg#arrow_down"></use></svg>
     </button>
     <nav class="side-nav scrollbar">
         <button class="fold_show mb-10" onclick="sideToggle()">
-            <svg viewBox="0 0 8 13" class="svg-icon w-8 h-8 -rotate-90"><use href="./dist/images/icon-defs.svg#arrow_down"></use></svg>
+            <svg viewBox="0 0 8 13" class="svg-icon w-8 h-8 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#arrow_down"></use></svg>
         </button>
+        <div class="text-right md:hidden block">
+            <button class="mo_close_btn" onclick="mosideToggle()">
+                <svg viewBox="0 0 8 13" class="svg-icon w-10 h-10"><use xlink:href="./dist/images/icon-defs.svg#x"></use></svg>
+            </button>
+        </div>
 
-        <button class="fold_hide btn btn-gradient-primary w-full rounded-3xl">Sign Up</button>
+        <button class="fold_hide btn btn-gradient-primary w-full text-base rounded-3xl">Sign Up</button>
 
         <div class="fold_hide flex justify-between p-1 gap-1 mt-5 mb-3 bg-back2 rounded">
             <button class="flex items-center justify-center gap-2 w-1/2 py-1 rounded-2xl hover:bg-white hover:bg-opacity-5">
-                <svg class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#casino"></use></svg>
+                <svg class="svg-icon w-6 h-6"><use xlink:href="./dist/images/icon-defs.svg#casino"></use></svg>
                 Casino
             </button>
             <button class="flex items-center justify-center gap-2 w-1/2 py-1 rounded-2xl hover:bg-white hover:bg-opacity-5">
-                <svg class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#sports"></use></svg>
+                <svg class="svg-icon w-6 h-6"><use xlink:href="./dist/images/icon-defs.svg#sports"></use></svg>
                 Sports
             </button>
 
@@ -26,61 +33,61 @@
         <ul class="py-2">
             <li>
                 <a href="javascript:;" class="side-menu">
-                    <div class="side-menu__icon"> <svg class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#casino"></use></svg></div>
+                    <div class="side-menu__icon"> <svg class="svg-icon w-6 h-6"><use xlink:href="./dist/images/icon-defs.svg#casino"></use></svg></div>
                     <div class="side-menu__title"> Casino </div>
                 </a>
             </li>
             <li>
                 <a href="javascript:;" class="side-menu">
-                    <div class="side-menu__icon"> <svg class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#slots"></use></svg></div>
+                    <div class="side-menu__icon"> <svg class="svg-icon w-6 h-6"><use xlink:href="./dist/images/icon-defs.svg#slots"></use></svg></div>
                     <div class="side-menu__title"> Slots </div>
                 </a>
             </li>
             <li>
                 <a href="javascript:;" class="side-menu">
-                    <div class="side-menu__icon"> <svg class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#live-casino"></use></svg></div>
+                    <div class="side-menu__icon"> <svg class="svg-icon w-6 h-6"><use xlink:href="./dist/images/icon-defs.svg#live-casino"></use></svg></div>
                     <div class="side-menu__title"> Live Casino </div>
                 </a>
             </li>
             <li class="my-2 border-t-2 border-white"></li>
             <li>
                 <a href="javascript:;" class="side-menu">
-                    <div class="side-menu__icon"> <svg viewBox="0 0 20 20" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#sports"></use></svg></div>
+                    <div class="side-menu__icon"> <svg viewBox="0 0 20 20" class="svg-icon w-6 h-6"><use xlink:href="./dist/images/icon-defs.svg#sports"></use></svg></div>
                     <div class="side-menu__title">
                         Sports
                         <div class="side-menu__sub-icon transform"> 
-                            <svg viewBox="0 0 8 13" class="svg-icon w-6 h-6" data-test="downArrow"><use href="./dist/images/icon-defs.svg#arrow_down"></use></svg> 
+                            <svg viewBox="0 0 8 13" class="svg-icon w-6 h-6" data-test="downArrow"><use xlink:href="./dist/images/icon-defs.svg#arrow_down"></use></svg> 
                         </div>
                     </div>
                 </a>
                 <ul class="">
                     <li>
                         <a href="javascript:;" class="side-menu">
-                            <div class="side-menu__icon"> <svg viewBox="0 0 20 20" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#sports"></use></svg></div>
+                            <div class="side-menu__icon"> <svg viewBox="0 0 20 20" class="svg-icon w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#sports"></use></svg></div>
                             <div class="side-menu__title"> All Sports </div>
                         </a>
                     </li>
                     <li>
                         <a href="javascript:;" class="side-menu">
-                            <div class="side-menu__icon"> <svg viewBox="0 0 20 20" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#football"></use></svg></div>
+                            <div class="side-menu__icon"> <svg viewBox="0 0 20 20" class="svg-icon w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#football"></use></svg></div>
                             <div class="side-menu__title"> Football </div>
                         </a>
                     </li>
                     <li>
                         <a href="javascript:;" class="side-menu">
-                            <div class="side-menu__icon"> <svg viewBox="0 0 20 20" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#tennis"></use></svg></div>
+                            <div class="side-menu__icon"> <svg viewBox="0 0 20 20" class="svg-icon w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#tennis"></use></svg></div>
                             <div class="side-menu__title"> Tennis </div>
                         </a>
                     </li>
                     <li>
                         <a href="javascript:;" class="side-menu">
-                            <div class="side-menu__icon"> <svg viewBox="0 0 20 20" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#basketball"></use></svg></div>
+                            <div class="side-menu__icon"> <svg viewBox="0 0 20 20" class="svg-icon w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#basketball"></use></svg></div>
                             <div class="side-menu__title"> Basketball </div>
                         </a>
                     </li>
                     <li>
                         <a href="javascript:;" class="side-menu">
-                            <div class="side-menu__icon"> <svg viewBox="0 0 20 20" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#bets"></use></svg></div>
+                            <div class="side-menu__icon"> <svg viewBox="0 0 20 20" class="svg-icon w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#bets"></use></svg></div>
                             <div class="side-menu__title"> My Bets </div>
                         </a>
                     </li>
@@ -89,58 +96,76 @@
             <li class="my-2 border-t-2 border-white"></li>
             <li>
                 <a href="javascript:;" class="side-menu">
-                    <div class="side-menu__icon"> <svg class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#vip"></use></svg></div>
-                    <div class="side-menu__title"> VIP </div>
+                    <div class="side-menu__icon"> <svg class="svg-icon w-6 h-6"><use xlink:href="./dist/images/icon-defs.svg#vip"></use></svg></div>
+                    <div class="side-menu__title"> VIP Club</div>
                 </a>
             </li>
             <li>
                 <a href="javascript:;" class="side-menu">
-                    <div class="side-menu__icon"> <svg class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#promotion"></use></svg></div>
+                    <div class="side-menu__icon"> <svg class="svg-icon w-6 h-6"><use xlink:href="./dist/images/icon-defs.svg#brand-ico-stutt"></use></svg></div>
+                    <div class="side-menu__title"> VfB Stuttgart</div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="side-menu">
+                    <div class="side-menu__icon"> <svg class="svg-icon w-6 h-6 text-white" width="24" height="24"><use xlink:href="./dist/images/icon-defs.svg#promotion" fill="#FFFFFF"></use></svg></div>
                     <div class="side-menu__title"> Promotions </div>
                 </a>
             </li>
             <li>
                 <a href="javascript:;" class="side-menu">
-                    <div class="side-menu__icon"> <svg class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#loyalty"></use></svg></div>
+                    <div class="side-menu__icon"> <svg class="svg-icon w-6 h-6"><use xlink:href="./dist/images/icon-defs.svg#loyalty"></use></svg></div>
                     <div class="side-menu__title"> Loyalty </div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="side-menu">
+                    <div class="side-menu__icon"> <svg class="svg-icon w-6 h-6"><use xlink:href="./dist/images/icon-defs.svg#brand-ico-diamond2"></use></svg></div>
+                    <div class="side-menu__title"> Jackpot </div>
                 </a>
             </li>
             <li class="my-2 border-t-2 border-white"></li>
             <li>
                 <a href="javascript:;" class="side-menu">
-                    <div class="side-menu__icon"> <svg class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#telegram"></use></svg></div>
+                    <div class="side-menu__icon"> <svg class="svg-icon w-6 h-6"><use xlink:href="./dist/images/icon-defs.svg#telegram"></use></svg></div>
                     <div class="side-menu__title"> Telegram Casino </div>
                 </a>
             </li>
             <li>
                 <a href="javascript:;" class="side-menu">
-                    <div class="side-menu__icon"> <svg class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#community"></use></svg></div>
+                    <div class="side-menu__icon"> <svg class="svg-icon w-6 h-6"><use xlink:href="./dist/images/icon-defs.svg#community"></use></svg></div>
                     <div class="side-menu__title"> Telegram Community </div>
                 </a>
             </li>
             <li class="my-2 border-t-2 border-white"></li>
             <li>
                 <a href="javascript:;" class="side-menu">
-                    <div class="side-menu__icon"> <svg class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#crypto"></use></svg></div>
+                    <div class="side-menu__icon"> <svg class="svg-icon w-6 h-6"><use xlink:href="./dist/images/icon-defs.svg#crypto"></use></svg></div>
                     <div class="side-menu__title"> Buy Crypto </div>
                 </a>
             </li>
             <li>
                 <a href="javascript:;" class="side-menu">
-                    <div class="side-menu__icon"> <svg class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#help"></use></svg></div>
+                    <div class="side-menu__icon"> <svg class="svg-icon w-6 h-6"><use xlink:href="./dist/images/icon-defs.svg#brand-ico-play-lblobk-new"></use></svg></div>
+                    <div class="side-menu__title"> Play with $LBLOCK </div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="side-menu">
+                    <div class="side-menu__icon"> <svg class="svg-icon w-6 h-6"><use xlink:href="./dist/images/icon-defs.svg#help"></use></svg></div>
                     <div class="side-menu__title"> Help </div>
                 </a>
             </li>
             <li>
                 <a href="javascript:;" class="side-menu">
-                    <div class="side-menu__icon"> <svg class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#blog"></use></svg></div>
+                    <div class="side-menu__icon"> <svg class="svg-icon w-6 h-6"><use xlink:href="./dist/images/icon-defs.svg#blog"></use></svg></div>
                     <div class="side-menu__title"> Blog </div>
                 </a>
             </li>
 
         </ul>
 
-        <button class="fold_hide btn btn-gradient-primary w-full rounded-3xl">Buy $LBLOCK</button>
+        <button class="fold_hide btn btn-gradient-primary w-full text-base rounded-3xl">Buy $LBLOCK</button>
 
     </nav>
 

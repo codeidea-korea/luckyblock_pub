@@ -1,4 +1,5 @@
-<header>
+<!-- 헤더 -->
+<header class="px-4">
     <div class="flex items-center justify-between inner py-3">
         <h1><a href="./index.html"><img class="h-8" src="./dist/images/logo/logo.svg" alt=""></a></h1>
         <div class="flex items-center gap-2">
@@ -7,3 +8,39 @@
         </div>
     </div>
 </header>
+
+<!-- 모바일 퀵메뉴 -->
+<div class="quick_menu">
+    <ul>
+        <li class="text-center" onclick="mosideToggle()">
+            <a href="javascript:;">
+                <svg viewBox="0 0 20 20" class="svg-icon w-6 h-6 mx-auto"><use xlink:href="./dist/images/icon-defs.svg#brand-ico-:menu:"></use></svg>
+                <span class="text-xs">Menu</span>
+            </a>
+        </li>
+        <li class="text-center">
+            <a href="javascsript:;">
+                <svg viewBox="0 0 20 20" class="svg-icon w-6 h-6 mx-auto"><use xlink:href="./dist/images/icon-defs.svg#brand-ico-:signup:"></use></svg>
+                <span class="text-xs">Sign Up</span>
+            </a>
+        </li>
+        <li class="text-center">
+            <a href="javascsript:;">
+                <svg viewBox="0 0 20 20" class="svg-icon w-6 h-6 mx-auto"><use xlink:href="./dist/images/icon-defs.svg#brand-ico-:telegram:"></use></svg>
+                <span class="text-xs">Telegram</span>
+            </a>
+        </li>
+        <li class="text-center">
+            <a href="javascsript:;">
+                <svg viewBox="0 0 20 20" class="svg-icon w-6 h-6 mx-auto"><use xlink:href="./dist/images/icon-defs.svg#brand-ico-:ball:"></use></svg>
+                <span class="text-xs">Sports</span>
+            </a>
+        </li>
+        <li class="text-center">
+            <a href="javascsript:;">
+                <svg viewBox="0 0 20 20" class="svg-icon w-6 h-6 mx-auto"><use xlink:href="./dist/images/icon-defs.svg#brand-ico-:casino2:"></use></svg>
+                <span class="text-xs">Casino</span>
+            </a>
+        </li>
+    </ul>
+</div>
