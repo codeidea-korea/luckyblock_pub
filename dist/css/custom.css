@@ -4,6 +4,15 @@
         **공통으로 크게 쓰여지지 않는 레이아웃**
 */
 
+/* 메인 > 메인비주얼 */
+.main_visual li {position:relative; height:360px; }
+.main_visual li > img {width:100%; height:100%; object-fit:cover; }
+.main_visual li .txt_box {position:absolute; left:0; top:0; display:flex; flex-direction:column; justify-content:center; width:100%; height:100%; padding:30px; }
+
+@media all and (max-width:767px){
+    .main_visual li {height:380px; }
+    .main_visual li .txt_box {justify-content:flex-start; padding:20px; }
+}
 /* 메인 > provider */
 .provider_box {position:relative; display:block; width:100%; padding-bottom:90%; }
 .provider_box img {position:absolute; left:0; top:0; right:0; bottom:0; max-width:60%; margin:auto; }

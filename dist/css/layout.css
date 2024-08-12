@@ -6,6 +6,7 @@
     --primary-dark-color:#e8a430; 
     --primary-gradient:linear-gradient(0deg,rgb(221,137,10),rgb(255,218,119));
     --primary-gradient-hover:linear-gradient(0deg,rgb(237,153,28),rgb(255,234,180)); 
+    --primary-soft-gradient:linear-gradient(180deg, #FFFFFF 0%, #E3C9A3 100%);
     --footer-color:#101010;
     --back-color:#202022;
     --back2-color:#201f22;
@@ -38,6 +39,7 @@ body {font-family: Poppins, Arial, Helvetica, 'sans-serif'; color:#fff; backgrou
 .color-tit {color:var(--tit-color); }
 .color-txt {color:var(--txt-color); }
 .color-blue {color:var(--blue-color); }
+.color-gradient-soft {background:var(--primary-soft-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
 
 .bg-sub {background:var(--sub-color); }
 .hover\:bg-sub:hover {background:var(--sub-color);}
@@ -134,6 +136,9 @@ body {font-family: Poppins, Arial, Helvetica, 'sans-serif'; color:#fff; backgrou
 .quick_menu {z-index:100; position:fixed; left:0; bottom:0; display:none; width:100%; height:56px; background:#171717; }
 .quick_menu ul {display:grid; grid-template-columns:repeat(5,1fr); width:100%; height:100%; }
 .quick_menu ul a {display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; height:100%; }
+.quick_menu ul li.login_btn {color:#a6a6a6; } 
+.quick_menu ul li.login_btn svg {margin-bottom:5px; }
+.quick_menu ul li.login_btn span {color:#fff; }
 
 @media all and (max-width:767px){
     .quick_menu {display:block; }
@@ -143,6 +148,15 @@ body {font-family: Poppins, Arial, Helvetica, 'sans-serif'; color:#fff; backgrou
 -------------------------------------- */ 
 header {z-index:100; position:sticky; top:0; box-shadow:#0003 0 4px 6px -1px, #0000001f 0 2px 4px -1px; background:var(--back-color); }
 
+
+/* --------------------------------------
+    로그아웃시
+-------------------------------------- */ 
+body:not(.logout) .side_menu .sign_btn ,
+body:not(.logout) header .logout_btn , 
+body:not(.logout) .quick_menu .logout_btn ,
+body .quick_menu .login_btn {display:none; }
+body:not(.logout) .quick_menu .login_btn {display:block; }
 
 
 /* --------------------------------------
@@ -177,8 +191,11 @@ header {z-index:100; position:sticky; top:0; box-shadow:#0003 0 4px 6px -1px, #0
 -------------------------------------- */ 
 .casinoSwiper li.swiper-wrapper {width:180px; }
 .casino_item {overflow:hidden; border-radius:4px; }
+
 .casino_item.hover_normal {transform:translateY(0); transition:transform 0.4s; }
 .casino_item.hover_normal:hover {transform:translateY(-5px); }
+
+.casino_item .hover_casino {}
 
 
 

@@ -23,7 +23,7 @@
         <!-- END: CSS Assets-->
     </head>
     <!-- END: Head -->
-    <body>
+    <body class="logout">
 
         <div id="initial-loader" class="initial-loader">
             <div class="initial-loader-logo-container"><img class="h-10" src="./dist/images/logo/logo.svg" alt=""></div>
@@ -43,14 +43,22 @@
                 <div class="content_box">
                     <div class="inner">
                         <!-- 메인비주얼 -->
-                        <div class="mySwiper relative overflow-hidden" data-loop="false">
+                        <div class="mySwiper relative overflow-hidden main_visual" data-loop="false">
                             <div class="swiper-container">
                                 <ul class="swiper-wrapper">
                                     <li class="swiper-slide">
-                                        <img class="visual_img" src="./dist/images/banner/main_banner_1.avif" alt="">
+                                        <img class="visual_img md:block hidden" src="./dist/images/banner/main_banner_1.avif" alt="">
+                                        <img class="visual_img block md:hidden" src="./dist/images/banner/main_banner_1_mo.avif" alt="">
+                                        <div class="txt_box">
+                                            <p class="text-base md:text-xl font-medium text-primary">LICENSED BITCOIN CASINO</p>
+                                            <h5 class="my-5 text-4xl md:text-6xl color-gradient-soft font-semibold">200% up to €25,000</h5>
+                                            <span class="text-base md:text-xl color-gradient-soft">+50 Free Spins</span>
+                                            <a class="btn btn-gradient-primary w-36 md:w-40 mt-10 text-base md:text-xl rounded-3xl" href="javascript:;">Claiim Bonus</a>
+                                        </div>
                                     </li>
                                     <li class="swiper-slide">
-                                        <img class="visual_img" src="./dist/images/banner/main_banner_2.avif" alt="">
+                                        <img class="visual_img md:block hidden" src="./dist/images/banner/main_banner_2.avif" alt="">
+                                        <img class="visual_img block md:hidden" src="./dist/images/banner/main_banner_2_mo.avif" alt="">
                                     </li>
                                 </ul>
                                 <div class="pagination z-10 absolute justify-center"></div>
@@ -82,17 +90,17 @@
                             <div class="casinoSwiper" data-xl="6" data-mo="3" data-gap="15" data-loop="true">
                                 <div class="swiper-container">
                                     <ul class="swiper-wrapper ">
-                                        <li class="swiper-slide casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_1.webp" alt=""><div class="hover_box"><p>CHAOS CREW</p><i><svg class="svg-icon w-5 h-5 color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i></div></a></li>
-                                        <li class="swiper-slide casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_2.webp" alt=""><div class="hover_box"><p>CHAOS CREW</p><i><svg class="svg-icon w-5 h-5 color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i></div></a></li>
-                                        <li class="swiper-slide casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_3.webp" alt=""><div class="hover_box"><p>CHAOS CREW</p><i><svg class="svg-icon w-5 h-5 color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i></div></a></li>
-                                        <li class="swiper-slide casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_4.webp" alt=""><div class="hover_box"><p>CHAOS CREW</p><i><svg class="svg-icon w-5 h-5 color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i></div></a></li>
-                                        <li class="swiper-slide casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_5.webp" alt=""><div class="hover_box"><p>CHAOS CREW</p><i><svg class="svg-icon w-5 h-5 color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i></div></a></li>
-                                        <li class="swiper-slide casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_6.webp" alt=""><div class="hover_box"><p>CHAOS CREW</p><i><svg class="svg-icon w-5 h-5 color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i></div></a></li>
-                                        <li class="swiper-slide casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_7.webp" alt=""><div class="hover_box"><p>CHAOS CREW</p><i><svg class="svg-icon w-5 h-5 color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i></div></a></li>
-                                        <li class="swiper-slide casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_8.webp" alt=""><div class="hover_box"><p>CHAOS CREW</p><i><svg class="svg-icon w-5 h-5 color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i></div></a></li>
-                                        <li class="swiper-slide casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_9.webp" alt=""><div class="hover_box"><p>CHAOS CREW</p><i><svg class="svg-icon w-5 h-5 color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i></div></a></li>
-                                        <li class="swiper-slide casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_10.webp" alt=""><div class="hover_box"><p>CHAOS CREW</p><i><svg class="svg-icon w-5 h-5 color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i></div></a></li>
-                                        <li class="swiper-slide casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_11.webp" alt=""><div class="hover_box"><p>CHAOS CREW</p><i><svg class="svg-icon w-5 h-5 color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i></div></a></li>
+                                        <li class="swiper-slide casino_item hover_normal"><a href="javascript:;"><img src="./dist/images/casino/casino_1.webp" alt=""></a></li>
+                                        <li class="swiper-slide casino_item hover_normal"><a href="javascript:;"><img src="./dist/images/casino/casino_2.webp" alt=""></a></li>
+                                        <li class="swiper-slide casino_item hover_normal"><a href="javascript:;"><img src="./dist/images/casino/casino_3.webp" alt=""></a></li>
+                                        <li class="swiper-slide casino_item hover_normal"><a href="javascript:;"><img src="./dist/images/casino/casino_4.webp" alt=""></a></li>
+                                        <li class="swiper-slide casino_item hover_normal"><a href="javascript:;"><img src="./dist/images/casino/casino_5.webp" alt=""></a></li>
+                                        <li class="swiper-slide casino_item hover_normal"><a href="javascript:;"><img src="./dist/images/casino/casino_6.webp" alt=""></a></li>
+                                        <li class="swiper-slide casino_item hover_normal"><a href="javascript:;"><img src="./dist/images/casino/casino_7.webp" alt=""></a></li>
+                                        <li class="swiper-slide casino_item hover_normal"><a href="javascript:;"><img src="./dist/images/casino/casino_8.webp" alt=""></a></li>
+                                        <li class="swiper-slide casino_item hover_normal"><a href="javascript:;"><img src="./dist/images/casino/casino_9.webp" alt=""></a></li>
+                                        <li class="swiper-slide casino_item hover_normal"><a href="javascript:;"><img src="./dist/images/casino/casino_10.webp" alt=""></a></li>
+                                        <li class="swiper-slide casino_item hover_normal"><a href="javascript:;"><img src="./dist/images/casino/casino_11.webp" alt=""></a></li>
                                     </ul>
                                 </div>
                                 <button class="arrow prev p-2"><svg class="svg-icon w-5 h-5 color-gray2 rotate-180"><use xlink:href="./dist/images/icon-defs.svg#arrow_next"></use></svg></button>
