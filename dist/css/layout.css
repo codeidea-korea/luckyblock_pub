@@ -65,6 +65,10 @@ body {font-family: Poppins, Arial, Helvetica, 'sans-serif'; color:#fff; backgrou
 .scrollbar {scrollbar-color: #3D3D3D var(--back-color); scrollbar-width: thin; }
 .noscrollbar::-webkit-scrollbar {display:none; }
 
+/* 말줄임표 */
+.truncate-2 {-webkit-line-clamp: 2; display: -webkit-box; word-wrap: break-word;-webkit-box-orient: vertical; text-overflow: ellipsis; overflow: hidden;}
+.truncate-3 {-webkit-line-clamp: 3; display: -webkit-box; word-wrap: break-word;-webkit-box-orient: vertical; text-overflow: ellipsis; overflow: hidden;}
+.truncate-4 {-webkit-line-clamp: 4; display: -webkit-box; word-wrap: break-word;-webkit-box-orient: vertical; text-overflow: ellipsis; overflow: hidden;}
 
 
 /* 
@@ -195,8 +199,12 @@ body:not(.logout) .quick_menu .login_btn {display:block; }
 .casino_item.hover_normal {transform:translateY(0); transition:transform 0.4s; }
 .casino_item.hover_normal:hover {transform:translateY(-5px); }
 
-.casino_item .hover_casino {}
-
+.casino_item.hover_casino {position:relative; transition:transform 0.2s; }
+.casino_item.hover_casino:hover {transform:scale(1.04); }
+.casino_item.hover_casino:hover img {filter:blur(4px); overflow:clip; overflow-clip-margin:content-box; }
+.casino_item.hover_casino .hover_box {opacity:0; position:absolute; left:0; top:0; display:flex; flex-direction:column; justify-content:space-around; width:100%; height:100%; padding:10px; }
+.casino_item.hover_casino:hover .hover_box {opacity:1; }
+.casino_item.hover_casino .hover_box p {font-size:16px; text-shadow:0 1px 2px rgba(0,0,0,0.75); color:#fff; font-weight:900; text-align:center; }
 
 
 /* --------------------------------------

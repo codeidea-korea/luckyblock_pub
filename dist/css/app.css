@@ -2042,15 +2042,6 @@ select{
 .h-96{
     height: 24rem;
 }
-.h-\[500px\]{
-    height: 500px;
-}
-.h-\[501px\]{
-    height: 501px;
-}
-.h-\[502px\]{
-    height: 502px;
-}
 .max-h-96{
     max-height: 24rem;
 }
