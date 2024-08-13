@@ -1,5 +1,7 @@
  @charset "utf-8";
 
+ 
+
 /* 
         **공통으로 크게 쓰여지지 않는 레이아웃**
 */
@@ -23,3 +25,12 @@
 @media all and (max-width:767px){
     .main_started {background:url('../images/main/started_bg_mo.png') no-repeat center center / cover;}
 }
+
+
+/* vip club */
+.vipClub_main {background: url('../images/vip/vipclub_main_banner.png') no-repeat center center /cover;}
+@media all and (max-width:767px){
+    .vipClub_main {background:url('../images/vip/vipclub_main_banner_m.avif') no-repeat center center / cover;}
+}
+.vipClub_benefits td{width:14.2%;}
+.vipClub_benefits img{margin: 0 auto;}
