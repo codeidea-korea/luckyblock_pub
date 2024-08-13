@@ -2194,12 +2194,15 @@ select{
 .w-full{
     width: 100%;
 }
+<<<<<<< HEAD
 .w-\[25\%\]{
     width: 25%;
 }
 .w-\[14\.2\%\]{
     width: 14.2%;
 }
+=======
+>>>>>>> 6003d0a5b773719d95da4280960fed394c951319
 .max-w-1\/2{
     max-width: 50%;
 }
@@ -2230,12 +2233,15 @@ select{
 }
 .grid-cols-1{
     grid-template-columns: repeat(1, minmax(0, 1fr));
+<<<<<<< HEAD
 }
 .grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 .grid-cols-none{
     grid-template-columns: none;
+=======
+>>>>>>> 6003d0a5b773719d95da4280960fed394c951319
 }
 .flex-col{
     flex-direction: column;
@@ -2273,9 +2279,12 @@ select{
 .gap-5{
     gap: 1.25rem;
 }
+<<<<<<< HEAD
 .gap-6{
     gap: 1.5rem;
 }
+=======
+>>>>>>> 6003d0a5b773719d95da4280960fed394c951319
 .overflow-hidden{
     overflow: hidden;
 }
@@ -2499,12 +2508,15 @@ select{
 .p-3{
     padding: 0.75rem;
 }
+<<<<<<< HEAD
 .p-5{
     padding: 1.25rem;
 }
 .p-10{
     padding: 2.5rem;
 }
+=======
+>>>>>>> 6003d0a5b773719d95da4280960fed394c951319
 .px-4{
     padding-left: 1rem;
     padding-right: 1rem;
