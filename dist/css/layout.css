@@ -10,10 +10,12 @@
     --footer-color:#101010;
     --back-color:#202022;
     --back2-color:#201f22;
+    --back3-color:#171717;
     --provider-color:#343434;
     --sub-color:#6a6a6a;
     --gray-color:#b6b7b7;
     --gray2-color:#a9aeb3;
+    --win-color:#11ad56; 
 
     --tit-color:#ececec;
     --txt-color:#959ca0;
@@ -39,11 +41,13 @@ body {font-family: Poppins, Arial, Helvetica, 'sans-serif'; color:#fff; backgrou
 .color-tit {color:var(--tit-color); }
 .color-txt {color:var(--txt-color); }
 .color-blue {color:var(--blue-color); }
+.color-win {color:var(--win-color); }
 .color-gradient-soft {background:var(--primary-soft-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
 
 .bg-sub {background:var(--sub-color); }
 .hover\:bg-sub:hover {background:var(--sub-color);}
 .bg-back2 {background:var(--back2-color); }
+.bg-back3 {background:var(--back3-color); }
 .bg-footer {background:var(--footer-color); }
 .bg-provider {background-color:var(--provider-color);}
 .bg-gradient-black {background:var(--black-gradient); }
@@ -56,6 +60,10 @@ body {font-family: Poppins, Arial, Helvetica, 'sans-serif'; color:#fff; backgrou
 
 .btn-transparent {border:0 none; background:transparent; color:#fff; }
 .btn-transparent:hover {background:#787878; }
+
+.hover_effect {background-color:transparent; }
+.hover_effect:hover {background-color:rgba(255,255,255, 0.08); }
+.hover_effect.pr_type:hover {background-color:rgba(241, 194, 76, 0.08); }
 
 /* svg 공통 */
 .svg-icon {fill:currentColor !important; }
@@ -70,6 +78,7 @@ body {font-family: Poppins, Arial, Helvetica, 'sans-serif'; color:#fff; backgrou
 .truncate-3 {-webkit-line-clamp: 3; display: -webkit-box; word-wrap: break-word;-webkit-box-orient: vertical; text-overflow: ellipsis; overflow: hidden;}
 .truncate-4 {-webkit-line-clamp: 4; display: -webkit-box; word-wrap: break-word;-webkit-box-orient: vertical; text-overflow: ellipsis; overflow: hidden;}
 
+.fs10 {font-size:10px; }
 
 /* 
         **레이아웃 및 공통으로 쓰여지는 레이아웃**
@@ -83,6 +92,12 @@ body {font-family: Poppins, Arial, Helvetica, 'sans-serif'; color:#fff; backgrou
         CASINO_ITEM
         ACCORDION
         TYPOGRAPHY
+        TABS
+        TABLE
+
+        DROPDOWN
+        MODAL
+        FORM-CONTROL
 
 
 
@@ -137,12 +152,12 @@ body {font-family: Poppins, Arial, Helvetica, 'sans-serif'; color:#fff; backgrou
 /* --------------------------------------
     QUICK_MENU
 -------------------------------------- */ 
-.quick_menu {z-index:100; position:fixed; left:0; bottom:0; display:none; width:100%; height:56px; background:#171717; }
+.quick_menu {z-index:100; position:fixed; left:0; bottom:0; display:none; width:100%; height:56px; background:var(--back3-color); }
 .quick_menu ul {display:grid; grid-template-columns:repeat(5,1fr); width:100%; height:100%; }
 .quick_menu ul a {display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; height:100%; }
-.quick_menu ul li.login_btn {color:#a6a6a6; } 
-.quick_menu ul li.login_btn svg {margin-bottom:5px; }
-.quick_menu ul li.login_btn span {color:#fff; }
+.quick_menu ul li.isLogin {color:#a6a6a6; } 
+.quick_menu ul li.isLogin svg {margin-bottom:5px; }
+.quick_menu ul li.isLogin span {color:#fff; }
 
 @media all and (max-width:767px){
     .quick_menu {display:block; }
@@ -157,10 +172,12 @@ header {z-index:100; position:sticky; top:0; box-shadow:#0003 0 4px 6px -1px, #0
     로그아웃시
 -------------------------------------- */ 
 body:not(.logout) .side_menu .sign_btn ,
-body:not(.logout) header .logout_btn , 
-body:not(.logout) .quick_menu .logout_btn ,
-body .quick_menu .login_btn {display:none; }
-body:not(.logout) .quick_menu .login_btn {display:block; }
+body:not(.logout) header .isLogout , 
+body:not(.logout) .quick_menu .isLogout ,
+body .quick_menu .isLogin,
+body header .isLogin {display:none; }
+body:not(.logout) .quick_menu .isLogin {display:block; }
+body:not(.logout) header .isLogin {display:flex; }
 
 
 /* --------------------------------------
@@ -181,6 +198,20 @@ body:not(.logout) .quick_menu .login_btn {display:block; }
 /* --------------------------------------
     SWIPER
 -------------------------------------- */ 
+body:not(.logout) .casinoSwiper {width:calc(100% + 80px); padding:8px 40px; margin-left:-40px; }
+body:not(.logout) .casinoSwiper.nooverflow {width:100%; padding:8px 0; margin-left:0; }
+body:not(.logout) .casinoSwiper:hover .arrow {opacity:0.7; }
+body:not(.logout) .casinoSwiper .arrow {opacity:0; display:flex; align-items:center; justify-content:center; width:38px; height:38px; background-color:#fff; border-radius:50%; transition:all 0.2s; }
+body:not(.logout) .casinoSwiper .arrow:hover {opacity:1; }
+body:not(.logout) .casinoSwiper .arrow svg {color:var(--back3-color); }
+body:not(.logout) .casinoSwiper .arrow.prev {left:15px; }
+body:not(.logout) .casinoSwiper .arrow.next {right:15px; }
+
+@media all and (max-width:767px){
+    body:not(.logout) .casinoSwiper,
+    body:not(.logout) .casinoSwiper.nooverflow {width:calc(100% + 32px); padding:0 16px; margin-left:-16px; }
+}
+
 .mySwiper .pagination span.swiper-pagination-bullet {width:8px; height:8px; background-color:#fff; opacity:1;}
 .mySwiper .pagination span.swiper-pagination-bullet.swiper-pagination-bullet-active {background-color:var(--primary-color);}
 
@@ -193,7 +224,6 @@ body:not(.logout) .quick_menu .login_btn {display:block; }
 /* --------------------------------------
     CASINO_ITEM
 -------------------------------------- */ 
-.casinoSwiper li.swiper-wrapper {width:180px; }
 .casino_item {overflow:hidden; border-radius:4px; }
 
 .casino_item.hover_normal {transform:translateY(0); transition:transform 0.4s; }
@@ -205,15 +235,19 @@ body:not(.logout) .quick_menu .login_btn {display:block; }
 .casino_item.hover_casino .hover_box {opacity:0; position:absolute; left:0; top:0; display:flex; flex-direction:column; justify-content:space-around; width:100%; height:100%; padding:10px; }
 .casino_item.hover_casino:hover .hover_box {opacity:1; }
 .casino_item.hover_casino .hover_box p {font-size:16px; text-shadow:0 1px 2px rgba(0,0,0,0.75); color:#fff; font-weight:900; text-align:center; }
+.casino_item.hover_casino .hover_box i {position:relative; width:45%; padding-bottom:45%; margin:0 auto; background-color:var(--back3-color); border-radius:50%; box-shadow:0 2px 7px 0 rgba(0, 0, 0, 0.49); }
+.casino_item.hover_casino .hover_box i svg {position:absolute; left:0; top:0; right:0; bottom:0; width:80%; margin:auto; color:var(--primary-color); }
+
 
 
 /* --------------------------------------
     ACCORDION
 -------------------------------------- */ 
+.accordion .accordion-item {overflow: hidden; box-shadow:0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%); border-radius:5px; }
 .accordion .accordion-item:last-child {margin-bottom:0 !important; }
 .accordion .accordion-item:first-child {margin-top:0 !important; }
 .accordion .accordion-header {position:relative; z-index:10; }
-.accordion .accordion-button {padding:10px 20px !important; color:#fff !important; background-color:var(--provider-color);}
+.accordion .accordion-button {padding:10px 20px !important; color:#fff !important; background-color:var(--provider-color); }
 .accordion .accordion-button .arrow {transform:rotate(180deg); transition:all 0.4s; }
 .accordion .accordion-button.collapsed .arrow {transform:rotate(0deg); }
 .accordion .accordion-body {padding:15px 20px; background-color:#2e2e2e; }
@@ -230,5 +264,58 @@ body:not(.logout) .quick_menu .login_btn {display:block; }
 .typography_box ul {margin:0 0 10px 20px; list-style:disc;}
 .typography_box ul li {font-size:18px; }
 .typography_box a {text-decoration:underline; }
+
+
+
+/* --------------------------------------
+    TABS
+-------------------------------------- */ 
+.nav.nav-link-tabs .nav-item .nav-link {border-bottom:2px solid #3b311c; color:#868787; font-weight:800; }
+.nav.nav-link-tabs .nav-item .nav-link:hover {color:#fff; background-color:var(--back3-color); }
+.nav.nav-link-tabs .nav-item .nav-link.active {border-bottom:2px solid var(--primary-color); color:#fff; font-weight:800; }
+
+.tab-content > div {width:100% !important; }
+
+
+/* --------------------------------------
+    TABLE
+-------------------------------------- */ 
+.table.noborder tr th, 
+.table.noborder tr td {border:0 none; }
+
+.table.table-striped tr td {padding:20px 16px; }
+.table.table-striped tr:nth-of-type(odd) td {background-color:#292929; }
+
+
+
+/* --------------------------------------
+    DROPDOWN
+-------------------------------------- */ 
+.dropdown-menu .dropdown-content {background-color:#343434; }
+
+
+/* --------------------------------------
+    MODAL
+-------------------------------------- */ 
+.modal .modal-content {background-color:#171717; }
+.modal .modal-body {position:relative; }
+.modal .modal-body .close_btn {position:absolute; right:15px; top:15px; }
+
+.modal.left_type .modal-dialog {position:relative; left:-100%; height:100%; margin:0; transition:left 0.3s; }
+.modal.left_type.show .modal-dialog {left:0; }
+.modal.left_type .modal-dialog .modal-content {height:100%; border-radius:0; } 
+
+
+@media (min-width: 640px) {
+    .modal .modal-dialog.modal-md {width: 370px; }
+}
+
+/* --------------------------------------
+    FORM-CONTROL
+-------------------------------------- */ 
+
+.form-control {height:42px; border:1px solid #343434; color:#fff; font-size:16px; font-weight:500; background-color:#343434;}
+.form-control::placeholder {color:#989999; }
+.form-control.error {border:1px solid #ff2e2e; }
 
 

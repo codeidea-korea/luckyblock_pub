@@ -160,6 +160,22 @@ const mosideToggle = ()=>{
     $('.side_menu').toggleClass('open')
 }
 
+// password <---> text
+const passwordChange = (item)=>{
+    let type = $(item).siblings('input').attr('type')
+
+    if(type == 'text'){
+        $(item).siblings('input').attr('type','password')
+    }else{
+        $(item).siblings('input').attr('type','text')
+    }
+}
+
+// tw tab 클릭
+const tabChange = (item)=>{
+    $(item).click();
+}
+
 
 // jquery 모음
 const loadJquery = ()=>{
@@ -240,7 +256,7 @@ const loadJquery = ()=>{
                   slidesPerView: taItemPer,
                 },
                 1020: {
-                  slidesPerView: taItemPer,
+                  slidesPerView: pcItemPer,
                 },
                 1365: {
                   slidesPerView: xlpcItemPer,

@@ -6,7 +6,7 @@
     --color-info: theme("colors.rgb.cyan.500");
     --color-warning: theme("colors.rgb.yellow.400");
     --color-pending: theme("colors.rgb.orange.500");
-    --color-danger: theme("colors.rgb.red.600");
+    --color-danger: 255 46 46;
     --color-light: theme("colors.rgb.slate.100");
     --color-dark: 52 52 52;
     --color-slate-50: theme("colors.rgb.slate.50");
