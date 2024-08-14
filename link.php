@@ -82,6 +82,9 @@ echo txtRecord('./@record/');
 					<button class="pop-modal" onclick="modalOpen('sign-modal'); tabChange('#sign-2-tab button')">Login 모달</button>
 					<button class="pop-modal" onclick="modalOpen('reset_password-modal')">Reset Password 모달</button>
 				</li>
+				<li>
+					<button class="pop-modal" onclick="modalOpen('coin-modal')">COIN 모달</button>
+				</li>
             </ul>
         </li>
 

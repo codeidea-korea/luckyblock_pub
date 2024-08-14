@@ -128,3 +128,187 @@
         </div>
     </div>
 </div>
+
+<!-- header > coin -->
+<div id="coin-modal" class="modal coin_modal mo_full" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="flex flex-col modal-body p-0">
+                <button class="close_btn" onclick="modalClose('coin-modal')"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#x"></use></svg></button>
+                <div class="py-5 text-center">
+                    <p class="mb-1 color-txt font-bold">Balance</p>
+                    <h4 class="text-primary text-2xl font-bold"><span class="currentCash">0.00000000</span> <span class="currentCoinName">BTC</span></h4>
+                    <div class="grid grid-cols-2 mt-8">
+                        <div>
+                            <p class="mb-1 color-txt font-bold">Withdrawable</p>
+                            <p class="text-base font-extrabold"><span class="currentCash">0.00000000</span> <span class="currentCoinName">BTC</span></p>
+                        </div>
+                        <div>
+                            <p class="mb-1 color-txt font-bold">Bonus</p>
+                            <p class="text-base font-extrabold"><span class="currentCash">0.00000000</span> <span class="currentCoinName">BTC</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="overflow-y-auto flex-grow bg-back p-4">
+                    <div class="coin_list grid grid-cols-2 gap-x-2 gap-y-1">
+                        <button class="flex items-center justify-between p-2 bg-footer rounded" onclick="coinChange(this)">
+                            <p class="text-base color-txt font-medium coin">0.00000000</p>
+                            <p class="flex items-center gap-1">
+                                <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-flok"></use></svg>
+                                <b class="name">FLOK</b>
+                            </p>
+                        </button>
+                        <button class="flex items-center justify-between p-2 bg-footer rounded" onclick="coinChange(this)">
+                            <p class="text-base color-txt font-medium coin">0.00000001</p>
+                            <p class="flex items-center gap-1">
+                                <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-ton"></use></svg>
+                                <b class="name">TON</b>
+                            </p>
+                        </button>
+                        <button class="flex items-center justify-between p-2 bg-footer rounded" onclick="coinChange(this)">
+                            <p class="text-base color-txt font-medium coin">0.00000002</p>
+                            <p class="flex items-center gap-1">
+                                <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-mtic"></use></svg>
+                                <b class="name">MATIC</b>
+                            </p>
+                        </button>
+                        <button class="flex items-center justify-between p-2 bg-footer rounded" onclick="coinChange(this)">
+                            <p class="text-base color-txt font-medium coin">0.00000003</p>
+                            <p class="flex items-center gap-1">
+                                <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-bonk"></use></svg>
+                                <b class="name">BONK</b>
+                            </p>
+                        </button>
+                        <button class="flex items-center justify-between p-2 bg-footer rounded" onclick="coinChange(this)">
+                            <p class="text-base color-txt font-medium coin">0.00000004</p>
+                            <p class="flex items-center gap-1">
+                                <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-bch"></use></svg>
+                                <b class="name">BCH</b>
+                            </p>
+                        </button>
+                        <button class="flex items-center justify-between p-2 bg-footer rounded" onclick="coinChange(this)">
+                            <p class="text-base color-txt font-medium coin">0.00000005</p>
+                            <p class="flex items-center gap-1">
+                                <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-xrp"></use></svg>
+                                <b class="name">XRP</b>
+                            </p>
+                        </button>
+                        <button class="flex items-center justify-between p-2 bg-footer rounded" onclick="coinChange(this)">
+                            <p class="text-base color-txt font-medium coin">0.00000006</p>
+                            <p class="flex items-center gap-1">
+                                <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-tama"></use></svg>
+                                <b class="name">TAMA</b>
+                            </p>
+                        </button>
+                        <button class="flex items-center justify-between p-2 bg-footer rounded" onclick="coinChange(this)">
+                            <p class="text-base color-txt font-medium coin">0.00000007</p>
+                            <p class="flex items-center gap-1">
+                                <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-bnb"></use></svg>
+                                <b class="name">BNB</b>
+                            </p>
+                        </button>
+                        <button class="flex items-center justify-between p-2 bg-footer rounded" onclick="coinChange(this)">
+                            <p class="text-base color-txt font-medium coin">0.00000008</p>
+                            <p class="flex items-center gap-1">
+                                <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-shib"></use></svg>
+                                <b class="name">SHIB</b>
+                            </p>
+                        </button>
+                        <button class="flex items-center justify-between p-2 bg-footer rounded" onclick="coinChange(this)">
+                            <p class="text-base color-txt font-medium coin">0.00000009</p>
+                            <p class="flex items-center gap-1">
+                                <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-eth"></use></svg>
+                                <b class="name">ETH</b>
+                            </p>
+                        </button>
+                        <button class="flex items-center justify-between p-2 bg-footer rounded" onclick="coinChange(this)">
+                            <p class="text-base color-txt font-medium coin">0.00000010</p>
+                            <p class="flex items-center gap-1">
+                                <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-doge"></use></svg>
+                                <b class="name">DOGE</b>
+                            </p>
+                        </button>
+                        <button class="flex items-center justify-between p-2 bg-footer rounded" onclick="coinChange(this)">
+                            <p class="text-base color-txt font-medium coin">0.00000011</p>
+                            <p class="flex items-center gap-1">
+                                <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-ltc"></use></svg>
+                                <b class="name">LTC</b>
+                            </p>
+                        </button>
+                        <button class="flex items-center justify-between p-2 bg-footer rounded" onclick="coinChange(this)">
+                            <p class="text-base color-txt font-medium coin">0.00000012</p>
+                            <p class="flex items-center gap-1">
+                                <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-usdt"></use></svg>
+                                <b class="name">USDT</b>
+                            </p>
+                        </button>
+                        <button class="flex items-center justify-between p-2 bg-footer rounded" onclick="coinChange(this)">
+                            <p class="text-base color-txt font-medium coin">0.00000013</p>
+                            <p class="flex items-center gap-1">
+                                <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-usdc"></use></svg>
+                                <b class="name">USDC</b>
+                            </p>
+                        </button>
+                        <button class="flex items-center justify-between p-2 bg-footer rounded" onclick="coinChange(this)">
+                            <p class="text-base color-txt font-medium coin">0.00000014</p>
+                            <p class="flex items-center gap-1">
+                                <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-pepe"></use></svg>
+                                <b class="name">PEPE</b>
+                            </p>
+                        </button>
+                        <button class="flex items-center justify-between p-2 bg-footer rounded" onclick="coinChange(this)">
+                            <p class="text-base color-txt font-medium coin">0.00000015</p>
+                            <p class="flex items-center gap-1">
+                                <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-trx"></use></svg>
+                                <b class="name">TRX</b>
+                            </p>
+                        </button>
+                        <button class="flex items-center justify-between p-2 bg-footer active rounded" onclick="coinChange(this)">
+                            <p class="text-base color-txt font-medium coin">0.00000016</p>
+                            <p class="flex items-center gap-1">
+                                <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-btc"></use></svg>
+                                <b class="name">BTC</b>
+                            </p>
+                        </button>
+                        <button class="flex items-center justify-between p-2 bg-footer rounded" onclick="coinChange(this)">
+                            <p class="text-base color-txt font-medium coin">0.00000017</p>
+                            <p class="flex items-center gap-1">
+                                <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-lblock"></use></svg>
+                                <b class="name">LBLOCK</b>
+                            </p>
+                        </button>
+                        <button class="flex items-center justify-between p-2 bg-footer rounded" onclick="coinChange(this)">
+                            <p class="text-base color-txt font-medium coin">0.00000018</p>
+                            <p class="flex items-center gap-1">
+                                <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-sol"></use></svg>
+                                <b class="name">SOL</b>
+                            </p>
+                        </button>
+                        <button class="flex items-center justify-between p-2 bg-footer rounded" onclick="coinChange(this)">
+                            <p class="text-base color-txt font-medium coin">0.00000019</p>
+                            <p class="flex items-center gap-1">
+                                <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-ada"></use></svg>
+                                <b class="name">ADA</b>
+                            </p>
+                        </button>
+                        <button class="flex items-center justify-between p-2 bg-footer rounded" onclick="coinChange(this)">
+                            <p class="text-base color-txt font-medium coin">0.00000020</p>
+                            <p class="flex items-center gap-1">
+                                <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-avax"></use></svg>
+                                <b class="name">AVAX</b>
+                            </p>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="p-4 bg-back top-shadow">
+                    <div class="form-check form-switch justify-end gap-3">
+                        <label class="form-check-label text-base font-bold" for="display_infiat">Display in Fiat</label> 
+                        <input id="display_infiat" class="form-check-input" type="checkbox"> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

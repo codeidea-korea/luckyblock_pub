@@ -17,6 +17,7 @@
 }
 /* 메인 > provider */
 .provider_box {position:relative; display:block; width:100%; padding-bottom:90%; }
+.provider_box.sm_type {padding-bottom:40%; }
 .provider_box img {position:absolute; left:0; top:0; right:0; bottom:0; max-width:60%; margin:auto; }
 
 /* 메인 > started */

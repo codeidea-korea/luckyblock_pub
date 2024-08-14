@@ -1614,9 +1614,9 @@
         <path class="cls-15550" d="m320.74,198.95h-86.83c-2.14-12.21-11.78-21.84-23.99-23.99v-86.84c0-2.83-2.29-5.12-5.12-5.12s-5.12,2.29-5.12,5.12v86.84c-12.21,2.14-21.84,11.78-23.99,23.99h-86.84c-2.83,0-5.12,2.29-5.12,5.12s2.29,5.12,5.12,5.12h86.84c2.14,12.21,11.78,21.84,23.99,23.99v86.84c0,2.83,2.29,5.12,5.12,5.12s5.12-2.29,5.12-5.12v-86.84c12.21-2.14,21.85-11.78,23.99-23.99h86.83c2.83,0,5.12-2.29,5.12-5.12s-2.29-5.12-5.12-5.12Zm-115.94,24.46c-10.66,0-19.34-8.68-19.34-19.34s8.68-19.34,19.34-19.34,19.35,8.68,19.35,19.34-8.68,19.34-19.35,19.34Z"></path>
     </symbol>
     <symbol id="brand-ico-logout-99-01" viewBox="0 0 19.5 19.5">
-        <line class="cls-15661" x1="10.75" y1="9.75" x2="0.75" y2="9.75"></line>
-        <polyline class="cls-15661" points="4.25 6.25 .75 9.75 4.25 13.25"></polyline>
-        <path class="cls-15661" d="m9.75.75c4.97,0,9,4.03,9,9s-4.03,9-9,9h0"></path>
+        <line class="cls-15661" fill="none" stroke-width="1.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" x1="10.75" y1="9.75" x2="0.75" y2="9.75"></line>
+        <polyline class="cls-15661" fill="none" stroke-width="1.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" points="4.25 6.25 .75 9.75 4.25 13.25"></polyline>
+        <path class="cls-15661" fill="none" stroke-width="1.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m9.75.75c4.97,0,9,4.03,9,9s-4.03,9-9,9h0"></path>
     </symbol>
     <symbol id="brand-ico-logout1710" viewBox="0 0 19.5 19.5">
         <rect class="cls-15772" x="0.75" y="9.25" width="10" height="1"></rect>

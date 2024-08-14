@@ -9,29 +9,36 @@
         </div>
 
         <div class="flex items-center gap-1 isLogin">
-            <button class="sign_btn btn btn-gradient-primary text-base rounded-3xl">Wallet</button>
+            <button class="flex items-center px-2 py-1 bg-provider" onclick="modalOpen('coin-modal')">
+                <p class="flex items-center gap-2">
+                    <span class="text-base font-bold currentCash">0.00000000</span>
+                    <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 currentCoinImg"><use href="./dist/images/icon-defs.svg#currency-ico-btc"></use></svg>
+                </p>
+                <span><svg viewBox="0 0 24 24" class="svg-icon arrow w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#arrow_down"></use></svg></span>
+            </button>
+            <button class="btn btn-gradient-primary px-2 py-1 text-base rounded-3xl !font-extrabold">Wallet</button>
         </div>
 
         <div class="flex items-center gap-2.5 isLogin">
             <button class="hover_effect pr_type p-2 rounded-full"><svg viewBox="0 0 20 20" class="svg-icon w-6 h-6"><use xlink:href="./dist/images/icon-defs.svg#brand-ico-gamification01"></use></svg></button>
-            <button class="relative hover_effect p-2 rounded-full"><img class="w-6" src="./dist/images/icon/message.avif" alt=""><span class="absolute right-1 top-1 px-1 fs10 leading-normal bg-primary rounded-full">2</span></button>
+            <button class="relative hover_effect p-2 rounded-full" onclick="inboxToggle()"><img class="w-6" src="./dist/images/icon/message.avif" alt=""><span class="absolute right-1 top-1 px-1 fs10 leading-normal bg-primary rounded-full">2</span></button>
             <div class="dropdown" data-tw-placement="bottom">
                 <button class="dropdown-toggle hover_effect p-2 rounded-full" aria-expanded="false" data-tw-toggle="dropdown"><svg viewBox="0 0 20 20" class="svg-icon w-5 h-5 mx-auto"><use xlink:href="./dist/images/icon-defs.svg#brand-ico-account"></use></svg></button>
-                <div class="dropdown-menu w-32">
+                <div class="dropdown-menu w-36">
                     <ul class="dropdown-content">
-                        <li> <a href="" class="dropdown-item gap-2">
+                        <li> <a href="javascript:;" class="dropdown-item hover:bg-transparent hover:underline gap-2">
                             <svg viewBox="0 0 20 20" class="svg-icon w-6 h-6"><use xlink:href="./dist/images/icon-defs.svg#brand-ico-wallet-23-10"></use></svg>
                             Wallet
                         </a> </li>
-                        <li> <a href="" class="dropdown-item gap-2">
+                        <li> <a href="javascript:;" class="dropdown-item hover:bg-transparent hover:underline gap-2">
                             <svg viewBox="0 0 20 20" class="svg-icon w-6 h-6"><use xlink:href="./dist/images/icon-defs.svg#brand-ico-settings-99-01"></use></svg>
                             Settings
                         </a> </li>
-                        <li> <a href="" class="dropdown-item gap-2">
+                        <li> <a href="javascript:;" class="dropdown-item hover:bg-transparent hover:underline gap-2">
                             <svg viewBox="0 0 20 20" class="svg-icon w-6 h-6"><use xlink:href="./dist/images/icon-defs.svg#brand-ico-:chat2:"></use></svg>
                             Live Chat
                         </a> </li>
-                        <li> <a href="" class="dropdown-item gap-2">
+                        <li> <a href="javascript:;" class="dropdown-item hover:bg-transparent hover:underline gap-2">
                             <svg viewBox="0 0 20 20" class="svg-icon w-6 h-6"><use xlink:href="./dist/images/icon-defs.svg#brand-ico-logout-99-01"></use></svg>
                             Logout
                         </a> </li>
@@ -82,4 +89,97 @@
             </a>
         </li>
     </ul>
+</div>
+
+<!-- 우측 Inbox -->
+<div class="right_inbox">
+    <div>
+        <div class="flex items-center justify-between py-4 px-3">
+            <h4 class="flex items-center gap-2 text-xl font-bold">Inbox <span class="flex items-center justify-center w-5 h-5 text-xs text-black bg-white rounded">2</span></h4>
+            <button class="close_btn text-danger" onclick="inboxToggle()"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#x"></use></svg></button>
+        </div>
+
+        <ul class="nav nav-link-tabs white_type" role="tablist">
+            <li id="inbox-1-tab" class="nav-item" role="presentation"> 
+                <button class="nav-link py-2 active" data-tw-toggle="pill" data-tw-target="#inbox-tab-1" type="button" role="tab" aria-controls="inbox-tab-1" aria-selected="true"> All </button> 
+            </li>
+            <li id="inbox-2-tab" class="nav-item" role="presentation"> 
+                <button class="nav-link py-2" data-tw-toggle="pill" data-tw-target="#inbox-tab-2" type="button" role="tab" aria-controls="inbox-tab-2" aria-selected="false"> Favorite </button> 
+            </li>
+        </ul>
+    </div>
+    <div class="flex-grow bg-content">
+        <div class="tab-content h-full">
+            <div id="inbox-tab-1" class="tab-pane leading-relaxed h-full active" role="tabpanel" aria-labelledby="inbox-1-tab">
+                <div class="bg-inbox inbox_item">
+                    <div class="flex items-center justify-between gap-4 cursor-pointer p-3.5 ">
+                        <div class="relative w-16 shrink-0">
+                            <img src="./dist/images/icon/inbox_img_1.avif" alt="">
+                        </div>
+                        <div class="flex-grow">
+                            <h6 class="fs13 font-bold">Game of the Week Missions!</h6>
+                            <p class="truncate-2 text-xs opacity-70">Earn up to 230 free spins and 75 super spins by playing Revenge of Loki Megaways!</p>
+                        </div>
+                        <div class="w-1/5 shrink-0">
+                            <p class="fs11 opacity-70 text-right">4 days ago</p>
+                            <div class="icon_box flex items-center justify-end gap-3 mt-3">
+                                <button><img class="w-5" src="./dist/images/icon/delete-btn.png" alt=""></button>
+                                <button><img class="w-5 img_filter" src="./dist/images/icon/inbox-favor.png" alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-inbox inbox_item">
+                    <div class="flex items-center justify-between gap-4 cursor-pointer p-3.5" onclick="inboxContenToggle(this)">
+                        <div class="relative w-16 shrink-0">
+                            <img src="./dist/images/icon/inbox_img_2.jpg" alt="">
+                            <span class="absolute -right-1 -top-1 w-2.5 h-2.5 bg-primary rounded-full"></span>
+                        </div>
+                        <div class="flex-grow">
+                            <h6 class="fs13 font-bold">🥇 Olympics 24 - Win Cash Prizes Everyday</h6>
+                            <p class="truncate-2 text-xs opacity-70">There’s EUR 45,000 up for Grabs <a href="javascript:;" class="block underline">Read more</a></p>
+                        </div>
+                        <div class="w-1/5 shrink-0">
+                            <p class="fs11 opacity-70 text-right">4 days ago</p>
+                            <div class="icon_box flex items-center justify-end gap-3 mt-3">
+                                <button><img class="w-5" src="./dist/images/icon/delete-btn.png" alt=""></button>
+                                <button><img class="w-5" src="./dist/images/icon/inbox-favor-active.png" alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inbox_content hidden p-2.5">
+                        <div>
+                            <img src="./dist/images/icon/inbox_detail_1.jpg" alt="">
+                            <br/>
+                            <h6 style="font-size: 20px; text-align: center; padding-left: 15px; padding-right: 15px; font-weight:bold;">HI!</h6><br/>
+                            <p style="font-size: 15px; text-align: center; padding-left: 15px; padding-right: 15px;">Winning bets on Olympic Games sports could see you win up to 🙌🏼 <b>EUR 15,000</b> in cash!</p><br/>
+                            <p style="font-size: 15px; text-align: center; padding-left: 15px; padding-right: 15px;">Plus, everyday we’re running tournaments on <b>live casino</b> games and <b>slots</b>, as well as chances to get huge <b>daily Free Bets</b> with our <b>🏃🏽 sports streaks missions</b>.</p><br/>
+                            <p style="font-size: 15px; text-align: center; padding-left: 15px; padding-right: 15px;">The Lucky Block Olympics are in full flow, and you can get your hands on more than just a 🥇 gold medal.</p><br/>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <button class="btn btn-pending py-1 px-2 font-bold">TOURNAMENT</button>
+                            <button class="btn btn-outline-pending py-1 px-2 font-bold">SPORTS MISSIONS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="inbox-tab-2" class="tab-pane leading-relaxed h-full" role="tabpanel" aria-labelledby="inbox-2-tab">
+                <div class="flex items-center justify-center h-full bg-inbox">
+                    <div class="p-5 text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 450 350" width="450" height="350" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;"><defs><clipPath id="__lottie_element_40"><rect width="450" height="350" x="0" y="0"></rect></clipPath><clipPath id="__lottie_element_42"><path d="M0,0 L450,0 L450,350 L0,350z"></path></clipPath></defs><g clip-path="url(#__lottie_element_40)"><g clip-path="url(#__lottie_element_42)" transform="matrix(1,0,0,1,-17,-16)" opacity="1" style="display: block;"><g transform="matrix(1,0,0,1,84.06900024414062,71.51099395751953)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,160.5989990234375,71)"><path fill="rgb(255,255,255)" fill-opacity="1" d=" M-69.9229965209961,-61 C-69.9229965209961,-61 71.9280014038086,-61 71.9280014038086,-61 C91.56400299072266,-61 107.48300170898438,-45.08100128173828 107.48300170898438,-25.444000244140625 C107.48300170898438,-25.444000244140625 107.48300170898438,61 107.48300170898438,61 C107.48300170898438,61 -107.48300170898438,61 -107.48300170898438,61"></path><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="rgb(84,93,104)" stroke-opacity="1" stroke-width="4" d=" M-69.9229965209961,-61 C-69.9229965209961,-61 71.9280014038086,-61 71.9280014038086,-61 C91.56400299072266,-61 107.48300170898438,-45.08100128173828 107.48300170898438,-25.444000244140625 C107.48300170898438,-25.444000244140625 107.48300170898438,61 107.48300170898438,61 C107.48300170898438,61 -107.48300170898438,61 -107.48300170898438,61"></path></g><g opacity="1" transform="matrix(1,0,0,1,94.08300018310547,71)"><path fill="rgb(59,67,89)" fill-opacity="1" d=" M3.444000005722046,-61 C3.444000005722046,-61 -3.444999933242798,-61 -3.444999933242798,-61 C-23.634000778198242,-61 -40,-44.63399887084961 -40,-24.444000244140625 C-40,-24.444000244140625 -40,61 -40,61 C-40,61 40,61 40,61 C40,61 40,-24.444000244140625 40,-24.444000244140625 C40,-44.63399887084961 23.632999420166016,-61 3.444000005722046,-61z"></path></g><g opacity="1" transform="matrix(1,0,0,1,115.05400085449219,71)"><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="rgb(84,93,104)" stroke-opacity="1" stroke-width="4" d=" M-17.777999877929688,-61 C1.8589999675750732,-61 17.777999877929688,-45.08100128173828 17.777999877929688,-25.444000244140625 C17.777999877929688,-25.444000244140625 17.777999877929688,61 17.777999877929688,61"></path></g><g opacity="1" transform="matrix(1,0,0,1,72.89800262451172,71)"><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="rgb(84,93,104)" stroke-opacity="1" stroke-width="4" d=" M24.34600067138672,-60.88600158691406 C24.34600067138672,-60.88600158691406 37.415000915527344,-61 17.777999877929688,-61 C-1.8589999675750732,-61 -17.777999877929688,-45.08100128173828 -17.777999877929688,-25.444000244140625 C-17.777999877929688,-25.444000244140625 -17.777999877929688,61 -17.777999877929688,61"></path></g><g opacity="1" transform="matrix(1,0,0,1,247.62100219726562,115.73200225830078)"><path fill="rgb(226,230,232)" fill-opacity="1" d=" M-10.038000106811523,1.7309999465942383 C-10.038000106811523,1.7309999465942383 10.038000106811523,1.7309999465942383 10.038000106811523,1.7309999465942383 C10.994000434875488,1.7309999465942383 11.770000457763672,0.9559999704360962 11.770000457763672,0 C11.770000457763672,-0.9559999704360962 10.994000434875488,-1.7309999465942383 10.038000106811523,-1.7309999465942383 C10.038000106811523,-1.7309999465942383 -10.038000106811523,-1.7309999465942383 -10.038000106811523,-1.7309999465942383 C-10.994000434875488,-1.7309999465942383 -11.770000457763672,-0.9559999704360962 -11.770000457763672,0 C-11.770000457763672,0.9559999704360962 -10.994000434875488,1.7309999465942383 -10.038000106811523,1.7309999465942383z"></path></g><g opacity="1" transform="matrix(1,0,0,1,237.23599243164062,122.2699966430664)"><path fill="rgb(226,230,232)" fill-opacity="1" d=" M-20.42300033569336,1.7309999465942383 C-20.42300033569336,1.7309999465942383 20.42300033569336,1.7309999465942383 20.42300033569336,1.7309999465942383 C21.378999710083008,1.7309999465942383 22.15399932861328,0.9559999704360962 22.15399932861328,0 C22.15399932861328,-0.9559999704360962 21.378999710083008,-1.7309999465942383 20.42300033569336,-1.7309999465942383 C20.42300033569336,-1.7309999465942383 -20.42300033569336,-1.7309999465942383 -20.42300033569336,-1.7309999465942383 C-21.378999710083008,-1.7309999465942383 -22.15399932861328,-0.9559999704360962 -22.15399932861328,0 C-22.15399932861328,0.9559999704360962 -21.378999710083008,1.7309999465942383 -20.42300033569336,1.7309999465942383z"></path></g></g><g transform="matrix(1,0,0,1,116.91799926757812,316.5140075683594)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,0,0)"><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="rgb(84,93,104)" stroke-opacity="1" stroke-width="4" d=" M2,2 C2,2 249,2 249,2"></path></g><g opacity="1" transform="matrix(1,0,0,1,0,0)"><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="rgb(84,93,104)" stroke-opacity="1" stroke-width="4" d=" M202.5,10 C202.5,10 48.5,10 48.5,10"></path></g></g><g transform="matrix(1,0,0,1,83.94400024414062,190.9329833984375)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,67.83000183105469,7.578000068664551)"><path fill="rgb(226,230,232)" fill-opacity="1" d=" M65.00199890136719,4.75 C65.00199890136719,4.75 -65.00199890136719,4.75 -65.00199890136719,4.75 C-65.00199890136719,4.75 -65.00199890136719,-4.75 -65.00199890136719,-4.75 C-65.00199890136719,-4.75 65.00199890136719,-4.75 65.00199890136719,-4.75 C65.00199890136719,-4.75 65.00199890136719,4.75 65.00199890136719,4.75z"></path><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="rgb(84,93,104)" stroke-opacity="1" stroke-width="4" d=" M65.00199890136719,4.75 C65.00199890136719,4.75 -65.00199890136719,4.75 -65.00199890136719,4.75 C-65.00199890136719,4.75 -65.00199890136719,-4.75 -65.00199890136719,-4.75 C-65.00199890136719,-4.75 65.00199890136719,-4.75 65.00199890136719,-4.75 C65.00199890136719,-4.75 65.00199890136719,4.75 65.00199890136719,4.75z"></path></g></g><g transform="matrix(1,0,0,1,229.072998046875,199.18499755859375)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,14.32800006866455,61.077999114990234)"><path fill="rgb(255,255,255)" fill-opacity="1" d=" M11.5,58.25 C11.5,58.25 -11.5,58.25 -11.5,58.25 C-11.5,58.25 -11.348000526428223,21.221004486083984 -11.499998092651367,-7.146999835968018 C-11.650995254516602,-35.263004302978516 -11.48999309539795,-56.5620002746582 -11.48999309539795,-56.5620002746582 C-11.48999309539795,-56.5620002746582 11.510005950927734,-56.5620002746582 11.510005950927734,-56.5620002746582 C11.510005950927734,-56.5620002746582 11.65100383758545,-30.207000732421875 11.500001907348633,-0.2350015640258789 C11.348999977111816,29.73699951171875 11.5,58.25 11.5,58.25z"></path><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="rgb(84,93,104)" stroke-opacity="1" stroke-width="4" d=" M11.5,58.25 C11.5,58.25 -11.5,58.25 -11.5,58.25 C-11.5,58.25 -11.348000526428223,21.221004486083984 -11.499998092651367,-7.146999835968018 C-11.650995254516602,-35.263004302978516 -11.48999309539795,-56.5620002746582 -11.48999309539795,-56.5620002746582 C-11.48999309539795,-56.5620002746582 11.510005950927734,-56.5620002746582 11.510005950927734,-56.5620002746582 C11.510005950927734,-56.5620002746582 11.65100383758545,-30.207000732421875 11.500001907348633,-0.2350015640258789 C11.348999977111816,29.73699951171875 11.5,58.25 11.5,58.25z"></path></g></g><g transform="matrix(1,0,0,1,240.3780059814453,120.96499633789062)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,42.75,12.75)"><path fill="rgb(59,67,89)" fill-opacity="1" d=" M-42.5,-10.611000061035156 C-42.5,-10.611000061035156 -42.5,-7.388999938964844 -42.5,-7.388999938964844 C-42.5,-6.3460001945495605 -41.65399932861328,-5.5 -40.611000061035156,-5.5 C-40.611000061035156,-5.5 10.5,-5.5 10.5,-5.5 C10.5,-5.5 10.5,10.611000061035156 10.5,10.611000061035156 C10.5,11.654000282287598 11.345999717712402,12.5 12.388999938964844,12.5 C12.388999938964844,12.5 40.611000061035156,12.5 40.611000061035156,12.5 C41.65399932861328,12.5 42.5,11.654000282287598 42.5,10.611000061035156 C42.5,10.611000061035156 42.5,-5.5 42.5,-5.5 C42.5,-5.5 42.5,-10.611000061035156 42.5,-10.611000061035156 C42.5,-11.654000282287598 41.65399932861328,-12.5 40.611000061035156,-12.5 C40.611000061035156,-12.5 -40.611000061035156,-12.5 -40.611000061035156,-12.5 C-41.65399932861328,-12.5 -42.5,-11.654000282287598 -42.5,-10.611000061035156z"></path></g></g><g transform="matrix(0.9950312972068787,0.0995628833770752,-0.0995628833770752,0.9950312972068787,230.83302307128906,176.97000122070312)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,0,0)"><path stroke-linecap="round" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4" stroke="rgb(153,163,168)" stroke-opacity="1" stroke-width="4" d="M0 0"></path></g></g><g transform="matrix(0.7632685899734497,0.07637269794940948,0.07618552446365356,-0.7613979578018188,229.36880493164062,125.775634765625)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,0,0)"><path stroke-linecap="round" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4" stroke="rgb(153,163,168)" stroke-opacity="1" stroke-width="5" d="M0 0"></path></g></g></g></g></svg>
+                        <p class="text-base font-medium">No favorite messages</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="flex items-center justify-between py-4 px-3">
+        <div class="form-check form-switch"> 
+            <input id="inbox_unread" class="form-check-input" type="checkbox"> 
+            <label class="form-check-label font-bold" for="inbox_unread">Show unread</label> 
+        </div>
+
+        <button class="flex items-center gap-1 font-semibold"><img class="w-5 img_filter" src="./dist/images/icon/mark-all-read.png" alt="">Mark all as Read</button>
+    </div>
 </div>
