@@ -74,6 +74,18 @@ echo txtRecord('./@record/');
                 <li><a href="./index_logout.html" target="_blank" class="">메인 - 로그인 전</a></li>
             </ul>
         </li>
+
+		<li class="mt20" data-label="공통모달">
+            <ul>
+                <li>
+					<button class="pop-modal" onclick="modalOpen('sign-modal'); tabChange('#sign-1-tab button')">Sign up 모달</button>
+					<button class="pop-modal" onclick="modalOpen('sign-modal'); tabChange('#sign-2-tab button')">Login 모달</button>
+					<button class="pop-modal" onclick="modalOpen('reset_password-modal')">Reset Password 모달</button>
+				</li>
+            </ul>
+        </li>
+
+
 	</ul>
 </div>
 

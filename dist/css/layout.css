@@ -79,6 +79,7 @@ body {font-family: Poppins, Arial, Helvetica, 'sans-serif'; color:#fff; backgrou
 .truncate-4 {-webkit-line-clamp: 4; display: -webkit-box; word-wrap: break-word;-webkit-box-orient: vertical; text-overflow: ellipsis; overflow: hidden;}
 
 .fs10 {font-size:10px; }
+.fs13 {font-size:13px; }
 
 /* 
         **레이아웃 및 공통으로 쓰여지는 레이아웃**
@@ -97,7 +98,7 @@ body {font-family: Poppins, Arial, Helvetica, 'sans-serif'; color:#fff; backgrou
 
         DROPDOWN
         MODAL
-        FORM-CONTROL
+        FORM
 
 
 
@@ -297,25 +298,49 @@ body:not(.logout) .casinoSwiper .arrow.next {right:15px; }
 /* --------------------------------------
     MODAL
 -------------------------------------- */ 
-.modal .modal-content {background-color:#171717; }
+.modal {display:flex; align-items:center; justify-content:center; }
+
+.modal .modal-dialog .modal-body {overflow-y:auto; max-height:75vh;}
+.modal .modal-dialog .modal-body.h_full {max-height:100%; }
+
+.modal .modal-content,
+.modal .modal-dialog {background-color:#171717; }
+.modal .white-type .modal-content,
+.modal .modal-dialog.white-type {background-color:#ffffff; }
+.modal .modal-dialog {border-radius:12px; }
+
 .modal .modal-body {position:relative; }
 .modal .modal-body .close_btn {position:absolute; right:15px; top:15px; }
 
-.modal.left_type .modal-dialog {position:relative; left:-100%; height:100%; margin:0; transition:left 0.3s; }
+.modal.left_type {justify-content:flex-start; }
+.modal.left_type .modal-dialog {overflow-y:auto; position:relative; left:-100%; height:100%; margin:0; transition:left 0.3s; }
 .modal.left_type.show .modal-dialog {left:0; }
 .modal.left_type .modal-dialog .modal-content {height:100%; border-radius:0; } 
 
 
+@media (max-width: 767px) {
+    .modal.mo_full .modal-dialog {width:100%; height:100%; margin:0; border-radius:0 }
+    .modal.mo_full .modal-dialog .modal-content {height:100%; }
+    .modal.mo_full .modal-dialog .modal-body {max-height:100vh; }
+}
 @media (min-width: 640px) {
     .modal .modal-dialog.modal-md {width: 370px; }
 }
 
 /* --------------------------------------
-    FORM-CONTROL
+    FORM
 -------------------------------------- */ 
 
+/* input */
 .form-control {height:42px; border:1px solid #343434; color:#fff; font-size:16px; font-weight:500; background-color:#343434;}
 .form-control::placeholder {color:#989999; }
 .form-control.error {border:1px solid #ff2e2e; }
+
+/* check */
+.form-check-input[type="checkbox"] {width:18px; height:18px; border-width:2px; background-color:transparent; border-radius:2px; }
+.form-check-input[type="checkbox"]:checked {border-color:#fff; background-color:#fff; }
+[type="checkbox"]:checked {background-image:url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='black' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e")}
+
+
 
 

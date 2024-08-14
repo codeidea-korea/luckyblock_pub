@@ -126,10 +126,6 @@ const sideMenuScript = ()=>{
 
 }
 
-// 모달 스크립트
-const modalScript = ()=>{
-
-}
 
 // 로딩 스크립트
 window.addEventListener('load',function(){
