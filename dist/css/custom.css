@@ -34,3 +34,14 @@
 }
 .vipClub_benefits td{width:14.2%;}
 .vipClub_benefits img{margin: 0 auto;}
+
+.vipClub_img_large{ display: block;}
+.vipClub_img_small{display: none;}
+@media all and (max-width:767px){
+    .vipClub_img_large{ display: none;}
+    .vipClub_img_small{display: block;}
+}
+ 
+@media all and (max-width:767px){
+   .vipClub_advantages > div {display:flex; flex-direction: row;}
+}
