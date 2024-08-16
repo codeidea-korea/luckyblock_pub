@@ -312,3 +312,304 @@
         </div>
     </div>
 </div>
+
+<!-- mo - casino search -->
+<div id="casino_search-modal" class="modal mo_full" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body px-3">
+                <button class="close_btn" onclick="modalClose('casino_search-modal')"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#x"></use></svg></button>
+                <div class="search_box show">
+                    <h3 class="py-3 text-xl text-center font-bold">Search</h3>
+                    <div class="relative">
+                        <label for="search_" class="absolute p-3"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#search"></use></svg></label>
+                        <input type="text" class="form-control pl-10" id="search_" placeholder="Search by Game and Provider">
+                        <button class="absolute right-0 p-3 opacity-0 color-txt"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#x"></use></svg></button>
+                    </div>
+                    <div class="search_result rounded-md">
+                        <!-- 검색결과 없을때 -->
+                        <div class="py-10 text-center">Search by Game and Provider</div>
+
+                        <!-- 검색결과 있을때 -->
+                        <div class="py-4">
+                            <div class="flex items-center justify-between border-b border-zinc-400">
+                                <h4 class="fs13">Search results</h4>
+                                <p class="fs13">55 results</p>
+                            </div>
+                            <div class="mt-5">
+                                <div class="mb-1 text-white font-bold">Games</div>
+                                <ul class="grid grid-cols-2 gap-2">
+                                    <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_1.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                    <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_2.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                    <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_3.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                    <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_4.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                    <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_5.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                    <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_6.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                    <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_7.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                    <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_8.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                    <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_9.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                    <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_10.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                </ul>
+                                <div class="mt-2 text-center">
+                                    <button class="btn btn-gradient-primary text-base rounded-3xl">Load more</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- wallet -->
+<div id="wallet-modal" class="modal mo_full" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body p-5">
+                <button class="close_btn" onclick="modalClose('wallet-modal')"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#x"></use></svg></button>
+                
+                <ul class="nav nav-link-tabs" role="tablist">
+                    <li id="wallet-1-tab" class="nav-item flex-1" role="presentation"> 
+                        <button class="nav-link w-full py-2 text-base active" data-tw-toggle="pill" data-tw-target="#wallet-tab-1" type="button" role="tab" aria-controls="wallet-tab-1" aria-selected="true"> Deposit </button> 
+                    </li>
+                    <li id="wallet-2-tab" class="nav-item flex-1" role="presentation"> 
+                        <button class="nav-link w-full py-2 text-base" data-tw-toggle="pill" data-tw-target="#wallet-tab-2" type="button" role="tab" aria-controls="wallet-tab-2" aria-selected="false"> Withdraw </button> 
+                    </li>
+                    <li id="wallet-3-tab" class="nav-item flex-1" role="presentation"> 
+                        <button class="nav-link w-full py-2 text-base" data-tw-toggle="pill" data-tw-target="#wallet-tab-3" type="button" role="tab" aria-controls="wallet-tab-3" aria-selected="false"> Buy Crypto </button> 
+                    </li>
+                </ul>
+                <div class="tab-content mt-5 md:h-[55vh]">
+                    <div id="wallet-tab-1" class="tab-pane leading-relaxed pb-5 active" role="tabpanel" aria-labelledby="wallet-1-tab">
+                        <div class="mb-5">
+                            <button class="flex items-center gap-2 my-2 py-2 px-3 mx-auto border border-secondary border-opacity-60 color-softP text-base font-extrabold rounded-3xl">
+                                <svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#connect-wallet"></use></svg>
+                                Connect Wallet
+                            </button>
+                            <div class="flex items-center justify-center gap-2 mt-4">
+                                <div class="custom_select">
+                                    <button class="w-32 p-2 pr-6 font-medium bg-provider rounded-lg">
+                                        <p class="flex items-center gap-1 font-base font-bold">
+                                            <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-bnb"></use></svg>
+                                            <b class="name">BNB</b>
+                                        </p> 
+                                        <span class="arrow"><svg viewBox="0 0 16 16" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#arrow_down"></use></svg></span>
+                                    </button>
+                                    <div class="!w-60">
+                                        <ul class="coin_list grid grid-cols-2">
+                                            <li class="flex items-center justify-between !py-1 border-b border-r border-white border-opacity-40">
+                                                <p class="flex items-center gap-1">
+                                                    <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-flok"></use></svg>
+                                                    <b class="name">FLOK</b>
+                                                </p>
+                                            </li>
+                                            <li class="flex items-center justify-between !py-1 border-b border-white border-opacity-40">
+                                                <p class="flex items-center gap-1">
+                                                    <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-ton"></use></svg>
+                                                    <b class="name">TON</b>
+                                                </p>
+                                            </li>
+                                            <li class="flex items-center justify-between !py-1 border-b border-r border-white border-opacity-40">
+                                                <p class="flex items-center gap-1">
+                                                    <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-mtic"></use></svg>
+                                                    <b class="name">MATIC</b>
+                                                </p>
+                                            </li>
+                                            <li class="flex items-center justify-between !py-1 border-b border-white border-opacity-40">
+                                                <p class="flex items-center gap-1">
+                                                    <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-bonk"></use></svg>
+                                                    <b class="name">BONK</b>
+                                                </p>
+                                            </li>
+                                            <li class="flex items-center justify-between !py-1 border-b border-r border-white border-opacity-40">
+                                                <p class="flex items-center gap-1">
+                                                    <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-bch"></use></svg>
+                                                    <b class="name">BCH</b>
+                                                </p>
+                                            </li>
+                                            <li class="flex items-center justify-between !py-1 border-b border-white border-opacity-40">
+                                                <p class="flex items-center gap-1">
+                                                    <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-xrp"></use></svg>
+                                                    <b class="name">XRP</b>
+                                                </p>
+                                            </li>
+                                            <li class="flex items-center justify-between !py-1 border-b border-r border-white border-opacity-40">
+                                                <p class="flex items-center gap-1">
+                                                    <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-tama"></use></svg>
+                                                    <b class="name">TAMA</b>
+                                                </p>
+                                            </li>
+                                            <li class="flex items-center justify-between !py-1 border-b border-white border-opacity-40">
+                                                <p class="flex items-center gap-1">
+                                                    <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-bnb"></use></svg>
+                                                    <b class="name">BNB</b>
+                                                </p>
+                                            </li>
+                                            <li class="flex items-center justify-between !py-1 border-b border-r border-white border-opacity-40">
+                                                <p class="flex items-center gap-1">
+                                                    <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-shib"></use></svg>
+                                                    <b class="name">SHIB</b>
+                                                </p>
+                                            </li>
+                                            <li class="flex items-center justify-between !py-1 border-b border-white border-opacity-40">
+                                                <p class="flex items-center gap-1">
+                                                    <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-eth"></use></svg>
+                                                    <b class="name">ETH</b>
+                                                </p>
+                                            </li>
+                                            <li class="flex items-center justify-between !py-1 border-b border-r border-white border-opacity-40">
+                                                <p class="flex items-center gap-1">
+                                                    <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-doge"></use></svg>
+                                                    <b class="name">DOGE</b>
+                                                </p>
+                                            </li>
+                                            <li class="flex items-center justify-between !py-1 border-b border-white border-opacity-40">
+                                                <p class="flex items-center gap-1">
+                                                    <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-ltc"></use></svg>
+                                                    <b class="name">LTC</b>
+                                                </p>
+                                            </li>
+                                            <li class="flex items-center justify-between !py-1 border-b border-r border-white border-opacity-40">
+                                                <p class="flex items-center gap-1">
+                                                    <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-usdt"></use></svg>
+                                                    <b class="name">USDT</b>
+                                                </p>
+                                            </li>
+                                            <li class="flex items-center justify-between !py-1 border-b border-white border-opacity-40">
+                                                <p class="flex items-center gap-1">
+                                                    <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-usdc"></use></svg>
+                                                    <b class="name">USDC</b>
+                                                </p>
+                                            </li>
+                                            <li class="flex items-center justify-between !py-1 border-b border-r border-white border-opacity-40">
+                                                <p class="flex items-center gap-1">
+                                                    <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-pepe"></use></svg>
+                                                    <b class="name">PEPE</b>
+                                                </p>
+                                            </li>
+                                            <li class="flex items-center justify-between !py-1 border-b border-white border-opacity-40">
+                                                <p class="flex items-center gap-1">
+                                                    <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-trx"></use></svg>
+                                                    <b class="name">TRX</b>
+                                                </p>
+                                            </li>
+                                            <li class="flex items-center justify-between !py-1 border-b border-r border-white border-opacity-40">
+                                                <p class="flex items-center gap-1">
+                                                    <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-btc"></use></svg>
+                                                    <b class="name">BTC</b>
+                                                </p>
+                                            </li>
+                                            <li class="flex items-center justify-between !py-1 border-b border-white border-opacity-40">
+                                                <p class="flex items-center gap-1">
+                                                    <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-lblock"></use></svg>
+                                                    <b class="name">LBLOCK</b>
+                                                </p>
+                                            </li>
+                                            <li class="flex items-center justify-between !py-1 border-b border-r border-white border-opacity-40">
+                                                <p class="flex items-center gap-1">
+                                                    <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-sol"></use></svg>
+                                                    <b class="name">SOL</b>
+                                                </p>
+                                            </li>
+                                            <li class="flex items-center justify-between !py-1 border-b border-white border-opacity-40">
+                                                <p class="flex items-center gap-1">
+                                                    <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-ada"></use></svg>
+                                                    <b class="name">ADA</b>
+                                                </p>
+                                            </li>
+                                            <li class="flex items-center justify-between !py-1 border-b border-r border-white border-opacity-40">
+                                                <p class="flex items-center gap-1">
+                                                    <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-avax"></use></svg>
+                                                    <b class="name">AVAX</b>
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="custom_select">
+                                    <button class="w-32 p-2 pr-6 font-medium bg-provider rounded-lg">
+                                        <p class="flex items-center gap-1 font-base font-bold">
+                                            <b class="name">BNB-BSC</b>
+                                        </p>
+                                        <span class="arrow"><svg viewBox="0 0 16 16" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#arrow_down"></use></svg></span>
+                                    </button>
+                                    <div class="!w-60">
+                                        <ul>
+                                            <li><p class="hidden">BNB-BSC</p>BNB-BSC-BNB Smart Chain (BEP20)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-2 text-center text-xs color-txt">Min. Deposit 0.01BNB-BSC</div>
+                        </div>
+                        <div class="flex items-center gap-5">
+                            <div>
+                                <h6 class="font-bold ">Your BNB Depositing address</h6>
+                                <div class="flex items-center gap-2 my-2">
+                                    <div class="flex-1 flex items-center justify-center h-12 border-2 border-dashed border-white border-opacity-30 p-2 rounded">0xD5BC35F7179233313D1417529B0253EF364bb6AC</div>
+                                    <button class="btn btn-gradient-primary w-28 text-base rounded-3xl">Copy</button>
+                                </div>
+                                <p class="text-xs">Only send BNB to this address, 1/25 confirmation(s) required. Values sent below the minimum deposit or to an incorrect address will be lost.</p>
+                            </div>
+                            <img class="w-32 shrink-0" src="./dist/images/icon/wallet_qr.png" alt="">
+                        </div>
+                    </div>
+                    <div id="wallet-tab-2" class="tab-pane leading-relaxed pb-5" role="tabpanel" aria-labelledby="wallet-2-tab">
+                        <div class="text-center">
+                            <div class="flex items-center justify-center gap-2">
+                                <div class="custom_select">
+                                    <button class="w-32 p-2 pr-6 font-medium bg-provider rounded-lg">
+                                        <p class="flex items-center gap-1 font-base font-bold">
+                                            <b class="name">USDC</b>
+                                        </p>
+                                        <span class="arrow"><svg viewBox="0 0 16 16" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#arrow_down"></use></svg></span>
+                                    </button>
+                                    <div class="!w-60">
+                                        <ul>
+                                            <li><p class="hidden">USDC</p>USDC-Ethereum (ERC20)</li>
+                                            <li><p class="hidden">USDC-POLY</p>USDC-POLY-Polygon</li>
+                                            <li><p class="hidden">USDC-BSC</p>USDC-BSC-BNB Smart</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="mt-2 text-xs color-txt">Min. Withdraw 0.01ETH</p>
+                        </div>
+                        <div class="w-[320px] max-w-full mx-auto">
+                            <div class="input_wrap mb-4">
+                                <label for="address" class="block py-1 px-2 font-bold">BTC Address</label>
+                                <input type="text" id="address" class="form-control error" placeholder="Enter your address">
+                                <p class="text-danger py-1 px-2">currency address required</p>
+                            </div>
+                            <div class="input_wrap mb-4">
+                                <div class="flex items-center justify-between">
+                                    <label for="amount" class="block py-1 px-2 font-bold">Amount</label>
+                                    <b>$0.00</b>
+                                </div>
+                                <div class="relative">
+                                    <input type="text" id="amount" class="form-control pr-28" placeholder="Amount">
+                                    <div class="absolute right-0 top-0 flex items-center gap-2">
+                                        <svg viewBox="0 0 16 16" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-usdc"></use></svg>
+                                        <button class="h-10 px-4 bg-option rounded-3xl font-bold">MAX</button>
+                                    </div>
+                                </div>
+                                <p class="py-1 px-2">currency address required</p>
+                            </div>
+                            <button class="btn btn-gradient-primary w-full text-base rounded-3xl">Activate 2FA</button>
+                            <button class="btn btn-gradient-primary w-full mt-2 text-base rounded-3xl" disabled>Withdraw</button>
+                            <div class="mt-3 text-center text-xs font-bold color-txt">
+                                Requesting a withdrawal will mean that you forfeit all bonus funds. 2FA is Mandatory for Withdrawals.<br/><br/>
+                                You must enable 2FA to withdraw
+                            </div>
+                        </div>
+                    </div>
+                    <div id="wallet-tab-3" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="wallet-3-tab">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

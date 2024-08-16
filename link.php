@@ -88,6 +88,21 @@ echo txtRecord('./@record/');
             </ul>
         </li>
 
+		<li class="mt20" data-label="Casino">
+            <ul>
+                <li>
+					<a href="./casino_index.html" target="_blank" class="">Casino - lobby</a>
+					<ul>
+						<li><button class="pop-modal" onclick="modalOpen('casino_search-modal')">Casino search (mobile) 모달</button></li>
+					</ul>
+				</li>
+                <li><a href="./casino_slots.html" target="_blank" class="">Casino - slots</a></li>
+                <li><a href="./casino_live.html" target="_blank" class="">Casino - Live casino</a></li>
+                <li><a href="./casino_game.html" target="_blank" class="">Casino - Game shows</a></li>
+                <li><a href="./casino_all.html" target="_blank" class="">Casino - All games</a></li>
+            </ul>
+        </li>
+
 
 	</ul>
 </div>

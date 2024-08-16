@@ -205,6 +205,20 @@ const coinChange = (item)=>{
     })
 }
 
+// search_box focus 될때
+const searchFocus = (item)=>{
+    $(item).parents('.search_box').addClass('open')
+}
+document.addEventListener('click',(e)=>{
+    const search = document.querySelectorAll('.search_box.open')
+
+    search.forEach((item)=>{
+        if(item && !item.contains(e.target)){
+            item.classList.remove('open')
+        }
+    })
+})
+
 
 
 // jquery 모음
@@ -266,7 +280,8 @@ const loadJquery = ()=>{
 
     // 카지노 스와이퍼
     $('.casinoSwiper').each(function(index){
-        $(this).addClass('num'+index);		
+        let idx = index + 100
+        $(this).addClass('num'+idx);		
         let xlpcItemPer = $(this).data('xl') ? $(this).data('xl') : 1,
             pcItemPer = $(this).data('lg') ? $(this).data('lg') : xlpcItemPer,
             taItemPer = $(this).data('md') ? $(this).data('md') : pcItemPer,
@@ -275,7 +290,7 @@ const loadJquery = ()=>{
             itemGroup = $(this).data('group') ?$(this).data('group') : 1,
             slideLoop = $(this).data('loop') == true ? true : false ;
         
-        var casinoswiper = new Swiper( '.casinoSwiper.num' + index + ' .swiper-container', {
+        var casinoswiper = new Swiper( '.casinoSwiper.num' + idx + ' .swiper-container', {
             spaceBetween: parseInt(itemGap),
             slidesPerView : moItemPer,
             slidesPerGroup : itemGroup,
@@ -293,11 +308,41 @@ const loadJquery = ()=>{
                 }
             },
             navigation: {
-                nextEl: '.casinoSwiper.num' + index + ' .next',
-                prevEl: '.casinoSwiper.num' + index + ' .prev'
+                nextEl: '.casinoSwiper.num' + idx + ' .next',
+                prevEl: '.casinoSwiper.num' + idx + ' .prev'
             },
 
         });
+    })
+
+    // custom_select 버튼 클릭
+    $('.custom_select > button').on('click',function(){
+        let Parents = $(this).parents('.custom_select');
+        if(Parents.hasClass('open')){
+            Parents.removeClass('open')
+        }else{
+            Parents.addClass('open')
+        }
+    });
+
+    // custom_select option 클릭
+    $('.custom_select > div li').on('click',function(){
+        let Parents = $(this).parents('.custom_select');
+        let text = $(this).find('p').html();
+
+        // option 닫기
+        Parents.removeClass('open')
+        Parents.find('> button p').html(text);
+    })
+    // custom_select 외의 영역 선택했을 시 닫기 
+    document.addEventListener('click',(e)=>{
+        const select = document.querySelectorAll('.custom_select.open')
+
+        select.forEach((item)=>{
+            if(item && !item.contains(e.target)){
+                item.classList.remove('open')
+            }
+        })
     })
 
 
