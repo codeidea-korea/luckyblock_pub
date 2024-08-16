@@ -44,5 +44,10 @@
 }
  
 @media all and (max-width:767px){
-   .vipClub_advantages > div {display:flex; flex-direction: row;}
+   .vipClub_advantages > div {display:flex; flex-direction:column; align-items:center;}
+   .vipClub_advantages > div > div {width:98%;}
+   .vipClub_advantages > div > div > div > img {left:0; width:130px;}
+   .vipClub_advantages > div > div > div > p {width:100%; margin-left: 160px;}
+   .vipClub_advantages > div > div  > p {width:100%; margin-top: 20px; margin-bottom: 30px;}
 }
+
