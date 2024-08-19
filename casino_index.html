@@ -76,9 +76,11 @@
                         <!-- search_box - pc -->
                         <div class="search_box md:block hidden my-8">
                             <div class="relative">
-                                <label for="search_" class="absolute p-3"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#search"></use></svg></label>
-                                <input type="text" class="form-control pl-10" id="search_" placeholder="Search" onfocus="searchFocus(this)">
-                                <button class="absolute right-0 p-3 opacity-0 color-txt"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#x"></use></svg></button>
+                                <form>
+                                    <label for="search_" class="absolute p-3"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#search"></use></svg></label>
+                                    <input type="text" class="form-control pl-10" id="search_" placeholder="Search" onfocus="searchFocus(this)">
+                                    <button type="button" class="absolute right-0 p-3 opacity-0 color-txt" onclick="searchReset(this)"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#x"></use></svg></button>
+                                </form>
                             </div>
                             <div class="search_result rounded-md">
                                 <!-- 검색결과 없을때 -->

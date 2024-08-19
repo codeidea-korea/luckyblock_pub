@@ -93,6 +93,7 @@ echo txtRecord('./@record/');
                 <li>
 					<a href="./casino_index.html" target="_blank" class="">Casino - lobby</a>
 					<ul>
+						<li><a href="./casino_detail.html" target="_blank" class="">Casino - detail</a></li>
 						<li><button class="pop-modal" onclick="modalOpen('casino_search-modal')">Casino search (mobile) 모달</button></li>
 					</ul>
 				</li>
@@ -103,14 +104,32 @@ echo txtRecord('./@record/');
             </ul>
         </li>
 
-		<li class="mt20" data-label="VIP">
+		<li class="mt20" data-label="Slots">
             <ul>
-				<li><a href="./vipClub.html" target="_blank" class="">VIP - VIP club</a></li>
-				<li><a href="./vfbStuttgart.html" target="_blank" class="">VIP - VfB Stuttgart</a></li>
-				<li><a href="./promotions.html" target="_blank" class="">VIP - Promotions</a></li>	
-				<li><a href="./loyalty.html" target="_blank" class="">VIP - Loyalty</a></li>	
+                <li><a href="./slots_index.html" target="_blank" class="">Slots - Discover</a></li>
+                <li><a href="./slots_new.html" target="_blank" class="">Slots - New Games</a></li>
+                <li><a href="./slots_crypto.html" target="_blank" class="">Slots - Crypto Games</a></li>
             </ul>
         </li>
+
+
+		<li class="mt20" data-label="Live Casino">
+		</li>
+
+		<li class="mt20" data-label="Sports">
+		</li>
+
+		<li class="mt20" data-label="Menu">
+            <ul>
+				<li><a href="./vipClub.html" target="_blank" class="">VIP club</a></li>
+				<li><a href="./vfbStuttgart.html" target="_blank" class="">VfB Stuttgart</a></li>
+				<li><a href="./promotions.html" target="_blank" class="">Promotions</a></li>	
+				<li><a href="./loyalty.html" target="_blank" class="">Loyalty</a></li>	
+            </ul>
+        </li>
+
+		<li class="mt20" data-label="Profile">
+		</li>
 
 
 	</ul>

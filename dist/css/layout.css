@@ -122,6 +122,8 @@ body {font-family: Poppins, Arial, Helvetica, 'sans-serif'; color:#fff; backgrou
         SEARCH_BOX
         CUSTOM_SELECT
 
+        CASINO_DETAIL
+
 
 */
 
@@ -174,6 +176,9 @@ body {font-family: Poppins, Arial, Helvetica, 'sans-serif'; color:#fff; backgrou
 /* 메뉴 active 효과 */
 body.casino button[data-cate="casino"] {background-color:var(--primary-color); }
 body.casino a[data-cate="casino"] {background-color:#101010; }
+
+body.slots button[data-cate="slots"] {background-color:var(--primary-color); }
+body.slots a[data-cate="slots"] {background-color:#101010; }
 
 /* --------------------------------------
     QUICK_MENU
@@ -438,3 +443,14 @@ body:not(.logout) .casinoSwiper .arrow.next {right:15px; }
 .custom_select.open {z-index:10; }
 .custom_select.open > button .arrow {transform:translateY(-50%) rotate(180deg); }
 .custom_select.open > div {display:block; }
+
+
+/* ----------------------------------------------
+            CASINO_DETAIL - 모바일에서 full 화면
+---------------------------------------------- */
+@media (max-width: 767px) {
+    body.casino_detail header ,
+    body.casino_detail footer ,
+    body.casino_detail .quick_menu {display:none; }
+    body.casino_detail .content_box {padding:0; }
+}

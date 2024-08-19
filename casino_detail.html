@@ -23,7 +23,7 @@
         <!-- END: CSS Assets-->
     </head>
     <!-- END: Head -->
-    <body class="casino">
+    <body class="slots casino_detail">
 
         <div id="initial-loader" class="initial-loader">
             <div class="initial-loader-logo-container"><img class="h-10" src="./dist/images/logo/logo.svg" alt=""></div>
@@ -43,144 +43,19 @@
                 <div class="content_box">
                     <div class="inner">
 
-                        <!-- 카지노 비주얼 -->
-                        <div class="mySwiper relative overflow-hidden" data-loop="false">
-                            <div class="swiper-container">
-                                <ul class="swiper-wrapper">
-                                    <li class="swiper-slide">
-                                        <img class="visual_img xl:block hidden" src="./dist/images/casino/casino_banner_1.avif" alt="">
-                                        <img class="visual_img block xl:hidden" src="./dist/images/casino/casino_banner_mo_1.avif" alt="">
-                                    </li>
-                                    <li class="swiper-slide">
-                                        <img class="visual_img xl:block hidden" src="./dist/images/casino/casino_banner_2.avif" alt="">
-                                        <img class="visual_img block xl:hidden" src="./dist/images/casino/casino_banner_mo_2.avif" alt="">
-                                    </li>
-                                    <li class="swiper-slide">
-                                        <img class="visual_img xl:block hidden" src="./dist/images/casino/casino_banner_3.avif" alt="">
-                                        <img class="visual_img block xl:hidden" src="./dist/images/casino/casino_banner_mo_3.avif" alt="">
-                                    </li>
-                                    <li class="swiper-slide">
-                                        <img class="visual_img xl:block hidden" src="./dist/images/casino/casino_banner_4.avif" alt="">
-                                        <img class="visual_img block xl:hidden" src="./dist/images/casino/casino_banner_mo_4.avif" alt="">
-                                    </li>
-                                    <li class="swiper-slide">
-                                        <img class="visual_img xl:block hidden" src="./dist/images/casino/casino_banner_5.avif" alt="">
-                                        <img class="visual_img block xl:hidden" src="./dist/images/casino/casino_banner_mo_5.avif" alt="">
-                                    </li>
-                                </ul>
-                                <div class="pagination z-10 absolute justify-center"></div>
+                        <!-- casino_detail -->
+                        <div class="flex items-start gap-6 md:py-5">
+                            <div class="flex-1 flex items-center justify-center min-h-dvh md:min-h-[550px] bg-black">
+                                <p>게임 들어가는 영역입니다</p>
+                            </div>
+                            <div class="w-6 md:block hidden">
+                                <button class="flex items-center justify-center w-6 h-6 border border-white rounded"><svg class="w-5 h-5 fill-white" aria-hidden="true" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg></button>
+                                <button class="flex items-center justify-center w-6 h-6 mt-2 border border-white rounded"><svg class="w-5 h-5 fill-white" aria-hidden="true" viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"></path></svg></button>
                             </div>
                         </div>
-
-
-                        <!-- search_box - pc -->
-                        <div class="search_box md:block hidden my-8">
-                            <div class="relative">
-                                <label for="search_" class="absolute p-3"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#search"></use></svg></label>
-                                <input type="text" class="form-control pl-10" id="search_" placeholder="Search" onfocus="searchFocus(this)">
-                                <button class="absolute right-0 p-3 opacity-0 color-txt"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#x"></use></svg></button>
-                            </div>
-                            <div class="search_result rounded-md">
-                                <!-- 검색결과 없을때 -->
-                                <!-- <div class="py-10 text-center">Search by Game and Provider</div> -->
-
-                                <!-- 검색결과 있을때 -->
-                                <div class="p-4">
-                                    <div class="flex items-center justify-between border-b border-zinc-400">
-                                        <h4 class="fs13">Search results</h4>
-                                        <p class="fs13">55 results</p>
-                                    </div>
-                                    <div class="mt-5">
-                                        <div class="mb-1 text-white font-bold">Games</div>
-                                        <ul class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-2">
-                                            <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_1.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
-                                            <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_2.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
-                                            <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_3.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
-                                            <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_4.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
-                                            <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_5.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
-                                            <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_6.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
-                                            <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_7.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
-                                            <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_8.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
-                                            <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_9.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
-                                            <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_10.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
-                                        </ul>
-                                        <div class="mt-2 text-center">
-                                            <button class="btn btn-gradient-primary text-base rounded-3xl">Load more</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- search_box - mo -->
-                        <div class="search_box block md:hidden my-8">
-                            <div class="relative cursor-pointer" onclick="modalOpen('casino_search-modal')">
-                                <form>
-                                    <label for="search_" class="absolute p-3"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#search"></use></svg></label>
-                                    <input type="text" class="form-control pl-10" id="search_" placeholder="Search" onfocus="searchFocus(this)">
-                                    <button type="button" class="absolute right-0 p-3 opacity-0 color-txt" onclick="searchReset(this)"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#x"></use></svg></button>
-                                </form>
-                            </div>
-                        </div>
-
-
-                        <!-- tab -->
-                        <div class="mySwiper overflow-hidden" data-per="auto" data-gap="0" data-loop="false">
-                            <div class="swiper-container">
-                                <ul class="swiper-wrapper nav nav-link-tabs transparent_type" role="tablist">
-                                    <li class="nav-item swiper-slide !w-auto" role="presentation">
-                                        <a href="./casino_index.html" class="nav-link flex items-center gap-1.5 text-base px-3 py-2"><svg class="svg-icon w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#brand-ico-discover-casino-home"></use></svg> Lobby </a> 
-                                    </li>
-                                    <li class="nav-item swiper-slide !w-auto" role="presentation">
-                                        <a href="./casino_slots.html" class="nav-link flex items-center gap-1.5 text-base px-3 py-2 active"><svg class="svg-icon w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#brand-ico-slots-white"></use></svg> Slots </a> 
-                                    </li>
-                                    <li class="nav-item swiper-slide !w-auto" role="presentation">
-                                        <a href="./casino_live.html" class="nav-link flex items-center gap-1.5 text-base px-3 py-2"><svg class="svg-icon w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#brand-ico-live-casino-home"></use></svg> Live Casino </a> 
-                                    </li>
-                                    <li class="nav-item swiper-slide !w-auto" role="presentation">
-                                        <a href="./casino_game.html" class="nav-link flex items-center gap-1.5 text-base px-3 py-2"><svg class="svg-icon w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#brand-ico-gameshows"></use></svg> Game Shows </a> 
-                                    </li>
-                                    <li class="nav-item swiper-slide !w-auto" role="presentation">
-                                        <a href="./casino_all.html" class="nav-link flex items-center gap-1.5 text-base px-3 py-2"><svg class="svg-icon w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#brand-ico-all-games-casino-home"></use></svg> All Games </a> 
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    
-                        <div class="my-10">
-                            <ul class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2">
-                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_1.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
-                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_2.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
-                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_3.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
-                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_4.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
-                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_5.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
-                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_6.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
-                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_7.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
-                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_8.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
-                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_9.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
-                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_10.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
-                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_11.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
-                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_1.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
-                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_2.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
-                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_3.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
-                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_4.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
-                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_5.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
-                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_6.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
-                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_7.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
-                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_8.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
-                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_9.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
-                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_10.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
-                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_11.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
-                            </ul>
-                            <div class="mt-2 text-center">
-                                <button class="btn btn-gradient-primary text-base rounded-3xl">Load more</button>
-                            </div>
-                        </div>
-                        
-
+                                              
                         <!-- winner -->
-                        <div class="my-10">
+                        <div class="my-10 md:block hidden">
                             <ul class="nav nav-link-tabs md:justify-start justify-center" role="tablist">
                                 <li id="winner-1-tab" class="nav-item" role="presentation"> 
                                     <button class="nav-link py-2 text-base active" data-tw-toggle="pill" data-tw-target="#winner-tab-1" type="button" role="tab" aria-controls="winner-tab-1" aria-selected="true"> All Bets </button> 
@@ -388,7 +263,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
 

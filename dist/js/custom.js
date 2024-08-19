@@ -219,6 +219,11 @@ document.addEventListener('click',(e)=>{
     })
 })
 
+// search_box x 클릭시 reset
+const searchReset = (item)=>{
+    $(item).parent('form')[0].reset();
+}
+
 
 
 // jquery 모음
