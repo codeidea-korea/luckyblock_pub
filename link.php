@@ -103,6 +103,15 @@ echo txtRecord('./@record/');
             </ul>
         </li>
 
+		<li class="mt20" data-label="VIP">
+            <ul>
+				<li><a href="./vipClub.html" target="_blank" class="">VIP - VIP club</a></li>
+				<li><a href="./vfbStuttgart.html" target="_blank" class="">VIP - VfB Stuttgart</a></li>
+				<li><a href="./promotions.html" target="_blank" class="">VIP - Promotions</a></li>	
+				<li><a href="./loyalty.html" target="_blank" class="">VIP - Loyalty</a></li>	
+            </ul>
+        </li>
+
 
 	</ul>
 </div>
