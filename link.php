@@ -123,8 +123,14 @@ echo txtRecord('./@record/');
             <ul>
 				<li><a href="./vipClub.html" target="_blank" class="">VIP club</a></li>
 				<li><a href="./vfbStuttgart.html" target="_blank" class="">VfB Stuttgart</a></li>
-				<li><a href="./promotions.html" target="_blank" class="">Promotions</a></li>	
+				<li><a href="./promotions.html" target="_blank" class="">Promotions</a>
+					<ul>
+						<li><a href="./promotions_detail.html" target="_blank" class="">Promotions - detail</a></li>
+					</ul>
+				</li>
 				<li><a href="./loyalty.html" target="_blank" class="">Loyalty</a></li>	
+				<li><a href="./telegram_casino.html" target="_blank" class="">Telegram Casino</a></li>	
+				<li><a href="./buy_crypto.html" target="_blank" class="">Buy Crypto</a></li>	
             </ul>
         </li>
 
