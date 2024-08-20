@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+    <!-- BEGIN: Head -->
+    <head>
+        <meta charset="utf-8">
+        <link href="dist/images/logo.svg" rel="shortcut icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Midone admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
+        <meta name="keywords" content="admin template, Midone Admin Template, dashboard template, flat admin template, responsive admin template, web app">
+
+        <title>Bitcoin Casino - €25,000 Bonus at Lucky Block Crypto Casino</title>
+        <link rel="icon" type="image/png" sizes="16x16" href="./dist/images/logo/favicon.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <!-- BEGIN: CSS Assets-->
+        <link rel="stylesheet" href="./dist/css/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./dist/css/app.css" />
+        <link rel="stylesheet" href="./dist/css/layout.css" />
+        <link rel="stylesheet" href="./dist/css/custom.css" />
+        <!-- END: CSS Assets-->
+    </head>
+    <!-- END: Head -->
+    <body class="live">
+
+        <div id="initial-loader" class="initial-loader">
+            <div class="initial-loader-logo-container"><img class="h-10" src="./dist/images/logo/logo.svg" alt=""></div>
+            <div class="initial-progress-bar-container"><div class="initial-progress-bar"></div></div>
+        </div>
+        
+
+        <div id="wrap" class="flex">
+            <!-- BEGIN: Side Menu -->
+            
+            <!-- END: Side Menu -->
+            <!-- BEGIN: Content -->
+            <div class="content">
+                <!-- BEGIN: Header -->
+                <!-- END: Header -->
+                
+                <div class="content_box">
+                    <div class="inner">
+
+                        <!-- 카지노 비주얼 -->
+                        <div class="mySwiper relative overflow-hidden" data-loop="false">
+                            <div class="swiper-container">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide">
+                                        <img class="visual_img xl:block hidden" src="./dist/images/casino/casino_banner_1.avif" alt="">
+                                        <img class="visual_img block xl:hidden" src="./dist/images/casino/casino_banner_mo_1.avif" alt="">
+                                    </li>
+                                </ul>
+                                <div class="pagination z-10 absolute justify-center"></div>
+                            </div>
+                        </div>
+
+
+                        <!-- search_box - pc -->
+                        <div class="search_box md:block hidden my-8">
+                            <div class="relative">
+                                <form>
+                                    <label for="search_" class="absolute p-3"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#search"></use></svg></label>
+                                    <input type="text" class="form-control pl-10" id="search_" placeholder="Search" onfocus="searchFocus(this)">
+                                    <button type="button" class="absolute right-0 p-3 opacity-0 color-txt" onclick="searchReset(this)"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#x"></use></svg></button>
+                                </form>
+                            </div>
+                            <div class="search_result rounded-md">
+                                <!-- 검색결과 없을때 -->
+                                <!-- <div class="py-10 text-center">Search by Game and Provider</div> -->
+
+                                <!-- 검색결과 있을때 -->
+                                <div class="p-4">
+                                    <div class="flex items-center justify-between border-b border-zinc-400">
+                                        <h4 class="fs13">Search results</h4>
+                                        <p class="fs13">55 results</p>
+                                    </div>
+                                    <div class="mt-5">
+                                        <div class="mb-1 text-white font-bold">Games</div>
+                                        <ul class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-2">
+                                            <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_1.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                            <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_2.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                            <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_3.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                            <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_4.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                            <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_5.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                            <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_6.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                            <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_7.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                            <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_8.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                            <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_9.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                            <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_10.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                        </ul>
+                                        <div class="mt-2 text-center">
+                                            <button class="btn btn-gradient-primary text-base rounded-3xl">Load more</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- search_box - mo -->
+                        <div class="search_box block md:hidden my-8">
+                            <div class="relative cursor-pointer" onclick="modalOpen('casino_search-modal')">
+                                <label for="search_" class="absolute p-3"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#search"></use></svg></label>
+                                <input type="text" class="form-control pl-10" id="search_" placeholder="Search" onfocus="searchFocus(this)">
+                                <button class="absolute right-0 p-3 opacity-0 color-txt"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#x"></use></svg></button>
+                            </div>
+                        </div>
+
+
+                        <!-- tab -->
+                        <div class="mySwiper overflow-hidden" data-per="auto" data-gap="0" data-loop="false">
+                            <div class="swiper-container">
+                                <ul class="swiper-wrapper nav nav-link-tabs transparent_type" role="tablist">
+                                    <li class="nav-item swiper-slide !w-auto" role="presentation">
+                                        <a href="./live_index.html" class="nav-link flex items-center gap-1.5 text-base px-3 py-2"><svg class="svg-icon w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#brand-ico-live-casino-home"></use></svg> Live Casino </a> 
+                                    </li>
+                                    <li class="nav-item swiper-slide !w-auto" role="presentation">
+                                        <a href="./live_blackjack.html" class="nav-link flex items-center gap-1.5 text-base px-3 py-2"><svg class="svg-icon w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#brand-ico-blackjack-white"></use></svg> Blackjack </a> 
+                                    </li>
+                                    <li class="nav-item swiper-slide !w-auto" role="presentation">
+                                        <a href="./live_roulette.html" class="nav-link flex items-center gap-1.5 text-base px-3 py-2 active"><svg class="svg-icon w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#brand-ico-roulette-white"></use></svg> Roulette </a> 
+                                    </li>
+                                    <li class="nav-item swiper-slide !w-auto" role="presentation">
+                                        <a href="./live_show.html" class="nav-link flex items-center gap-1.5 text-base px-3 py-2"><svg class="svg-icon w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#brand-ico-gameshows"></use></svg> Game Shows </a> 
+                                    </li>
+                                    <li class="nav-item swiper-slide !w-auto" role="presentation">
+                                        <a href="./live_baccarat.html" class="nav-link flex items-center gap-1.5 text-base px-3 py-2"><svg class="svg-icon w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#brand-ico-baccarat"></use></svg> Baccarat </a> 
+                                    </li>
+                                    <li class="nav-item swiper-slide !w-auto" role="presentation">
+                                        <a href="./live_poker.html" class="nav-link flex items-center gap-1.5 text-base px-3 py-2"><svg class="svg-icon w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#brand-ico-poker"></use></svg> Poker </a> 
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <div class="my-10">
+                            <ul class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5 gap-2">
+                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_2.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_3.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_8.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_7.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_8.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_9.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_10.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_11.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_1.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_10.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_11.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_9.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_1.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_2.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_3.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_4.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_5.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_6.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_7.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_4.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_5.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                                <li class="casino_item hover_casino"><a href="javascript:;"><img src="./dist/images/casino/casino_6.webp" alt=""><div class="hover_box"><p class="truncate-2">CHAOS CREW</p><i><svg class="svg-icon color-gray2"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></i><p></p></div></a></li>
+                            </ul>
+                            <div class="mt-2 text-center">
+                                <button class="btn btn-gradient-primary text-base rounded-3xl">Load more</button>
+                            </div>
+                        </div>
+
+                        <!-- Live Casino -->
+                        <div class="my-10">
+                            <div id="bitcoin_casino" class="accordion">
+                                <div class="accordion-item">
+                                    <div id="bitcoin_casino-content-1" class="accordion-header">
+                                        <button class="accordion-button collapsed flex items-center justify-between text-lg" type="button" data-tw-toggle="collapse" data-tw-target="#bitcoin_casino-collapse-1" aria-expanded="false" aria-controls="bitcoin_casino-collapse-1">
+                                            Live Casino
+                                            <svg class="svg-icon w-4 h-4 arrow"><use xlink:href="./dist/images/icon-defs.svg#arrow_down"></use></svg>
+                                        </button>
+                                    </div>
+                                    <div id="bitcoin_casino-collapse-1" class="accordion-collapse collapse" aria-labelledby="bitcoin_casino-content-2" >
+                                        <div class="accordion-body text-white leading-relaxed">
+                                            <div class="typography_box">
+                                                <h2><span data-color="transparent">Lucky Block’s history as a Bitcoin Casino</span></h2>
+                                                <p><span data-color="transparent">Lucky Block was founded in early 2022 as a global blockchain-based lottery with our native LBLOCK tokens. After becoming one of the world’s largest and widely respected crypto lottery sites, we expanded our offerings to include a crypto casino and sportsbook.&nbsp;</span></p>
+                                                <p><span data-color="transparent">Since then, we’ve gone on to become a leading Bitcoin online casino with our customer-first approach. We’re fully licensed and work hard to maintain a secure and fair gaming environment for our players, with Blockonomi dubbing Lucky Block “a premier iGaming destination that crypto holders can trust completely.”&nbsp;</span></p>
+                                                <h2><span data-color="transparent">An Exceptional Selection of Crypto Casino Games</span></h2>
+                                                <h3><span data-color="transparent">Slots</span></h3>
+                                                <ul>
+                                                    <li><span data-color="transparent">3-reel and 5-reel video <a href="https://www.luckyblock.com/slots" aria-invalid="true">slots</a> with unique variations.</span></li>
+                                                    <li><span data-color="transparent">Variety of themes and high RTP (Return to Player) rates.</span></li>
+                                                    <li><span data-color="transparent">Megaways, Bonus Buys, Jackpot Slots, and Drop variations offer the potential for huge prizes.</span></li>
+                                                    <li><span data-color="transparent">Wide range of titles from industry-leading developers like Evolution Gaming, Hacksaw Gaming, and Pragmatic Play.</span></li>
+                                                </ul>
+                                                <h3><span data-color="transparent">Live Dealer</span></h3>
+                                                <ul>
+                                                    <li><span data-color="transparent">Real-time gaming with professional dealers.</span></li>
+                                                    <li><span data-color="transparent">Experience the thrill of the casino floor at home.</span></li>
+                                                    <li><span data-color="transparent">Classic table games like <a href="https://www.luckyblock.com/blackjack" aria-invalid="true">blackjack</a>, <a href="https://www.luckyblock.com/roulette" aria-invalid="true">roulette</a>, and <a href="https://www.luckyblock.com/baccarat" aria-invalid="true">baccarat</a>, alongside exciting variations of <a href="https://www.luckyblock.com/live-casino">Bitcoin live casino</a> games.</span></li>
+                                                    <li><span data-color="transparent">Transparent gameplay for fairness and thrill in every round.</span></li>
+                                                </ul>
+                                                <h3><span data-color="transparent">Table Games</span></h3>
+                                                <ul>
+                                                    <li><span data-color="transparent">Variety of classic table games, from card games like blackjack and poker to dice games like craps and baccarat.</span></li>
+                                                    <li><span data-color="transparent">Variations provide endless entertainment and fresh challenges, even for experienced players.</span></li>
+                                                    <li><span data-color="transparent">Chance to hone strategic gameplay with high winning potential</span></li>
+                                                </ul>
+                                                <h3><span data-color="transparent">Sportsbook</span></h3>
+                                                <ul>
+                                                    <li><span data-color="transparent">Wide range of <a href="https://www.luckyblock.com/sports" aria-invalid="true">live sports betting</a>, from soccer and tennis to basketball, ice hockey, and even esports.</span></li>
+                                                    <li><span data-color="transparent">Highly competitive odds.</span></li>
+                                                    <li><span data-color="transparent">Live betting keeps the excitement going.</span></li>
+                                                    <li><span data-color="transparent">Unique rapid betting feature offers a slots-style sports betting experience, perfect for quick wagers.</span></li>
+                                                </ul>
+                                                <h3><span data-color="transparent">Special Games</span></h3>
+                                                <ul>
+                                                    <li><span data-color="transparent">Experience games with innovative gameplay mechanics.</span></li>
+                                                    <li><span data-color="transparent">Includes games like Sic Bo, a modern twist on the classic Chinese dice game, and live game shows with interactive hosts.</span></li>
+                                                    <li><span data-color="transparent">Constantly updated selection to keep the gaming experience fresh.</span></li>
+                                                </ul>
+                                                <h2><span data-color="transparent">Promotions and bonuses&nbsp;</span></h2>
+                                                <ul>
+                                                    <li><span data-color="transparent"><strong>Welcome Bonus &amp; Free Spins:</strong> New players get a <a href="https://www.luckyblock.com/promotions/welcome-offer-200" aria-invalid="true">200% crypto casino bonus</a> up to €25,000 + 50 free spins on Wanted Dead or a Wild.</span></li>
+                                                    <li><span data-color="transparent"><strong>Drops &amp; Wins:</strong> Daily prizes in specific games, like a €2,000,000 prize pot with <a href="https://www.luckyblock.com/promotions" aria-invalid="true">10,000 daily prizes totaling €70,000</a>.</span></li>
+                                                    <li><span data-color="transparent"><strong>Game of the Week:</strong> Complete missions to earn free spins on selected games, with hundreds of free and super spins up for grabs for each player.</span></li>
+                                                    <li><span data-color="transparent"><strong>Seasonal Offers:</strong> Enjoy regular seasonal offers with reload bonuses, free spins, prize pools, and more.</span></li>
+                                                    <li><span data-color="transparent"><strong>Loyalty Program:</strong> Generous loyalty program offering a rakeback of up to €40 in cash, with points collected offering Wheel Spins and a shot at free Super and Mega Spins.</span></li>
+                                                    <li><span data-color="transparent"><strong>VIP Program:</strong> Secure a weekly cashback of up to 20%, a dedicated VIP manager, and exclusive entry to Highroller tournaments.</span></li>
+                                                </ul>
+                                                <h1><span data-color="transparent">Play your favorite games with Crypto &amp; Bitcoin</span></h1>
+                                                <p><span data-color="transparent">Lucky Block crypto casino offers a Bitcoin casino exclusive—licensed Novomatic titles—but these aren’t the only thrilling premium games you’ll find. Besides our partnerships with Push Gaming and Microgaming, we offer games from providers like:</span></p>
+                                                <ul>
+                                                    <li><span data-color="transparent">Evolution Gaming</span></li>
+                                                    <li><span data-color="transparent">NetEnt</span></li>
+                                                    <li><span data-color="transparent">Play’n Go</span></li>
+                                                    <li><span data-color="transparent">Pragmatic Play</span></li>
+                                                    <li><span data-color="transparent">Red Tiger Gaming</span></li>
+                                                    <li><span data-color="transparent">ELK</span></li>
+                                                    <li><span data-color="transparent">Big Time Gaming</span></li>
+                                                    <li><span data-color="transparent">Betsoft</span></li>
+                                                    <li><span data-color="transparent">Blueprint Gaming</span></li>
+                                                    <li><span data-color="transparent">Hacksaw Gaming</span></li>
+                                                </ul>
+                                                <h2><span data-color="transparent">Advantages of Playing on Bitcoin Casinos</span></h2>
+                                                <h3><span data-color="transparent">Customer Service</span></h3>
+                                                <ul>
+                                                    <li><span data-color="transparent">24/7 customer support with friendly agents always available to assist.</span></li>
+                                                    <li><span data-color="transparent">Quick response times solve queries and problems quickly</span></li>
+                                                    <li><span data-color="transparent">Highly knowledgeable staff dedicated to providing expert assistance.</span></li>
+                                                </ul>
+                                                <h3><span data-color="transparent">Fast Transactions</span></h3>
+                                                <ul>
+                                                    <li><span data-color="transparent">Typical payout time of 5 minutes lets you enjoy your winnings almost instantly</span></li>
+                                                    <li><span data-color="transparent">Minimum deposits as low as $2 make playing accessible for everyone.</span></li>
+                                                    <li><span data-color="transparent">Keep more of your money with no extra charges beyond standard blockchain fees.</span></li>
+                                                </ul>
+                                                <h3><span data-color="transparent">Exclusive Games</span></h3>
+                                                <ul>
+                                                    <li><span data-color="transparent">Unique titles not found in regular online casinos.</span></li>
+                                                    <li><span data-color="transparent">The only Bitcoin casino where you can enjoy exclusive Novomatic casino games.</span></li>
+                                                </ul>
+                                                <h3><span data-color="transparent">Safety &amp; Anonymity</span></h3>
+                                                <ul>
+                                                    <li><span data-color="transparent">Crypto transactions provide complete discretion and protect your privacy.</span></li>
+                                                    <li><span data-color="transparent">Industry-leading encryption and security measures mean your data and funds are always safe.</span></li>
+                                                </ul>
+                                                <h3><span data-color="transparent">Is Lucky Block safe and legal?</span></h3>
+                                                <p><span data-color="transparent">Yes, Lucky Block is fully licensed and regulated by the Curaçao Gaming Control Board and is highly regarded for its secure, transparent, and fair gaming environment. We pride ourselves on employing industry-leading security measures to protect our players and have earned a reputation as one of the most trustworthy crypto casinos.&nbsp;</span></p>
+                                                <h2><span data-color="transparent">Join the best crypto casino today!&nbsp;</span></h2>
+                                                <p><span data-color="transparent">Ready to jump into the excitement with Lucky Block’s BTC casino? It’s incredibly easy to get started: just sign up, deposit, secure your welcome bonuses, and immerse yourself in a world of non-stop thrills. Come and see why they call Lucky Block the best Bitcoin casino in Web3 by joining the fun today!</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+                <!-- BEGIN: Footer -->
+                <!-- END: Footer -->
+            </div>
+            <!-- END: Content -->
+        </div>
+        
+        <!-- BEGIN: JS Assets-->
+        <script src="./dist/js/app.js"></script>
+        <script src="./dist/js/jquery-1.12.4.js"></script>
+        <script src="./dist/js/jquery-ui.js"></script>
+        <script src="./dist/js/swiper-bundle.min.js"></script>
+        <script src="./dist/js/custom.js"></script>
+        <!-- END: JS Assets-->
+    </body>
+</html>

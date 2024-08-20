@@ -380,12 +380,12 @@
                         <button class="nav-link w-full py-2 text-base" data-tw-toggle="pill" data-tw-target="#wallet-tab-3" type="button" role="tab" aria-controls="wallet-tab-3" aria-selected="false"> Buy Crypto </button> 
                     </li>
                 </ul>
-                <div class="tab-content mt-5 md:h-[55vh]">
+                <div class="tab-content mt-5 md:h-[55vh] px-5">
                     <div id="wallet-tab-1" class="tab-pane leading-relaxed pb-5 active" role="tabpanel" aria-labelledby="wallet-1-tab">
                         <div class="mb-5">
                             <button class="flex items-center gap-2 my-2 py-2 px-3 mx-auto border border-secondary border-opacity-60 color-softP text-base font-extrabold rounded-3xl">
                                 <svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#connect-wallet"></use></svg>
-                                Connect Wallet
+                                Use WalletConnect
                             </button>
                             <div class="flex items-center justify-center gap-2 mt-4">
                                 <div class="custom_select">
@@ -555,57 +555,225 @@
                             <img class="w-32 shrink-0" src="./dist/images/icon/wallet_qr.png" alt="">
                         </div>
                     </div>
-                    <div id="wallet-tab-2" class="tab-pane leading-relaxed pb-5" role="tabpanel" aria-labelledby="wallet-2-tab">
-                        <div class="text-center">
-                            <div class="flex items-center justify-center gap-2">
-                                <div class="custom_select">
-                                    <button class="w-32 p-2 pr-6 font-medium bg-provider rounded-lg">
+                    <div id="wallet-tab-2" class="tab-pane leading-relaxed pb-0" role="tabpanel" aria-labelledby="wallet-2-tab">
+                        <div class="relative overflow-hidden pb-5">
+                            <div class="text-center">
+                                <div class="flex items-center justify-center gap-2">
+                                    <button class="flex items-center gap-2 p-2 pr-4 font-medium bg-provider rounded-md cursor-pointer" onclick="selectCryptoToggle()">
                                         <p class="flex items-center gap-1 font-base font-bold">
-                                            <b class="name">USDC</b>
+                                            <b class="cryptoCash">0.0000000000000</b>
+                                            <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 cryptoCoinImg"><use href="./dist/images/icon-defs.svg#currency-ico-btc"></use></svg>
                                         </p>
                                         <span class="arrow"><svg viewBox="0 0 16 16" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#arrow_down"></use></svg></span>
                                     </button>
-                                    <div class="!w-60">
-                                        <ul>
-                                            <li><p class="hidden">USDC</p>USDC-Ethereum (ERC20)</li>
-                                            <li><p class="hidden">USDC-POLY</p>USDC-POLY-Polygon</li>
-                                            <li><p class="hidden">USDC-BSC</p>USDC-BSC-BNB Smart</li>
-                                        </ul>
+                                    <div class="custom_select">
+                                        <button class="w-32 p-2 pr-6 font-medium bg-provider rounded-lg">
+                                            <p class="flex items-center gap-1 font-base font-bold">
+                                                <b class="name">USDC</b>
+                                            </p>
+                                            <span class="arrow"><svg viewBox="0 0 16 16" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#arrow_down"></use></svg></span>
+                                        </button>
+                                        <div class="!w-60">
+                                            <ul>
+                                                <li><p class="hidden">USDC</p>USDC-Ethereum (ERC20)</li>
+                                                <li><p class="hidden">USDC-POLY</p>USDC-POLY-Polygon</li>
+                                                <li><p class="hidden">USDC-BSC</p>USDC-BSC-BNB Smart</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
+                                <p class="mt-2 text-xs color-txt">Min. Withdraw 0.01ETH</p>
                             </div>
-                            <p class="mt-2 text-xs color-txt">Min. Withdraw 0.01ETH</p>
-                        </div>
-                        <div class="w-[320px] max-w-full mx-auto">
-                            <div class="input_wrap mb-4">
-                                <label for="address" class="block py-1 px-2 font-bold">BTC Address</label>
-                                <input type="text" id="address" class="form-control error" placeholder="Enter your address">
-                                <p class="text-danger py-1 px-2">currency address required</p>
-                            </div>
-                            <div class="input_wrap mb-4">
-                                <div class="flex items-center justify-between">
-                                    <label for="amount" class="block py-1 px-2 font-bold">Amount</label>
-                                    <b>$0.00</b>
+                            <div class="w-[320px] max-w-full mx-auto">
+                                <div class="input_wrap mb-4">
+                                    <label for="address" class="block py-1 px-2 font-bold">BTC Address</label>
+                                    <input type="text" id="address" class="form-control error" placeholder="Enter your address">
+                                    <p class="text-danger py-1 px-2">currency address required</p>
                                 </div>
-                                <div class="relative">
-                                    <input type="text" id="amount" class="form-control pr-28" placeholder="Amount">
-                                    <div class="absolute right-0 top-0 flex items-center gap-2">
-                                        <svg viewBox="0 0 16 16" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-usdc"></use></svg>
-                                        <button class="h-10 px-4 bg-option rounded-3xl font-bold">MAX</button>
+                                <div class="input_wrap mb-4">
+                                    <div class="flex items-center justify-between">
+                                        <label for="amount" class="block py-1 px-2 font-bold">Amount</label>
+                                        <b>$0.00</b>
+                                    </div>
+                                    <div class="relative">
+                                        <input type="text" id="amount" class="form-control pr-28" placeholder="Amount">
+                                        <div class="absolute right-0 top-0 flex items-center gap-2">
+                                            <svg viewBox="0 0 16 16" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-usdc"></use></svg>
+                                            <button class="h-10 px-4 bg-option rounded-3xl font-bold">MAX</button>
+                                        </div>
+                                    </div>
+                                    <p class="py-1 px-2">currency address required</p>
+                                </div>
+                                <button class="btn btn-gradient-primary w-full text-base rounded-3xl">Activate 2FA</button>
+                                <button class="btn btn-gradient-primary w-full mt-2 text-base rounded-3xl" disabled>Withdraw</button>
+                                <div class="mt-3 text-center text-xs font-bold color-txt">
+                                    Requesting a withdrawal will mean that you forfeit all bonus funds. 2FA is Mandatory for Withdrawals.<br/><br/>
+                                    You must enable 2FA to withdraw
+                                </div>
+                            </div>
+                            <div class="absolute left-0 select_crypto p-4 rounded-lg flex flex-col">
+                                <button class="flex items-center gap-2 pb-2 font-extrabold" onclick="selectCryptoToggle()"><svg viewBox="0 0 16 16" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#arrow_down"></use></svg>Back</button>
+                                <div class="pb-4 text-center font-extrabold">Select Crypto</div>
+                                <div class="flex-1 overflow-y-auto coin_list grid grid-cols-2 gap-x-2 gap-y-1 pb-2">
+                                    <button class="flex items-center justify-between p-2 bg-provider rounded" onclick="cryptoChange(this)">
+                                        <p class="text-base color-txt font-medium coin">0.00000000</p>
+                                        <p class="flex items-center gap-1">
+                                            <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-flok"></use></svg>
+                                            <b class="name">FLOK</b>
+                                        </p>
+                                    </button>
+                                    <button class="flex items-center justify-between p-2 bg-provider rounded" onclick="cryptoChange(this)">
+                                        <p class="text-base color-txt font-medium coin">0.00000001</p>
+                                        <p class="flex items-center gap-1">
+                                            <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-ton"></use></svg>
+                                            <b class="name">TON</b>
+                                        </p>
+                                    </button>
+                                    <button class="flex items-center justify-between p-2 bg-provider rounded" onclick="cryptoChange(this)">
+                                        <p class="text-base color-txt font-medium coin">0.00000002</p>
+                                        <p class="flex items-center gap-1">
+                                            <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-mtic"></use></svg>
+                                            <b class="name">MATIC</b>
+                                        </p>
+                                    </button>
+                                    <button class="flex items-center justify-between p-2 bg-provider rounded" onclick="cryptoChange(this)">
+                                        <p class="text-base color-txt font-medium coin">0.00000003</p>
+                                        <p class="flex items-center gap-1">
+                                            <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-bonk"></use></svg>
+                                            <b class="name">BONK</b>
+                                        </p>
+                                    </button>
+                                    <button class="flex items-center justify-between p-2 bg-provider rounded" onclick="cryptoChange(this)">
+                                        <p class="text-base color-txt font-medium coin">0.00000004</p>
+                                        <p class="flex items-center gap-1">
+                                            <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-bch"></use></svg>
+                                            <b class="name">BCH</b>
+                                        </p>
+                                    </button>
+                                    <button class="flex items-center justify-between p-2 bg-provider rounded" onclick="cryptoChange(this)">
+                                        <p class="text-base color-txt font-medium coin">0.00000005</p>
+                                        <p class="flex items-center gap-1">
+                                            <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-xrp"></use></svg>
+                                            <b class="name">XRP</b>
+                                        </p>
+                                    </button>
+                                    <button class="flex items-center justify-between p-2 bg-provider rounded" onclick="cryptoChange(this)">
+                                        <p class="text-base color-txt font-medium coin">0.00000006</p>
+                                        <p class="flex items-center gap-1">
+                                            <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-tama"></use></svg>
+                                            <b class="name">TAMA</b>
+                                        </p>
+                                    </button>
+                                    <button class="flex items-center justify-between p-2 bg-provider rounded" onclick="cryptoChange(this)">
+                                        <p class="text-base color-txt font-medium coin">0.00000007</p>
+                                        <p class="flex items-center gap-1">
+                                            <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-bnb"></use></svg>
+                                            <b class="name">BNB</b>
+                                        </p>
+                                    </button>
+                                    <button class="flex items-center justify-between p-2 bg-provider rounded" onclick="cryptoChange(this)">
+                                        <p class="text-base color-txt font-medium coin">0.00000008</p>
+                                        <p class="flex items-center gap-1">
+                                            <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-shib"></use></svg>
+                                            <b class="name">SHIB</b>
+                                        </p>
+                                    </button>
+                                    <button class="flex items-center justify-between p-2 bg-provider rounded" onclick="cryptoChange(this)">
+                                        <p class="text-base color-txt font-medium coin">0.00000009</p>
+                                        <p class="flex items-center gap-1">
+                                            <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-eth"></use></svg>
+                                            <b class="name">ETH</b>
+                                        </p>
+                                    </button>
+                                    <button class="flex items-center justify-between p-2 bg-provider rounded" onclick="cryptoChange(this)">
+                                        <p class="text-base color-txt font-medium coin">0.00000010</p>
+                                        <p class="flex items-center gap-1">
+                                            <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-doge"></use></svg>
+                                            <b class="name">DOGE</b>
+                                        </p>
+                                    </button>
+                                    <button class="flex items-center justify-between p-2 bg-provider rounded" onclick="cryptoChange(this)">
+                                        <p class="text-base color-txt font-medium coin">0.00000011</p>
+                                        <p class="flex items-center gap-1">
+                                            <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-ltc"></use></svg>
+                                            <b class="name">LTC</b>
+                                        </p>
+                                    </button>
+                                    <button class="flex items-center justify-between p-2 bg-provider rounded" onclick="cryptoChange(this)">
+                                        <p class="text-base color-txt font-medium coin">0.00000012</p>
+                                        <p class="flex items-center gap-1">
+                                            <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-usdt"></use></svg>
+                                            <b class="name">USDT</b>
+                                        </p>
+                                    </button>
+                                    <button class="flex items-center justify-between p-2 bg-provider rounded" onclick="cryptoChange(this)">
+                                        <p class="text-base color-txt font-medium coin">0.00000013</p>
+                                        <p class="flex items-center gap-1">
+                                            <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-usdc"></use></svg>
+                                            <b class="name">USDC</b>
+                                        </p>
+                                    </button>
+                                    <button class="flex items-center justify-between p-2 bg-provider rounded" onclick="cryptoChange(this)">
+                                        <p class="text-base color-txt font-medium coin">0.00000014</p>
+                                        <p class="flex items-center gap-1">
+                                            <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-pepe"></use></svg>
+                                            <b class="name">PEPE</b>
+                                        </p>
+                                    </button>
+                                    <button class="flex items-center justify-between p-2 bg-provider rounded" onclick="cryptoChange(this)">
+                                        <p class="text-base color-txt font-medium coin">0.00000015</p>
+                                        <p class="flex items-center gap-1">
+                                            <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-trx"></use></svg>
+                                            <b class="name">TRX</b>
+                                        </p>
+                                    </button>
+                                    <button class="flex items-center justify-between p-2 bg-provider active rounded" onclick="cryptoChange(this)">
+                                        <p class="text-base color-txt font-medium coin">0.00000016</p>
+                                        <p class="flex items-center gap-1">
+                                            <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-btc"></use></svg>
+                                            <b class="name">BTC</b>
+                                        </p>
+                                    </button>
+                                    <button class="flex items-center justify-between p-2 bg-provider rounded" onclick="cryptoChange(this)">
+                                        <p class="text-base color-txt font-medium coin">0.00000017</p>
+                                        <p class="flex items-center gap-1">
+                                            <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-lblock"></use></svg>
+                                            <b class="name">LBLOCK</b>
+                                        </p>
+                                    </button>
+                                    <button class="flex items-center justify-between p-2 bg-provider rounded" onclick="cryptoChange(this)">
+                                        <p class="text-base color-txt font-medium coin">0.00000018</p>
+                                        <p class="flex items-center gap-1">
+                                            <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-sol"></use></svg>
+                                            <b class="name">SOL</b>
+                                        </p>
+                                    </button>
+                                    <button class="flex items-center justify-between p-2 bg-provider rounded" onclick="cryptoChange(this)">
+                                        <p class="text-base color-txt font-medium coin">0.00000019</p>
+                                        <p class="flex items-center gap-1">
+                                            <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-ada"></use></svg>
+                                            <b class="name">ADA</b>
+                                        </p>
+                                    </button>
+                                    <button class="flex items-center justify-between p-2 bg-provider rounded" onclick="cryptoChange(this)">
+                                        <p class="text-base color-txt font-medium coin">0.00000020</p>
+                                        <p class="flex items-center gap-1">
+                                            <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-avax"></use></svg>
+                                            <b class="name">AVAX</b>
+                                        </p>
+                                    </button>
+                                </div>
+                                <div class="p-4 bg-provider">
+                                    <div class="form-check form-switch justify-end"> 
+                                        <label class="form-check-label mr-3 font-bold" for="display_in_fiat">Display in Fiat</label> 
+                                        <input id="display_in_fiat" class="form-check-input" type="checkbox"> 
                                     </div>
                                 </div>
-                                <p class="py-1 px-2">currency address required</p>
-                            </div>
-                            <button class="btn btn-gradient-primary w-full text-base rounded-3xl">Activate 2FA</button>
-                            <button class="btn btn-gradient-primary w-full mt-2 text-base rounded-3xl" disabled>Withdraw</button>
-                            <div class="mt-3 text-center text-xs font-bold color-txt">
-                                Requesting a withdrawal will mean that you forfeit all bonus funds. 2FA is Mandatory for Withdrawals.<br/><br/>
-                                You must enable 2FA to withdraw
                             </div>
                         </div>
                     </div>
                     <div id="wallet-tab-3" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="wallet-3-tab">
-
+                        <div class="py-10 text-center bg-provider">iframe 영역 들어가는 곳</div>
                     </div>
                 </div>
 

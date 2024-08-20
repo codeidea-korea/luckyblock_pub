@@ -224,6 +224,31 @@ const searchReset = (item)=>{
     $(item).parent('form')[0].reset();
 }
 
+// wallet 모달 
+const selectCryptoToggle = ()=>{
+    $('.select_crypto').toggleClass('open')
+}
+const cryptoChange = (item)=>{
+    $(item).addClass('active').siblings().removeClass('active');
+
+    let coinName = $(item).find('.name').text();
+    let coinSvg = $(item).find('svg use').attr('href').split('#')[1];
+    let coin = $(item).find('.coin').text();
+    // currentCash, currentCoinImg, currentCoinName
+
+    $('.cryptoCash').each(function(){
+        $(this).text(coin)
+    })
+    $('.cryptoCoinName').each(function(){
+        $(this).text(coinName)
+    })
+    $('.cryptoCoinImg').each(function(){
+        let target = $(this).find('use')
+        let targetSvg = target.attr('href').split('#')[1]
+        target.attr('href', target.attr('href').replace(targetSvg,coinSvg))
+    })
+    selectCryptoToggle()
+}
 
 
 // jquery 모음

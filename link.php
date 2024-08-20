@@ -84,6 +84,7 @@ echo txtRecord('./@record/');
 				</li>
 				<li>
 					<button class="pop-modal" onclick="modalOpen('coin-modal')">COIN 모달</button>
+					<button class="pop-modal" onclick="modalOpen('wallet-modal')">Wallet 모달</button>
 				</li>
             </ul>
         </li>
@@ -114,6 +115,14 @@ echo txtRecord('./@record/');
 
 
 		<li class="mt20" data-label="Live Casino">
+			<ul>
+                <li><a href="./live_index.html" target="_blank" class="">Live Casino</a></li>
+                <li><a href="./live_blackjack.html" target="_blank" class="">Live Casino - Blackjack</a></li>
+                <li><a href="./live_roulette.html" target="_blank" class="">Live Casino - Roulette</a></li>
+                <li><a href="./live_show.html" target="_blank" class="">Live Casino - Game Shows</a></li>
+                <li><a href="./live_baccarat.html" target="_blank" class="">Live Casino - Baccarat</a></li>
+                <li><a href="./live_poker.html" target="_blank" class="">Live Casino - Poker</a></li>
+            </ul>
 		</li>
 
 		<li class="mt20" data-label="Sports">
