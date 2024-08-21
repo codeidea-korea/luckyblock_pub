@@ -140,6 +140,10 @@ echo txtRecord('./@record/');
 				<li><a href="./loyalty.html" target="_blank" class="">Loyalty</a></li>	
 				<li><a href="./telegram_casino.html" target="_blank" class="">Telegram Casino</a></li>	
 				<li><a href="./buy_crypto.html" target="_blank" class="">Buy Crypto</a></li>	
+				<li><a href="./play_with_lblock.html" target="_blank" class="">Play with $LBLOCK</a></li>
+				<li><a href="./help.html" target="_blank" class="">help</a></li>	
+            </ul>
+            </ul>
             </ul>
         </li>
 

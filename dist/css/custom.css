@@ -29,17 +29,17 @@
 
 
 /* vip club */
-.vipClub_main {background: url('../images/vip/vipclub_main_banner.png') no-repeat center center /cover;}
+.vipClub_main {background: url('../images/vip/vipclub_main_banner.png') no-repeat center center / cover;}
 @media all and (max-width:767px){
     .vipClub_main {background:url('../images/vip/vipclub_main_banner_m.avif') no-repeat center center / cover;}
 }
 .vipClub_benefits td{width:14.2%;}
 .vipClub_benefits img{margin: 0 auto;}
 
-.vipClub_img_large{ display: block;}
+.vipClub_img_large{display: block;}
 .vipClub_img_small{display: none;}
 @media all and (max-width:767px){
-    .vipClub_img_large{ display: none;}
+    .vipClub_img_large{display: none;}
     .vipClub_img_small{display: block;}
 }
  
@@ -51,12 +51,43 @@
    .vipClub_advantages > div > div  > p {width:100%; margin-top: 20px; margin-bottom: 30px;}
 }
 
-.jackpot_main_content{
-    border:1px solid #0000;
-    border-radius:18px;
-    background:
-        linear-gradient(black,black) padding-box,
-        linear-gradient(white,black) border-box;
+ /* play with lblock */
+ .playWithLblock_main{background: url('../images/vip/playwith_main.avif') no-repeat center center / cover; width:100%; height:400px;}
+@media all and (max-width:767px){
+    .playWithLblock_main{background: url('../images/vip/playwith_main_m.avif') no-repeat center center / cover; width:100%; height:430px;}
 }
-    
-    
+
+/* profile - settings datepicker */
+.litepicker{background-color: #343434;}
+.litepicker::before{
+    content: "";
+    left: 9px;
+    top: -7px;
+    border-bottom-color: #343434;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    border-bottom: 7px solid #343434;
+    position: absolute;
+    display: inline-block;
+}
+.litepicker::after{    
+    content: "";
+    left: 10px;
+    top: -6px;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #343434;
+    border-left: 6px solid transparent;
+    position: absolute;
+    display: inline-block;}
+.litepicker .container__months .month-item-header{color: white;}
+.litepicker .container__months .month-item-header svg path{}
+.litepicker .container__months .month-item-weekdays-row {color:#909090;}
+.litepicker .container__days .day-item {color:white;}
+.litepicker .container__days .week-number{color:white;}
+.litepicker .container__days
+.day-item.is-start-date,
+.litepicker .container__days .day-item.is-start-date:hover,
+.litepicker .container__days .day-item.is-end-date,
+.litepicker .container__days .day-item.is-end-date:hover{color:#343434;}
+.litepicker .container__footer .button-apply {color: #343434;}
+.litepicker .container__footer .button-cancel {color: #343434; background-color: rgba(255, 255, 255, 0.787);}
