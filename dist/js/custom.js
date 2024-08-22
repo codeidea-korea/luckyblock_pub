@@ -250,6 +250,22 @@ const cryptoChange = (item)=>{
     selectCryptoToggle()
 }
 
+// setting - contry select box
+const selectContryToggle = ()=>{
+    $('.select_contry').toggleClass('open')
+}
+
+const getSelectedList = (countryName) => {
+    document.querySelector('.custom_select .name').innerHTML = countryName;
+}
+
+const selectPhoneToggle = ()=>{
+    $('.select_contryNum').toggleClass('open')
+}
+
+const getSelectedNumber = (contryNumber) => {
+    document.querySelector('.custom_select .number').innerHTML = contryNumber;
+}
 
 // jquery 모음
 const loadJquery = ()=>{
@@ -359,6 +375,7 @@ const loadJquery = ()=>{
     $('.custom_select > div li').on('click',function(){
         let Parents = $(this).parents('.custom_select');
         let text = $(this).find('p').html();
+        console.log('dd');
 
         // option 닫기
         Parents.removeClass('open')
@@ -375,5 +392,8 @@ const loadJquery = ()=>{
         })
     })
 
+    
+   
 
+  
 }
