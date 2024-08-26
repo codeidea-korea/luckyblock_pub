@@ -97,4 +97,16 @@
     -webkit-text-fill-color: white;
 }
 
-.select_contryNum
+/* 프로필 > settings */
+.selectBtn{background-color: #6e6e6e;}
+.textfieldError{border: 1px solid #ff2e2e;}
+/* input Number 버튼 제거 Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {-webkit-appearance: none; margin: 0;}
+/* input Number 버튼 제거 Firefox  */
+input[type='number'] {-moz-appearance: textfield;}
+
+/* 프로필 > Activity */
+.toggleOn{background-image : linear-gradient(to top, #DD890A 0%, #FFDA77 100%);}
+.hide{display: none;}
+.show{display: grid;}

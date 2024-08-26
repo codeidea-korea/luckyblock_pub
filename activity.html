@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+  <!-- BEGIN: Head -->
+  <head>
+    <meta charset="utf-8" />
+    <link href="dist/images/logo.svg" rel="shortcut icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Midone admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities."
+    />
+    <meta
+      name="keywords"
+      content="admin template, Midone Admin Template, dashboard template, flat admin template, responsive admin template, web app"
+    />
+
+    <title>Bitcoin Casino - €25,000 Bonus at Lucky Block Crypto Casino</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./dist/images/logo/favicon.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- BEGIN: CSS Assets-->
+    <link rel="stylesheet" href="./dist/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./dist/css/app.css" />
+    <link rel="stylesheet" href="./dist/css/layout.css" />
+    <link rel="stylesheet" href="./dist/css/custom.css" />
+    <!-- END: CSS Assets-->
+  </head>
+  <!-- END: Head -->
+  <body>
+    <div id="initial-loader" class="initial-loader">
+      <div class="initial-loader-logo-container">
+        <img class="h-10" src="./dist/images/logo/logo.svg" alt="" />
+      </div>
+      <div class="initial-progress-bar-container">
+        <div class="initial-progress-bar"></div>
+      </div>
+    </div>
+
+    <div id="wrap" class="flex">
+      <!-- BEGIN: Side Menu -->
+
+      <!-- END: Side Menu -->
+      <!-- BEGIN: Content -->
+      <div class="content">
+        <!-- BEGIN: Header -->
+        <!-- END: Header -->
+
+        <div class="content_box">
+          <div class="inner">
+            <!-- content 영역 -->
+            <div class="mb-10 w-[66%]">
+              <!-- tab menu -->
+              <div class="flex h-12 mb-1">
+                <a class="p-4 pt-3 pb-0 text-base font-bold text-[#868787] hover:bg-black hover:text-white" tabindex="-1" role="tab" aria-selected="false" href="./settings.html">Settings<span></span></a>
+                <a class="p-4 pt-3 pb-0 text-base font-bold hover:bg-black border-b-2 border-[#f1c24c] " tabindex="0" role="tab" aria-selected="true" href="#">Activity<span></span></a>
+                <a class="p-4 pt-3 pb-0 text-base font-bold text-[#868787] hover:bg-black hover:text-white" tabindex="-1" role="tab" aria-selected="false" href="#">count Info<span></span></a>
+                <a class="p-4 pt-3 pb-0 text-base font-bold text-[#868787] hover:bg-black hover:text-white" tabindex="-1" role="tab" aria-selected="false" href="#">Balances<span></span></a>
+                <a class="p-4 pt-3 pb-0 text-base font-bold text-[#868787] hover:bg-black hover:text-white" tabindex="-1" role="tab" aria-selected="false" href="#">Bonuses<span></span></a>
+              </div>
+              <div class="grid grid-cols-2 gap-3 pt-4 pb-1">
+                <div>
+                  <!-- select  -->
+                  <button onclick="selectActivityMain()"class="w-full p-[9px] pr-4 bg-provider rounded-lg">
+                    <div class="custom_select select_mainFilter flex flex-row justify-between items-center">
+                      <p class="flex items-center gap-1 text-base font-medium">
+                          <span class="mainSpan">Bets</span>
+                      </p>
+                      <span class="arrow">
+                        <svg viewBox="0 0 16 16" class="svg-icon w-5 h-5">
+                          <use href="./dist/images/icon-defs.svg#arrow_down"></use>
+                        </svg>
+                      </span>
+                      <div class="!w-full">
+                        <ul>
+                          <li onclick="getSelectedActivityMain('Transactions')"><p>Transactions</p></li>
+                          <li onclick="getSelectedActivityMain('Bets')"><p>Bets</p></li>
+                          <li onclick="getSelectedActivityMain('Sport bets')"><p>Sport bets</p></li>
+                        </ul>
+                      </div>
+                    </div> 
+                  </button>
+                  <!-- select end  -->
+                </div>
+                <button onclick="toggleFilter()" class="filterBtn bg-[#14141a] w-16 rounded-full border border-[#787878]">
+                  <img class="w-5 m-auto" src="./dist/images/icon/filter_icon.png">
+                </button>
+                
+                </div>
+                <!-- filter tab1 - Bets -->
+                <div class="filter-bets grid grid-cols-2 gap-3 hide">
+                  <div class="flex flex-col">
+                    <label for="settings_Game" class="block py-1 px-2 font-medium">Game</label>
+                    <button onclick="selectActivityGame()" class="w-full p-[9px] pr-4 bg-provider rounded-lg">
+                      <div class="custom_select select_gameFilter flex flex-row justify-between items-center">
+                        <p class="flex items-center gap-1 text-base font-medium">
+                            <span class="gameSpan">All</span>
+                        </p>
+                        <span class="arrow">
+                          <svg viewBox="0 0 16 16" class="svg-icon w-5 h-5">
+                            <use href="./dist/images/icon-defs.svg#arrow_down"></use>
+                          </svg>
+                        </span>
+                        <div class="!w-full">
+                          <ul>
+                            <li onclick="getSelectedActivityGame('All')"><p>All</p></li>
+                          </ul>
+                        </div>  
+                      </div>
+                    </button>
+                  </div>
+                  <div class="flex flex-col">
+                    <label for="settings_Currency" class="block py-1 px-2 font-medium">Currency</label>
+                    <button onclick="selectActivityCurrency()" class="w-full p-[9px] pr-4 bg-provider rounded-lg">
+                      <div class="custom_select select_currencyFilter flex flex-row justify-between items-center">
+                        <p class="flex items-center gap-1 text-base font-medium">
+                            <span class="currencySpan">All</span>
+                        </p>
+                        <span class="arrow">
+                          <svg viewBox="0 0 16 16" class="svg-icon w-5 h-5">
+                            <use href="./dist/images/icon-defs.svg#arrow_down"></use>
+                          </svg>
+                        </span>
+                        <div class="!w-full">
+                          <ul>
+                            <li onclick="getSelectedActivityCurrency('All')"><p>All</p></li>
+                            <li onclick="getSelectedActivityCurrency('United State Dollar - USD')"><p>United State Dollar - USD</p></li>
+                            <li onclick="getSelectedActivityCurrency('Euro - EUR')"><p>Euro - EUR</p></li>
+                            <li onclick="getSelectedActivityCurrency('undefined - FLOK')"><p>undefined - FLOK</p></li>
+                            <li onclick="getSelectedActivityCurrency('undefined - MTIC')"><p>undefined - MTIC</p></li>
+                          </ul>
+                        </div>  
+                      </div>
+                    </button>
+                  </div>
+                  <div class="input_wrap mb-4">
+                    <label for="settings_dateFrom" class="block py-1 px-2 font-medium">From</label>
+                    <input type="text" class="datepicker form-control" placeholder="dd/mm/yyyy" data-single-mode="true">
+                  </div>
+                  <div class="input_wrap mb-4">
+                    <label for="settings_dateTo" class="block py-1 px-2 font-medium">To</label>
+                    <input type="text" class="datepicker form-control" placeholder="dd/mm/yyyy" data-single-mode="true">
+                  </div>
+                </div>
+              <!-- filter tab 1 end-->
+                </div>
+                <div class="w-full h-48 bg-[#181818] flex justify-center items-center rounded-sm mt-6">
+                  <div class="font-bold text-xl">No Bets</div>
+                </div>
+              </div>
+            <!-- content 영역 -->
+          </div>
+          </div>
+        </div>
+
+        <!-- BEGIN: Footer -->
+        <!-- END: Footer -->
+      </div>
+      <!-- END: Content -->
+    </div>
+
+    <!-- BEGIN: JS Assets-->
+    <script src="./dist/js/app.js"></script>
+    <script src="./dist/js/jquery-1.12.4.js"></script>
+    <script src="./dist/js/jquery-ui.js"></script>
+    <script src="./dist/js/swiper-bundle.min.js"></script>
+    <script src="./dist/js/custom.js"></script>
+    <!-- END: JS Assets-->
+  </body>
+</html>

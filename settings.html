@@ -59,41 +59,41 @@
         <div class="content_box">
           <div class="inner">
             <!-- content 영역 -->
-            <div class="w-[70%]">
+            <div class="w-[70%] mb-10">
               <!-- tab menu -->
-              <div>
-                <a tabindex="0" role="tab" aria-selected="true" href="#">Settings<span></span></a>
-                <a tabindex="-1" role="tab" aria-selected="false" href="#">Activity<span></span></a>
-                <a tabindex="-1" role="tab" aria-selected="false" href="#">count Info<span></span></a>
-                <a tabindex="-1" role="tab" aria-selected="false" href="#">Balances<span></span></a>
-                <a tabindex="-1" role="tab" aria-selected="false" href="#">Bonuses<span></span></a>
+              <div class="flex h-12 mb-1">
+                <a class="p-4 pt-3 pb-0 text-base font-bold hover:bg-black border-b-2 border-[#f1c24c] " tabindex="0" role="tab" aria-selected="true" href="#">Settings<span></span></a>
+                <a class="p-4 pt-3 pb-0 text-base font-bold text-[#868787] hover:bg-black hover:text-white" tabindex="-1" role="tab" aria-selected="false" href="./activity.html">Activity<span></span></a>
+                <a class="p-4 pt-3 pb-0 text-base font-bold text-[#868787] hover:bg-black hover:text-white" tabindex="-1" role="tab" aria-selected="false" href="#">count Info<span></span></a>
+                <a class="p-4 pt-3 pb-0 text-base font-bold text-[#868787] hover:bg-black hover:text-white" tabindex="-1" role="tab" aria-selected="false" href="#">Balances<span></span></a>
+                <a class="p-4 pt-3 pb-0 text-base font-bold text-[#868787] hover:bg-black hover:text-white" tabindex="-1" role="tab" aria-selected="false" href="#">Bonuses<span></span></a>
               </div>
 
               <!-- input group-->
               <div class="grid grid-cols-2 gap-x-4 pt-4 pb-1 border-b border-[#434343]"> 
                 <div class="input_wrap mb-4">
-                  <label for="settings_email" class="block py-1 px-2 font-bold">Email *</label>
+                  <label for="settings_email" class="block py-1 px-2">Email *</label>
                   <input type="text" id="settings_email" class="form-control" placeholder="id0001@gmail.com">
                 </div>
                 <div class="input_wrap row-start-2 mb-4 ">
-                  <label for="settings_username" class="block py-1 px-2 font-bold">Username *</label>
+                  <label for="settings_username" class="block py-1 px-2 font-medium">Username *</label>
                   <input type="text" id="settings_username" class="form-control" placeholder="username">
                 </div>
               </div>
               <!-- input group-->
               <div class="grid grid-cols-2 gap-x-4 pt-4 pb-1 border-b border-[#434343]"> 
                 <div class="input_wrap mb-4">
-                  <label for="settings_firstname" class="block py-1 px-2 font-bold">First name *</label>
+                  <label for="settings_firstname" class="block py-1 px-2 font-medium">First name *</label>
                   <input type="text" id="settings_firstname" class="form-control error" placeholder="First name">
                   <span class="text-xs text-[#ff2e2e] font-semibold ml-2 mt-2">First name is required</span>
                 </div>
                 <div class="input_wrap mb-4 ">
-                  <label for="settings_lastname" class="block py-1 px-2 font-bold">Last name *</label>
+                  <label for="settings_lastname" class="block py-1 px-2 font-medium">Last name *</label>
                   <input type="text" id="settings_lastname" class="form-control error" placeholder="Last name">
                   <span class="text-xs text-[#ff2e2e] font-semibold ml-2 mt-2">Last name is required</span>
                 </div>
                 <div class="input_wrap mb-4">
-                  <label for="settings_date" class="block py-1 px-2 font-bold">Date of birth *</label>
+                  <label for="settings_date" class="block py-1 px-2 font-medium">Date of birth *</label>
                   <input type="text" class="datepicker form-control" placeholder="dd/mm/yyyy" data-single-mode="true">
                   <!-- <span class="text-xs text-[#ff2e2e] font-semibold ml-2 mt-2">Date of birth is required</span> -->
                 </div>
@@ -104,11 +104,11 @@
             <div class="grid grid-cols-2 gap-x-4 pt-4 pb-1 border-b border-[#434343]">
               <div class="settings_contryGroup">
                 <!-- select  -->
-                <label for="settings_contry" class="block py-1 px-2 font-bold">Contry *</label>
+                <label for="settings_contry" class="block py-1 px-2 font-medium">Contry *</label>
                 <button onclick="selectContryToggle()"class="w-full p-[9px] pr-4 bg-provider rounded-lg">
                   <div class="custom_select select_contry flex flex-row justify-between items-center">
                     <p class="flex items-center gap-1 text-base font-medium">
-                        <span class="name"> </span>
+                        <span class="name">&nbsp;</span>
                     </p>
                     <span class="arrow">
                       <svg viewBox="0 0 16 16" class="svg-icon w-5 h-5">
@@ -117,44 +117,44 @@
                     </span>
                     <div class="!w-full">
                       <ul>
-                        <li onclick="getSelectedNumber('Albania')"><p>Albania</p></li>
-                        <li onclick="getSelectedNumber('Algeria')"><p>Algeria</p></li>
-                        <li onclick="getSelectedNumber('Andorra')"><p>Andorra</p></li>
-                        <li onclick="getSelectedNumber('Angola')"><p>Angola</p></li>
-                        <li onclick="getSelectedNumber('Anguilla')"><p>Anguilla</p></li>
-                        <li onclick="getSelectedNumber('Antarctica')"><p>Antarctica</p></li>
-                        <li onclick="getSelectedNumber('Antigua')"><p>Antigua</p></li>
-                        <li onclick="getSelectedNumber('Armenia')"><p>Armenia</p></li>
-                        <li onclick="getSelectedNumber('Australia')"><p>Australia</p></li>
+                        <li onclick="getSelectedList('Albania')"><p>Albania</p></li>
+                        <li onclick="getSelectedList('Algeria')"><p>Algeria</p></li>
+                        <li onclick="getSelectedList('Andorra')"><p>Andorra</p></li>
+                        <li onclick="getSelectedList('Angola')"><p>Angola</p></li>
+                        <li onclick="getSelectedList('Anguilla')"><p>Anguilla</p></li>
+                        <li onclick="getSelectedList('Antarctica')"><p>Antarctica</p></li>
+                        <li onclick="getSelectedList('Antigua')"><p>Antigua</p></li>
+                        <li onclick="getSelectedList('Armenia')"><p>Armenia</p></li>
+                        <li onclick="getSelectedList('Australia')"><p>Australia</p></li>
                       </ul>
                     </div>  
                 </button>
                 </div>
                 <!-- select end  -->
                 <div class="input_wrap mb-4 ">
-                  <label for="settings_postal" class="block py-1 px-2 font-bold">Postal Code *</label>
+                  <label for="settings_postal" class="block py-1 px-2 font-medium">Postal Code *</label>
                   <input type="text" id="settings_postal" class="form-control error" placeholder="Postal Code">
                   <span class="text-xs text-[#ff2e2e] font-semibold ml-2 mt-2">Postal code is required</span>
                 </div>
                 <div class="input_wrap mb-4 ">
-                  <label for="settings_adress" class="block py-1 px-2 font-bold">Address *</label>
+                  <label for="settings_adress" class="block py-1 px-2 font-medium">Address *</label>
                   <input type="text" id="settings_adress" class="form-control error" placeholder="Address">
                   <span class="text-xs text-[#ff2e2e] font-semibold ml-2 mt-2">Address is required</span>
                 </div>
                 <div class="input_wrap mb-4 ">
-                  <label for="settings_city" class="block py-1 px-2 font-bold">City *</label>
+                  <label for="settings_city" class="block py-1 px-2 font-medium">City *</label>
                   <input type="text" id="settings_city" class="form-control error" placeholder="City">
                   <span class="text-xs text-[#ff2e2e] font-semibold ml-2 mt-2">City is required</span>
                 </div>
               </div>
               <div class="grid grid-cols-2 gap-x-4 pt-4 pb-1 "> 
                 <div class="input_wrap ">
-                  <label for="settings_lastname" class="block py-1 px-2 font-bold">Phone number*</label>
-                  <div class="flex flex-row">
-                    <button onclick="selectPhoneToggle()"class="w-32 p-[9px] pr-4 bg-provider rounded-lg">
+                  <label for="settings_lastname" class="block py-1 px-2 font-medium">Phone number*</label>
+                  <div class="flex flex-row bg-[#343434] rounded-lg textfieldError">
+                    <button onclick="selectPhoneToggle()" class="selectBtn w-32 p-2 pr-4 bg-provider rounded-lg ">
                       <div class="custom_select select_contryNum flex flex-row justify-between items-center">
                         <p class="flex items-center gap-1 text-base font-medium">
-                            <span class="number"> </span>
+                            <span class="number text-ellipsis">&nbsp;</span>
                         </p>
                         <span class="arrow">
                           <svg viewBox="0 0 16 16" class="svg-icon w-4 h-4">
@@ -173,13 +173,13 @@
                           </ul>
                         </div>  
                     </button>
-                    <input type="text" id="settings_lastname" class="form-control" placeholder="Enter mobile number"/>
+                    <input type="number" id="settings_lastname" class="form-control" placeholder="Enter mobile number"/>
                   </div>
                   <span class="text-xs text-[#ff2e2e] font-semibold ml-2 mt-2">Phone number is required</span>
                   
                 </div>
               </div>
-              <button class="btn btn-gradient-primary">Save</button>
+              <button class="btn btn-gradient-primary rounded-full w-48 mt-6">Save</button>
   
             </div>
             

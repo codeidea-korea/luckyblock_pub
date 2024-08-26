@@ -250,22 +250,83 @@ const cryptoChange = (item)=>{
     selectCryptoToggle()
 }
 
-// setting - contry select box
+// settings - contry select box
 const selectContryToggle = ()=>{
     $('.select_contry').toggleClass('open')
+    const select = document.querySelectorAll('.custom_select .open');
+    $(document).on('click', (event) => {
+        if (!$(event.target).closest('.select_contry').length) {
+            $('.select_contry').removeClass('open');
+        }
+    }); 
 }
 
 const getSelectedList = (countryName) => {
     document.querySelector('.custom_select .name').innerHTML = countryName;
 }
 
+// settings - phone number select box
 const selectPhoneToggle = ()=>{
     $('.select_contryNum').toggleClass('open')
+    $(document).on('click', (event) => {
+        if (!$(event.target).closest('.select_contryNum').length) {
+            $('.select_contryNum').removeClass('open');
+        }
+    });
 }
 
 const getSelectedNumber = (contryNumber) => {
     document.querySelector('.custom_select .number').innerHTML = contryNumber;
 }
+
+// settings - activity filter button
+const toggleFilter = () => {
+    let filterBtn = document.querySelector('.filterBtn');
+   
+        filterBtn.classList.add('toggleOn');
+        document.querySelector('.filter-bets').classList.add('show');
+  
+
+}
+
+const selectActivityMain = ()=>{
+    $('.select_mainFilter').toggleClass('open')
+    $(document).on('click', (event) => {
+        if (!$(event.target).closest('.select_mainFilter').length) {
+            $('.select_mainFilter').removeClass('open');
+        }
+    });
+}
+
+const getSelectedActivityMain = (mainList) => {
+    document.querySelector('.custom_select .mainSpan').innerHTML = mainList;
+}
+
+const selectActivityGame = ()=>{
+    $('.select_gameFilter').toggleClass('open')
+    $(document).on('click', (event) => {
+        if (!$(event.target).closest('.select_gameFilter').length) {
+            $('.select_gameFilter').removeClass('open');
+        }
+    });
+}
+const getSelectedActivityGame = (mainList) => {
+    document.querySelector('.custom_select .gameSpan').innerHTML = mainList;
+}
+const selectActivityCurrency = ()=>{
+    $('.select_currencyFilter').toggleClass('open')
+    $(document).on('click', (event) => {
+        if (!$(event.target).closest('.select_currencyFilter').length) {
+            $('.select_currencyFilter').removeClass('open');
+        }
+    });
+}
+const getSelectedActivityCurrency = (currencyList) => {
+    document.querySelector('.custom_select .currencySpan').innerHTML = currencyList;
+}
+
+
+
 
 // jquery 모음
 const loadJquery = ()=>{

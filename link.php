@@ -148,6 +148,9 @@ echo txtRecord('./@record/');
         </li>
 
 		<li class="mt20" data-label="Profile">
+			<ul>
+				<li><a href="./settings.html" target="_blank" class="">Settings</a></li>
+			</ul>
 		</li>
 
 
