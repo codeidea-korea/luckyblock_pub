@@ -282,14 +282,23 @@ const getSelectedNumber = (contryNumber) => {
 // settings - activity filter button
 const toggleFilter = () => {
     let filterBtn = document.querySelector('.filterBtn');
-   
-        filterBtn.classList.add('toggleOn');
-        document.querySelector('.filter-bets').classList.add('show');
-  
-
+    let textValue = document.querySelector('.mainSpan').innerHTML;
+    filterBtn.classList.toggle('toggleOn');
+    if(textValue == 'Bets'){
+        document.querySelector('.filter-bets').classList.toggle('hide');
+        document.querySelector('.filter-transactions').classList.add('hide');
+        document.querySelector('.filter-sport').classList.add('hide');
+    }else if(textValue == 'Transactions'){
+        document.querySelector('.filter-bets').classList.add('hide');
+        document.querySelector('.filter-transactions').classList.toggle('hide');
+        document.querySelector('.filter-sport').classList.add('hide');
+    }else if(textValue == 'Sport bets'){
+        document.querySelector('.filter-bets').classList.add('hide');
+        document.querySelector('.filter-transactions').classList.add('hide');
+        document.querySelector('.filter-sport').classList.toggle('hide');
+    }
 }
-
-const selectActivityMain = ()=>{
+const selectActivityMain = () => {
     $('.select_mainFilter').toggleClass('open')
     $(document).on('click', (event) => {
         if (!$(event.target).closest('.select_mainFilter').length) {
@@ -297,11 +306,24 @@ const selectActivityMain = ()=>{
         }
     });
 }
-
-const getSelectedActivityMain = (mainList) => {
+const getActivityMain = (mainList) => {
     document.querySelector('.custom_select .mainSpan').innerHTML = mainList;
-}
+    let textValue = document.querySelector('.mainSpan').innerHTML;
+    if(textValue == 'Bets'){
+        document.querySelector('.filter-transactions').classList.add('hide');
+        document.querySelector('.filter-sport').classList.add('hide');
+        document.querySelector('.boxSpan').innerHTML = "Bets";
+    }else if(textValue == 'Transactions'){
+        document.querySelector('.filter-bets').classList.add('hide');
+        document.querySelector('.filter-sport').classList.add('hide');
+        document.querySelector('.boxSpan').innerHTML = "Transactions";
+    }else if(textValue == 'Sport bets'){
+        document.querySelector('.filter-bets').classList.add('hide');
+        document.querySelector('.filter-transactions').classList.add('hide');
+        document.querySelector('.boxSpan').innerHTML = "Bets";
+    }
 
+}
 const selectActivityGame = ()=>{
     $('.select_gameFilter').toggleClass('open')
     $(document).on('click', (event) => {
@@ -310,10 +332,10 @@ const selectActivityGame = ()=>{
         }
     });
 }
-const getSelectedActivityGame = (mainList) => {
+const getActivityGame = (mainList) => {
     document.querySelector('.custom_select .gameSpan').innerHTML = mainList;
 }
-const selectActivityCurrency = ()=>{
+const selectActivityCurrency_bets = ()=>{
     $('.select_currencyFilter').toggleClass('open')
     $(document).on('click', (event) => {
         if (!$(event.target).closest('.select_currencyFilter').length) {
@@ -321,11 +343,42 @@ const selectActivityCurrency = ()=>{
         }
     });
 }
-const getSelectedActivityCurrency = (currencyList) => {
+const getActivityCurrency = (currencyList) => {
     document.querySelector('.custom_select .currencySpan').innerHTML = currencyList;
 }
-
-
+const selectActivityType = () => {
+    $('.select_typeFilter').toggleClass('open')
+    $(document).on('click', (event) => {
+        if (!$(event.target).closest('.select_typeFilter').length) {
+            $('.select_typeFilter').removeClass('open');
+        }
+    });
+}
+const getActivityType = (typeList) => {
+    document.querySelector('.custom_select .typeSpan').innerHTML = typeList;
+}
+const selectActivityCurrency_transactions = ()=>{
+    $('.select_currencyFilter2').toggleClass('open')
+    $(document).on('click', (event) => {
+        if (!$(event.target).closest('.select_currencyFilter2').length) {
+            $('.select_currencyFilter2').removeClass('open');
+        }
+    });
+}
+const getActivityCurrency2 = (currencyList) => {
+    document.querySelector('.custom_select .currencySpan2').innerHTML = currencyList;
+}
+const selectActivityCurrency_sport = ()=>{
+    $('.select_currencyFilter3').toggleClass('open')
+    $(document).on('click', (event) => {
+        if (!$(event.target).closest('.select_currencyFilter3').length) {
+            $('.select_currencyFilter3').removeClass('open');
+        }
+    });
+}
+const getActivityCurrency3 = (currencyList) => {
+    document.querySelector('.custom_select .currencySpan3').innerHTML = currencyList;
+}
 
 
 // jquery 모음
