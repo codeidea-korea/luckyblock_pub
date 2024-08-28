@@ -110,3 +110,7 @@ input[type='number'] {-moz-appearance: textfield;}
 .toggleOn{background-image : linear-gradient(to top, #DD890A 0%, #FFDA77 100%);}
 .hide{display: none;}
 .show{display: grid;}
+
+/* 프로필 tab scroll  */
+.scroll-container {scroll-behavior: smooth; overflow-y: hidden; -webkit-overflow-scrolling: touch;}
+.scroll-container::-webkit-scrollbar {display: none;}

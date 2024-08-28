@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+  <!-- BEGIN: Head -->
+  <head>
+    <meta charset="utf-8" />
+    <link href="dist/images/logo.svg" rel="shortcut icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Midone admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities."
+    />
+    <meta
+      name="keywords"
+      content="admin template, Midone Admin Template, dashboard template, flat admin template, responsive admin template, web app"
+    />
+
+    <title>Bitcoin Casino - €25,000 Bonus at Lucky Block Crypto Casino</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./dist/images/logo/favicon.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- BEGIN: CSS Assets-->
+    <link rel="stylesheet" href="./dist/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./dist/css/app.css" />
+    <link rel="stylesheet" href="./dist/css/layout.css" />
+    <link rel="stylesheet" href="./dist/css/custom.css" />
+    <!-- END: CSS Assets-->
+     
+  </head>
+  <!-- END: Head -->
+  <body>
+    <div id="initial-loader" class="initial-loader">
+      <div class="initial-loader-logo-container">
+        <img class="h-10" src="./dist/images/logo/logo.svg" alt="" />
+      </div>
+      <div class="initial-progress-bar-container">
+        <div class="initial-progress-bar"></div>
+      </div>
+    </div>
+
+    <div id="wrap" class="flex">
+      <!-- BEGIN: Side Menu -->
+
+      <!-- END: Side Menu -->
+      <!-- BEGIN: Content -->
+      <div class="content">
+        <!-- BEGIN: Header -->
+        <!-- END: Header -->
+
+        <div class="content_box">
+          <div class="inner">
+            <!-- content 영역 -->
+            <div class="md:w-[70%] w-full mb-10">
+              <!-- tab menu -->
+              <div class="flex">
+                <button class="bg-[#171717] p-2 h-8 mt-3 md:hidden inline-block">
+                  <img src="./dist/images/icon/chevron-left.png" alt="Left Image" class="side-image" id="left-image">
+                </button>
+                <div class="scroll-container h-12 flex">
+                  <a class="p-4 pt-3 pb-0 text-base whitespace-nowrap font-bold text-[#868787] hover:bg-black hover:text-white" tabindex="-1" role="tab" aria-selected="false" href="./settings.html">Settings<span></span></a>
+                  <a class="p-4 pt-3 pb-0 text-base whitespace-nowrap font-bold text-[#868787] hover:bg-black hover:text-white" tabindex="0" role="tab" aria-selected="true" href="./activity.html">Activity<span></span></a>
+                  <a class="p-4 pt-3 pb-0 text-base whitespace-nowrap font-bold hover:bg-black border-b-2 border-[#f1c24c]" tabindex="-1" role="tab" aria-selected="false" href="#">Account Info<span></span></a>
+                  <a class="p-4 pt-3 pb-0 text-base whitespace-nowrap font-bold text-[#868787] hover:bg-black hover:text-white" tabindex="-1" role="tab" aria-selected="false" href="#">Balances<span></span></a>
+                  <a class="p-4 pt-3 pb-0 text-base whitespace-nowrap font-bold text-[#868787] hover:bg-black hover:text-white" tabindex="-1" role="tab" aria-selected="false" href="#">Bonuses<span></span></a>
+                </div>
+                <button class="bg-[#171717] p-2 h-8 mt-3 md:hidden inline-block">
+                   <img src="./dist/images/icon/chevron-right.png" alt="Right Image" class="side-image" id="right-image">
+                </button>
+              </div>
+              <!-- contents(selectbox) -->
+               <div class="grid grid-cols-2 gap-3 mt-4">
+                <div>
+                  <label for="settings_langue" class="block py-1 px-2">Langue</label>
+                  <button onclick="selectActivityMain()"class="w-full p-[9px] pr-4 bg-provider rounded-lg">
+                    <div class="custom_select select_mainFilter flex flex-row justify-between items-center">
+                      <p class="flex items-center gap-1 text-base font-medium">
+                          <span class="mainSpan">Bets</span>
+                      </p>
+                      <span class="arrow">
+                        <svg viewBox="0 0 16 16" class="svg-icon w-5 h-5">
+                          <use href="./dist/images/icon-defs.svg#arrow_down"></use>
+                        </svg>
+                      </span>
+                      <div class="!w-full">
+                        <ul>
+                          <li onclick="getActivityMain('English EN')"><p>English EN</p></li>
+                          <li onclick="getActivityMain('German DE')"><p>German DE</p></li>
+                          <li onclick="getActivityMain('Spanish ES')"><p>Spanish ES</p></li>
+                          <li onclick="getActivityMain('French FR')"><p>French FR</p></li>
+                        </ul>
+                      </div>
+                    </div> 
+                  </button>
+                </div>
+                <div>
+                  <label for="settings_langue" class="block py-1 px-2">Preferred Fiat Display Currency</label>
+                  <button onclick="selectActivityMain()"class="w-full p-[9px] pr-4 bg-provider rounded-lg">
+                    <div class="custom_select select_mainFilter flex flex-row justify-between items-center">
+                      <p class="flex items-center gap-1 text-base font-medium">
+                          <span class="mainSpan">EUR €</span>
+                      </p>
+                      <span class="arrow">
+                        <svg viewBox="0 0 16 16" class="svg-icon w-5 h-5">
+                          <use href="./dist/images/icon-defs.svg#arrow_down"></use>
+                        </svg>
+                      </span>
+                      <div class="!w-full">
+                        <ul>
+                          <li onclick="getActivityMain('Transactions')"><p>USD $</p></li>
+                          <li onclick="getActivityMain('Bets')"><p>EUR €</p></li>
+                        </ul>
+                      </div>
+                    </div> 
+                  </button>
+                </div>
+
+               </div>
+            </div>
+            <!-- content 영역 -->
+          </div>
+          </div>
+        </div>
+
+        <!-- BEGIN: Footer -->
+        <!-- END: Footer -->
+      </div>
+      <!-- END: Content -->
+    </div>
+
+    <!-- BEGIN: JS Assets-->
+    <script src="./dist/js/app.js"></script>
+    <script src="./dist/js/jquery-1.12.4.js"></script>
+    <script src="./dist/js/jquery-ui.js"></script>
+    <script src="./dist/js/swiper-bundle.min.js"></script>
+    <script src="./dist/js/custom.js"></script>
+    <!-- END: JS Assets-->
+  </body>
+</html>
