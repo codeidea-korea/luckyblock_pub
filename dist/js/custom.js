@@ -380,6 +380,10 @@ const getActivityCurrency3 = (currencyList) => {
     document.querySelector('.custom_select .currencySpan3').innerHTML = currencyList;
 }
 
+// betBtn 토글
+const betBtnToggle = (item)=>{
+    $(item).toggleClass('btn-active')
+}
 
 // jquery 모음
 const loadJquery = ()=>{

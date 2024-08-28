@@ -38,6 +38,7 @@ body {font-family: Poppins, Arial, Helvetica, 'sans-serif'; color:#fff; backgrou
 ::-webkit-scrollbar-track {background:var(--back-color); }
 
 .inner {width:1200px; max-width:100%; margin:0 auto; }
+.sports .inner {width:100%; }
 
 .color-softP {color:var(--primary-soft-color); }
 .color-darkP {color:var(--primary-dark-color); }
@@ -69,6 +70,7 @@ body {font-family: Poppins, Arial, Helvetica, 'sans-serif'; color:#fff; backgrou
 .img_filter {filter:invert(1) brightness(10); }
 
 .btn {transition:all 0.2s; }
+.btn-active {background-color:#957329 !important;}
 
 .btn-gradient-primary{border:0 none; background: var(--primary-gradient); color: #070708; font-weight:bold; }
 .btn-gradient-primary:hover {background:var(--primary-gradient-hover); }
@@ -98,6 +100,8 @@ body {font-family: Poppins, Arial, Helvetica, 'sans-serif'; color:#fff; backgrou
 .fs11 {font-size:11px; }
 .fs13 {font-size:13px; }
 
+.mask-image {mask-image:linear-gradient(90deg, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%); }
+
 /* 
         **레이아웃 및 공통으로 쓰여지는 레이아웃**
         WRAP
@@ -125,6 +129,9 @@ body {font-family: Poppins, Arial, Helvetica, 'sans-serif'; color:#fff; backgrou
 
         CASINO_DETAIL
         SELECT_CRYPTO
+        TOOLTIP
+        SPORTS_MENU
+        SPORTS_SLIDE
 
 */
 
@@ -180,6 +187,9 @@ body.casino a[data-cate="casino"] {background-color:#101010; }
 
 body.slots button[data-cate="slots"] {background-color:var(--primary-color); }
 body.slots a[data-cate="slots"] {background-color:#101010; }
+
+body.sports button[data-cate="sports"] {background-color:var(--primary-color); }
+body.sports a[data-cate="sports"] {background-color:#101010; }
 
 /* --------------------------------------
     QUICK_MENU
@@ -262,10 +272,21 @@ body:not(.logout) .casinoSwiper .arrow.next {right:15px; }
 .mySwiper .pagination span.swiper-pagination-bullet {width:8px; height:8px; background-color:#fff; opacity:1;}
 .mySwiper .pagination span.swiper-pagination-bullet.swiper-pagination-bullet-active {background-color:var(--primary-color);}
 
+.mySwiper .pagination.type02 span.swiper-pagination-bullet {width:8px; height:4px; opacity:0.5; border-radius:4px; }
+.mySwiper .pagination.type02 span.swiper-pagination-bullet.swiper-pagination-bullet-active {width:24px; background-color:#fff; opacity:1; }
+
 .casinoSwiper {position:relative; }
 .casinoSwiper .arrow {z-index:10; position:absolute; top:50%; transform:translateY(-50%); }
 .casinoSwiper .arrow.prev {left:0; }
 .casinoSwiper .arrow.next {right:0; }
+
+.hoverArrow {position:relative; }
+.hoverArrow:hover .arrow {opacity:0.7; }
+.hoverArrow .arrow {opacity:0; z-index:1 0; position:absolute; top:calc(50% - 16px); display:flex; align-items:center; justify-content:center; width:38px; height:38px; background-color:#fff; border-radius:50%; transition:all 0.2s; }
+.hoverArrow .arrow:hover {opacity:1; }
+.hoverArrow .arrow svg {color:var(--back3-color); }
+.hoverArrow .arrow.prev {left:15px; }
+.hoverArrow .arrow.next {right:15px; }
 
 
 /* --------------------------------------
@@ -327,6 +348,11 @@ body:not(.logout) .casinoSwiper .arrow.next {right:15px; }
 .nav.nav-link-tabs.white_type .nav-item .nav-link.active {border-bottom:2px solid #fff; }
 
 .nav.nav-link-tabs.transparent_type .nav-item .nav-link:not(.active) {border-color:transparent; }
+
+.nav.nav-boxed-tabs .nav-item .nav-link {background-color:var(--provider-color); color:#fff; }
+.nav.nav-boxed-tabs .nav-item .nav-link svg {opacity:0.5; }
+.nav.nav-boxed-tabs .nav-item .nav-link.active {background-color:#957329; font-weight:bold; }
+.nav.nav-boxed-tabs .nav-item .nav-link.active svg {opacity:1; }
 
 .tab-content > div {width:100% !important; }
 
@@ -465,4 +491,36 @@ body:not(.logout) .casinoSwiper .arrow.next {right:15px; }
 ---------------------------------------------- */
 .select_crypto {z-index:10; bottom:-100%; width:100%; height:100%; background-color:var(--back3-color); box-shadow:0 0 9px 2px rgba(0, 0, 0, 0.13); transition:all 0.5s; }
 .select_crypto.open {bottom:0; }
+
+
+/* ----------------------------------------------
+            TOOLTIP
+---------------------------------------------- */
+.tippy-box {background-color:#000; }
+.tippy-box svg {fill:#000; }
+
+
+/* ----------------------------------------------
+            SPORTS_MENU
+---------------------------------------------- */
+.sports_menu a {color:rgba(255,255,255, 0.6); letter-spacing:0.12em; }
+.sports_menu a.active {color:#fff; }
+.sports_menu a.active.type01 svg {color:#FF603E; }
+.sports_menu a.active.type02 svg {color:#BC4EFF; }
+.sports_menu a.active.type03 svg {color:#FF603E; }
+
+
+/* ----------------------------------------------
+            SPORTS_SLIDE
+---------------------------------------------- */
+.sports_slide_1 {background:url('../images/sports/sports_slide_bg.jpg') no-repeat center center / cover; }
+.sports_slide_1:before {content:''; z-index:0; position: absolute; left:0; top:0; width:100%; height:100%; background:linear-gradient(180deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)); }
+.sports_slide_1 > * {z-index:2; position:relative; }
+
+
+/* ----------------------------------------------
+            CUSTOM_GRID
+---------------------------------------------- */
+.custom_grid {display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:16px; grid-template-areas:"none none none widget""none none none widget""none none none widget";}
+.custom_grid .widget {grid-area:widget; }
 

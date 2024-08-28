@@ -23,7 +23,7 @@
         <!-- END: CSS Assets-->
     </head>
     <!-- END: Head -->
-    <body class="live">
+    <body class="sports">
 
         <div id="initial-loader" class="initial-loader">
             <div class="initial-loader-logo-container"><img class="h-10" src="./dist/images/logo/logo.svg" alt=""></div>
@@ -44,15 +44,371 @@
                     <div class="inner">
 
                         <!-- 스포츠 상단 메뉴 -->
-                        <div class="p-2 bg-provider">
-                            <div>
-                                <button class="p-2"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#ic-home"></use></svg></button>
-                                <button class="p-2 opacity-50"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#ic-live"></use></svg></button>
-                                <button class="p-2 opacity-50"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#ic-favourite"></use></svg></button>
-                                <button class="p-2 opacity-50"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#ic-navbar-mybets"></use></svg></button>
+                        <div class="sports_topmenu flex items-center p-2 bg-provider">
+                            <div class="shrink-0">
+                                <button class="p-2 tooltip" data-placement="bottom" title="Home"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#ic-home"></use></svg></button>
+                                <button class="p-2 opacity-50 tooltip" data-placement="bottom" title="Live"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#ic-live"></use></svg></button>
+                                <button class="p-2 opacity-50 tooltip" data-placement="bottom" title="Favourites"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#ic-favourite"></use></svg></button>
+                                <button class="p-2 opacity-50 tooltip" data-placement="bottom" title="My Bets"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#ic-navbar-mybets"></use></svg></button>
                             </div>
-                            <div></div>
+                            <div class="relative overflow-hidden flex-1 h-12 pr-8 ml-2 pl-2">
+                                <i class="absolute left-0 top-2 h-8 w-[1px] bg-white bg-opacity-50"></i>
+                                <div class="overflow-hidden">
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="soccer"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-soccer"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="tennis"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-tennis"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="basketball"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-basketball"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="table tennis"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-tabletennis"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="american football"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-americanfootball"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="volleyball"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-volleyball"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="handball"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-handball"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="boxing"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-boxing"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="icehockey"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-icehockey"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="counterstrike"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-counterstrike"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="mma"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-mma"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="fifa"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-fifa-b"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="cricket"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-cricket"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="rugby"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-rugby"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="dota2"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-dota2"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="baseball"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-baseball"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="horseracing"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-horseracing"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="snooker"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-snooker"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="darts"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-darts"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="valorant"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-valorant"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="league of legends"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-leagueoflegends"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="fifa:volta"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-fifa-volta"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="ehorse racing"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-ehorseracing"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="fighting"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-e-fighting-b"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="aotennis"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-aotennis-b"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="nba2k"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-nba2k-b"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="chess"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-chess"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="aussierules"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-aussierules"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="ecricket"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-ecricket-b"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="eshooter"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-eshooter"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="futsal"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-futsal"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="rainbow six"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-rainbow_six"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="badminton"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-badminton"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="arena of valor"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-arena_of_valor"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="king of glory"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-king-of-glory"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="mobile legends"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-mobile-legends"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="skirace"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-skirace"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="floorball"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-floorball"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="golf"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-golf"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="cycling"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-cycling"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="specials"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-specials"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="lacrosse"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-lacrosse"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="formula"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-formula-1"></use></svg></button>
+                                    <button class="p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="alpineskiing"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-alpineskiing"></use></svg></button>
+                                </div>
+                                <button class="absolute right-0 top-0 p-2"><svg class="svg-icon w-4 h-8"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></button>
+                            </div>
+                            <div class="shrink-0 ml-12">
+                                <button class="p-2 opacity-50 hover:opacity-100"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#ic-search"></use></svg></button>
+                            </div>
                         </div>
+
+                        <!-- 스포츠 상단 탭 -->
+                        <div class="flex items-center gap-2 my-4 sports_menu">
+                            <a href="javascript:;" class="flex items-center gap-1.5 px-4 py-1.5 bg-provider font-bold text-xs rounded-xl type01 active"><svg class="svg-icon w-4 h-4"><use xlink:href="./dist/images/icon-defs.svg#ic-hot-title"></use></svg> HIGHLIGHTS</a>
+                            <a href="javascript:;" class="flex items-center gap-1.5 px-4 py-1.5 bg-provider font-bold text-xs rounded-xl type02"><svg class="svg-icon w-4 h-4"><use xlink:href="./dist/images/icon-defs.svg#ic-schedule-title"></use></svg> SCHEDULE</a>
+                            <a href="javascript:;" class="flex items-center gap-1.5 px-4 py-1.5 bg-provider font-bold text-xs rounded-xl type03"><svg class="svg-icon w-4 h-4"><use xlink:href="./dist/images/icon-defs.svg#ic-top-bets"></use></svg> BETS FEED</a>
+                        </div>
+
+                        <!-- 스포츠 비주얼 -->
+                        <div class="mySwiper relative overflow-hidden rounded-lg" data-loop="false">
+                            <div class="swiper-container">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide">
+                                        <img class="visual_img xl:block hidden" src="./dist/images/sports/sports_banner_1.jpg" alt="">
+                                        <img class="visual_img block xl:hidden" src="./dist/images/sports/sports_banner_1_mo.jpg" alt="">
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <img class="visual_img xl:block hidden" src="./dist/images/sports/sports_banner_1.jpg" alt="">
+                                        <img class="visual_img block xl:hidden" src="./dist/images/sports/sports_banner_1_mo.jpg" alt="">
+                                    </li>
+                                </ul>
+                                <div class="pagination type02 z-10 absolute px-2"></div>
+                            </div>
+                        </div>
+
+
+                        <!-- 스포츠 슬라이드 -->
+                        <div class="mySwiper hoverArrow overflow-hidden mt-4" data-loop="false" data-per="auto" data-gap="16">
+                            <div class="swiper-container">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide sports_slide_1 w-[368px] rounded-lg overflow-hidden relative p-2 cursor-pointer">
+                                        <div class="flex items-center justify-between text-xs font-bold">
+                                            <div class="overflow-hidden flex items-center gap-1.5 whitespace-nowrap mask-image opacity-50 hover:opacity-100">
+                                                <svg class="svg-icon w-4 h-4 shrink-0"><use xlink:href="./dist/images/icon-defs.svg#sport-soccer"></use></svg>
+                                                <p>
+                                                    <span>International Clubs</span>
+                                                    <span>UEFA Conference League</span>
+                                                </p>
+                                            </div>
+                                            <div class="whitespace-nowrap opacity-50">Tomorrow, 01:00</div>
+                                        </div>
+                                        <div class="flex items-center justify-between gap-4 mt-3 mb-5 font-semibold">
+                                            <div class="text-left">
+                                                <img src="./dist/images/sports/2614.png" class="w-8" alt="">
+                                                <p class="mt-2">FC Carl Zeiss Jena</p>
+                                            </div>
+                                            <div class="text-right">
+                                                <img src="./dist/images/sports/2681.png" class="w-8 ml-auto mr-0" alt="">
+                                                <p class="mt-2">Bayer Leverkusen</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex gap-2">
+                                            <button class="flex-1 flex items-center justify-between h-8 px-2 bg-white bg-opacity-30 hover:bg-opacity-50 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span>1</span>
+                                                <span>40.00</span>
+                                            </button>
+                                            <button class="flex-1 flex items-center justify-between h-8 px-2 bg-white bg-opacity-30 hover:bg-opacity-50 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span>draw</span>
+                                                <span>16.00</span>
+                                            </button>
+                                            <button class="flex-1 flex items-center justify-between h-8 px-2 bg-white bg-opacity-30 hover:bg-opacity-50 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span>2</span>
+                                                <span>1.02</span>
+                                            </button>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide sports_slide_1 w-[368px] rounded-lg overflow-hidden relative p-2 cursor-pointer">
+                                        <div class="flex items-center justify-between text-xs font-bold">
+                                            <div class="overflow-hidden flex items-center gap-1.5 whitespace-nowrap mask-image opacity-50 hover:opacity-100">
+                                                <svg class="svg-icon w-4 h-4 shrink-0"><use xlink:href="./dist/images/icon-defs.svg#sport-soccer"></use></svg>
+                                                <p>
+                                                    <span>International Clubs</span>
+                                                    <span>UEFA Conference League</span>
+                                                </p>
+                                            </div>
+                                            <div class="whitespace-nowrap opacity-50">Tomorrow, 01:00</div>
+                                        </div>
+                                        <div class="flex items-center justify-between gap-4 mt-3 mb-5 font-semibold">
+                                            <div class="text-left">
+                                                <img src="./dist/images/sports/2614.png" class="w-8" alt="">
+                                                <p class="mt-2">FC Carl Zeiss Jena</p>
+                                            </div>
+                                            <div class="text-right">
+                                                <img src="./dist/images/sports/2681.png" class="w-8 ml-auto mr-0" alt="">
+                                                <p class="mt-2">Bayer Leverkusen</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex gap-2">
+                                            <button class="flex-1 flex items-center justify-between h-8 px-2 bg-white bg-opacity-30 hover:bg-opacity-50 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span>1</span>
+                                                <span>40.00</span>
+                                            </button>
+                                            <button class="flex-1 flex items-center justify-between h-8 px-2 bg-white bg-opacity-30 hover:bg-opacity-50 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span>draw</span>
+                                                <span>16.00</span>
+                                            </button>
+                                            <button class="flex-1 flex items-center justify-between h-8 px-2 bg-white bg-opacity-30 hover:bg-opacity-50 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span>2</span>
+                                                <span>1.02</span>
+                                            </button>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide sports_slide_1 w-[368px] rounded-lg overflow-hidden relative p-2 cursor-pointer">
+                                        <div class="flex items-center justify-between text-xs font-bold">
+                                            <div class="overflow-hidden flex items-center gap-1.5 whitespace-nowrap mask-image opacity-50 hover:opacity-100">
+                                                <svg class="svg-icon w-4 h-4 shrink-0"><use xlink:href="./dist/images/icon-defs.svg#sport-soccer"></use></svg>
+                                                <p>
+                                                    <span>International Clubs</span>
+                                                    <span>UEFA Conference League</span>
+                                                </p>
+                                            </div>
+                                            <div class="whitespace-nowrap opacity-50">Tomorrow, 01:00</div>
+                                        </div>
+                                        <div class="flex items-center justify-between gap-4 mt-3 mb-5 font-semibold">
+                                            <div class="text-left">
+                                                <img src="./dist/images/sports/2614.png" class="w-8" alt="">
+                                                <p class="mt-2">FC Carl Zeiss Jena</p>
+                                            </div>
+                                            <div class="text-right">
+                                                <img src="./dist/images/sports/2681.png" class="w-8 ml-auto mr-0" alt="">
+                                                <p class="mt-2">Bayer Leverkusen</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex gap-2">
+                                            <button class="flex-1 flex items-center justify-between h-8 px-2 bg-white bg-opacity-30 hover:bg-opacity-50 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span>1</span>
+                                                <span>40.00</span>
+                                            </button>
+                                            <button class="flex-1 flex items-center justify-between h-8 px-2 bg-white bg-opacity-30 hover:bg-opacity-50 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span>draw</span>
+                                                <span>16.00</span>
+                                            </button>
+                                            <button class="flex-1 flex items-center justify-between h-8 px-2 bg-white bg-opacity-30 hover:bg-opacity-50 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span>2</span>
+                                                <span>1.02</span>
+                                            </button>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide sports_slide_1 w-[368px] rounded-lg overflow-hidden relative p-2 cursor-pointer">
+                                        <div class="flex items-center justify-between text-xs font-bold">
+                                            <div class="overflow-hidden flex items-center gap-1.5 whitespace-nowrap mask-image opacity-50 hover:opacity-100">
+                                                <svg class="svg-icon w-4 h-4 shrink-0"><use xlink:href="./dist/images/icon-defs.svg#sport-soccer"></use></svg>
+                                                <p>
+                                                    <span>International Clubs</span>
+                                                    <span>UEFA Conference League</span>
+                                                </p>
+                                            </div>
+                                            <div class="whitespace-nowrap opacity-50">Tomorrow, 01:00</div>
+                                        </div>
+                                        <div class="flex items-center justify-between gap-4 mt-3 mb-5 font-semibold">
+                                            <div class="text-left">
+                                                <img src="./dist/images/sports/2614.png" class="w-8" alt="">
+                                                <p class="mt-2">FC Carl Zeiss Jena</p>
+                                            </div>
+                                            <div class="text-right">
+                                                <img src="./dist/images/sports/2681.png" class="w-8 ml-auto mr-0" alt="">
+                                                <p class="mt-2">Bayer Leverkusen</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex gap-2">
+                                            <button class="flex-1 flex items-center justify-between h-8 px-2 bg-white bg-opacity-30 hover:bg-opacity-50 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span>1</span>
+                                                <span>40.00</span>
+                                            </button>
+                                            <button class="flex-1 flex items-center justify-between h-8 px-2 bg-white bg-opacity-30 hover:bg-opacity-50 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span>draw</span>
+                                                <span>16.00</span>
+                                            </button>
+                                            <button class="flex-1 flex items-center justify-between h-8 px-2 bg-white bg-opacity-30 hover:bg-opacity-50 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span>2</span>
+                                                <span>1.02</span>
+                                            </button>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide sports_slide_1 w-[368px] rounded-lg overflow-hidden relative p-2 cursor-pointer">
+                                        <div class="flex items-center justify-between text-xs font-bold">
+                                            <div class="overflow-hidden flex items-center gap-1.5 whitespace-nowrap mask-image opacity-50 hover:opacity-100">
+                                                <svg class="svg-icon w-4 h-4 shrink-0"><use xlink:href="./dist/images/icon-defs.svg#sport-soccer"></use></svg>
+                                                <p>
+                                                    <span>International Clubs</span>
+                                                    <span>UEFA Conference League</span>
+                                                </p>
+                                            </div>
+                                            <div class="whitespace-nowrap opacity-50">Tomorrow, 01:00</div>
+                                        </div>
+                                        <div class="flex items-center justify-between gap-4 mt-3 mb-5 font-semibold">
+                                            <div class="text-left">
+                                                <img src="./dist/images/sports/2614.png" class="w-8" alt="">
+                                                <p class="mt-2">FC Carl Zeiss Jena</p>
+                                            </div>
+                                            <div class="text-right">
+                                                <img src="./dist/images/sports/2681.png" class="w-8 ml-auto mr-0" alt="">
+                                                <p class="mt-2">Bayer Leverkusen</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex gap-2">
+                                            <button class="flex-1 flex items-center justify-between h-8 px-2 bg-white bg-opacity-30 hover:bg-opacity-50 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span>1</span>
+                                                <span>40.00</span>
+                                            </button>
+                                            <button class="flex-1 flex items-center justify-between h-8 px-2 bg-white bg-opacity-30 hover:bg-opacity-50 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span>draw</span>
+                                                <span>16.00</span>
+                                            </button>
+                                            <button class="flex-1 flex items-center justify-between h-8 px-2 bg-white bg-opacity-30 hover:bg-opacity-50 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span>2</span>
+                                                <span>1.02</span>
+                                            </button>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide sports_slide_1 w-[368px] rounded-lg overflow-hidden relative p-2 cursor-pointer">
+                                        <div class="flex items-center justify-between text-xs font-bold">
+                                            <div class="overflow-hidden flex items-center gap-1.5 whitespace-nowrap mask-image opacity-50 hover:opacity-100">
+                                                <svg class="svg-icon w-4 h-4 shrink-0"><use xlink:href="./dist/images/icon-defs.svg#sport-soccer"></use></svg>
+                                                <p>
+                                                    <span>International Clubs</span>
+                                                    <span>UEFA Conference League</span>
+                                                </p>
+                                            </div>
+                                            <div class="whitespace-nowrap opacity-50">Tomorrow, 01:00</div>
+                                        </div>
+                                        <div class="flex items-center justify-between gap-4 mt-3 mb-5 font-semibold">
+                                            <div class="text-left">
+                                                <img src="./dist/images/sports/2614.png" class="w-8" alt="">
+                                                <p class="mt-2">FC Carl Zeiss Jena</p>
+                                            </div>
+                                            <div class="text-right">
+                                                <img src="./dist/images/sports/2681.png" class="w-8 ml-auto mr-0" alt="">
+                                                <p class="mt-2">Bayer Leverkusen</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex gap-2">
+                                            <button class="flex-1 flex items-center justify-between h-8 px-2 bg-white bg-opacity-30 hover:bg-opacity-50 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span>1</span>
+                                                <span>40.00</span>
+                                            </button>
+                                            <button class="flex-1 flex items-center justify-between h-8 px-2 bg-white bg-opacity-30 hover:bg-opacity-50 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span>draw</span>
+                                                <span>16.00</span>
+                                            </button>
+                                            <button class="flex-1 flex items-center justify-between h-8 px-2 bg-white bg-opacity-30 hover:bg-opacity-50 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span>2</span>
+                                                <span>1.02</span>
+                                            </button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button class="arrow prev p-2"><svg class="svg-icon w-8 h-8 rotate-180"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></button>
+                            <button class="arrow next p-2"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></button>
+                        </div>
+
+                        <!-- Popular -->
+                        <div class="flex items-center gap-2 mt-6 text-xl font-bold"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#crown"></use></svg>Popular</div>
+                        <ul class="nav nav-boxed-tabs gap-2 mt-3" role="tablist">
+                            <li id="popular-1-tab" class="nav-item" role="presentation">
+                                <button class="nav-link flex items-center gap-1 px-2 py-1 !rounded-2xl font-bold active" data-tw-toggle="pill" data-tw-target="#popular-tab-1" type="button" role="tab" aria-controls="popular-tab-1" aria-selected="true">
+                                    <svg class="svg-icon w-6 h-6 rotate-180"><use xlink:href="./dist/images/icon-defs.svg#sport-soccer"></use></svg>
+                                    Soccer
+                                </button> 
+                            </li>
+                            <li id="popular-2-tab" class="nav-item" role="presentation">
+                                <button class="nav-link flex items-center gap-1 px-2 py-1 !rounded-2xl font-bold" data-tw-toggle="pill" data-tw-target="#popular-tab-2" type="button" role="tab" aria-controls="popular-tab-2" aria-selected="false"> 
+                                    <svg class="svg-icon w-6 h-6 rotate-180"><use xlink:href="./dist/images/icon-defs.svg#sport-tennis"></use></svg>
+                                    Tennis
+                                </button> 
+                            </li>
+                            <li id="popular-3-tab" class="nav-item" role="presentation">
+                                <button class="nav-link flex items-center gap-1 px-2 py-1 !rounded-2xl font-bold" data-tw-toggle="pill" data-tw-target="#popular-tab-3" type="button" role="tab" aria-controls="popular-tab-3" aria-selected="false"> 
+                                    <svg class="svg-icon w-6 h-6 rotate-180"><use xlink:href="./dist/images/icon-defs.svg#sport-basketball"></use></svg>
+                                    Basketball
+                                </button> 
+                            </li>
+                            <li id="popular-4-tab" class="nav-item" role="presentation">
+                                <button class="nav-link flex items-center gap-1 px-2 py-1 !rounded-2xl font-bold" data-tw-toggle="pill" data-tw-target="#popular-tab-4" type="button" role="tab" aria-controls="popular-tab-4" aria-selected="false"> 
+                                    <svg class="svg-icon w-6 h-6 rotate-180"><use xlink:href="./dist/images/icon-defs.svg#sport-rugby"></use></svg>
+                                    Rugby
+                                </button> 
+                            </li>
+                            <li id="popular-5-tab" class="nav-item" role="presentation">
+                                <button class="nav-link flex items-center gap-1 px-2 py-1 !rounded-2xl font-bold" data-tw-toggle="pill" data-tw-target="#popular-tab-5" type="button" role="tab" aria-controls="popular-tab-5" aria-selected="false"> 
+                                    <svg class="svg-icon w-6 h-6 rotate-180"><use xlink:href="./dist/images/icon-defs.svg#sport-baseball"></use></svg>
+                                    Baseball
+                                </button> 
+                            </li>
+                        </ul>
+                        <div class="tab-content mt-5">
+                            <div id="popular-tab-1" class="tab-pane leading-relaxed active" role="tabpanel" aria-labelledby="popular-1-tab">
+                                <div class="custom_grid">
+                                    <div>-</div>
+                                    <div>-</div>
+                                    <div>-</div>
+                                    <div>-</div>
+                                    <div>-</div>
+                                    <div>-</div>
+                                    <div>-</div>
+                                    <div>-</div>
+                                    <div>-</div>
+                                    <div class="widget">widget</div>
+                                </div>
+                            </div>
+                            <div id="popular-tab-2" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="popular-2-tab"> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). </div>
+                        </div>
+
 
                     </div>
                 </div>
