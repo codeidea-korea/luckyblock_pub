@@ -85,7 +85,6 @@
     "/dist/images/main/supported_3.png": "/dist/images/main/supported_3.png",
     "/dist/images/main/visa-pay-1.png": "/dist/images/main/visa-pay-1.png",
     "/dist/images/main/visa-pay.png": "/dist/images/main/visa-pay.png",
-    "/dist/images/profile/qr_code.png": "/dist/images/profile/qr_code.png",
     "/dist/images/providers/providers_1.png": "/dist/images/providers/providers_1.png",
     "/dist/images/providers/providers_2.png": "/dist/images/providers/providers_2.png",
     "/dist/images/providers/providers_3.png": "/dist/images/providers/providers_3.png",
@@ -94,6 +93,8 @@
     "/dist/images/providers/providers_6.png": "/dist/images/providers/providers_6.png",
     "/dist/images/providers/providers_7.png": "/dist/images/providers/providers_7.png",
     "/dist/images/providers/providers_8.png": "/dist/images/providers/providers_8.png",
+    "/dist/images/sports/1984.png": "/dist/images/sports/1984.png",
+    "/dist/images/sports/1999.png": "/dist/images/sports/1999.png",
     "/dist/images/sports/2614.png": "/dist/images/sports/2614.png",
     "/dist/images/sports/2681.png": "/dist/images/sports/2681.png",
     "/dist/images/sports/sports_banner_1.jpg": "/dist/images/sports/sports_banner_1.jpg",
@@ -134,5 +135,6 @@
     "/dist/images/vip/vipclub_icon_small_banner4.avif": "/dist/images/vip/vipclub_icon_small_banner4.avif",
     "/dist/images/vip/vipclub_main_banner.png": "/dist/images/vip/vipclub_main_banner.png",
     "/dist/images/vip/vipclub_main_banner_m.avif": "/dist/images/vip/vipclub_main_banner_m.avif",
-    "/dist/images/icon/copy_icon.png": "/dist/images/icon/copy_icon.png"
+    "/dist/images/icon/copy_icon.png": "/dist/images/icon/copy_icon.png",
+    "/dist/images/profile/qr_code.png": "/dist/images/profile/qr_code.png"
 }

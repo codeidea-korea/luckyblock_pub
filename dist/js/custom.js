@@ -385,6 +385,24 @@ const betBtnToggle = (item)=>{
     $(item).toggleClass('btn-active')
 }
 
+// sport 베팅상세 보이기
+const openSportItem = (item)=>{
+    let sportItem = $(item).parents('.sport_item');
+
+    $('.sport_item').each(function(){
+        $(this).removeClass('active');
+        $(this).removeClass('open')
+        $(this).find('.open_arrow svg').toggleClass('rotate-180');
+    })
+    
+    sportItem.toggleClass('active');
+
+    if(sportItem.hasClass('active')){
+        sportItem.toggleClass('open');
+        $(item).find('svg').toggleClass('rotate-180');
+    }
+}
+
 // jquery 모음
 const loadJquery = ()=>{
 
@@ -399,6 +417,7 @@ const loadJquery = ()=>{
             slidePlayTime = $(this).attr('data-timer') ? $(this).attr('data-timer') * 1000 : 0;
             effect = $(this).attr('data-effect') ? $(this).attr('data-effect') : 'slide';
             initial = $(this).attr('data-initial') ? $(this).attr('data-initial') : 0;
+            itemSpeed = $(this).attr('data-speed') ? $(this).attr('data-speed') : 1000;
         $(this).addClass('num'+index);		
         var swiper =  new Swiper( '.mySwiper.num' + index + ' .swiper-container', {
             spaceBetween: parseInt(itemGap),
@@ -413,7 +432,7 @@ const loadJquery = ()=>{
                 nextEl: '.mySwiper.num' + index + ' .next',
                 prevEl: '.mySwiper.num' + index + ' .prev'
             },
-            speed : 1000,
+            speed : itemSpeed,
             centeredSlides: slideCenter,
             autoplay: slidePlayTime ? {delay: parseInt(slidePlayTime),disableOnInteraction:true} : false,
             loop: slideLoop,
@@ -510,6 +529,12 @@ const loadJquery = ()=>{
         })
     })
 
+    // 모달 배경 클릭시 body overflow-hidden 클래스 빼기
+    $('body').on('click',function(e){
+        if($(e.target).hasClass('modal')){
+            modalClose(e.target.id);
+        }
+    });
     
    
 
