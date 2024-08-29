@@ -78,13 +78,13 @@
                 </button>
               </div>
               <!-- contents(selectbox) -->
-               <div class="grid grid-cols-2 gap-3 mt-4">
+               <div class="grid grid-cols-2 gap-x-3 gap-y-6 mt-4">
                 <div>
                   <label for="settings_langue" class="block py-1 px-2">Langue</label>
                   <button onclick="selectActivityMain()"class="w-full p-[9px] pr-4 bg-provider rounded-lg">
                     <div class="custom_select select_mainFilter flex flex-row justify-between items-center">
                       <p class="flex items-center gap-1 text-base font-medium">
-                          <span class="mainSpan">Bets</span>
+                          <span class="mainSpan">English EN</span>
                       </p>
                       <span class="arrow">
                         <svg viewBox="0 0 16 16" class="svg-icon w-5 h-5">
@@ -116,15 +116,130 @@
                       </span>
                       <div class="!w-full">
                         <ul>
-                          <li onclick="getActivityMain('Transactions')"><p>USD $</p></li>
-                          <li onclick="getActivityMain('Bets')"><p>EUR €</p></li>
+                          <li onclick="getActivityMain('USD $')"><p>USD $</p></li>
+                          <li onclick="getActivityMain('EUR €')"><p>EUR €</p></li>
                         </ul>
                       </div>
                     </div> 
                   </button>
                 </div>
-
+                <div>
+                  <p class="font-bold">Communication</p>
+                  <div class="border-b border-2 border-[#f1c24c] w-14 mb-4"></div>
+                  <div class="flex items-center gap-2">
+                    <label class="toggle-container">
+                      <input type="checkbox">
+                      <span class="toggle-circle"></span>
+                    </label>
+                    <span class="font-bold">Receive marketing emails</span>
+                  </div>
+                </div>
+                <div class="flex items-end gap-2">
+                  <label class="toggle-container">
+                    <input type="checkbox">
+                    <span class="toggle-circle"></span>
+                  </label>
+                  <span class="font-bold">Receive marketing SMS</span>
+                </div>
+                <div>
+                  <p class="font-bold">Security</p>
+                  <div class="border-b border-2 border-[#f1c24c] w-14 mb-4"></div>
+                  <div id="loyalty_accordion" class="accordion max-w-[1200px] m-auto w-full">
+                    <div class="accordion-item">
+                        <div id="loyalty_accordion-content-1" class="accordion-header ">
+                            <button class="accordion-button collapsed flex items-center justify-between text-sm" type="button" data-tw-toggle="collapse" data-tw-target="#loyalty_accordion-collapse-1" aria-expanded="false" aria-controls="loyalty_accordion-collapse-1">
+                              Change Password
+                                <svg class="svg-icon w-4 h-4 arrow"><use xlink:href="./dist/images/icon-defs.svg#arrow_down"></use></svg>
+                            </button>
+                        </div>
+                        <div id="loyalty_accordion-collapse-1" class="accordion-collapse collapse " aria-labelledby="loyalty_accordion-content-2" >
+                            <div class="accordion-body text-white">
+                              <div class="typography_box">
+                                <div class=" gap-x-4 pt-4 pb-1"> 
+                                  <div class="input_wrap mb-4">
+                                    <label for="settings_email" class="block py-1 px-2">Old password *</label>
+                                    <input type="password" id="settings_email" class="form-control error" placeholder="">
+                                    <span class="text-xs text-[#ff2e2e] font-semibold ml-2 mt-2">Password required</span>
+                                  </div>
+                                  <div class="input_wrap row-start-2 mb-4 ">
+                                    <label for="settings_username" class="block py-1 px-2 font-medium">New password *</label>
+                                    <input type="password" id="settings_username" class="form-control error" placeholder="">
+                                    <span class="text-xs text-[#ff2e2e] font-semibold ml-2 mt-2">Password required</span>
+                                  </div>
+                                  <div class="input_wrap row-start-2 mb-4 ">
+                                    <label for="settings_username" class="block py-1 px-2 font-medium">Confirm new password *</label>
+                                    <input type="password" id="settings_username" class="form-control error" placeholder="">
+                                    <span class="text-xs text-[#ff2e2e] font-semibold ml-2 mt-2">Password required</span>
+                                  </div>
+                                  <button class="btn btn-gradient-primary w-48 rounded-full">Save Changes</button>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                  </div>
+                  
+                </div>
+                
+                
                </div>
+               <div class="col-start-1 col-end-3 w-[70%]">
+                <p class="font-bold">Privacy</p>
+                <div class="border-b border-2 border-[#f1c24c] w-14 mb-4"></div>
+                <div class="flex items-center gap-2 mb-6">
+                  <label class="toggle-container">
+                    <input type="checkbox">
+                    <span class="toggle-circle"></span>
+                  </label>
+                  <span class="font-bold">Hide my Username</span>
+                </div>
+                <div id="loyalty_accordion" class="accordion max-w-[1200px] m-auto w-full">
+                  <div class="accordion-item">
+                      <div id="loyalty_accordion-content-1" class="accordion-header ">
+                          <button class="accordion-button collapsed flex items-center justify-between text-sm" type="button" data-tw-toggle="collapse" data-tw-target="#loyalty_accordion-collapse-1" aria-expanded="false" aria-controls="loyalty_accordion-collapse-1">
+                            2FA
+                              <svg class="svg-icon w-4 h-4 arrow"><use xlink:href="./dist/images/icon-defs.svg#arrow_down"></use></svg>
+                          </button>
+                      </div>
+                      <div id="loyalty_accordion-collapse-1" class="accordion-collapse collapse " aria-labelledby="loyalty_accordion-content-2" >
+                          <div class="accordion-body text-white">
+                            <div>
+                              <div class=" gap-x-4 pt-4 pb-1 text-xs"> 
+                                <span>For security reasons, it is required that you use 2FA for withdrawals. To enable 2FA, follow the steps below.</span>
+                                <div class="flex">
+                                  <ul class="list-decimal ml-3 mt-6">
+                                    <li class="pb-3">Download an app (e.g. Google Authenticator) and install it on your mobile device.</li>
+                                    <li class="pb-3">Scan or copy the QR code.</li>
+                                    <li class="pb-3">Enter and verify the authentication code generated by the app.</li>
+                                  </ul>
+                                  <img src="./dist/images/profile/qr_code.png" alt="QR_code" class="w-24 h-24">
+                                </div>
+                                <p class="text-[#8c9090] mt-4 mb-2">Copy this code into your authenticator app</p>
+                                <a href="#" class="flex items-center justify-center gap-2 border-2 border-dashed border-white rounded-md p-2">
+                                  <p>YMQ36Z657MTSOS36VXAYS3EP3POOZZZ3</p>
+                                  <img src="./dist/images/icon/copy_icon.png" alt="copy_icon" >
+                                </a>
+                                <div>
+                                  <input id="checkbox1" class="" name="mfaLoginCheckbox" type="checkbox">
+                                  <label for="checkbox1">2FA is mandatory for login</label>
+                                </div>
+                                <div>
+                                  <input id="checkbox2" name="mfaLoginCheckbox" type="checkbox" disabled checked>
+                                  <label for="checkbox2">2FA is mandatory for withdrawals</label>
+                                </div>
+                                <p>2FA App Code</p>
+                                <div class="input_wrap row-start-2 mb-4 ">
+                                  <label for="settings_username" class="block py-1 px-2 font-medium">Confirm new password *</label>
+                                  <input type="password" id="settings_username" class="form-control error" placeholder="Enter code form the 2FA app">
+                                  <span class="text-xs text-[#ff2e2e] font-semibold ml-2 mt-2">code is required</span>
+                                </div>
+                                <button class="btn btn-gradient-primary w-60 rounded-full">Activate</button>
+                                
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                </div>
+              </div>
             </div>
             <!-- content 영역 -->
           </div>

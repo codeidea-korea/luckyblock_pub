@@ -143,13 +143,12 @@ echo txtRecord('./@record/');
 				<li><a href="./play_with_lblock.html" target="_blank" class="">Play with $LBLOCK</a></li>
 				<li><a href="./help.html" target="_blank" class="">help</a></li>	
             </ul>
-            </ul>
-            </ul>
         </li>
 
 		<li class="mt20" data-label="Profile">
 			<ul>
 				<li><a href="./settings.html" target="_blank" class="">Settings</a></li>
+				<li><a href="./activity.html" target="_blank" class="">Activity</a></li>
 			</ul>
 		</li>
 

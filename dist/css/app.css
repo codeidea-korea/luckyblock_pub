@@ -1898,6 +1898,15 @@ select{
 .col-span-2{
     grid-column: span 2 / span 2;
 }
+.col-start-1{
+    grid-column-start: 1;
+}
+.col-end-2{
+    grid-column-end: 2;
+}
+.col-end-3{
+    grid-column-end: 3;
+}
 .row-span-2{
     grid-row: span 2 / span 2;
 }
@@ -2334,6 +2343,9 @@ select{
 .contents{
     display: contents;
 }
+.list-item{
+    display: list-item;
+}
 .\!hidden{
     display: none !important;
 }
@@ -2598,6 +2610,15 @@ select{
 .w-full{
     width: 100%;
 }
+.w-\[80\%\]{
+    width: 80%;
+}
+.w-\[60\%\]{
+    width: 60%;
+}
+.w-\[70\%\]{
+    width: 70%;
+}
 .max-w-1\/2{
     max-width: 50%;
 }
@@ -2674,6 +2695,9 @@ select{
 .items-start{
     align-items: flex-start;
 }
+.items-end{
+    align-items: flex-end;
+}
 .items-center{
     align-items: center;
 }
@@ -2721,6 +2745,13 @@ select{
 .gap-y-1{
     row-gap: 0.25rem;
 }
+.gap-x-3{
+    -moz-column-gap: 0.75rem;
+         column-gap: 0.75rem;
+}
+.gap-y-6{
+    row-gap: 1.5rem;
+}
 .overflow-hidden{
     overflow: hidden;
 }
@@ -2738,6 +2769,9 @@ select{
 }
 .whitespace-nowrap{
     white-space: nowrap;
+}
+.\!rounded-2xl{
+    border-radius: 1rem !important;
 }
 .rounded{
     border-radius: 0.25rem;
@@ -2765,12 +2799,6 @@ select{
 }
 .rounded-xl{
     border-radius: 0.75rem;
-}
-.\!rounded-xl{
-    border-radius: 0.75rem !important;
-}
-.\!rounded-2xl{
-    border-radius: 1rem !important;
 }
 .rounded-b-lg{
     border-bottom-right-radius: 0.5rem;
@@ -2883,6 +2911,10 @@ select{
 .border-zinc-700{
     --tw-border-opacity: 1;
     border-color: rgb(63 63 70 / var(--tw-border-opacity));
+}
+.border-\[\#fff\]{
+    --tw-border-opacity: 1;
+    border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 .border-opacity-10{
     --tw-border-opacity: 0.1;
@@ -3122,10 +3154,6 @@ select{
 .py-5{
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
-}
-.py-0{
-    padding-top: 0px;
-    padding-bottom: 0px;
 }
 .pb-0{
     padding-bottom: 0px;
@@ -3669,6 +3697,10 @@ select{
 .text-white{
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.text-\[\#8c9090\]{
+    --tw-text-opacity: 1;
+    color: rgb(140 144 144 / var(--tw-text-opacity));
 }
 .underline{
     -webkit-text-decoration-line: underline;
