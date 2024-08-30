@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+  <!-- BEGIN: Head -->
+  <head>
+    <meta charset="utf-8" />
+    <link href="dist/images/logo.svg" rel="shortcut icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Midone admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities."
+    />
+    <meta
+      name="keywords"
+      content="admin template, Midone Admin Template, dashboard template, flat admin template, responsive admin template, web app"
+    />
+
+    <title>Bitcoin Casino - €25,000 Bonus at Lucky Block Crypto Casino</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./dist/images/logo/favicon.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- BEGIN: CSS Assets-->
+    <link rel="stylesheet" href="./dist/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./dist/css/app.css" />
+    <link rel="stylesheet" href="./dist/css/layout.css" />
+    <link rel="stylesheet" href="./dist/css/custom.css" />
+    <!-- END: CSS Assets-->
+     
+  </head>
+  <!-- END: Head -->
+  <body>
+    <div id="initial-loader" class="initial-loader">
+      <div class="initial-loader-logo-container">
+        <img class="h-10" src="./dist/images/logo/logo.svg" alt="" />
+      </div>
+      <div class="initial-progress-bar-container">
+        <div class="initial-progress-bar"></div>
+      </div>
+    </div>
+
+    <div id="wrap" class="flex">
+      <!-- BEGIN: Side Menu -->
+
+      <!-- END: Side Menu -->
+      <!-- BEGIN: Content -->
+      <div class="content">
+        <!-- BEGIN: Header -->
+        <!-- END: Header -->
+
+        <div class="content_box">
+          <div class="inner">
+            <!-- content 영역 -->
+            <div>
+              <!-- tab menu -->
+              <div class="flex">
+                <button class="bg-[#171717] p-2 h-8 mt-3 md:hidden inline-block">
+                  <img src="./dist/images/icon/chevron-left.png" alt="Left Image" class="side-image" id="left-image">
+                </button>
+                <div class="scroll-container h-12 flex">
+                  <a class="p-4 pt-3 pb-0 text-base whitespace-nowrap font-bold text-[#868787] hover:bg-black hover:text-white" tabindex="-1" role="tab" aria-selected="false" href="./settings.html">Settings<span></span></a>
+                  <a class="p-4 pt-3 pb-0 text-base whitespace-nowrap font-bold text-[#868787] hover:bg-black hover:text-white" tabindex="0" role="tab" aria-selected="true" href="./activity.html">Activity<span></span></a>
+                  <a class="p-4 pt-3 pb-0 text-base whitespace-nowrap font-bold text-[#868787] hover:bg-black hover:text-white" tabindex="-1" role="tab" aria-selected="false" href="./account_info.html">Account Info<span></span></a>
+                  <a class="p-4 pt-3 pb-0 text-base whitespace-nowrap font-bold hover:bg-black border-b-2 border-[#f1c24c]" tabindex="-1" role="tab" aria-selected="false" href="./balances.html">Balances<span></span></a>
+                  <a class="p-4 pt-3 pb-0 text-base whitespace-nowrap font-bold text-[#868787] hover:bg-black hover:text-white" tabindex="-1" role="tab" aria-selected="false" href="./bonuses">Bonuses<span></span></a>
+                </div>
+                <button class="bg-[#171717] p-2 h-8 mt-3 md:hidden inline-block">
+                   <img src="./dist/images/icon/chevron-right.png" alt="Right Image" class="side-image" id="right-image">
+                </button>
+              </div>
+              <!-- table -->
+              <table class="w-full mt-5 mb-8">
+                <thead>
+                  <tr>
+                    <th class="font-normal text-[#b6b7b7] p-4 text-left">Currendy</th>
+                    <th class="font-normal text-[#b6b7b7] p-4 text-left">Total Balance</th>
+                    <th class="font-normal text-[#b6b7b7] p-4 text-left">Withdrawable</th>
+                    <th class="font-normal text-[#b6b7b7] p-4 text-left">Bonus</th>
+                    <th class="font-normal text-[#b6b7b7] p-4 text-left">
+                      <div class="form-check form-switch justify-end gap-3">
+                        <label class="form-check-label" for="display_infiat">Hide 0 balances</label> 
+                        <input id="display_infiat" class="form-check-input" type="checkbox"> 
+                    </div>
+                    </th>
+                  </tr>
+                  <tbody class="text-base">
+                    <tr class="bg-[#292929]">
+                      <td class="p-4">
+                        <p class="flex items-center gap-1">
+                          <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-flok"></use></svg>
+                          <span class="name">FLOK</span>
+                        </p>
+                      </td>
+                      <td class="p-4">0.00000000</td>
+                      <td class="p-4">0.00000000</td>
+                      <td class="p-4">0.00000000</td>
+                      <td class="flex justify-end gap-3 p-4">
+                        <button class="btn btn-gradient-primary rounded-full">Deposit</button>
+                        <button class="btn btn-outline-primary rounded-full">Withdraw</button>
+                      </td>
+                    </tr>
+                    <tr class="">
+                      <td class="p-4">
+                        <p class="flex items-center gap-1">
+                          <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-mtic"></use></svg>
+                          <span class="name">MATIC</span>
+                        </p>
+                      </td>
+                      <td class="p-4">0.00000000</td>
+                      <td class="p-4">0.00000000</td>
+                      <td class="p-4">0.00000000</td>
+                      <td class="flex justify-end gap-3 p-4">
+                        <button class="btn btn-gradient-primary rounded-full">Deposit</button>
+                        <button class="btn btn-outline-primary rounded-full">Withdraw</button>
+                      </td>
+                    </tr>
+                    <tr class="bg-[#292929]">
+                      <td class="p-4">
+                        <p class="flex items-center gap-1">
+                          <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-bch"></use></svg>
+                          <span class="name">BCH</span>
+                        </p>
+                      </td>
+                      <td class="p-4">0.00000000</td>
+                      <td class="p-4">0.00000000</td>
+                      <td class="p-4">0.00000000</td>
+                      <td class="flex justify-end gap-3 p-4">
+                        <button class="btn btn-gradient-primary rounded-full">Deposit</button>
+                        <button class="btn btn-outline-primary rounded-full">Withdraw</button>
+                      </td>
+                    </tr>
+                    <tr class="">
+                      <td class="p-4">
+                        <p class="flex items-center gap-1">
+                          <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-tama"></use></svg>
+                          <span class="name">TAMA</span>
+                        </p>
+                      </td>
+                      <td class="p-4">0.00000000</td>
+                      <td class="p-4">0.00000000</td>
+                      <td class="p-4">0.00000000</td>
+                      <td class="flex justify-end gap-3 p-4">
+                        <button class="btn btn-gradient-primary rounded-full">Deposit</button>
+                        <button class="btn btn-outline-primary rounded-full">Withdraw</button>
+                      </td>
+                    </tr>
+                    <tr class="bg-[#292929]">
+                      <td class="p-4">
+                        <p class="flex items-center gap-1">
+                          <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-shib"></use></svg>
+                          <span class="name">SHIB</span>
+                        </p>
+                      </td>
+                      <td class="p-4">0.00000000</td>
+                      <td class="p-4">0.00000000</td>
+                      <td class="p-4">0.00000000</td>
+                      <td class="flex justify-end gap-3 p-4">
+                        <button class="btn btn-gradient-primary rounded-full">Deposit</button>
+                        <button class="btn btn-outline-primary rounded-full">Withdraw</button>
+                      </td>
+                    </tr>
+                    <tr class="">
+                      <td class="p-4">
+                        <p class="flex items-center gap-1">
+                          <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-doge"></use></svg>
+                          <span class="name">DOGE</span>
+                        </p>
+                      </td>
+                      <td class="p-4">0.00000000</td>
+                      <td class="p-4">0.00000000</td>
+                      <td class="p-4">0.00000000</td>
+                      <td class="flex justify-end gap-3 p-4">
+                        <button class="btn btn-gradient-primary rounded-full">Deposit</button>
+                        <button class="btn btn-outline-primary rounded-full">Withdraw</button>
+                      </td>
+                    </tr>
+                    <tr class="bg-[#292929]">
+                      <td class="p-4">
+                        <p class="flex items-center gap-1">
+                          <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-usdt"></use></svg>
+                          <span class="name">USDT</span>
+                        </p>
+                      </td>
+                      <td class="p-4">0.00000000</td>
+                      <td class="p-4">0.00000000</td>
+                      <td class="p-4">0.00000000</td>
+                      <td class="flex justify-end gap-3 p-4">
+                        <button class="btn btn-gradient-primary rounded-full">Deposit</button>
+                        <button class="btn btn-outline-primary rounded-full">Withdraw</button>
+                      </td>
+                    </tr>
+                    <tr class="">
+                      <td class="p-4">
+                        <p class="flex items-center gap-1">
+                          <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-pepe"></use></svg>
+                          <span class="name">PEPE</span>
+                        </p>
+                      </td>
+                      <td class="p-4">0.00000000</td>
+                      <td class="p-4">0.00000000</td>
+                      <td class="p-4">0.00000000</td>
+                      <td class="flex justify-end gap-3 p-4">
+                        <button class="btn btn-gradient-primary rounded-full">Deposit</button>
+                        <button class="btn btn-outline-primary rounded-full">Withdraw</button>
+                      </td>
+                    </tr>
+                    <tr class="bg-[#292929]">
+                      <td class="p-4">
+                        <p class="flex items-center gap-1">
+                          <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-btc"></use></svg>
+                          <span class="name">BTC</span>
+                        </p>
+                      </td>
+                      <td class="p-4">0.00000000</td>
+                      <td class="p-4">0.00000000</td>
+                      <td class="p-4">0.00000000</td>
+                      <td class="flex justify-end gap-3 p-4">
+                        <button class="btn btn-gradient-primary rounded-full">Deposit</button>
+                        <button class="btn btn-outline-primary rounded-full">Withdraw</button>
+                      </td>
+                    </tr>
+                    <tr class="">
+                      <td class="p-4">
+                        <p class="flex items-center gap-1">
+                          <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-sol"></use></svg>
+                          <span class="name">SOL</span>
+                        </p>
+                      </td>
+                      <td class="p-4">0.00000000</td>
+                      <td class="p-4">0.00000000</td>
+                      <td class="p-4">0.00000000</td>
+                      <td class="flex justify-end gap-3 p-4">
+                        <button class="btn btn-gradient-primary rounded-full">Deposit</button>
+                        <button class="btn btn-outline-primary rounded-full">Withdraw</button>
+                      </td>
+                    </tr>
+                    <tr class="bg-[#292929]">
+                      <td class="p-4">
+                        <p class="flex items-center gap-1">
+                          <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-avax"></use></svg>
+                          <span class="name">AVAX</span>
+                        </p>
+                      </td>
+                      <td class="p-4">0.00000000</td>
+                      <td class="p-4">0.00000000</td>
+                      <td class="p-4">0.00000000</td>
+                      <td class="flex justify-end gap-3 p-4">
+                        <button class="btn btn-gradient-primary rounded-full">Deposit</button>
+                        <button class="btn btn-outline-primary rounded-full">Withdraw</button>
+                      </td>
+                    </tr>
+                    <tr class="">
+                      <td class="p-4">
+                        <p class="flex items-center gap-1">
+                          <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#currency-ico-ton"></use></svg>
+                          <span class="name">TON</span>
+                        </p>
+                      </td>
+                      <td class="p-4">0.00000000</td>
+                      <td class="p-4">0.00000000</td>
+                      <td class="p-4">0.00000000</td>
+                      <td class="flex justify-end gap-3 p-4">
+                        <button class="btn btn-gradient-primary rounded-full">Deposit</button>
+                        <button class="btn btn-outline-primary rounded-full">Withdraw</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </thead>
+              </table>
+              <!-- table 영역 -->
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <!-- BEGIN: Footer -->
+        <!-- END: Footer -->
+      </div>
+      <!-- END: Content -->
+    </div>
+
+    <!-- BEGIN: JS Assets-->
+    <script src="./dist/js/app.js"></script>
+    <script src="./dist/js/jquery-1.12.4.js"></script>
+    <script src="./dist/js/jquery-ui.js"></script>
+    <script src="./dist/js/swiper-bundle.min.js"></script>
+    <script src="./dist/js/custom.js"></script>
+    <!-- END: JS Assets-->
+  </body>
+</html>

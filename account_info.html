@@ -69,22 +69,22 @@
                 <div class="scroll-container h-12 flex">
                   <a class="p-4 pt-3 pb-0 text-base whitespace-nowrap font-bold text-[#868787] hover:bg-black hover:text-white" tabindex="-1" role="tab" aria-selected="false" href="./settings.html">Settings<span></span></a>
                   <a class="p-4 pt-3 pb-0 text-base whitespace-nowrap font-bold text-[#868787] hover:bg-black hover:text-white" tabindex="0" role="tab" aria-selected="true" href="./activity.html">Activity<span></span></a>
-                  <a class="p-4 pt-3 pb-0 text-base whitespace-nowrap font-bold hover:bg-black border-b-2 border-[#f1c24c]" tabindex="-1" role="tab" aria-selected="false" href="#">Account Info<span></span></a>
-                  <a class="p-4 pt-3 pb-0 text-base whitespace-nowrap font-bold text-[#868787] hover:bg-black hover:text-white" tabindex="-1" role="tab" aria-selected="false" href="#">Balances<span></span></a>
-                  <a class="p-4 pt-3 pb-0 text-base whitespace-nowrap font-bold text-[#868787] hover:bg-black hover:text-white" tabindex="-1" role="tab" aria-selected="false" href="#">Bonuses<span></span></a>
+                  <a class="p-4 pt-3 pb-0 text-base whitespace-nowrap font-bold hover:bg-black border-b-2 border-[#f1c24c]" tabindex="-1" role="tab" aria-selected="false" href="./account_info.html">Account Info<span></span></a>
+                  <a class="p-4 pt-3 pb-0 text-base whitespace-nowrap font-bold text-[#868787] hover:bg-black hover:text-white" tabindex="-1" role="tab" aria-selected="false" href="./balances.html">Balances<span></span></a>
+                  <a class="p-4 pt-3 pb-0 text-base whitespace-nowrap font-bold text-[#868787] hover:bg-black hover:text-white" tabindex="-1" role="tab" aria-selected="false" href="./bonuses">Bonuses<span></span></a>
                 </div>
                 <button class="bg-[#171717] p-2 h-8 mt-3 md:hidden inline-block">
                    <img src="./dist/images/icon/chevron-right.png" alt="Right Image" class="side-image" id="right-image">
                 </button>
               </div>
               <!-- contents(selectbox) -->
-               <div class="grid grid-cols-2 gap-x-3 gap-y-6 mt-4">
+               <div class="md:grid flex md:grid-cols-2 flex-col gap-x-3 gap-y-6 mt-4">
                 <div>
-                  <label for="settings_langue" class="block py-1 px-2">Langue</label>
-                  <button onclick="selectActivityMain()"class="w-full p-[9px] pr-4 bg-provider rounded-lg">
-                    <div class="custom_select select_mainFilter flex flex-row justify-between items-center">
+                  <label for="settings_langue" class="block py-1 px-2">Language</label>
+                  <button onclick="selectAccount_lang()"class="w-full p-[9px] pr-4 bg-provider rounded-lg">
+                    <div class="custom_select select_lang flex flex-row justify-between items-center">
                       <p class="flex items-center gap-1 text-base font-medium">
-                          <span class="mainSpan">English EN</span>
+                          <span class="langSpan">English EN</span>
                       </p>
                       <span class="arrow">
                         <svg viewBox="0 0 16 16" class="svg-icon w-5 h-5">
@@ -93,21 +93,21 @@
                       </span>
                       <div class="!w-full">
                         <ul>
-                          <li onclick="getActivityMain('English EN')"><p>English EN</p></li>
-                          <li onclick="getActivityMain('German DE')"><p>German DE</p></li>
-                          <li onclick="getActivityMain('Spanish ES')"><p>Spanish ES</p></li>
-                          <li onclick="getActivityMain('French FR')"><p>French FR</p></li>
+                          <li onclick="getAccountLangue('English EN')"><p>English EN</p></li>
+                          <li onclick="getAccountLangue('German DE')"><p>German DE</p></li>
+                          <li onclick="getAccountLangue('Spanish ES')"><p>Spanish ES</p></li>
+                          <li onclick="getAccountLangue('French FR')"><p>French FR</p></li>
                         </ul>
                       </div>
                     </div> 
                   </button>
                 </div>
                 <div>
-                  <label for="settings_langue" class="block py-1 px-2">Preferred Fiat Display Currency</label>
-                  <button onclick="selectActivityMain()"class="w-full p-[9px] pr-4 bg-provider rounded-lg">
-                    <div class="custom_select select_mainFilter flex flex-row justify-between items-center">
+                  <label for="settings_preferred" class="block py-1 px-2">Preferred Fiat Display Currency</label>
+                  <button onclick="selectAccount_preferred()"class="w-full p-[9px] pr-4 bg-provider rounded-lg">
+                    <div class="custom_select select_preferred flex flex-row justify-between items-center">
                       <p class="flex items-center gap-1 text-base font-medium">
-                          <span class="mainSpan">EUR €</span>
+                          <span class="preferredSpan">EUR €</span>
                       </p>
                       <span class="arrow">
                         <svg viewBox="0 0 16 16" class="svg-icon w-5 h-5">
@@ -116,8 +116,8 @@
                       </span>
                       <div class="!w-full">
                         <ul>
-                          <li onclick="getActivityMain('USD $')"><p>USD $</p></li>
-                          <li onclick="getActivityMain('EUR €')"><p>EUR €</p></li>
+                          <li onclick="getAccountPreferred('USD $')"><p>USD $</p></li>
+                          <li onclick="getAccountPreferred('EUR €')"><p>EUR €</p></li>
                         </ul>
                       </div>
                     </div> 
@@ -126,20 +126,20 @@
                 <div>
                   <p class="font-bold">Communication</p>
                   <div class="border-b border-2 border-[#f1c24c] w-14 mb-4"></div>
-                  <div class="flex items-center gap-2">
-                    <label class="toggle-container">
-                      <input type="checkbox">
+                  <div class="flex items-center md:justify-normal justify-between gap-2">
+                    <label class="toggle-container md:-order-none order-2">
+                      <input id="toggle_email" type="checkbox">
                       <span class="toggle-circle"></span>
                     </label>
-                    <span class="font-bold">Receive marketing emails</span>
+                    <label for="toggle_email" class="font-bold md:-order-none order-1">Receive marketing emails</label>
                   </div>
                 </div>
-                <div class="flex items-end gap-2">
-                  <label class="toggle-container">
-                    <input type="checkbox">
+                <div class="flex items-end md:justify-normal justify-between gap-2">
+                  <label class="toggle-container md:-order-none order-2">
+                    <input id="toggle_sns" type="checkbox">
                     <span class="toggle-circle"></span>
                   </label>
-                  <span class="font-bold">Receive marketing SMS</span>
+                  <label for="toggle_sns" class="font-bold md:-order-none order-1">Receive marketing SMS</label>
                 </div>
                 <div>
                   <p class="font-bold">Security</p>
@@ -182,15 +182,15 @@
                 
                 
                </div>
-               <div class="col-start-1 col-end-3 w-[70%]">
+               <div class="col-start-1 col-end-3 md:w-[70%] w-full">
                 <p class="font-bold">Privacy</p>
                 <div class="border-b border-2 border-[#f1c24c] w-14 mb-4"></div>
-                <div class="flex items-center gap-2 mb-6">
-                  <label class="toggle-container">
-                    <input type="checkbox">
+                <div class="flex items-center md:justify-normal justify-between gap-2 mb-6">
+                  <label class="toggle-container md:-order-none order-2">
+                    <input id="toggle_username" type="checkbox">
                     <span class="toggle-circle"></span>
                   </label>
-                  <span class="font-bold">Hide my Username</span>
+                  <label for="toggle_username" class="font-bold md:-order-none order-1">Hide my Username</label>
                 </div>
                 <div id="loyalty_accordion" class="accordion max-w-[1200px] m-auto w-full">
                   <div class="accordion-item">
@@ -214,25 +214,26 @@
                                   <img src="./dist/images/profile/qr_code.png" alt="QR_code" class="w-24 h-24">
                                 </div>
                                 <p class="text-[#8c9090] mt-4 mb-2">Copy this code into your authenticator app</p>
-                                <a href="#" class="flex items-center justify-center gap-2 border-2 border-dashed border-white rounded-md p-2">
+                                <a href="#" class="flex items-center justify-center gap-2 border-2 border-dashed border-white rounded-md p-2 mb-8">
                                   <p>YMQ36Z657MTSOS36VXAYS3EP3POOZZZ3</p>
                                   <img src="./dist/images/icon/copy_icon.png" alt="copy_icon" >
                                 </a>
-                                <div>
-                                  <input id="checkbox1" class="" name="mfaLoginCheckbox" type="checkbox">
-                                  <label for="checkbox1">2FA is mandatory for login</label>
-                                </div>
-                                <div>
-                                  <input id="checkbox2" name="mfaLoginCheckbox" type="checkbox" disabled checked>
-                                  <label for="checkbox2">2FA is mandatory for withdrawals</label>
-                                </div>
-                                <p>2FA App Code</p>
-                                <div class="input_wrap row-start-2 mb-4 ">
-                                  <label for="settings_username" class="block py-1 px-2 font-medium">Confirm new password *</label>
+                                <label class="checkbox_label mb-3">
+                                  <input type="checkbox">
+                                  <span class="checkbox_icon"></span>
+                                  <span class="checkbox_text">2FA is mandatory for login</span>
+                                </label>
+                                <label class="checkbox_label mb-3">
+                                  <input type="checkbox" disabled checked>
+                                  <span class="checkbox_icon"></span>
+                                  <span class="checkbox_text">2FA is mandatory for withdrawals</span>
+                                </label>
+                                <div class="input_wrap row-start-2 mb-6">
+                                  <label for="settings_username" class="block py-1 px-2 font-medium">2FA App Code</label>
                                   <input type="password" id="settings_username" class="form-control error" placeholder="Enter code form the 2FA app">
                                   <span class="text-xs text-[#ff2e2e] font-semibold ml-2 mt-2">code is required</span>
                                 </div>
-                                <button class="btn btn-gradient-primary w-60 rounded-full">Activate</button>
+                                <button class="btn btn-gradient-primary w-60 rounded-full text-base">Activate</button>
                                 
                               </div>
                             </div>

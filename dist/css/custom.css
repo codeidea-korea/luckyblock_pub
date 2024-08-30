@@ -115,36 +115,16 @@ input[type='number'] {-moz-appearance: textfield;}
 .scroll-container {scroll-behavior: smooth; overflow-y: hidden; -webkit-overflow-scrolling: touch;}
 .scroll-container::-webkit-scrollbar {display: none;}
 
-.toggle-container {
-    position: relative;
-    display: inline-block;
-    width: 50px;
-    height: 25px;
-    background-color: #4c4c4c; /* 기본 회색 배경 */
-    border-radius: 50px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
+/* 프로필 account info 토글 버튼 스타일 */
+.toggle-container {position: relative; display: inline-block; width: 50px; height: 25px; background-color: #4c4c4c; border-radius: 50px; cursor: pointer; transition: background-color 0.3s;}
 
-.toggle-container input {
-    display: none;
-}
+.toggle-container input {display: none;}
 
-.toggle-circle {
-    position: absolute;
-    top: 2.5px;
-    left: 2.5px;
-    width: 20px;
-    height: 20px;
-    background-color: white;
-    border:2px solid #4c4c4c;
-    border-radius: 50%;
-    transition: transform 0.3s;
-}
+.toggle-circle {position: absolute;top: 2.5px; left: 2.5px; width: 20px; height: 20px; background-color: white; border:2px solid #4c4c4c; border-radius: 50%; transition: transform 0.3s;}
 
-.toggle-container input:checked + .toggle-circle {
-    transform: translateX(25px);
-    background-color: #f1c24c;
-    border:0;
-    outline:4px solid #fff;
-}
+.toggle-container input:checked + .toggle-circle {transform: translateX(25px); background-color: #f1c24c; border:0; outline:4px solid #fff;}
+
+.checkbox_label input{display: none;}
+.checkbox_label{display: flex; align-items: center;}
+.checkbox_icon::before{content:''; display: block; margin-right: 5px; display: inline-block; width: 20px; height: 20px; background-color: transparent; border: 2px solid #dbdede; box-sizing:border-box; position: relative; cursor: pointer; border-radius: 3px; }
+.checkbox_label input:checked + .checkbox_icon::before{background: url(../images/icon/check_icon.png) #dbdede no-repeat center; background-size: 15px 15px; border:none;}

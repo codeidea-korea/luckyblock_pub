@@ -379,6 +379,29 @@ const selectActivityCurrency_sport = ()=>{
 const getActivityCurrency3 = (currencyList) => {
     document.querySelector('.custom_select .currencySpan3').innerHTML = currencyList;
 }
+// account info select box
+const selectAccount_lang = ()=>{
+    $('.select_lang').toggleClass('open')
+    $(document).on('click', (event) => {
+        if (!$(event.target).closest('.select_lang').length) {
+            $('.select_lang').removeClass('open');
+        }
+    });
+}
+const getAccountLangue = (langueList) => {
+    document.querySelector('.custom_select .langSpan').innerHTML = langueList;
+}
+const selectAccount_preferred = ()=>{
+    $('.select_preferred').toggleClass('open')
+    $(document).on('click', (event) => {
+        if (!$(event.target).closest('.select_preferred').length) {
+            $('.select_preferred').removeClass('open');
+        }
+    });
+}
+const getAccountPreferred = (preferredList) => {
+    document.querySelector('.custom_select .preferredSpan').innerHTML = preferredList;
+}
 
 // betBtn 토글
 const betBtnToggle = (item)=>{
