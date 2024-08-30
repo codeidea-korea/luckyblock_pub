@@ -84,6 +84,8 @@
 .litepicker .container__months .month-item-weekdays-row {color:#909090;}
 .litepicker .container__days .day-item {color:white;}
 .litepicker .container__days .week-number{color:white;}
+.litepicker .container__days .day-item.is-in-range, 
+.litepicker .container__days .day-item.is-in-range:hover {background:rgb(var(--color-primary) / 0.3)}
 .litepicker .container__days
 .day-item.is-start-date,
 .litepicker .container__days .day-item.is-start-date:hover,
@@ -96,6 +98,7 @@
     -webkit-box-shadow: 0 0 0 1000px #343434 inset; 
     -webkit-text-fill-color: white;
 }
+.litepicker .container__tooltip {color:#000; }
 
 /* 프로필 > settings */
 .selectBtn{background-color: #6e6e6e;}

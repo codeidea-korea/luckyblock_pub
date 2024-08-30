@@ -58,6 +58,16 @@ window.addEventListener("load", ()=>{
         console.log(error);
     });
 
+    // 스포츠 상단메뉴
+    fetch("./_sports_topmenu.html")
+    .then((response) => response.text())
+    .then((htmlData) => {
+        $('.sports_content_box').prepend(htmlData);
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+
 
 });
 
@@ -413,22 +423,23 @@ const openSportItem = (item)=>{
     let sportItem = $(item).parents('.sport_item');
 
     $('.sport_item').each(function(){
-        $(this).removeClass('active');
-        $(this).removeClass('open')
-        $(this).find('.open_arrow svg').toggleClass('rotate-180');
+        if(sportItem.data('num') != $(this).data('num')){
+            $(this).removeClass('open active')
+            $(this).find('.open_arrow').removeClass('rotate-180');
+        }
     })
-    
-    sportItem.toggleClass('active');
-
+        
     if(sportItem.hasClass('active')){
-        sportItem.toggleClass('open');
-        $(item).find('svg').toggleClass('rotate-180');
+        sportItem.removeClass('open active');
+        $(item).find('svg').removeClass('rotate-180');
+    }else{
+        sportItem.addClass('open active');
+        $(item).find('svg').addClass('rotate-180');
     }
 }
 
 // jquery 모음
 const loadJquery = ()=>{
-
     // 스와이퍼 공통
     $('.mySwiper').each(function(index) {
         var mySwiper = $(this),
@@ -558,8 +569,24 @@ const loadJquery = ()=>{
             modalClose(e.target.id);
         }
     });
-    
-   
+
+    // 스포츠 아이템
+    $('.sport_item').each(function(index){
+        $(this).attr('data-num',index)
+    });
+
+    // sport_item 외의 영역 선택했을 시 닫기
+    document.addEventListener('click',(e)=>{
+        const sport = document.querySelectorAll('.sport_item.open')
+
+        sport.forEach((item)=>{
+            if(item && !item.contains(e.target)){
+                item.classList.remove('open')
+                item.classList.remove('active')
+                item.querySelector('.open_arrow').classList.remove('rotate-180')
+            }
+        })
+    });
 
   
 }

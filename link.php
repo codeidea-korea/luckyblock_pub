@@ -72,6 +72,7 @@ echo txtRecord('./@record/');
             <ul>
                 <li><a href="./index.html" target="_blank" class="">메인 - 로그인 후</a></li>
                 <li><a href="./index_logout.html" target="_blank" class="">메인 - 로그인 전</a></li>
+                <li><a href="./index_ko.html" target="_blank" class="">메인 - 한국어 번역</a></li>
             </ul>
         </li>
 
