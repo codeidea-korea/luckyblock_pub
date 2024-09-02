@@ -468,6 +468,15 @@ const openSportItem = (item)=>{
     }
 }
 
+// sport 배팅슬립 
+const oddSetting = ()=>{
+    $('.sports_betslip .odd_setting').toggleClass('open');
+}
+
+const sportsBetSlip = ()=>{
+    $('.sports_betslip .betslip_cont').slideToggle();
+}
+
 // jquery 모음
 const loadJquery = ()=>{
     // 스와이퍼 공통

@@ -127,6 +127,11 @@ echo txtRecord('./@record/');
 		</li>
 
 		<li class="mt20" data-label="Sports">
+			<ul>
+				<li><a href="./sports.html" target="_blank" class="">sports - highlights</a></li>
+				<li><a href="./sports_schedule.html" target="_blank" class="">sports - schedule</a></li>
+				<li><a href="./sports_bets_feed.html" target="_blank" class="">sports - bets feed</a></li>
+			</ul>
 		</li>
 
 		<li class="mt20" data-label="Menu">

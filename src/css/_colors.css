@@ -2,7 +2,7 @@
 :root {
     --color-primary: 241 194 76;
     --color-secondary: theme("colors.rgb.slate.200");
-    --color-success: theme("colors.rgb.lime.500");
+    --color-success: 45 143 29;
     --color-info: theme("colors.rgb.cyan.500");
     --color-warning: theme("colors.rgb.yellow.400");
     --color-pending: 241 112 76;

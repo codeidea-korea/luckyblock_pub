@@ -5,6 +5,7 @@
     --primary-soft-color:#ffdd9a; 
     --primary-dark-color:#e8a430; 
     --primary-dark2-color:#d0a853; 
+    --primary-dark3-color:#957329; 
     --primary-gradient:linear-gradient(0deg,rgb(221,137,10),rgb(255,218,119));
     --primary-gradient-hover:linear-gradient(0deg,rgb(237,153,28),rgb(255,234,180)); 
     --primary-soft-gradient:linear-gradient(180deg, #FFFFFF 0%, #E3C9A3 100%);
@@ -38,11 +39,14 @@ body {font-family: Poppins, Arial, Helvetica, 'sans-serif'; color:#fff; backgrou
 ::-webkit-scrollbar-thumb {background:#3d3d3d; border-radius:5px; width:20px; }
 ::-webkit-scrollbar-track {background:var(--back-color); }
 
+button:disabled {opacity:.5; }
+
 .inner {width:1200px; max-width:100%; margin:0 auto; }
 .sports .inner {width:100%; }
 
 .color-softP {color:var(--primary-soft-color); }
 .color-darkP {color:var(--primary-dark-color); }
+.color-darkP3 {color:var(--primary-dark3-color); }
 .color-sub {color:var(--sub-color); }
 .color-gray {color:var(--gray-color); }
 .color-gray2 {color:var(--gray2-color); }
@@ -55,6 +59,7 @@ body {font-family: Poppins, Arial, Helvetica, 'sans-serif'; color:#fff; backgrou
 .color-gradient-soft {background:var(--primary-soft-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
 .hover\:bg-option:hover {background:var(--option-color);}
 
+.bg-primarydark3 {background:var(--primary-dark3-color);}
 .bg-sub {background:var(--sub-color); }
 .hover\:bg-sub:hover {background:var(--sub-color);}
 .bg-back {background:var(--back-color); }
@@ -138,8 +143,10 @@ body {font-family: Poppins, Arial, Helvetica, 'sans-serif'; color:#fff; backgrou
         CASINO_DETAIL
         SELECT_CRYPTO
         TOOLTIP
+
         SPORTS_MENU
         SPORTS_SLIDE
+        SPORTS_BETSLIP
 
 */
 
@@ -457,12 +464,24 @@ body:not(.logout) .casinoSwiper .arrow.next {right:15px; }
 .form-check-input[type="checkbox"] {width:18px; height:18px; border-width:2px; background-color:transparent; border-radius:2px; }
 .form-check-input[type="checkbox"]:checked {border-color:#fff; background-color:#fff; background-image:url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='black' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e"); }
 
+.form-check-input[type="radio"] + label {opacity:0.6; }
+.form-check-input[type="radio"] + label:hover {opacity:1; }
+.form-check-input[type="radio"]:checked + label {opacity:1; }
+
 .form-switch .form-check-input[type="checkbox"] {width:40px; height:20px; border:0 none; border-radius:20px; border:2px solid #fff; }
 .form-switch .form-check-input[type="checkbox"]:checked {background:transparent; }
 .form-switch .form-check-input::after {content:''; z-index:1; position:absolute; left:calc(50% - 11px); top:calc(50% - 1px); width:22px; height:2px; background-color:#bababa; }
 .form-switch .form-check-input::before {z-index:2; width:12px; height:12px; outline:10px solid #fff; margin-left:1px; background-color:#fff; box-shadow:1px 1px 3px rgba(0, 0, 0, 0.25); transition:all 0.5s; }
 .form-switch .form-check-input:hover::before {outline:10px solid rgba(241,194,76,0.3); }
 .form-switch .form-check-input:checked::before {margin-left:21px; background-color:var(--primary-color);}
+
+.form-switch.type02 .form-check-input {width:52px; height:24px; }
+.form-switch.type02 .form-check-input::after {display:none; }
+.form-switch.type02 .form-check-input::before {width:16px; height:16px; outline:0 none; }
+.form-switch.type02 .form-check-input:checked::before {margin-left:28px; background-color:#006699; }
+.form-switch.type02 .form-check-input:checked {background-color:#fff; }
+.form-switch.type02 .form-check-input + svg {z-index:10; position:absolute; top:4px; left:3.5px; width:16px; height:16px; color:#957329; transition:all 0.5s; }
+.form-switch.type02 .form-check-input:checked + svg {left:31.5px; color:#fff; }
 
 /* --------------------------------------
     COIN_LIST
@@ -596,3 +615,24 @@ body:not(.logout) .casinoSwiper .arrow.next {right:15px; }
     .custom_grid {grid-template-columns:1fr; grid-template-areas:none;}
     .custom_grid .widget {grid-area:auto; }
 }
+
+
+/* ----------------------------------------------
+            SPORTS_BETSLIP
+---------------------------------------------- */
+.sports_betslip {z-index:100; overflow:hidden; position:fixed; right:10px; bottom:0; width:320px; box-shadow:0 0 60px rgba(0,0,0,0.65); background:#292929; border-radius:6px 6px 0 0; transition:all 0.5s; }
+.sports_betslip::-webkit-scrollbar {width:7px; -webkit-appearance:none; }
+
+.sports_betslip .betslip_cont {display:none; }
+
+.sports_betslip .tab-content {overflow-y:auto; max-height:75vh;}
+
+.sports_betslip .odd_setting {z-index:-1; position:absolute; top:0; left:0; opacity:0; visibility:hidden; width:100%; height:100%; background:rgba(0,0,0,0.5); transition:all 0.5s; }
+.sports_betslip .odd_setting .setting_cont {position:absolute; left:5px; bottom:-100%; width:calc(100% - 10px); border-radius:10px; transition:all 0.5s; }
+
+.sports_betslip .odd_setting.open {z-index:10; opacity:1; visibility:visible; }
+.sports_betslip .odd_setting.open .setting_cont {bottom:5px; }
+
+.sports_betslip .comboboost p {position:relative; }
+.sports_betslip .comboboost p span {position:absolute; left:50%; bottom:calc(100% + 7px); transform:translateX(-50%); }
+.sports_betslip .comboboost p span:before {content:''; position:absolute; left:50%; top:100%; width:0; height:0; border-color:rgba(255,255,255,0.6) transparent transparent transparent; border-style:solid; border-width:4px 3px 0 3px; transform:translateX(-50%); }
