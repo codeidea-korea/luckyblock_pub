@@ -68,10 +68,10 @@
                 </button>
                 <div class="scroll-container h-12 flex">
                   <a class="p-4 pt-3 pb-0 text-base whitespace-nowrap font-bold text-[#868787] hover:bg-black hover:text-white" tabindex="-1" role="tab" aria-selected="false" href="./settings.html">Settings<span></span></a>
-                  <a class="p-4 pt-3 pb-0 text-base whitespace-nowrap font-bold hover:bg-black border-b-2 border-[#f1c24c] " tabindex="0" role="tab" aria-selected="true" href="./activity.html">Activity<span></span></a>
+                  <a class="p-4 pt-3 pb-0 text-base whitespace-nowrap font-bold text-[#868787] hover:bg-black hover:text-white" tabindex="0" role="tab" aria-selected="true" href="./activity.html">Activity<span></span></a>
                   <a class="p-4 pt-3 pb-0 text-base whitespace-nowrap font-bold text-[#868787] hover:bg-black hover:text-white" tabindex="-1" role="tab" aria-selected="false" href="./account_info.html">Account Info<span></span></a>
                   <a class="p-4 pt-3 pb-0 text-base whitespace-nowrap font-bold text-[#868787] hover:bg-black hover:text-white" tabindex="-1" role="tab" aria-selected="false" href="./balances.html">Balances<span></span></a>
-                  <a class="p-4 pt-3 pb-0 text-base whitespace-nowrap font-bold text-[#868787] hover:bg-black hover:text-white" tabindex="-1" role="tab" aria-selected="false" href="./bonuses.html">Bonuses<span></span></a>
+                  <a class="p-4 pt-3 pb-0 text-base whitespace-nowrap font-bold hover:bg-black border-b-2 border-[#f1c24c]" tabindex="-1" role="tab" aria-selected="false" href="./bonuses.html">Bonuses<span></span></a>
                 </div>
                 <button class="bg-[#171717] p-2 h-8 mt-3 md:hidden inline-block">
                    <img src="./dist/images/icon/chevron-right.png" alt="Right Image" class="side-image" id="right-image">
@@ -83,7 +83,7 @@
                   <button onclick="selectActivityMain()"class="w-full p-[9px] pr-4 bg-provider rounded-lg">
                     <div class="custom_select select_mainFilter flex flex-row justify-between items-center">
                       <p class="flex items-center gap-1 text-base font-medium">
-                          <span class="mainSpan">Bets</span>
+                          <span class="mainSpan">History</span>
                       </p>
                       <span class="arrow">
                         <svg viewBox="0 0 16 16" class="svg-icon w-5 h-5">
@@ -92,9 +92,7 @@
                       </span>
                       <div class="!w-full">
                         <ul>
-                          <li onclick="getActivityMain('Transactions')"><p>Transactions</p></li>
-                          <li onclick="getActivityMain('Bets')"><p>Bets</p></li>
-                          <li onclick="getActivityMain('Sport bets')"><p>Sport bets</p></li>
+                          <li onclick="getActivityMain('History')"><p>History</p></li>
                         </ul>
                       </div>
                     </div> 
@@ -106,10 +104,10 @@
                 </button>
                 
                 </div>
-                <!-- filter tab1 - Bets -->
-                <div class="filter-bets grid md:grid-cols-2 grid-cols-1 md:gap-3 gap-2 hide">
+                <!-- filter tab -->
+                <div class="filter-history grid md:grid-cols-2 grid-cols-1 md:gap-3 gap-2 hide">
                   <div class="flex flex-col">
-                    <label for="settings_Game" class="block py-1 px-2 font-medium">Game</label>
+                    <label for="settings_Game" class="block py-1 px-2 font-medium">Type</label>
                     <button onclick="selectActivityGame()" class="w-full p-[9px] pr-4 bg-provider rounded-lg">
                       <div class="custom_select select_gameFilter flex flex-row justify-between items-center">
                         <p class="flex items-center gap-1 text-base font-medium">
@@ -123,6 +121,12 @@
                         <div class="!w-full">
                           <ul>
                             <li onclick="getActivityGame('All')"><p>All</p></li>
+                            <li onclick="getActivityGame('Wagering')"><p>Wagering</p></li>
+                            <li onclick="getActivityGame('Casino cashback')"><p>Casino cashback</p></li>
+                            <li onclick="getActivityGame('Sportsbook cashback')"><p>Sportsbook cashback</p></li>
+                            <li onclick="getActivityGame('Free spins')"><p>Free spins</p></li>
+                            <li onclick="getActivityGame('Chained bonus')"><p>Chained bonus</p></li>
+                            <li onclick="getActivityGame('Sport freebet')"><p>Sport freebet</p></li>
                           </ul>
                         </div>  
                       </div>
@@ -162,110 +166,12 @@
                   </div>
                   <button class="btn btn-outline-primary w-48 rounded-full mb-2">Apply</button>
                 </div>
-              <!-- filter tab 1 end-->
+              <!-- filter tab end-->
               
-              <!-- filter tab2 - Transactions -->
-               <div class="filter-transactions grid md:grid-cols-2 grid-cols-1 md:gap-3 gap-2 hide">
-                <div class="flex flex-col">
-                  <label for="settings_Type" class="block py-1 px-2 font-medium">Type</label>
-                  <button onclick="selectActivityType()" class="w-full p-[9px] pr-4 bg-provider rounded-lg">
-                    <div class="custom_select select_typeFilter flex flex-row justify-between items-center">
-                      <p class="flex items-center gap-1 text-base font-medium">
-                          <span class="typeSpan">All</span>
-                      </p>
-                      <span class="arrow">
-                        <svg viewBox="0 0 16 16" class="svg-icon w-5 h-5">
-                          <use href="./dist/images/icon-defs.svg#arrow_down"></use>
-                        </svg>
-                      </span>
-                      <div class="!w-full">
-                        <ul>
-                          <li onclick="getActivityType('All')"><p>All</p></li>
-                          <li onclick="getActivityType('Deposit')"><p>Deposit</p></li>
-                          <li onclick="getActivityType('Withdrawal')"><p>Withdrawal</p></li>
-                          <li onclick="getActivityType('Vault Deposit')"><p>Vault Deposit</p></li>
-                          <li onclick="getActivityType('Vault Withdrawal')"><p>Vault Withdrawal</p></li>
-                        </ul>
-                      </div>  
-                    </div>
-                  </button>
-                </div>
-                <div class="flex flex-col">
-                  <label for="settings_Currency2" class="block py-1 px-2 font-medium">Currency</label>
-                  <button onclick="selectActivityCurrency_transactions()" class="w-full p-[9px] pr-4 bg-provider rounded-lg">
-                    <div class="custom_select select_currencyFilter2 flex flex-row justify-between items-center">
-                      <p class="flex items-center gap-1 text-base font-medium">
-                          <span class="currencySpan2">All</span>
-                      </p>
-                      <span class="arrow">
-                        <svg viewBox="0 0 16 16" class="svg-icon w-5 h-5">
-                          <use href="./dist/images/icon-defs.svg#arrow_down"></use>
-                        </svg>
-                      </span>
-                      <div class="!w-full">
-                        <ul>
-                          <li onclick="getActivityCurrency2('All')"><p>All</p></li>
-                          <li onclick="getActivityCurrency2('United State Dollar - USD')"><p>United State Dollar - USD</p></li>
-                          <li onclick="getActivityCurrency2('Euro - EUR')"><p>Euro - EUR</p></li>
-                          <li onclick="getActivityCurrency2('undefined - FLOK')"><p>undefined - FLOK</p></li>
-                          <li onclick="getActivityCurrency2('undefined - MTIC')"><p>undefined - MTIC</p></li>
-                        </ul>
-                      </div>  
-                    </div>
-                  </button>
-                </div>
-                <div class="input_wrap mb-4">
-                  <label for="settings_dateFrom" class="block py-1 px-2 font-medium">From</label>
-                  <input type="text" class="datepicker form-control" placeholder="dd/mm/yyyy" data-single-mode="true">
-                </div>
-                <div class="input_wrap mb-4">
-                  <label for="settings_dateTo" class="block py-1 px-2 font-medium">To</label>
-                  <input type="text" class="datepicker form-control" placeholder="dd/mm/yyyy" data-single-mode="true">
-                </div>
-                <button class="btn btn-outline-primary w-48 rounded-full mb-2">Apply</button>
-              </div>
-            <!--filter tab2 - Transactions end-->
-
-            <!-- filter tab3 - Sport bets -->
-            <div class="filter-sport grid md:grid-cols-2 grid-cols-1 md:gap-3 gap-2 hide">
-              <div class="flex flex-col col-span-2">
-                <label for="settings_Currency3" class="block py-1 px-2 font-medium">Currency</label>
-                <button onclick="selectActivityCurrency_sport()" class="w-full p-[9px] pr-4 bg-provider rounded-lg">
-                  <div class="custom_select select_currencyFilter3 flex flex-row justify-between items-center">
-                    <p class="flex items-center gap-1 text-base font-medium">
-                        <span class="currencySpan3">All</span>
-                    </p>
-                    <span class="arrow">
-                      <svg viewBox="0 0 16 16" class="svg-icon w-5 h-5">
-                        <use href="./dist/images/icon-defs.svg#arrow_down"></use>
-                      </svg>
-                    </span>
-                    <div class="!w-full">
-                      <ul>
-                        <li onclick="getActivityCurrency3('All')"><p>All</p></li>
-                        <li onclick="getActivityCurrency3('United State Dollar - USD')"><p>United State Dollar - USD</p></li>
-                        <li onclick="getActivityCurrency3('Euro - EUR')"><p>Euro - EUR</p></li>
-                        <li onclick="getActivityCurrency3('undefined - FLOK')"><p>undefined - FLOK</p></li>
-                        <li onclick="getActivityCurrency3('undefined - MTIC')"><p>undefined - MTIC</p></li>
-                      </ul>
-                    </div>  
-                  </div>
-                </button>
-              </div>
-              <div class="input_wrap mb-4">
-                <label for="settings_dateFrom" class="block py-1 px-2 font-medium">From</label>
-                <input type="text" class="datepicker form-control" placeholder="dd/mm/yyyy" data-single-mode="true">
-              </div>
-              <div class="input_wrap mb-4">
-                <label for="settings_dateTo" class="block py-1 px-2 font-medium">To</label>
-                <input type="text" class="datepicker form-control" placeholder="dd/mm/yyyy" data-single-mode="true">
-              </div>
-              <button class="btn btn-outline-primary w-48 rounded-full mb-2">Apply</button>
-            </div>
-          <!--filter tab3 - Sport bets end-->
+              
                 </div>
                 <div class="w-full h-48 bg-[#181818] flex justify-center items-center rounded-sm mt-2 mb-8">
-                  <div class="font-bold text-xl">No <span class="boxSpan">Bets</span></div>
+                  <div class="font-bold text-xl">No <span class="boxSpan">bonuses</span></div>
                 </div>
               </div>
             <!-- content 영역 -->

@@ -306,7 +306,10 @@ const toggleFilter = () => {
         document.querySelector('.filter-bets').classList.add('hide');
         document.querySelector('.filter-transactions').classList.add('hide');
         document.querySelector('.filter-sport').classList.toggle('hide');
+    }else if(textValue == 'History'){
+        document.querySelector('.filter-history').classList.toggle('hide');
     }
+    
 }
 const selectActivityMain = () => {
     $('.select_mainFilter').toggleClass('open')
@@ -417,6 +420,33 @@ const getAccountPreferred = (preferredList) => {
 const betBtnToggle = (item)=>{
     $(item).toggleClass('btn-active')
 }
+
+//balances 토글
+const toggle_hidden = ()=>{
+    let toggleValue = document.querySelector('#display_infiat').checked ? 'on':'off';
+    let totalBalances = document.querySelectorAll('.total_value');
+    const mediaQuery = window.matchMedia('(min-width: 768px)');
+
+    if (toggleValue=='on'){
+        console.log(totalBalances[1].parentNode.innerText)
+        for(let i=0; i<totalBalances.length; i++){
+            // hide 토글 ON
+            if(totalBalances[i].parentNode.innerText.trim() == '0.00000000'){
+                totalBalances[i].parentNode.parentNode.style.display='none';
+            }else{
+                console.log('실패')
+            }
+        }
+    }else if(toggleValue=='off'){
+        for(let i=0; i<totalBalances.length; i++){
+            // hide 토글 OFF
+            if(totalBalances[i].parentNode.innerText.trim() !== '0.00000000'){
+                totalBalances[i].parentNode.parentNode.style.display = mediaQuery.matches ? 'table-row' : 'grid';
+            }
+        }
+    }
+}
+
 
 // sport 베팅상세 보이기
 const openSportItem = (item)=>{
