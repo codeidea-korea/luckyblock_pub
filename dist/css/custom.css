@@ -131,3 +131,8 @@ input[type='number'] {-moz-appearance: textfield;}
 .checkbox_label{display: flex; align-items: center;}
 .checkbox_icon::before{content:''; display: block; margin-right: 5px; display: inline-block; width: 20px; height: 20px; background-color: transparent; border: 2px solid #dbdede; box-sizing:border-box; position: relative; cursor: pointer; border-radius: 3px; }
 .checkbox_label input:checked + .checkbox_icon::before{background: url(../images/icon/check_icon.png) #dbdede no-repeat center; background-size: 15px 15px; border:none;}
+
+.arrow{
+    display: inline-block;
+    transition: transform 0.3s ease;
+}

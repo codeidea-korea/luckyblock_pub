@@ -80,23 +80,18 @@
               <div class="grid grid-cols-2 gap-3 pt-4 pb-1">
                 <div>
                   <!-- select  -->
-                  <button onclick="selectActivityMain()"class="w-full p-[9px] pr-4 bg-provider rounded-lg">
-                    <div class="custom_select select_mainFilter flex flex-row justify-between items-center">
-                      <p class="flex items-center gap-1 text-base font-medium">
-                          <span class="mainSpan">History</span>
-                      </p>
-                      <span class="arrow">
-                        <svg viewBox="0 0 16 16" class="svg-icon w-5 h-5">
-                          <use href="./dist/images/icon-defs.svg#arrow_down"></use>
-                        </svg>
-                      </span>
-                      <div class="!w-full">
-                        <ul>
-                          <li onclick="getActivityMain('History')"><p>History</p></li>
-                        </ul>
-                      </div>
-                    </div> 
-                  </button>
+                  <div class="custom_select">
+                    <button class="w-full p-2 pr-6 font-medium bg-provider rounded-lg">
+                      <p class="flex items-center gap-1 font-base font-bold">History</p>
+                      <span class="arrow"><svg viewBox="0 0 16 16" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#arrow_down"></use></svg></span>
+                    </button>
+                    <div class="!w-full">
+                      <ul>
+                        <li><p class="hidden">History</p>History</li>
+                      </ul>
+                    </div>
+                  </div>
+  
                   <!-- select end  -->
                 </div>
                 <button onclick="toggleFilter()" class="filterBtn bg-[#14141a] w-16 rounded-full border border-[#787878]">
@@ -104,67 +99,56 @@
                 </button>
                 
                 </div>
-                <!-- filter tab -->
-                <div class="filter-history grid md:grid-cols-2 grid-cols-1 md:gap-3 gap-2 hide">
-                  <div class="flex flex-col">
-                    <label for="settings_Game" class="block py-1 px-2 font-medium">Type</label>
-                    <button onclick="selectActivityGame()" class="w-full p-[9px] pr-4 bg-provider rounded-lg">
-                      <div class="custom_select select_gameFilter flex flex-row justify-between items-center">
-                        <p class="flex items-center gap-1 text-base font-medium">
-                            <span class="gameSpan">All</span>
-                        </p>
-                        <span class="arrow">
-                          <svg viewBox="0 0 16 16" class="svg-icon w-5 h-5">
-                            <use href="./dist/images/icon-defs.svg#arrow_down"></use>
-                          </svg>
-                        </span>
+
+                <div class="filter_cont hide">
+                  <!-- filter tab -->
+                  <div class="filter-history grid md:grid-cols-2 grid-cols-1 md:gap-3 gap-2" data-filter="History">
+                    <div class="flex flex-col">
+                      <label for="settings_Game" class="block py-1 px-2 font-medium">Type</label>
+                      <div class="custom_select">
+                        <button class="w-full p-2 pr-6 font-medium bg-provider rounded-lg">
+                          <p class="flex items-center gap-1 font-base font-bold">All</p>
+                          <span class="arrow"><svg viewBox="0 0 16 16" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#arrow_down"></use></svg></span>
+                        </button>
                         <div class="!w-full">
                           <ul>
-                            <li onclick="getActivityGame('All')"><p>All</p></li>
-                            <li onclick="getActivityGame('Wagering')"><p>Wagering</p></li>
-                            <li onclick="getActivityGame('Casino cashback')"><p>Casino cashback</p></li>
-                            <li onclick="getActivityGame('Sportsbook cashback')"><p>Sportsbook cashback</p></li>
-                            <li onclick="getActivityGame('Free spins')"><p>Free spins</p></li>
-                            <li onclick="getActivityGame('Chained bonus')"><p>Chained bonus</p></li>
-                            <li onclick="getActivityGame('Sport freebet')"><p>Sport freebet</p></li>
+                            <li><p class="hidden">All</p>All</li>
+                            <li><p class="hidden">Wagering</p>Wagering</li>
+                            <li><p class="hidden">Casino cashback</p>Casino cashback</li>
+                            <li><p class="hidden">Sportsbook cashback</p>Sportsbook cashback</li>
+                            <li><p class="hidden">Free spins</p>Free spins</li>
                           </ul>
-                        </div>  
+                        </div>
                       </div>
-                    </button>
-                  </div>
-                  <div class="flex flex-col">
-                    <label for="settings_Currency" class="block py-1 px-2 font-medium">Currency</label>
-                    <button onclick="selectActivityCurrency_bets()" class="w-full p-[9px] pr-4 bg-provider rounded-lg">
-                      <div class="custom_select select_currencyFilter flex flex-row justify-between items-center">
-                        <p class="flex items-center gap-1 text-base font-medium">
-                            <span class="currencySpan">All</span>
-                        </p>
-                        <span class="arrow">
-                          <svg viewBox="0 0 16 16" class="svg-icon w-5 h-5">
-                            <use href="./dist/images/icon-defs.svg#arrow_down"></use>
-                          </svg>
-                        </span>
+                    </div>
+                    <div class="flex flex-col">
+                      <label for="settings_Currency" class="block py-1 px-2 font-medium">Currency</label>
+                      <div class="custom_select">
+                        <button class="w-full p-2 pr-6 font-medium bg-provider rounded-lg">
+                          <p class="flex items-center gap-1 font-base font-bold">All</p>
+                          <span class="arrow"><svg viewBox="0 0 16 16" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#arrow_down"></use></svg></span>
+                        </button>
                         <div class="!w-full">
                           <ul>
-                            <li onclick="getActivityCurrency('All')"><p>All</p></li>
-                            <li onclick="getActivityCurrency('United State Dollar - USD')"><p>United State Dollar - USD</p></li>
-                            <li onclick="getActivityCurrency('Euro - EUR')"><p>Euro - EUR</p></li>
-                            <li onclick="getActivityCurrency('undefined - FLOK')"><p>undefined - FLOK</p></li>
-                            <li onclick="getActivityCurrency('undefined - MTIC')"><p>undefined - MTIC</p></li>
+                            <li><p class="hidden">All</p>All</li>
+                            <li><p class="hidden">United State Dollar - USD</p>United State Dollar - USD</li>
+                            <li><p class="hidden">Euro - EUR</p>Euro - EUR</li>
+                            <li><p class="hidden">undefined - FLOK</p>undefined - FLOK</li>
+                            <li><p class="hidden">undefined - MTIC</p>undefined - MTIC</li>
                           </ul>
-                        </div>  
+                        </div>
                       </div>
-                    </button>
+                    </div>
+                    <div class="input_wrap mb-4">
+                      <label for="settings_dateFrom" class="block py-1 px-2 font-medium">From</label>
+                      <input type="text" class="datepicker form-control" placeholder="dd/mm/yyyy" data-single-mode="true">
+                    </div>
+                    <div class="input_wrap mb-4">
+                      <label for="settings_dateTo" class="block py-1 px-2 font-medium">To</label>
+                      <input type="text" class="datepicker form-control" placeholder="dd/mm/yyyy" data-single-mode="true">
+                    </div>
+                    <button class="btn btn-outline-primary w-48 rounded-full mb-2">Apply</button>
                   </div>
-                  <div class="input_wrap mb-4">
-                    <label for="settings_dateFrom" class="block py-1 px-2 font-medium">From</label>
-                    <input type="text" class="datepicker form-control" placeholder="dd/mm/yyyy" data-single-mode="true">
-                  </div>
-                  <div class="input_wrap mb-4">
-                    <label for="settings_dateTo" class="block py-1 px-2 font-medium">To</label>
-                    <input type="text" class="datepicker form-control" placeholder="dd/mm/yyyy" data-single-mode="true">
-                  </div>
-                  <button class="btn btn-outline-primary w-48 rounded-full mb-2">Apply</button>
                 </div>
               <!-- filter tab end-->
               

@@ -155,6 +155,9 @@ echo txtRecord('./@record/');
 			<ul>
 				<li><a href="./settings.html" target="_blank" class="">Settings</a></li>
 				<li><a href="./activity.html" target="_blank" class="">Activity</a></li>
+				<li><a href="./account_info.html" target="_blank" class="">Account Info</a></li>
+				<li><a href="./balances.html" target="_blank" class="">Balances</a></li>
+				<li><a href="./bonuses.html" target="_blank" class="">Bonuses</a></li>
 			</ul>
 		</li>
 

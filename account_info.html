@@ -81,47 +81,35 @@
                <div class="md:grid flex md:grid-cols-2 flex-col gap-x-3 gap-y-6 mt-4">
                 <div>
                   <label for="settings_langue" class="block py-1 px-2">Language</label>
-                  <button onclick="selectAccount_lang()"class="w-full p-[9px] pr-4 bg-provider rounded-lg">
-                    <div class="custom_select select_lang flex flex-row justify-between items-center">
-                      <p class="flex items-center gap-1 text-base font-medium">
-                          <span class="langSpan">English EN</span>
-                      </p>
-                      <span class="arrow">
-                        <svg viewBox="0 0 16 16" class="svg-icon w-5 h-5">
-                          <use href="./dist/images/icon-defs.svg#arrow_down"></use>
-                        </svg>
-                      </span>
-                      <div class="!w-full">
-                        <ul>
-                          <li onclick="getAccountLangue('English EN')"><p>English EN</p></li>
-                          <li onclick="getAccountLangue('German DE')"><p>German DE</p></li>
-                          <li onclick="getAccountLangue('Spanish ES')"><p>Spanish ES</p></li>
-                          <li onclick="getAccountLangue('French FR')"><p>French FR</p></li>
-                        </ul>
-                      </div>
-                    </div> 
-                  </button>
+                  <div class="custom_select">
+                    <button class="w-full p-2 pr-6 font-medium bg-provider rounded-lg">
+                      <p class="flex items-center gap-1 font-base font-bold">English EN</p>
+                      <span class="arrow"><svg viewBox="0 0 16 16" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#arrow_down"></use></svg></span>
+                    </button>
+                    <div class="!w-full">
+                      <ul>
+                        <li><p class="hidden">English EN</p>English EN</li>
+                        <li><p class="hidden">German DE</p>German DE</li>
+                        <li><p class="hidden">Spanish ES</p>Spanish ES</li>
+                        <li><p class="hidden">French FR</p>French FR</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
                 <div>
                   <label for="settings_preferred" class="block py-1 px-2">Preferred Fiat Display Currency</label>
-                  <button onclick="selectAccount_preferred()"class="w-full p-[9px] pr-4 bg-provider rounded-lg">
-                    <div class="custom_select select_preferred flex flex-row justify-between items-center">
-                      <p class="flex items-center gap-1 text-base font-medium">
-                          <span class="preferredSpan">EUR €</span>
-                      </p>
-                      <span class="arrow">
-                        <svg viewBox="0 0 16 16" class="svg-icon w-5 h-5">
-                          <use href="./dist/images/icon-defs.svg#arrow_down"></use>
-                        </svg>
-                      </span>
-                      <div class="!w-full">
-                        <ul>
-                          <li onclick="getAccountPreferred('USD $')"><p>USD $</p></li>
-                          <li onclick="getAccountPreferred('EUR €')"><p>EUR €</p></li>
-                        </ul>
-                      </div>
-                    </div> 
-                  </button>
+                  <div class="custom_select">
+                    <button class="w-full p-2 pr-6 font-medium bg-provider rounded-lg">
+                      <p class="flex items-center gap-1 font-base font-bold">USD $</p>
+                      <span class="arrow"><svg viewBox="0 0 16 16" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#arrow_down"></use></svg></span>
+                    </button>
+                    <div class="!w-full">
+                      <ul>
+                        <li><p class="hidden">USD $</p>USD $</li>
+                        <li><p class="hidden">EUR €</p>EUR €</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
                 <div>
                   <p class="font-bold">Communication</p>

@@ -80,77 +80,61 @@
               <div class="grid grid-cols-2 gap-3 pt-4 pb-1">
                 <div>
                   <!-- select  -->
-                  <button onclick="selectActivityMain()"class="w-full p-[9px] pr-4 bg-provider rounded-lg">
-                    <div class="custom_select select_mainFilter flex flex-row justify-between items-center">
-                      <p class="flex items-center gap-1 text-base font-medium">
-                          <span class="mainSpan">Bets</span>
-                      </p>
-                      <span class="arrow">
-                        <svg viewBox="0 0 16 16" class="svg-icon w-5 h-5">
-                          <use href="./dist/images/icon-defs.svg#arrow_down"></use>
-                        </svg>
-                      </span>
-                      <div class="!w-full">
-                        <ul>
-                          <li onclick="getActivityMain('Transactions')"><p>Transactions</p></li>
-                          <li onclick="getActivityMain('Bets')"><p>Bets</p></li>
-                          <li onclick="getActivityMain('Sport bets')"><p>Sport bets</p></li>
-                        </ul>
-                      </div>
-                    </div> 
-                  </button>
+                  <div class="custom_select">
+                    <button class="w-full p-2 pr-6 font-medium bg-provider rounded-lg">
+                      <p class="flex items-center gap-1 font-base font-bold">Bets</p>
+                      <span class="arrow"><svg viewBox="0 0 16 16" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#arrow_down"></use></svg></span>
+                    </button>
+                    <div class="!w-full">
+                      <ul>
+                        <li onclick="getActivityMain('Transactions')"><p>Transactions</p></li>
+                        <li onclick="getActivityMain('Bets')"><p>Bets</p></li>
+                        <li onclick="getActivityMain('Sport bets')"><p>Sport bets</p></li>
+                      </ul>
+                    </div>
+                  </div>
                   <!-- select end  -->
                 </div>
                 <button onclick="toggleFilter()" class="filterBtn bg-[#14141a] w-16 rounded-full border border-[#787878]">
                   <img class="w-5 m-auto" src="./dist/images/icon/filter_icon.png">
                 </button>
                 
-                </div>
+              </div>
+              
+              <div class="filter_cont hide">
                 <!-- filter tab1 - Bets -->
-                <div class="filter-bets grid md:grid-cols-2 grid-cols-1 md:gap-3 gap-2 hide">
+                <div class="filter-bets grid md:grid-cols-2 grid-cols-1 md:gap-3 gap-2" data-filter="Bets" >
                   <div class="flex flex-col">
                     <label for="settings_Game" class="block py-1 px-2 font-medium">Game</label>
-                    <button onclick="selectActivityGame()" class="w-full p-[9px] pr-4 bg-provider rounded-lg">
-                      <div class="custom_select select_gameFilter flex flex-row justify-between items-center">
-                        <p class="flex items-center gap-1 text-base font-medium">
-                            <span class="gameSpan">All</span>
-                        </p>
-                        <span class="arrow">
-                          <svg viewBox="0 0 16 16" class="svg-icon w-5 h-5">
-                            <use href="./dist/images/icon-defs.svg#arrow_down"></use>
-                          </svg>
-                        </span>
-                        <div class="!w-full">
-                          <ul>
-                            <li onclick="getActivityGame('All')"><p>All</p></li>
-                          </ul>
-                        </div>  
+                    <div class="custom_select">
+                      <button class="w-full p-2 pr-6 font-medium bg-provider rounded-lg">
+                        <p class="flex items-center gap-1 font-base font-bold">All</p>
+                        <span class="arrow"><svg viewBox="0 0 16 16" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#arrow_down"></use></svg></span>
+                      </button>
+                      <div class="!w-full">
+                        <ul>
+                          <li><p class="hidden">All</p>All</li>
+                        </ul>
                       </div>
-                    </button>
+                    </div>
                   </div>
                   <div class="flex flex-col">
                     <label for="settings_Currency" class="block py-1 px-2 font-medium">Currency</label>
-                    <button onclick="selectActivityCurrency_bets()" class="w-full p-[9px] pr-4 bg-provider rounded-lg">
-                      <div class="custom_select select_currencyFilter flex flex-row justify-between items-center">
-                        <p class="flex items-center gap-1 text-base font-medium">
-                            <span class="currencySpan">All</span>
-                        </p>
-                        <span class="arrow">
-                          <svg viewBox="0 0 16 16" class="svg-icon w-5 h-5">
-                            <use href="./dist/images/icon-defs.svg#arrow_down"></use>
-                          </svg>
-                        </span>
+                      <div class="custom_select">
+                        <button class="w-full p-2 pr-6 font-medium bg-provider rounded-lg">
+                          <p class="flex items-center gap-1 font-base font-bold">All</p>
+                          <span class="arrow"><svg viewBox="0 0 16 16" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#arrow_down"></use></svg></span>
+                        </button>
                         <div class="!w-full">
                           <ul>
-                            <li onclick="getActivityCurrency('All')"><p>All</p></li>
-                            <li onclick="getActivityCurrency('United State Dollar - USD')"><p>United State Dollar - USD</p></li>
-                            <li onclick="getActivityCurrency('Euro - EUR')"><p>Euro - EUR</p></li>
-                            <li onclick="getActivityCurrency('undefined - FLOK')"><p>undefined - FLOK</p></li>
-                            <li onclick="getActivityCurrency('undefined - MTIC')"><p>undefined - MTIC</p></li>
+                            <li><p class="hidden">All</p>All</li>
+                            <li><p class="hidden">United State Dollar - USD</p>United State Dollar - USD</li>
+                            <li><p class="hidden">Euro - EUR</p>Euro - EUR</li>
+                            <li><p class="hidden">undefined - FLOK</p>undefined - FLOK</li>
+                            <li><p class="hidden">undefined - MTIC</p>undefined - MTIC</li>
                           </ul>
-                        </div>  
+                        </div>
                       </div>
-                    </button>
                   </div>
                   <div class="input_wrap mb-4">
                     <label for="settings_dateFrom" class="block py-1 px-2 font-medium">From</label>
@@ -162,108 +146,91 @@
                   </div>
                   <button class="btn btn-outline-primary w-48 rounded-full mb-2">Apply</button>
                 </div>
-              <!-- filter tab 1 end-->
+                <!-- filter tab 1 end-->
               
-              <!-- filter tab2 - Transactions -->
-               <div class="filter-transactions grid md:grid-cols-2 grid-cols-1 md:gap-3 gap-2 hide">
-                <div class="flex flex-col">
-                  <label for="settings_Type" class="block py-1 px-2 font-medium">Type</label>
-                  <button onclick="selectActivityType()" class="w-full p-[9px] pr-4 bg-provider rounded-lg">
-                    <div class="custom_select select_typeFilter flex flex-row justify-between items-center">
-                      <p class="flex items-center gap-1 text-base font-medium">
-                          <span class="typeSpan">All</span>
-                      </p>
-                      <span class="arrow">
-                        <svg viewBox="0 0 16 16" class="svg-icon w-5 h-5">
-                          <use href="./dist/images/icon-defs.svg#arrow_down"></use>
-                        </svg>
-                      </span>
+                <!-- filter tab2 - Transactions -->
+                <div class="filter-transactions grid md:grid-cols-2 grid-cols-1 md:gap-3 gap-2 hide" data-filter="Transactions">
+                  <div class="flex flex-col">
+                    <label for="settings_Type" class="block py-1 px-2 font-medium">Type</label>
+                    <div class="custom_select">
+                      <button class="w-full p-2 pr-6 font-medium bg-provider rounded-lg">
+                        <p class="flex items-center gap-1 font-base font-bold">All</p>
+                        <span class="arrow"><svg viewBox="0 0 16 16" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#arrow_down"></use></svg></span>
+                      </button>
                       <div class="!w-full">
                         <ul>
-                          <li onclick="getActivityType('All')"><p>All</p></li>
-                          <li onclick="getActivityType('Deposit')"><p>Deposit</p></li>
-                          <li onclick="getActivityType('Withdrawal')"><p>Withdrawal</p></li>
-                          <li onclick="getActivityType('Vault Deposit')"><p>Vault Deposit</p></li>
-                          <li onclick="getActivityType('Vault Withdrawal')"><p>Vault Withdrawal</p></li>
+                          <li><p class="hidden">All</p>All</li>
+                          <li><p class="hidden">Deposit</p>Deposit</li>
+                          <li><p class="hidden">Withdrawal</p>Withdrawal</li>
+                          <li><p class="hidden">Vault Deposit</p>Vault Deposit</li>
+                          <li><p class="hidden">Vault Withdrawal</p>Vault Withdrawal</li>
                         </ul>
-                      </div>  
+                      </div>
                     </div>
-                  </button>
-                </div>
-                <div class="flex flex-col">
-                  <label for="settings_Currency2" class="block py-1 px-2 font-medium">Currency</label>
-                  <button onclick="selectActivityCurrency_transactions()" class="w-full p-[9px] pr-4 bg-provider rounded-lg">
-                    <div class="custom_select select_currencyFilter2 flex flex-row justify-between items-center">
-                      <p class="flex items-center gap-1 text-base font-medium">
-                          <span class="currencySpan2">All</span>
-                      </p>
-                      <span class="arrow">
-                        <svg viewBox="0 0 16 16" class="svg-icon w-5 h-5">
-                          <use href="./dist/images/icon-defs.svg#arrow_down"></use>
-                        </svg>
-                      </span>
-                      <div class="!w-full">
-                        <ul>
-                          <li onclick="getActivityCurrency2('All')"><p>All</p></li>
-                          <li onclick="getActivityCurrency2('United State Dollar - USD')"><p>United State Dollar - USD</p></li>
-                          <li onclick="getActivityCurrency2('Euro - EUR')"><p>Euro - EUR</p></li>
-                          <li onclick="getActivityCurrency2('undefined - FLOK')"><p>undefined - FLOK</p></li>
-                          <li onclick="getActivityCurrency2('undefined - MTIC')"><p>undefined - MTIC</p></li>
-                        </ul>
-                      </div>  
-                    </div>
-                  </button>
-                </div>
-                <div class="input_wrap mb-4">
-                  <label for="settings_dateFrom" class="block py-1 px-2 font-medium">From</label>
-                  <input type="text" class="datepicker form-control" placeholder="dd/mm/yyyy" data-single-mode="true">
-                </div>
-                <div class="input_wrap mb-4">
-                  <label for="settings_dateTo" class="block py-1 px-2 font-medium">To</label>
-                  <input type="text" class="datepicker form-control" placeholder="dd/mm/yyyy" data-single-mode="true">
-                </div>
-                <button class="btn btn-outline-primary w-48 rounded-full mb-2">Apply</button>
-              </div>
-            <!--filter tab2 - Transactions end-->
-
-            <!-- filter tab3 - Sport bets -->
-            <div class="filter-sport grid md:grid-cols-2 grid-cols-1 md:gap-3 gap-2 hide">
-              <div class="flex flex-col col-span-2">
-                <label for="settings_Currency3" class="block py-1 px-2 font-medium">Currency</label>
-                <button onclick="selectActivityCurrency_sport()" class="w-full p-[9px] pr-4 bg-provider rounded-lg">
-                  <div class="custom_select select_currencyFilter3 flex flex-row justify-between items-center">
-                    <p class="flex items-center gap-1 text-base font-medium">
-                        <span class="currencySpan3">All</span>
-                    </p>
-                    <span class="arrow">
-                      <svg viewBox="0 0 16 16" class="svg-icon w-5 h-5">
-                        <use href="./dist/images/icon-defs.svg#arrow_down"></use>
-                      </svg>
-                    </span>
-                    <div class="!w-full">
-                      <ul>
-                        <li onclick="getActivityCurrency3('All')"><p>All</p></li>
-                        <li onclick="getActivityCurrency3('United State Dollar - USD')"><p>United State Dollar - USD</p></li>
-                        <li onclick="getActivityCurrency3('Euro - EUR')"><p>Euro - EUR</p></li>
-                        <li onclick="getActivityCurrency3('undefined - FLOK')"><p>undefined - FLOK</p></li>
-                        <li onclick="getActivityCurrency3('undefined - MTIC')"><p>undefined - MTIC</p></li>
-                      </ul>
-                    </div>  
                   </div>
-                </button>
-              </div>
-              <div class="input_wrap mb-4">
-                <label for="settings_dateFrom" class="block py-1 px-2 font-medium">From</label>
-                <input type="text" class="datepicker form-control" placeholder="dd/mm/yyyy" data-single-mode="true">
-              </div>
-              <div class="input_wrap mb-4">
-                <label for="settings_dateTo" class="block py-1 px-2 font-medium">To</label>
-                <input type="text" class="datepicker form-control" placeholder="dd/mm/yyyy" data-single-mode="true">
-              </div>
-              <button class="btn btn-outline-primary w-48 rounded-full mb-2">Apply</button>
-            </div>
-          <!--filter tab3 - Sport bets end-->
+                  <div class="flex flex-col">
+                    <label for="settings_Currency2" class="block py-1 px-2 font-medium">Currency</label>
+                    <div class="custom_select">
+                      <button class="w-full p-2 pr-6 font-medium bg-provider rounded-lg">
+                        <p class="flex items-center gap-1 font-base font-bold">All</p>
+                        <span class="arrow"><svg viewBox="0 0 16 16" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#arrow_down"></use></svg></span>
+                      </button>
+                      <div class="!w-full">
+                        <ul>
+                          <li><p class="hidden">All</p>All</li>
+                          <li><p class="hidden">United State Dollar - USD</p>United State Dollar - USD</li>
+                          <li><p class="hidden">Euro - EUR</p>Euro - EUR</li>
+                          <li><p class="hidden">undefined - FLOK</p>undefined - FLOK</li>
+                          <li><p class="hidden">undefined - MTIC</p>undefined - MTIC</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="input_wrap mb-4">
+                    <label for="settings_dateFrom" class="block py-1 px-2 font-medium">From</label>
+                    <input type="text" class="datepicker form-control" placeholder="dd/mm/yyyy" data-single-mode="true">
+                  </div>
+                  <div class="input_wrap mb-4">
+                    <label for="settings_dateTo" class="block py-1 px-2 font-medium">To</label>
+                    <input type="text" class="datepicker form-control" placeholder="dd/mm/yyyy" data-single-mode="true">
+                  </div>
+                  <button class="btn btn-outline-primary w-48 rounded-full mb-2">Apply</button>
                 </div>
+                <!--filter tab2 - Transactions end-->
+
+                <!-- filter tab3 - Sport bets -->
+                <div class="filter-sport grid md:grid-cols-2 grid-cols-1 md:gap-3 gap-2 hide" data-filter="Sport bets" data-content="bets">
+                  <div class="flex flex-col col-span-2">
+                    <label for="settings_Currency3" class="block py-1 px-2 font-medium">Currency</label>
+                    <div class="custom_select">
+                      <button class="w-full p-2 pr-6 font-medium bg-provider rounded-lg">
+                        <p class="flex items-center gap-1 font-base font-bold">All</p>
+                        <span class="arrow"><svg viewBox="0 0 16 16" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#arrow_down"></use></svg></span>
+                      </button>
+                      <div class="!w-full">
+                        <ul>
+                          <li><p class="hidden">All</p>All</li>
+                          <li><p class="hidden">United State Dollar - USD</p>United State Dollar - USD</li>
+                          <li><p class="hidden">Euro - EUR</p>Euro - EUR</li>
+                          <li><p class="hidden">undefined - FLOK</p>undefined - FLOK</li>
+                          <li><p class="hidden">undefined - MTIC</p>undefined - MTIC</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="input_wrap mb-4">
+                    <label for="settings_dateFrom" class="block py-1 px-2 font-medium">From</label>
+                    <input type="text" class="datepicker form-control" placeholder="dd/mm/yyyy" data-single-mode="true">
+                  </div>
+                  <div class="input_wrap mb-4">
+                    <label for="settings_dateTo" class="block py-1 px-2 font-medium">To</label>
+                    <input type="text" class="datepicker form-control" placeholder="dd/mm/yyyy" data-single-mode="true">
+                  </div>
+                  <button class="btn btn-outline-primary w-48 rounded-full mb-2">Apply</button>
+                </div>
+                <!--filter tab3 - Sport bets end-->
+              </div>
+            </div>
                 <div class="w-full h-48 bg-[#181818] flex justify-center items-center rounded-sm mt-2 mb-8">
                   <div class="font-bold text-xl">No <span class="boxSpan">Bets</span></div>
                 </div>

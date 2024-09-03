@@ -292,67 +292,72 @@ const getSelectedNumber = (contryNumber) => {
 // settings - activity filter button
 const toggleFilter = () => {
     let filterBtn = document.querySelector('.filterBtn');
-    let textValue = document.querySelector('.mainSpan').innerHTML;
+    // let textValue = document.querySelector('.mainSpan').innerHTML;
     filterBtn.classList.toggle('toggleOn');
-    if(textValue == 'Bets'){
-        document.querySelector('.filter-bets').classList.toggle('hide');
-        document.querySelector('.filter-transactions').classList.add('hide');
-        document.querySelector('.filter-sport').classList.add('hide');
-    }else if(textValue == 'Transactions'){
-        document.querySelector('.filter-bets').classList.add('hide');
-        document.querySelector('.filter-transactions').classList.toggle('hide');
-        document.querySelector('.filter-sport').classList.add('hide');
-    }else if(textValue == 'Sport bets'){
-        document.querySelector('.filter-bets').classList.add('hide');
-        document.querySelector('.filter-transactions').classList.add('hide');
-        document.querySelector('.filter-sport').classList.toggle('hide');
-    }else if(textValue == 'History'){
-        document.querySelector('.filter-history').classList.toggle('hide');
-    }
+
+    document.querySelector('.filter_cont').classList.toggle('hide')
     
 }
 const selectActivityMain = () => {
-    $('.select_mainFilter').toggleClass('open')
+    if($('.select_mainFilter').hasClass('open')){
+        $('.select_mainFilter .arrow').css({ transform: 'rotate(0deg)' });
+        $('.select_mainFilter').removeClass('open');
+    }else {
+        $('.select_mainFilter').addClass('open');
+        $('.select_mainFilter .arrow').css({ transform: 'rotate(180deg)' });
+    }
     $(document).on('click', (event) => {
         if (!$(event.target).closest('.select_mainFilter').length) {
             $('.select_mainFilter').removeClass('open');
+            $('.select_mainFilter .arrow').css({ transform: 'rotate(0deg)' });
         }
     });
 }
 const getActivityMain = (mainList) => {
-    document.querySelector('.custom_select .mainSpan').innerHTML = mainList;
-    let textValue = document.querySelector('.mainSpan').innerHTML;
-    if(textValue == 'Bets'){
-        document.querySelector('.filter-transactions').classList.add('hide');
-        document.querySelector('.filter-sport').classList.add('hide');
-        document.querySelector('.boxSpan').innerHTML = "Bets";
-    }else if(textValue == 'Transactions'){
-        document.querySelector('.filter-bets').classList.add('hide');
-        document.querySelector('.filter-sport').classList.add('hide');
-        document.querySelector('.boxSpan').innerHTML = "Transactions";
-    }else if(textValue == 'Sport bets'){
-        document.querySelector('.filter-bets').classList.add('hide');
-        document.querySelector('.filter-transactions').classList.add('hide');
-        document.querySelector('.boxSpan').innerHTML = "Bets";
-    }
+    document.querySelectorAll('.filter_cont > div').forEach(function(item){
+        if(item.getAttribute('data-filter') == mainList){
+            item.classList.remove('hide')
+        }else{
+            item.classList.add('hide')
+        }
+    })
+    // 버튼 초기화
+    document.querySelector('.filterBtn').classList.remove('toggleOn')
+    document.querySelector('.filter_cont').classList.add('hide')
+
+    // 텍스트 변경 data-content 없으면 data-filter 문구 보이게, 있으면 data-content 문구 보이게
+
+
 
 }
+
 const selectActivityGame = ()=>{
-    $('.select_gameFilter').toggleClass('open')
+    if($('.select_gameFilter').hasClass('open')){
+        $('.select_gameFilter .arrow').css({ transform: 'rotate(0deg)' });
+        $('.select_gameFilter').removeClass('open');
+    }else {
+        $('.select_gameFilter').addClass('open');
+        $('.select_gameFilter .arrow').css({ transform: 'rotate(180deg)' });
+    }
     $(document).on('click', (event) => {
         if (!$(event.target).closest('.select_gameFilter').length) {
             $('.select_gameFilter').removeClass('open');
+            $('.select_gameFilter .arrow').css({ transform: 'rotate(0deg)' });
         }
     });
 }
-const getActivityGame = (mainList) => {
-    document.querySelector('.custom_select .gameSpan').innerHTML = mainList;
-}
 const selectActivityCurrency_bets = ()=>{
-    $('.select_currencyFilter').toggleClass('open')
+    if($('.select_currencyFilter').hasClass('open')){
+        $('.select_currencyFilter .arrow').css({ transform: 'rotate(0deg)' });
+        $('.select_currencyFilter').removeClass('open');
+    }else {
+        $('.select_currencyFilter').addClass('open');
+        $('.select_currencyFilter .arrow').css({ transform: 'rotate(180deg)' });
+    }
     $(document).on('click', (event) => {
         if (!$(event.target).closest('.select_currencyFilter').length) {
             $('.select_currencyFilter').removeClass('open');
+            $('.select_currencyFilter .arrow').css({ transform: 'rotate(0deg)' });
         }
     });
 }
@@ -360,10 +365,17 @@ const getActivityCurrency = (currencyList) => {
     document.querySelector('.custom_select .currencySpan').innerHTML = currencyList;
 }
 const selectActivityType = () => {
-    $('.select_typeFilter').toggleClass('open')
+    if($('.select_typeFilter').hasClass('open')){
+        $('.select_typeFilter .arrow').css({ transform: 'rotate(0deg)' });
+        $('.select_typeFilter').removeClass('open');
+    }else {
+        $('.select_typeFilter').addClass('open');
+        $('.select_typeFilter .arrow').css({ transform: 'rotate(180deg)' });
+    }
     $(document).on('click', (event) => {
         if (!$(event.target).closest('.select_typeFilter').length) {
             $('.select_typeFilter').removeClass('open');
+            $('.select_typeFilter .arrow').css({ transform: 'rotate(0deg)' });
         }
     });
 }
@@ -371,10 +383,17 @@ const getActivityType = (typeList) => {
     document.querySelector('.custom_select .typeSpan').innerHTML = typeList;
 }
 const selectActivityCurrency_transactions = ()=>{
-    $('.select_currencyFilter2').toggleClass('open')
+    if($('.select_currencyFilter2').hasClass('open')){
+        $('.select_currencyFilter2 .arrow').css({ transform: 'rotate(0deg)' });
+        $('.select_currencyFilter2').removeClass('open');
+    }else {
+        $('.select_currencyFilter2').addClass('open');
+        $('.select_currencyFilter2 .arrow').css({ transform: 'rotate(180deg)' });
+    }
     $(document).on('click', (event) => {
         if (!$(event.target).closest('.select_currencyFilter2').length) {
             $('.select_currencyFilter2').removeClass('open');
+            $('.select_currencyFilter2 .arrow').css({ transform: 'rotate(0deg)' });
         }
     });
 }
@@ -382,10 +401,17 @@ const getActivityCurrency2 = (currencyList) => {
     document.querySelector('.custom_select .currencySpan2').innerHTML = currencyList;
 }
 const selectActivityCurrency_sport = ()=>{
-    $('.select_currencyFilter3').toggleClass('open')
+    if($('.select_currencyFilter3').hasClass('open')){
+        $('.select_currencyFilter3 .arrow').css({ transform: 'rotate(0deg)' });
+        $('.select_currencyFilter3').removeClass('open');
+    }else {
+        $('.select_currencyFilter3').addClass('open');
+        $('.select_currencyFilter3 .arrow').css({ transform: 'rotate(180deg)' });
+    }
     $(document).on('click', (event) => {
         if (!$(event.target).closest('.select_currencyFilter3').length) {
             $('.select_currencyFilter3').removeClass('open');
+            $('.select_currencyFilter3 .arrow').css({ transform: 'rotate(0deg)' });
         }
     });
 }
@@ -394,10 +420,17 @@ const getActivityCurrency3 = (currencyList) => {
 }
 // account info select box
 const selectAccount_lang = ()=>{
-    $('.select_lang').toggleClass('open')
+    if($('.select_lang').hasClass('open')){
+        $('.select_lang .arrow').css({ transform: 'rotate(0deg)' });
+        $('.select_lang').removeClass('open');
+    }else {
+        $('.select_lang').addClass('open');
+        $('.select_lang .arrow').css({ transform: 'rotate(180deg)' });
+    }
     $(document).on('click', (event) => {
         if (!$(event.target).closest('.select_lang').length) {
             $('.select_lang').removeClass('open');
+            $('.select_lang .arrow').css({ transform: 'rotate(0deg)' });
         }
     });
 }
@@ -405,10 +438,17 @@ const getAccountLangue = (langueList) => {
     document.querySelector('.custom_select .langSpan').innerHTML = langueList;
 }
 const selectAccount_preferred = ()=>{
-    $('.select_preferred').toggleClass('open')
+    if($('.select_preferred').hasClass('open')){
+        $('.select_preferred .arrow').css({ transform: 'rotate(0deg)' });
+        $('.select_preferred').removeClass('open');
+    }else {
+        $('.select_preferred').addClass('open');
+        $('.select_preferred .arrow').css({ transform: 'rotate(180deg)' });
+    }
     $(document).on('click', (event) => {
         if (!$(event.target).closest('.select_preferred').length) {
             $('.select_preferred').removeClass('open');
+            $('.select_preferred .arrow').css({ transform: 'rotate(0deg)' });
         }
     });
 }
@@ -421,20 +461,19 @@ const betBtnToggle = (item)=>{
     $(item).toggleClass('btn-active')
 }
 
-//balances 토글
+//balances-Hide 0 balances 토글
 const toggle_hidden = ()=>{
     let toggleValue = document.querySelector('#display_infiat').checked ? 'on':'off';
     let totalBalances = document.querySelectorAll('.total_value');
     const mediaQuery = window.matchMedia('(min-width: 768px)');
 
     if (toggleValue=='on'){
-        console.log(totalBalances[1].parentNode.innerText)
         for(let i=0; i<totalBalances.length; i++){
             // hide 토글 ON
             if(totalBalances[i].parentNode.innerText.trim() == '0.00000000'){
                 totalBalances[i].parentNode.parentNode.style.display='none';
-            }else{
-                console.log('실패')
+            }else if(totalBalances[i].nextElementSibling.innerText.trim() == '0.00000000'){
+                totalBalances[i].parentNode.parentNode.style.display='none';
             }
         }
     }else if(toggleValue=='off'){
@@ -585,7 +624,6 @@ const loadJquery = ()=>{
     $('.custom_select > div li').on('click',function(){
         let Parents = $(this).parents('.custom_select');
         let text = $(this).find('p').html();
-        console.log('dd');
 
         // option 닫기
         Parents.removeClass('open')
