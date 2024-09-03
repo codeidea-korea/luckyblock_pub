@@ -90,6 +90,17 @@ echo txtRecord('./@record/');
             </ul>
         </li>
 
+
+		<li class="mt20" data-label="Sports">
+			<ul>
+				<li><a href="./sports.html" target="_blank" class="">sports - highlights</a></li>
+				<li><a href="./sports_schedule.html" target="_blank" class="">sports - schedule</a></li>
+				<li><a href="./sports_bets_feed.html" target="_blank" class="">sports - bets feed</a></li>
+				<li><a href="./sports_live.html" target="_blank" class="">live</a></li>
+				<li><a href="./sports_favorites.html" target="_blank" class="">Favorites</a></li>
+			</ul>
+		</li>
+
 		<li class="mt20" data-label="Casino">
             <ul>
                 <li>
@@ -124,14 +135,6 @@ echo txtRecord('./@record/');
                 <li><a href="./live_baccarat.html" target="_blank" class="">Live Casino - Baccarat</a></li>
                 <li><a href="./live_poker.html" target="_blank" class="">Live Casino - Poker</a></li>
             </ul>
-		</li>
-
-		<li class="mt20" data-label="Sports">
-			<ul>
-				<li><a href="./sports.html" target="_blank" class="">sports - highlights</a></li>
-				<li><a href="./sports_schedule.html" target="_blank" class="">sports - schedule</a></li>
-				<li><a href="./sports_bets_feed.html" target="_blank" class="">sports - bets feed</a></li>
-			</ul>
 		</li>
 
 		<li class="mt20" data-label="Menu">

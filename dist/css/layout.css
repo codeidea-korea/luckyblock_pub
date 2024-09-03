@@ -74,6 +74,7 @@ button:disabled {opacity:.5; }
 .bg-inbox {background:var(--inbox-color); }
 .bg-option {background:var(--option-color); }
 .bg-green {background:var(--green-color); }
+.bg-win {background:var(--win-color);}
 
 .top-shadow {box-shadow:var(--top-shadow); }
 
@@ -623,6 +624,13 @@ body:not(.logout) .casinoSwiper .arrow.next {right:15px; }
 .sports_betslip {z-index:100; overflow:hidden; position:fixed; right:10px; bottom:0; width:320px; box-shadow:0 0 60px rgba(0,0,0,0.65); background:#292929; border-radius:6px 6px 0 0; transition:all 0.5s; }
 .sports_betslip::-webkit-scrollbar {width:7px; -webkit-appearance:none; }
 
+.sports_betslip.quick_bet .betslip_top {background-color:#006699;}
+.sports_betslip.quick_bet .betslip_cont .basic {display:none; }
+.sports_betslip.quick_bet .betslip_cont .quick {display:block; }
+.sports_betslip .betslip_cont .quick {display:none; }
+
+.sports_betslip .betslip_cont .quick .btn-active {background-color:#006699 !important; }
+
 .sports_betslip .betslip_cont {display:none; }
 
 .sports_betslip .tab-content {overflow-y:auto; max-height:75vh;}
@@ -636,3 +644,15 @@ body:not(.logout) .casinoSwiper .arrow.next {right:15px; }
 .sports_betslip .comboboost p {position:relative; }
 .sports_betslip .comboboost p span {position:absolute; left:50%; bottom:calc(100% + 7px); transform:translateX(-50%); }
 .sports_betslip .comboboost p span:before {content:''; position:absolute; left:50%; top:100%; width:0; height:0; border-color:rgba(255,255,255,0.6) transparent transparent transparent; border-style:solid; border-width:4px 3px 0 3px; transform:translateX(-50%); }
+.sports_betslip .comboboost p span.bg-success:before {border-color:rgb(var(--color-success)) transparent transparent transparent; }
+
+.sports_betslip .down {display:inline-block; vertical-align:middle; width:0; height:0; margin-left:4px; border-top:5px solid #FB3F3F; border-left:5px solid transparent; border-right:5px solid transparent; }
+.sports_betslip .up {display:inline-block; vertical-align:middle; width:0; height:0; margin-left:4px; border-bottom:5px solid #2d8f1d; border-left:5px solid transparent; border-right:5px solid transparent; }
+
+.betslip_btn {z-index:100; position:fixed; bottom:70px; left:calc(50% - 28px); }
+
+@media all and (max-width:767px){
+    .sports_betslip {right:0; bottom:-56px; width:100%; }
+    .sports_betslip.open {bottom:0; }
+    .sports_betslip .tab-content {max-height:65vh; }
+}

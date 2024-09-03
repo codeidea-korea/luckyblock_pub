@@ -773,6 +773,14 @@ select{
     opacity: 0.7;
 }
 /* Default Sizes */
+.btn-sm{
+    padding-top: 0.375rem;
+    padding-bottom: 0.375rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+}
 /* Button Colors */
 .btn-primary{
     --tw-border-opacity: 1;
@@ -1886,6 +1894,9 @@ select{
 .right-2{
     right: 0.5rem;
 }
+.right-24{
+    right: 6rem;
+}
 .right-3{
     right: 0.75rem;
 }
@@ -2792,6 +2803,9 @@ select{
 .gap-y-1{
     row-gap: 0.25rem;
 }
+.gap-y-4{
+    row-gap: 1rem;
+}
 .gap-y-6{
     row-gap: 1.5rem;
 }
@@ -3123,8 +3137,14 @@ select{
 .bg-opacity-90{
     --tw-bg-opacity: 0.9;
 }
+.fill-primary{
+    fill: rgb(var(--color-primary));
+}
 .fill-white{
     fill: #fff;
+}
+.stroke-primary{
+    stroke: rgb(var(--color-primary));
 }
 .object-contain{
     -o-object-fit: contain;
@@ -3854,6 +3874,11 @@ select{
 }
 .filter{
     filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.backdrop-blur-\[1px\]{
+    --tw-backdrop-blur: blur(1px);
+    -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+    backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 .transition{
     transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
