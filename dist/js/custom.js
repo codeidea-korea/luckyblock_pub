@@ -260,35 +260,6 @@ const cryptoChange = (item)=>{
     selectCryptoToggle()
 }
 
-// settings - contry select box
-const selectContryToggle = ()=>{
-    $('.select_contry').toggleClass('open')
-    const select = document.querySelectorAll('.custom_select .open');
-    $(document).on('click', (event) => {
-        if (!$(event.target).closest('.select_contry').length) {
-            $('.select_contry').removeClass('open');
-        }
-    }); 
-}
-
-const getSelectedList = (countryName) => {
-    document.querySelector('.custom_select .name').innerHTML = countryName;
-}
-
-// settings - phone number select box
-const selectPhoneToggle = ()=>{
-    $('.select_contryNum').toggleClass('open')
-    $(document).on('click', (event) => {
-        if (!$(event.target).closest('.select_contryNum').length) {
-            $('.select_contryNum').removeClass('open');
-        }
-    });
-}
-
-const getSelectedNumber = (contryNumber) => {
-    document.querySelector('.custom_select .number').innerHTML = contryNumber;
-}
-
 // settings - activity filter button
 const toggleFilter = () => {
     let filterBtn = document.querySelector('.filterBtn');
@@ -298,22 +269,7 @@ const toggleFilter = () => {
     document.querySelector('.filter_cont').classList.toggle('hide')
     
 }
-const selectActivityMain = () => {
-    if($('.select_mainFilter').hasClass('open')){
-        $('.select_mainFilter .arrow').css({ transform: 'rotate(0deg)' });
-        $('.select_mainFilter').removeClass('open');
-    }else {
-        $('.select_mainFilter').addClass('open');
-        $('.select_mainFilter .arrow').css({ transform: 'rotate(180deg)' });
-    }
-    $(document).on('click', (event) => {
-        if (!$(event.target).closest('.select_mainFilter').length) {
-            $('.select_mainFilter').removeClass('open');
-            $('.select_mainFilter .arrow').css({ transform: 'rotate(0deg)' });
-        }
-    });
-}
-const getActivityMain = (mainList) => {
+const getListMainToggle = (mainList,num) => {
     document.querySelectorAll('.filter_cont > div').forEach(function(item){
         if(item.getAttribute('data-filter') == mainList){
             item.classList.remove('hide')
@@ -326,135 +282,15 @@ const getActivityMain = (mainList) => {
     document.querySelector('.filter_cont').classList.add('hide')
 
     // 텍스트 변경 data-content 없으면 data-filter 문구 보이게, 있으면 data-content 문구 보이게
+    let dataContents = document.querySelectorAll('.filter_cont > div')
+    let boxSpan = document.querySelector('.boxSpan')
+    if(dataContents[num].getAttribute('data-content')){
+        boxSpan.innerHTML=dataContents[num].getAttribute('data-content');
+    }else{
+        boxSpan.innerHTML=dataContents[num].getAttribute('data-filter');
+    }
+}
 
-
-
-}
-
-const selectActivityGame = ()=>{
-    if($('.select_gameFilter').hasClass('open')){
-        $('.select_gameFilter .arrow').css({ transform: 'rotate(0deg)' });
-        $('.select_gameFilter').removeClass('open');
-    }else {
-        $('.select_gameFilter').addClass('open');
-        $('.select_gameFilter .arrow').css({ transform: 'rotate(180deg)' });
-    }
-    $(document).on('click', (event) => {
-        if (!$(event.target).closest('.select_gameFilter').length) {
-            $('.select_gameFilter').removeClass('open');
-            $('.select_gameFilter .arrow').css({ transform: 'rotate(0deg)' });
-        }
-    });
-}
-const selectActivityCurrency_bets = ()=>{
-    if($('.select_currencyFilter').hasClass('open')){
-        $('.select_currencyFilter .arrow').css({ transform: 'rotate(0deg)' });
-        $('.select_currencyFilter').removeClass('open');
-    }else {
-        $('.select_currencyFilter').addClass('open');
-        $('.select_currencyFilter .arrow').css({ transform: 'rotate(180deg)' });
-    }
-    $(document).on('click', (event) => {
-        if (!$(event.target).closest('.select_currencyFilter').length) {
-            $('.select_currencyFilter').removeClass('open');
-            $('.select_currencyFilter .arrow').css({ transform: 'rotate(0deg)' });
-        }
-    });
-}
-const getActivityCurrency = (currencyList) => {
-    document.querySelector('.custom_select .currencySpan').innerHTML = currencyList;
-}
-const selectActivityType = () => {
-    if($('.select_typeFilter').hasClass('open')){
-        $('.select_typeFilter .arrow').css({ transform: 'rotate(0deg)' });
-        $('.select_typeFilter').removeClass('open');
-    }else {
-        $('.select_typeFilter').addClass('open');
-        $('.select_typeFilter .arrow').css({ transform: 'rotate(180deg)' });
-    }
-    $(document).on('click', (event) => {
-        if (!$(event.target).closest('.select_typeFilter').length) {
-            $('.select_typeFilter').removeClass('open');
-            $('.select_typeFilter .arrow').css({ transform: 'rotate(0deg)' });
-        }
-    });
-}
-const getActivityType = (typeList) => {
-    document.querySelector('.custom_select .typeSpan').innerHTML = typeList;
-}
-const selectActivityCurrency_transactions = ()=>{
-    if($('.select_currencyFilter2').hasClass('open')){
-        $('.select_currencyFilter2 .arrow').css({ transform: 'rotate(0deg)' });
-        $('.select_currencyFilter2').removeClass('open');
-    }else {
-        $('.select_currencyFilter2').addClass('open');
-        $('.select_currencyFilter2 .arrow').css({ transform: 'rotate(180deg)' });
-    }
-    $(document).on('click', (event) => {
-        if (!$(event.target).closest('.select_currencyFilter2').length) {
-            $('.select_currencyFilter2').removeClass('open');
-            $('.select_currencyFilter2 .arrow').css({ transform: 'rotate(0deg)' });
-        }
-    });
-}
-const getActivityCurrency2 = (currencyList) => {
-    document.querySelector('.custom_select .currencySpan2').innerHTML = currencyList;
-}
-const selectActivityCurrency_sport = ()=>{
-    if($('.select_currencyFilter3').hasClass('open')){
-        $('.select_currencyFilter3 .arrow').css({ transform: 'rotate(0deg)' });
-        $('.select_currencyFilter3').removeClass('open');
-    }else {
-        $('.select_currencyFilter3').addClass('open');
-        $('.select_currencyFilter3 .arrow').css({ transform: 'rotate(180deg)' });
-    }
-    $(document).on('click', (event) => {
-        if (!$(event.target).closest('.select_currencyFilter3').length) {
-            $('.select_currencyFilter3').removeClass('open');
-            $('.select_currencyFilter3 .arrow').css({ transform: 'rotate(0deg)' });
-        }
-    });
-}
-const getActivityCurrency3 = (currencyList) => {
-    document.querySelector('.custom_select .currencySpan3').innerHTML = currencyList;
-}
-// account info select box
-const selectAccount_lang = ()=>{
-    if($('.select_lang').hasClass('open')){
-        $('.select_lang .arrow').css({ transform: 'rotate(0deg)' });
-        $('.select_lang').removeClass('open');
-    }else {
-        $('.select_lang').addClass('open');
-        $('.select_lang .arrow').css({ transform: 'rotate(180deg)' });
-    }
-    $(document).on('click', (event) => {
-        if (!$(event.target).closest('.select_lang').length) {
-            $('.select_lang').removeClass('open');
-            $('.select_lang .arrow').css({ transform: 'rotate(0deg)' });
-        }
-    });
-}
-const getAccountLangue = (langueList) => {
-    document.querySelector('.custom_select .langSpan').innerHTML = langueList;
-}
-const selectAccount_preferred = ()=>{
-    if($('.select_preferred').hasClass('open')){
-        $('.select_preferred .arrow').css({ transform: 'rotate(0deg)' });
-        $('.select_preferred').removeClass('open');
-    }else {
-        $('.select_preferred').addClass('open');
-        $('.select_preferred .arrow').css({ transform: 'rotate(180deg)' });
-    }
-    $(document).on('click', (event) => {
-        if (!$(event.target).closest('.select_preferred').length) {
-            $('.select_preferred').removeClass('open');
-            $('.select_preferred .arrow').css({ transform: 'rotate(0deg)' });
-        }
-    });
-}
-const getAccountPreferred = (preferredList) => {
-    document.querySelector('.custom_select .preferredSpan').innerHTML = preferredList;
-}
 
 // betBtn 토글
 const betBtnToggle = (item)=>{

@@ -1894,9 +1894,6 @@ select{
 .right-2{
     right: 0.5rem;
 }
-.right-24{
-    right: 6rem;
-}
 .right-3{
     right: 0.75rem;
 }
@@ -1917,6 +1914,9 @@ select{
 }
 .top-3{
     top: 0.75rem;
+}
+.right-24{
+    right: 6rem;
 }
 .z-10{
     z-index: 10;
@@ -2502,6 +2502,9 @@ select{
 .h-full{
     height: 100%;
 }
+.h-\[42px\]{
+    height: 42px;
+}
 .max-h-96{
     max-height: 24rem;
 }
@@ -2803,11 +2806,11 @@ select{
 .gap-y-1{
     row-gap: 0.25rem;
 }
-.gap-y-4{
-    row-gap: 1rem;
-}
 .gap-y-6{
     row-gap: 1.5rem;
+}
+.gap-y-4{
+    row-gap: 1rem;
 }
 .overflow-hidden{
     overflow: hidden;
@@ -3104,6 +3107,18 @@ select{
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
+.bg-\[\#6e6e6e\]{
+    --tw-bg-opacity: 1;
+    background-color: rgb(110 110 110 / var(--tw-bg-opacity));
+}
+.\!bg-\[\#6e6e6e\]{
+    --tw-bg-opacity: 1 !important;
+    background-color: rgb(110 110 110 / var(--tw-bg-opacity)) !important;
+}
+.bg-fuchsia-500{
+    --tw-bg-opacity: 1;
+    background-color: rgb(217 70 239 / var(--tw-bg-opacity));
+}
 .bg-opacity-10{
     --tw-bg-opacity: 0.1;
 }
@@ -3137,14 +3152,8 @@ select{
 .bg-opacity-90{
     --tw-bg-opacity: 0.9;
 }
-.fill-primary{
-    fill: rgb(var(--color-primary));
-}
 .fill-white{
     fill: #fff;
-}
-.stroke-primary{
-    stroke: rgb(var(--color-primary));
 }
 .object-contain{
     -o-object-fit: contain;

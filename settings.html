@@ -113,31 +113,25 @@
               <div class="settings_contryGroup">
                 <!-- select  -->
                 <label for="settings_contry" class="block py-1 px-2 font-medium">Contry *</label>
-                <button onclick="selectContryToggle()"class="w-full p-[9px] pr-4 bg-provider rounded-lg">
-                  <div class="custom_select select_contry flex flex-row justify-between items-center">
-                    <p class="flex items-center gap-1 text-base font-medium">
-                        <span class="name">&nbsp;</span>
-                    </p>
-                    <span class="arrow">
-                      <svg viewBox="0 0 16 16" class="svg-icon w-5 h-5">
-                        <use href="./dist/images/icon-defs.svg#arrow_down"></use>
-                      </svg>
-                    </span>
-                    <div class="!w-full">
-                      <ul>
-                        <li onclick="getSelectedList('Albania')"><p>Albania</p></li>
-                        <li onclick="getSelectedList('Algeria')"><p>Algeria</p></li>
-                        <li onclick="getSelectedList('Andorra')"><p>Andorra</p></li>
-                        <li onclick="getSelectedList('Angola')"><p>Angola</p></li>
-                        <li onclick="getSelectedList('Anguilla')"><p>Anguilla</p></li>
-                        <li onclick="getSelectedList('Antarctica')"><p>Antarctica</p></li>
-                        <li onclick="getSelectedList('Antigua')"><p>Antigua</p></li>
-                        <li onclick="getSelectedList('Armenia')"><p>Armenia</p></li>
-                        <li onclick="getSelectedList('Australia')"><p>Australia</p></li>
-                      </ul>
-                    </div>  
-                </button>
+                <div class="custom_select">
+                  <button class="w-full h-[42px] p-2 pr-6 font-medium bg-provider rounded-lg">
+                    <p class="flex items-center gap-1 font-base font-bold">&nbsp;</p>
+                    <span class="arrow"><svg viewBox="0 0 16 16" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#arrow_down"></use></svg></span>
+                  </button>
+                  <div class="!w-full">
+                    <ul>
+                      <li><p class="hidden">Albania</p>Albania</li>
+                      <li><p class="hidden">Algeria</p>Algeria</li>
+                      <li><p class="hidden">Angola</p>Angola</li>
+                      <li><p class="hidden">Anguilla</p>Anguilla</li>
+                      <li><p class="hidden">Antarctica</p>Antarctica</li>
+                      <li><p class="hidden">Antigua</p>Antigua</li>
+                      <li><p class="hidden">Armenia</p>Armenia</li>
+                      <li><p class="hidden">Australia</p>Australia</li>
+                    </ul>
+                  </div>
                 </div>
+              </div>
                 <!-- select end  -->
                 <div class="input_wrap mb-4 ">
                   <label for="settings_postal" class="block py-1 px-2 font-medium">Postal Code *</label>
@@ -156,31 +150,26 @@
                 </div>
               </div>
               <div class="grid md:grid-cols-2 grid-cols-1 gap-x-4 pt-4 pb-1 "> 
-                <div class="input_wrap ">
-                  <label for="settings_lastname" class="block py-1 px-2 font-medium">Phone number*</label>
+                <div class="input_wrap">
+                  <label for="settings_phoneNumber" class="block py-1 px-2 font-medium">Phone number*</label>
                   <div class="flex flex-row bg-[#343434] rounded-lg textfieldError">
-                    <button onclick="selectPhoneToggle()" class="selectBtn w-32 p-2 pr-4 bg-provider rounded-lg ">
-                      <div class="custom_select select_contryNum flex flex-row justify-between items-center">
-                        <p class="flex items-center gap-1 text-base font-medium">
-                            <span class="number text-ellipsis">&nbsp;</span>
-                        </p>
-                        <span class="arrow">
-                          <svg viewBox="0 0 16 16" class="svg-icon w-4 h-4">
-                            <use href="./dist/images/icon-defs.svg#arrow_down"></use>
-                          </svg>
-                        </span>
-                        <div class="!w-64">
-                          <ul>
-                            <li onclick="getSelectedNumber('+1')"><p>Canada (+1)</p></li>
-                            <li onclick="getSelectedNumber('+1-242')"><p>The Bahamas (+1-242)</p></li>
-                            <li onclick="getSelectedNumber('+1-246')"><p>Barbados (+1-246)</p></li>
-                            <li onclick="getSelectedNumber('+1-264')"><p>Anguilla (+1-264)</p></li>
-                            <li onclick="getSelectedNumber('+1-268')"><p>Antigua (+1-268)</p></li>
-                            <li onclick="getSelectedNumber('+1-284')"><p>British virgin Islands (+1-284)</p></li>
-                            <li onclick="getSelectedNumber('+1-345')"><p>Cayman Islands (+1-345)</p></li>
-                          </ul>
-                        </div>  
-                    </button>
+                    <div class="custom_select">
+                      <button class="w-24 h-full p-2 pr-6 font-medium bg-provider rounded-lg" style="background-color:#6e6e6e;">
+                        <p class="flex items-center gap-1 font-base font-bold">All</p>
+                        <span class="arrow"><svg viewBox="0 0 16 16" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#arrow_down"></use></svg></span>
+                      </button>
+                      <div style="width:200px;">
+                        <ul>
+                          <li><p class="hidden">+1</p>Canada (+1)</li>
+                          <li><p class="hidden">+1-242<p>The Bahamas (+1-242)</p></li>
+                          <li><p class="hidden">+1-246<p>Barbados (+1-246)</p></li>
+                          <li><p class="hidden">+1-264<p>Anguilla (+1-264)</p></li>
+                          <li><p class="hidden">+1-268<p>Antigua (+1-268)</p></li>
+                          <li><p class="hidden">+1-284<p>British virgin Islands (+1-284)</p></li>
+                          <li><p class="hidden">+1-345<p>Cayman Islands (+1-345)</p></li>
+                        </ul>
+                      </div>
+                    </div>
                     <input type="number" id="settings_lastname" class="form-control" placeholder="Enter mobile number"/>
                   </div>
                   <span class="text-xs text-[#ff2e2e] font-semibold ml-2 mt-2">Phone number is required</span>
