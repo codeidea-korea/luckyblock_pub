@@ -297,6 +297,10 @@ const betBtnToggle = (item)=>{
     $(item).toggleClass('btn-active')
 }
 
+const betBtnRadioToggle = (item)=>{
+    $(item).addClass('btn-active').siblings().removeClass('btn-active')
+}
+
 //balances-Hide 0 balances 토글
 const toggle_hidden = ()=>{
     let toggleValue = document.querySelector('#display_infiat').checked ? 'on':'off';

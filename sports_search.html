@@ -43,116 +43,111 @@
                 <div class="content_box sports_content_box">
                     <div class="inner">
 
-
-                        <!-- 스포츠 타이틀 -->
-                        <div class="flex items-center gap-2 mt-6 text-2xl font-bold">
-                            <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#ic-live-simple"></use></svg>
-                            Live
+                        <!-- 검색 -->
+                        <div class="search_box flex items-center gap-2 mt-8">
+                            <div class="relative flex-1">
+                                <form>
+                                    <input type="text" class="form-control !bg-white !bg-opacity-20 text-lg" id="search_" placeholder="Search" onfocus="searchFocus(this)">
+                                    <button type="button" class="z-10 absolute right-0 p-3 opacity-0 color-txt" onclick="searchReset(this)"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#x"></use></svg></button>
+                                </form>
+                            </div>
+                            <button class="px-2">Close</button>
                         </div>
 
-                        
-
                         <!-- 카테고리 -->
-                        <div class="overflow-hidden mySwiper blur_right" data-per="auto" data-gap="8" data-loop="false">
+                        <div class="flex-1 overflow-hidden mySwiper mt-4 mb-8 blur_right rounded-2xl" data-per="auto" data-gap="8" data-loop="false">
                             <div class="swiper-container">
-                                <ul class="swiper-wrapper nav nav-boxed-tabs  mt-3" role="tablist">
+                                <ul class="swiper-wrapper nav nav-boxed-tabs" role="tablist">
                                     <li class="nav-item swiper-slide !w-auto" role="presentation">
-                                        <button class="nav-link flex items-center gap-1 h-9 px-2 py-1 !rounded-2xl font-bold active" type="button" role="tab" >
-                                            <svg class="svg-icon w-6 h-6 rotate-180"><use xlink:href="./dist/images/icon-defs.svg#sport-soccer"></use></svg>
-                                            Soccer
+                                        <button class="nav-link flex items-center gap-1 h-9 px-2 py-1 !rounded-2xl font-bold" type="button" role="tab" > 
+                                            <img src="./dist/images/flag/international.svg" class="w-6" alt="">
+                                            UEFA Nations League
                                         </button> 
                                     </li>
                                     <li class="nav-item swiper-slide !w-auto" role="presentation">
                                         <button class="nav-link flex items-center gap-1 h-9 px-2 py-1 !rounded-2xl font-bold" type="button" role="tab" > 
-                                            <svg class="svg-icon w-6 h-6 rotate-180"><use xlink:href="./dist/images/icon-defs.svg#sport-tennis"></use></svg>
-                                            Tennis
+                                            <img src="./dist/images/flag/international.svg" class="w-6" alt="">
+                                            WC Qualification, CONMEBOL
                                         </button> 
                                     </li>
                                     <li class="nav-item swiper-slide !w-auto" role="presentation">
                                         <button class="nav-link flex items-center gap-1 h-9 px-2 py-1 !rounded-2xl font-bold" type="button" role="tab" > 
-                                            <svg class="svg-icon w-6 h-6 rotate-180"><use xlink:href="./dist/images/icon-defs.svg#sport-basketball"></use></svg>
-                                            Basketball
+                                            <img src="./dist/images/flag/international.svg" class="w-6" alt="">
+                                            UEFA Champions League
                                         </button> 
                                     </li>
                                     <li class="nav-item swiper-slide !w-auto" role="presentation">
                                         <button class="nav-link flex items-center gap-1 h-9 px-2 py-1 !rounded-2xl font-bold" type="button" role="tab" > 
-                                            <svg class="svg-icon w-6 h-6 rotate-180"><use xlink:href="./dist/images/icon-defs.svg#sport-americanfootball"></use></svg>
-                                            American Football
+                                            <img src="./dist/images/flag/international.svg" class="w-6" alt="">
+                                            UEFA Europa League
                                         </button> 
                                     </li>
                                     <li class="nav-item swiper-slide !w-auto" role="presentation">
                                         <button class="nav-link flex items-center gap-1 h-9 px-2 py-1 !rounded-2xl font-bold" type="button" role="tab" > 
-                                            <svg class="svg-icon w-6 h-6 rotate-180"><use xlink:href="./dist/images/icon-defs.svg#sport-icehockey"></use></svg>
-                                            Ice Hockey
+                                            <img src="./dist/images/flag/ENG.svg" class="w-6" alt="">
+                                            Premier League
                                         </button> 
                                     </li>
                                     <li class="nav-item swiper-slide !w-auto" role="presentation">
                                         <button class="nav-link flex items-center gap-1 h-9 px-2 py-1 !rounded-2xl font-bold" type="button" role="tab" > 
-                                            <svg class="svg-icon w-6 h-6 rotate-180"><use xlink:href="./dist/images/icon-defs.svg#sport-tabletennis"></use></svg>
-                                            Table Tennis
+                                            <img src="./dist/images/flag/ESP.svg" class="w-6" alt="">
+                                            LaLiga
                                         </button> 
                                     </li>
                                     <li class="nav-item swiper-slide !w-auto" role="presentation">
                                         <button class="nav-link flex items-center gap-1 h-9 px-2 py-1 !rounded-2xl font-bold" type="button" role="tab" > 
-                                            <svg class="svg-icon w-6 h-6 rotate-180"><use xlink:href="./dist/images/icon-defs.svg#sport-cricket"></use></svg>
-                                            Cricket
+                                            <img src="./dist/images/flag/DEU.svg" class="w-6" alt="">
+                                            Bundesliga
                                         </button> 
                                     </li>
                                     <li class="nav-item swiper-slide !w-auto" role="presentation">
                                         <button class="nav-link flex items-center gap-1 h-9 px-2 py-1 !rounded-2xl font-bold" type="button" role="tab" > 
-                                            <svg class="svg-icon w-6 h-6 rotate-180"><use xlink:href="./dist/images/icon-defs.svg#sport-baseball"></use></svg>
-                                            Baseball
-                                        </button> 
-                                    </li>
-                                    <li class="nav-item swiper-slide !w-auto" role="presentation">
-                                        <button class="nav-link flex items-center gap-1 h-9 px-2 py-1 !rounded-2xl font-bold" type="button" role="tab" > 
-                                            <svg class="svg-icon w-6 h-6 rotate-180"><use xlink:href="./dist/images/icon-defs.svg#sport-rugby"></use></svg>
-                                            Rugby
-                                        </button> 
-                                    </li>
-                                    <li class="nav-item swiper-slide !w-auto" role="presentation">
-                                        <button class="nav-link flex items-center gap-1 h-9 px-2 py-1 !rounded-2xl font-bold" type="button" role="tab" > 
-                                            <svg class="svg-icon w-6 h-6 rotate-180"><use xlink:href="./dist/images/icon-defs.svg#sport-volleyball"></use></svg>
-                                            Volleyball
-                                        </button> 
-                                    </li>
-                                    <li class="nav-item swiper-slide !w-auto" role="presentation">
-                                        <button class="nav-link flex items-center gap-1 h-9 px-2 py-1 !rounded-2xl font-bold" type="button" role="tab" > 
-                                            <svg class="svg-icon w-6 h-6 rotate-180"><use xlink:href="./dist/images/icon-defs.svg#sport-counterstrike"></use></svg>
-                                            Counter-Strike
-                                        </button> 
-                                    </li>
-                                    <li class="nav-item swiper-slide !w-auto" role="presentation">
-                                        <button class="nav-link flex items-center gap-1 h-9 px-2 py-1 !rounded-2xl font-bold" type="button" role="tab" > 
-                                            <svg class="svg-icon w-6 h-6 rotate-180"><use xlink:href="./dist/images/icon-defs.svg#sport-fifa-b"></use></svg>
-                                            FIFA
-                                        </button> 
-                                    </li>
-                                    <li class="nav-item swiper-slide !w-auto" role="presentation">
-                                        <button class="nav-link flex items-center gap-1 h-9 px-2 py-1 !rounded-2xl font-bold" type="button" role="tab" > 
-                                            <svg class="svg-icon w-6 h-6 rotate-180"><use xlink:href="./dist/images/icon-defs.svg#sport-leagueoflegends"></use></svg>
-                                            League of Legends
-                                        </button> 
-                                    </li>
-                                    <li class="nav-item swiper-slide !w-auto" role="presentation">
-                                        <button class="nav-link flex items-center gap-1 h-9 px-2 py-1 !rounded-2xl font-bold" type="button" role="tab" > 
-                                            <svg class="svg-icon w-6 h-6 rotate-180"><use xlink:href="./dist/images/icon-defs.svg#sport-fifa-volta"></use></svg>
-                                            FIFA : Volta
-                                        </button> 
-                                    </li>
-                                    <li class="nav-item swiper-slide !w-auto" role="presentation">
-                                        <button class="nav-link flex items-center gap-1 h-9 px-2 py-1 !rounded-2xl font-bold" type="button" role="tab" > 
-                                            <svg class="svg-icon w-6 h-6 rotate-180"><use xlink:href="./dist/images/icon-defs.svg#sport-valorant"></use></svg>
-                                            Valorant
+                                            <img src="./dist/images/flag/international.svg" class="w-6" alt="">
+                                            UEFA Conference League
                                         </button> 
                                     </li>
                                 </ul>
                             </div>
                         </div>
 
-
-                        <!-- 리스트 -->
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 mt-3">
+                        <!-- 검색결과 -->
+                        <div class="py-3">
+                            <div class="mb-3 cursor-pointer hover:opacity-60 transition-all">
+                                <h6 class="fs10 font-bold opacity-50">FIFA</h6>
+                                <div class="text-2xl font-bold color-darkP3">Spain</div>
+                            </div>
+                            <div class="mb-3 cursor-pointer hover:opacity-60 transition-all">
+                                <h6 class="fs10 font-bold opacity-50">NBA 2K</h6>
+                                <div class="text-2xl font-bold color-darkP3">Spain</div>
+                            </div>
+                            <div class="mb-3 cursor-pointer hover:opacity-60 transition-all">
+                                <h6 class="fs10 font-bold opacity-50">SOCCER</h6>
+                                <div class="text-2xl font-bold color-darkP3">Spain</div>
+                            </div>
+                        </div>
+                        <div class="py-3">
+                            <div class="mb-3 cursor-pointer hover:opacity-60 transition-all">
+                                <h6 class="fs10 font-bold opacity-50">FIFA ‧ SPAIN</h6>
+                                <div class="text-2xl"><span class="font-bold color-darkP3">La li</span>ga</div>
+                            </div>
+                            <div class="mb-3 cursor-pointer hover:opacity-60 transition-all">
+                                <h6 class="fs10 font-bold opacity-50">TENNIS ‧ ITF MEN</h6>
+                                <div class="text-2xl">ITF <span class="font-bold color-darkP3">Spain</span> F32, Men Doubles</div>
+                            </div>
+                            <div class="mb-3 cursor-pointer hover:opacity-60 transition-all">
+                                <h6 class="fs10 font-bold opacity-50">TENNIS ‧ ITF MEN</h6>
+                                <div class="text-2xl">ITF <span class="font-bold color-darkP3">Spain</span> F32, Men Singles</div>
+                            </div>
+                            <div class="mb-3 cursor-pointer hover:opacity-60 transition-all">
+                                <h6 class="fs10 font-bold opacity-50">TENNIS ‧ ATP CHALLENGER</h6>
+                                <div class="text-2xl">ATP Challenger Seville, <span class="font-bold color-darkP3">Spain</span> Men Doubles</div>
+                            </div>
+                            <div class="mb-3 cursor-pointer hover:opacity-60 transition-all">
+                                <h6 class="fs10 font-bold opacity-50">TENNIS ‧ ATP CHALLENGER</h6>
+                                <div class="text-2xl">ATP Challenger Seville, <span class="font-bold color-darkP3">Spain</span> Men Singles</div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4 mt-3">
                             <div class="sport_item">
                                 <div class="absolute left-0 top-0 w-full h-full py-3 px-2 bg-content rounded-md cursor-pointer">
                                     <div class="flex items-center justify-between px-2">
@@ -168,6 +163,351 @@
                                             <button class="shrink-0 opacity-50 hover:opacity-100"><svg class="svg-icon w-4 h-4"><use xlink:href="./dist/images/icon-defs.svg#stat"></use></svg></button>
                                             <button class="shrink-0 opacity-50 hover:opacity-100 tooltip" title="favorites"><svg class="svg-icon w-4 h-4"><use xlink:href="./dist/images/icon-defs.svg#favorite"></use></svg></button>
                                         </div>
+                                    </div>
+                                    <div class="flex items-center justify-between mt-2 px-2">
+                                        <p class="flex items-center gap-1 text-xs font-semibold opacity-50">Today, 18:00</p>
+                                    </div>
+                                    <div class="mt-4 px-2">
+                                        <div class="flex items-center justify-between">
+                                            <div class="overflow-hidden flex-1 flex items-center gap-1 whitespace-nowrap mask-image">
+                                                <img class="w-6" src="./dist/images/sports/1984.png" alt="">
+                                                <b>Criciuma EC SC</b>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center justify-between mt-1">
+                                            <div class="overflow-hidden flex-1 flex items-center gap-1 whitespace-nowrap mask-image">
+                                                <img class="w-6" src="./dist/images/sports/1999.png" alt="">
+                                                <b>Red Bull Bragantino SP</b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-3">
+                                        <div class="h-4 pl-1 text-xs font-semibold opacity-50">1x2</div>
+                                        <div class="flex items-center gap-2 mt-2">
+                                            <div class="flex-1 grid grid-cols-3 gap-2">
+                                                <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                    <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">1</span>
+                                                    <span class="shrink-0">40.00</span>
+                                                </button>
+                                                <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                    <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">draw</span>
+                                                    <span class="shrink-0">16.00</span>
+                                                </button>
+                                                <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                    <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">2</span>
+                                                    <span class="shrink-0">1.02</span>
+                                                </button>
+                                            </div>
+                                            <button class="flex items-center justify-center h-9 px-2 bg-provider hover:bg-provider-70 rounded-md" onclick="openSportItem(this)">
+                                                <svg class="svg-icon w-4 h-4 open_arrow opacity-50"><use xlink:href="./dist/images/icon-defs.svg#bet-arrow"></use></svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-y-auto open_item bg-content my-3">
+                                        <div class="h-4 pl-1 text-xs font-semibold opacity-50">Double chance</div>
+                                        <div class="grid grid-cols-3 gap-2 mt-2">
+                                            <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">FC Astana</span>
+                                                <span class="shrink-0">1.88</span>
+                                            </button>
+                                            <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">FC Astana</span>
+                                                <span class="shrink-0">1.26</span>
+                                            </button>
+                                            <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">draw of SK</span>
+                                                <span class="shrink-0">1.25</span>
+                                            </button>
+                                        </div>
+
+                                        <div class="mt-3 h-4 pl-1 text-xs font-semibold opacity-50">Total</div>
+                                        <div class="grid grid-cols-2 gap-2 mt-2">
+                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">over 2.0</span>
+                                                <span class="shrink-0">1.37</span>
+                                            </button>
+                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">under 2.0</span>
+                                                <span class="shrink-0">2.96</span>
+                                            </button>
+                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">over 2.5</span>
+                                                <span class="shrink-0">1.78</span>
+                                            </button>
+                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">under 2.5</span>
+                                                <span class="shrink-0">1.96</span>
+                                            </button>
+                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">over 3.0</span>
+                                                <span class="shrink-0">2.33</span>
+                                            </button>
+                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">under 3.0</span>
+                                                <span class="shrink-0">1.55</span>
+                                            </button>
+                                        </div>
+
+                                        <div class="mt-3 h-4 pl-1 text-xs font-semibold opacity-50">1st half - 1x2</div>
+                                        <div class="grid grid-cols-3 gap-2 mt-2">
+                                            <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">FC Astana</span>
+                                                <span class="shrink-0">4.30</span>
+                                            </button>
+                                            <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">draw</span>
+                                                <span class="shrink-0">2.26</span>
+                                            </button>
+                                            <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">SK Brann</span>
+                                                <span class="shrink-0">2.48</span>
+                                            </button>
+                                        </div>
+
+                                        <div class="mt-3 h-4 pl-1 text-xs font-semibold opacity-50">1st half - total</div>
+                                        <div class="grid grid-cols-2 gap-2 mt-2">
+                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">over 0.5</span>
+                                                <span class="shrink-0">1.37</span>
+                                            </button>
+                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">under 0.5</span>
+                                                <span class="shrink-0">2.96</span>
+                                            </button>
+                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">over 1.0</span>
+                                                <span class="shrink-0">1.78</span>
+                                            </button>
+                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">under 1.0</span>
+                                                <span class="shrink-0">1.96</span>
+                                            </button>
+                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">over 1.5</span>
+                                                <span class="shrink-0">2.33</span>
+                                            </button>
+                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">under 1.5</span>
+                                                <span class="shrink-0">1.55</span>
+                                            </button>
+                                        </div>
+
+                                        <div class="mt-3 h-4 pl-1 text-xs font-semibold opacity-50">Handicap</div>
+                                        <div class="grid grid-cols-2 gap-2 mt-2">
+                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">(0) FC Astana</span>
+                                                <span class="shrink-0">2.75</span>
+                                            </button>
+                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">(0) SK Brann</span>
+                                                <span class="shrink-0">2.96</span>
+                                            </button>
+                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">(0.5) FC Astana</span>
+                                                <span class="shrink-0">1.78</span>
+                                            </button>
+                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">(0.5) SK Brann</span>
+                                                <span class="shrink-0">1.96</span>
+                                            </button>
+                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">(-1) FC Astana</span>
+                                                <span class="shrink-0">2.33</span>
+                                            </button>
+                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">(-1) SK Brann</span>
+                                                <span class="shrink-0">1.55</span>
+                                            </button>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sport_item">
+                                <div class="absolute left-0 top-0 w-full h-full py-3 px-2 bg-content rounded-md cursor-pointer">
+                                    <div class="flex items-center justify-between px-2">
+                                        <div class="overflow-hidden flex-1 flex items-center gap-1.5 whitespace-nowrap mask-image opacity-50 hover:opacity-100 text-xs font-semibold">
+                                            <svg class="svg-icon w-4 h-4 shrink-0"><use xlink:href="./dist/images/icon-defs.svg#sport-soccer"></use></svg>
+                                            <p class="flex items-center gap-1">
+                                                <span>Australia</span>
+                                                <svg class="svg-icon w-3 h-3 shrink-0 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg>
+                                                <span>Victoria Premier League, Women </span>
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <button class="shrink-0 opacity-50 hover:opacity-100"><svg class="svg-icon w-4 h-4"><use xlink:href="./dist/images/icon-defs.svg#stat"></use></svg></button>
+                                            <button class="shrink-0 opacity-50 hover:opacity-100 tooltip" title="favorites"><svg class="svg-icon w-4 h-4"><use xlink:href="./dist/images/icon-defs.svg#favorite"></use></svg></button>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between mt-2 px-2">
+                                        <p class="flex items-center gap-1 text-xs font-semibold opacity-50">Today, 18:00</p>
+                                    </div>
+                                    <div class="mt-4 px-2">
+                                        <div class="flex items-center justify-between">
+                                            <div class="overflow-hidden flex-1 flex items-center gap-1 whitespace-nowrap mask-image">
+                                                <img class="w-6" src="./dist/images/sports/1984.png" alt="">
+                                                <b>Criciuma EC SC</b>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center justify-between mt-1">
+                                            <div class="overflow-hidden flex-1 flex items-center gap-1 whitespace-nowrap mask-image">
+                                                <img class="w-6" src="./dist/images/sports/1999.png" alt="">
+                                                <b>Red Bull Bragantino SP</b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-3">
+                                        <div class="h-4 pl-1 text-xs font-semibold opacity-50">1x2</div>
+                                        <div class="flex items-center gap-2 mt-2">
+                                            <div class="flex-1 grid grid-cols-3 gap-2">
+                                                <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                    <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">1</span>
+                                                    <span class="shrink-0">40.00</span>
+                                                </button>
+                                                <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                    <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">draw</span>
+                                                    <span class="shrink-0">16.00</span>
+                                                </button>
+                                                <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                    <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">2</span>
+                                                    <span class="shrink-0">1.02</span>
+                                                </button>
+                                            </div>
+                                            <button class="flex items-center justify-center h-9 px-2 bg-provider hover:bg-provider-70 rounded-md" onclick="openSportItem(this)">
+                                                <svg class="svg-icon w-4 h-4 open_arrow opacity-50"><use xlink:href="./dist/images/icon-defs.svg#bet-arrow"></use></svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-y-auto open_item bg-content my-3">
+                                        <div class="h-4 pl-1 text-xs font-semibold opacity-50">Double chance</div>
+                                        <div class="grid grid-cols-3 gap-2 mt-2">
+                                            <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">FC Astana</span>
+                                                <span class="shrink-0">1.88</span>
+                                            </button>
+                                            <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">FC Astana</span>
+                                                <span class="shrink-0">1.26</span>
+                                            </button>
+                                            <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">draw of SK</span>
+                                                <span class="shrink-0">1.25</span>
+                                            </button>
+                                        </div>
+
+                                        <div class="mt-3 h-4 pl-1 text-xs font-semibold opacity-50">Total</div>
+                                        <div class="grid grid-cols-2 gap-2 mt-2">
+                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">over 2.0</span>
+                                                <span class="shrink-0">1.37</span>
+                                            </button>
+                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">under 2.0</span>
+                                                <span class="shrink-0">2.96</span>
+                                            </button>
+                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">over 2.5</span>
+                                                <span class="shrink-0">1.78</span>
+                                            </button>
+                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">under 2.5</span>
+                                                <span class="shrink-0">1.96</span>
+                                            </button>
+                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">over 3.0</span>
+                                                <span class="shrink-0">2.33</span>
+                                            </button>
+                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">under 3.0</span>
+                                                <span class="shrink-0">1.55</span>
+                                            </button>
+                                        </div>
+
+                                        <div class="mt-3 h-4 pl-1 text-xs font-semibold opacity-50">1st half - 1x2</div>
+                                        <div class="grid grid-cols-3 gap-2 mt-2">
+                                            <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">FC Astana</span>
+                                                <span class="shrink-0">4.30</span>
+                                            </button>
+                                            <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">draw</span>
+                                                <span class="shrink-0">2.26</span>
+                                            </button>
+                                            <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">SK Brann</span>
+                                                <span class="shrink-0">2.48</span>
+                                            </button>
+                                        </div>
+
+                                        <div class="mt-3 h-4 pl-1 text-xs font-semibold opacity-50">1st half - total</div>
+                                        <div class="grid grid-cols-2 gap-2 mt-2">
+                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">over 0.5</span>
+                                                <span class="shrink-0">1.37</span>
+                                            </button>
+                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">under 0.5</span>
+                                                <span class="shrink-0">2.96</span>
+                                            </button>
+                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">over 1.0</span>
+                                                <span class="shrink-0">1.78</span>
+                                            </button>
+                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">under 1.0</span>
+                                                <span class="shrink-0">1.96</span>
+                                            </button>
+                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">over 1.5</span>
+                                                <span class="shrink-0">2.33</span>
+                                            </button>
+                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">under 1.5</span>
+                                                <span class="shrink-0">1.55</span>
+                                            </button>
+                                        </div>
+
+                                        <div class="mt-3 h-4 pl-1 text-xs font-semibold opacity-50">Handicap</div>
+                                        <div class="grid grid-cols-2 gap-2 mt-2">
+                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">(0) FC Astana</span>
+                                                <span class="shrink-0">2.75</span>
+                                            </button>
+                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">(0) SK Brann</span>
+                                                <span class="shrink-0">2.96</span>
+                                            </button>
+                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">(0.5) FC Astana</span>
+                                                <span class="shrink-0">1.78</span>
+                                            </button>
+                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">(0.5) SK Brann</span>
+                                                <span class="shrink-0">1.96</span>
+                                            </button>
+                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">(-1) FC Astana</span>
+                                                <span class="shrink-0">2.33</span>
+                                            </button>
+                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">(-1) SK Brann</span>
+                                                <span class="shrink-0">1.55</span>
+                                            </button>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sport_item">
+                                <div class="absolute left-0 top-0 w-full h-full py-3 px-2 bg-content rounded-md cursor-pointer">
+                                    <div class="flex items-center justify-between px-2">
+                                        <div class="overflow-hidden flex-1 flex items-center gap-1.5 whitespace-nowrap mask-image opacity-50 hover:opacity-100 text-xs font-semibold">
+                                            <svg class="svg-icon w-4 h-4 shrink-0"><use xlink:href="./dist/images/icon-defs.svg#sport-soccer"></use></svg>
+                                            <p><span>Brazil</span><span>Brasileiro Serie A</span></p>
+                                        </div>
+                                        <button class="shrink-0 opacity-50 hover:opacity-100 tooltip" title="favorites"><svg class="svg-icon w-4 h-4"><use xlink:href="./dist/images/icon-defs.svg#favorite"></use></svg></button>
                                     </div>
                                     <div class="flex items-center justify-between mt-2 px-2">
                                         <p class="flex items-center gap-1 text-[#21a8f7] text-xs font-semibold">75′ 2nd half <svg class="svg-icon w-4 h-4"><use xlink:href="./dist/images/icon-defs.svg#bet-builder"></use></svg></p>
@@ -179,35 +519,25 @@
                                                 <img class="w-6" src="./dist/images/sports/1984.png" alt="">
                                                 <b>Criciuma EC SC</b>
                                             </div>
-                                            <div class="flex items-center justify-end gap-1">
-                                                <b class="w-4">2</b>
-                                                <b class="w-4 color-blue">15</b>
-                                                <div class="w-2 h-2 bg-win rounded-full"></div>
-                                                <b class="shrink-0 flex items-center justify-center w-8 h-6 border border-white border-opacity-10 rounded-lg bg-white bg-opacity-5 font-semibold">1</b>
-                                            </div>
+                                            <b class="shrink-0 flex items-center justify-center w-8 h-6 border border-white border-opacity-10 rounded-lg bg-white bg-opacity-5 font-semibold">1</b>
                                         </div>
                                         <div class="flex items-center justify-between mt-1">
                                             <div class="overflow-hidden flex-1 flex items-center gap-1 whitespace-nowrap mask-image">
                                                 <img class="w-6" src="./dist/images/sports/1999.png" alt="">
                                                 <b>Red Bull Bragantino SP</b>
                                             </div>
-                                            <div class="flex items-center justify-end gap-1">
-                                                <b class="w-4">3</b>
-                                                <b class="w-4 color-blue">A</b>
-                                                <div class="w-2 h-2 rounded-full"></div>
-                                                <b class="shrink-0 flex items-center justify-center w-8 h-6 border border-white border-opacity-10 rounded-lg bg-white bg-opacity-5 font-semibold">0</b>
-                                            </div>
+                                            <b class="shrink-0 flex items-center justify-center w-8 h-6 border border-white border-opacity-10 rounded-lg bg-white bg-opacity-5 font-semibold">0</b>
                                         </div>
                                     </div>
                                     <div class="mt-3">
                                         <div class="h-4 pl-1 text-xs font-semibold opacity-50">1x2</div>
                                         <div class="flex items-center gap-2 mt-2">
                                             <div class="flex-1 grid grid-cols-3 gap-2">
-                                                <button class="bet_up flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
                                                     <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">1</span>
                                                     <span class="shrink-0">40.00</span>
                                                 </button>
-                                                <button class="bet_down flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
                                                     <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">draw</span>
                                                     <span class="shrink-0">16.00</span>
                                                 </button>
@@ -342,24 +672,17 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="sport_item">
+                            <div class="sport_item ">
                                 <div class="absolute left-0 top-0 w-full h-full py-3 px-2 bg-content rounded-md cursor-pointer">
                                     <div class="flex items-center justify-between px-2">
                                         <div class="overflow-hidden flex-1 flex items-center gap-1.5 whitespace-nowrap mask-image opacity-50 hover:opacity-100 text-xs font-semibold">
                                             <svg class="svg-icon w-4 h-4 shrink-0"><use xlink:href="./dist/images/icon-defs.svg#sport-soccer"></use></svg>
-                                            <p class="flex items-center gap-1">
-                                                <span>Australia</span>
-                                                <svg class="svg-icon w-3 h-3 shrink-0 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg>
-                                                <span>Victoria Premier League, Women </span>
-                                            </p>
+                                            <p><span>Brazil</span><span>Brasileiro Serie A</span></p>
                                         </div>
-                                        <div>
-                                            <button class="shrink-0 opacity-50 hover:opacity-100"><svg class="svg-icon w-4 h-4"><use xlink:href="./dist/images/icon-defs.svg#stat"></use></svg></button>
-                                            <button class="shrink-0 opacity-50 hover:opacity-100 tooltip" title="favorites"><svg class="svg-icon w-4 h-4"><use xlink:href="./dist/images/icon-defs.svg#favorite"></use></svg></button>
-                                        </div>
+                                        <button class="shrink-0 opacity-50 hover:opacity-100 tooltip" title="favorites"><svg class="svg-icon w-4 h-4"><use xlink:href="./dist/images/icon-defs.svg#favorite"></use></svg></button>
                                     </div>
                                     <div class="flex items-center justify-between mt-2 px-2">
-                                        <p class="flex items-center gap-1 text-[#21a8f7] text-xs font-semibold">75′ 2nd half <svg class="svg-icon w-4 h-4"><use xlink:href="./dist/images/icon-defs.svg#ic-youtube"></use></svg></p>
+                                        <p class="flex items-center gap-1 text-[#21a8f7] text-xs font-semibold">75′ 2nd half <svg class="svg-icon w-4 h-4"><use xlink:href="./dist/images/icon-defs.svg#bet-builder"></use></svg></p>
                                         <button><svg class="svg-icon w-4 h-4"><use xlink:href="./dist/images/icon-defs.svg#ic-live-simple"></use></svg></button>
                                     </div>
                                     <div class="mt-4 px-2">
@@ -380,379 +703,9 @@
                                     </div>
                                     <div class="mt-3">
                                         <div class="h-4 pl-1 text-xs font-semibold opacity-50">1x2</div>
-                                        <div class="flex items-center gap-2 mt-2">
-                                            <div class="flex-1 grid grid-cols-3 gap-2">
-                                                <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                    <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">1</span>
-                                                    <span class="shrink-0">40.00</span>
-                                                </button>
-                                                <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                    <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">draw</span>
-                                                    <span class="shrink-0">16.00</span>
-                                                </button>
-                                                <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                    <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">2</span>
-                                                    <span class="shrink-0">1.02</span>
-                                                </button>
-                                            </div>
-                                            <button class="flex items-center justify-center h-9 px-2 bg-provider hover:bg-provider-70 rounded-md" onclick="openSportItem(this)">
-                                                <svg class="svg-icon w-4 h-4 open_arrow opacity-50"><use xlink:href="./dist/images/icon-defs.svg#bet-arrow"></use></svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="overflow-y-auto open_item bg-content my-3">
-                                        <div class="h-4 pl-1 text-xs font-semibold opacity-50">Double chance</div>
-                                        <div class="grid grid-cols-3 gap-2 mt-2">
-                                            <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">FC Astana</span>
-                                                <span class="shrink-0">1.88</span>
-                                            </button>
-                                            <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">FC Astana</span>
-                                                <span class="shrink-0">1.26</span>
-                                            </button>
-                                            <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">draw of SK</span>
-                                                <span class="shrink-0">1.25</span>
-                                            </button>
-                                        </div>
-
-                                        <div class="mt-3 h-4 pl-1 text-xs font-semibold opacity-50">Total</div>
-                                        <div class="grid grid-cols-2 gap-2 mt-2">
-                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">over 2.0</span>
-                                                <span class="shrink-0">1.37</span>
-                                            </button>
-                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">under 2.0</span>
-                                                <span class="shrink-0">2.96</span>
-                                            </button>
-                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">over 2.5</span>
-                                                <span class="shrink-0">1.78</span>
-                                            </button>
-                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">under 2.5</span>
-                                                <span class="shrink-0">1.96</span>
-                                            </button>
-                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">over 3.0</span>
-                                                <span class="shrink-0">2.33</span>
-                                            </button>
-                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">under 3.0</span>
-                                                <span class="shrink-0">1.55</span>
-                                            </button>
-                                        </div>
-
-                                        <div class="mt-3 h-4 pl-1 text-xs font-semibold opacity-50">1st half - 1x2</div>
-                                        <div class="grid grid-cols-3 gap-2 mt-2">
-                                            <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">FC Astana</span>
-                                                <span class="shrink-0">4.30</span>
-                                            </button>
-                                            <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">draw</span>
-                                                <span class="shrink-0">2.26</span>
-                                            </button>
-                                            <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">SK Brann</span>
-                                                <span class="shrink-0">2.48</span>
-                                            </button>
-                                        </div>
-
-                                        <div class="mt-3 h-4 pl-1 text-xs font-semibold opacity-50">1st half - total</div>
-                                        <div class="grid grid-cols-2 gap-2 mt-2">
-                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">over 0.5</span>
-                                                <span class="shrink-0">1.37</span>
-                                            </button>
-                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">under 0.5</span>
-                                                <span class="shrink-0">2.96</span>
-                                            </button>
-                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">over 1.0</span>
-                                                <span class="shrink-0">1.78</span>
-                                            </button>
-                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">under 1.0</span>
-                                                <span class="shrink-0">1.96</span>
-                                            </button>
-                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">over 1.5</span>
-                                                <span class="shrink-0">2.33</span>
-                                            </button>
-                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">under 1.5</span>
-                                                <span class="shrink-0">1.55</span>
-                                            </button>
-                                        </div>
-
-                                        <div class="mt-3 h-4 pl-1 text-xs font-semibold opacity-50">Handicap</div>
-                                        <div class="grid grid-cols-2 gap-2 mt-2">
-                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">(0) FC Astana</span>
-                                                <span class="shrink-0">2.75</span>
-                                            </button>
-                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">(0) SK Brann</span>
-                                                <span class="shrink-0">2.96</span>
-                                            </button>
-                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">(0.5) FC Astana</span>
-                                                <span class="shrink-0">1.78</span>
-                                            </button>
-                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">(0.5) SK Brann</span>
-                                                <span class="shrink-0">1.96</span>
-                                            </button>
-                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">(-1) FC Astana</span>
-                                                <span class="shrink-0">2.33</span>
-                                            </button>
-                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">(-1) SK Brann</span>
-                                                <span class="shrink-0">1.55</span>
-                                            </button>
-                                        </div>
-
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sport_item">
-                                <div class="absolute left-0 top-0 w-full h-full py-3 px-2 bg-content rounded-md cursor-pointer">
-                                    <div class="flex items-center justify-between px-2">
-                                        <div class="overflow-hidden flex-1 flex items-center gap-1.5 whitespace-nowrap mask-image opacity-50 hover:opacity-100 text-xs font-semibold">
-                                            <svg class="svg-icon w-4 h-4 shrink-0"><use xlink:href="./dist/images/icon-defs.svg#sport-soccer"></use></svg>
-                                            <p class="flex items-center gap-1">
-                                                <span>Poland</span>
-                                                <svg class="svg-icon w-3 h-3 shrink-0 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg>
-                                                <span>U19 CLJ</span>
-                                            </p>
-                                        </div>
-                                        <div>
-                                            <button class="shrink-0 opacity-50 hover:opacity-100"><svg class="svg-icon w-4 h-4"><use xlink:href="./dist/images/icon-defs.svg#stat"></use></svg></button>
-                                            <button class="shrink-0 opacity-50 hover:opacity-100 tooltip" title="favorites"><svg class="svg-icon w-4 h-4"><use xlink:href="./dist/images/icon-defs.svg#favorite"></use></svg></button>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-center justify-between mt-2 px-2">
-                                        <p class="flex items-center gap-1 text-xs font-semibold opacity-50">Today, 18:00</p>
-                                    </div>
-                                    <div class="mt-4 px-2">
-                                        <div class="flex items-center justify-between">
-                                            <div class="overflow-hidden flex-1 flex items-center gap-1 whitespace-nowrap mask-image">
-                                                <img class="w-6" src="./dist/images/sports/1984.png" alt="">
-                                                <b>Criciuma EC SC</b>
-                                            </div>
-                                            <b class="shrink-0 flex items-center justify-center w-8 h-6 border border-white border-opacity-10 rounded-lg bg-white bg-opacity-5 font-semibold">1</b>
-                                        </div>
-                                        <div class="flex items-center justify-between mt-1">
-                                            <div class="overflow-hidden flex-1 flex items-center gap-1 whitespace-nowrap mask-image">
-                                                <img class="w-6" src="./dist/images/sports/1999.png" alt="">
-                                                <b>Red Bull Bragantino SP</b>
-                                            </div>
-                                            <b class="shrink-0 flex items-center justify-center w-8 h-6 border border-white border-opacity-10 rounded-lg bg-white bg-opacity-5 font-semibold">0</b>
-                                        </div>
-                                    </div>
-                                    <div class="mt-3">
-                                        <div class="h-4 pl-1 text-xs font-semibold opacity-50">1x2</div>
-                                        <div class="flex items-center gap-2 mt-2">
-                                            <div class="flex-1 grid grid-cols-3 gap-2">
-                                                <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                    <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">1</span>
-                                                    <span class="shrink-0">40.00</span>
-                                                </button>
-                                                <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                    <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">draw</span>
-                                                    <span class="shrink-0">16.00</span>
-                                                </button>
-                                                <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                    <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">2</span>
-                                                    <span class="shrink-0">1.02</span>
-                                                </button>
-                                            </div>
-                                            <button class="flex items-center justify-center h-9 px-2 bg-provider hover:bg-provider-70 rounded-md" onclick="openSportItem(this)">
-                                                <svg class="svg-icon w-4 h-4 open_arrow opacity-50"><use xlink:href="./dist/images/icon-defs.svg#bet-arrow"></use></svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="overflow-y-auto open_item bg-content my-3">
-                                        <div class="h-4 pl-1 text-xs font-semibold opacity-50">Double chance</div>
-                                        <div class="grid grid-cols-3 gap-2 mt-2">
-                                            <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">FC Astana</span>
-                                                <span class="shrink-0">1.88</span>
-                                            </button>
-                                            <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">FC Astana</span>
-                                                <span class="shrink-0">1.26</span>
-                                            </button>
-                                            <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">draw of SK</span>
-                                                <span class="shrink-0">1.25</span>
-                                            </button>
-                                        </div>
-
-                                        <div class="mt-3 h-4 pl-1 text-xs font-semibold opacity-50">Total</div>
-                                        <div class="grid grid-cols-2 gap-2 mt-2">
-                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">over 2.0</span>
-                                                <span class="shrink-0">1.37</span>
-                                            </button>
-                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">under 2.0</span>
-                                                <span class="shrink-0">2.96</span>
-                                            </button>
-                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">over 2.5</span>
-                                                <span class="shrink-0">1.78</span>
-                                            </button>
-                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">under 2.5</span>
-                                                <span class="shrink-0">1.96</span>
-                                            </button>
-                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">over 3.0</span>
-                                                <span class="shrink-0">2.33</span>
-                                            </button>
-                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">under 3.0</span>
-                                                <span class="shrink-0">1.55</span>
-                                            </button>
-                                        </div>
-
-                                        <div class="mt-3 h-4 pl-1 text-xs font-semibold opacity-50">1st half - 1x2</div>
-                                        <div class="grid grid-cols-3 gap-2 mt-2">
-                                            <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">FC Astana</span>
-                                                <span class="shrink-0">4.30</span>
-                                            </button>
-                                            <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">draw</span>
-                                                <span class="shrink-0">2.26</span>
-                                            </button>
-                                            <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">SK Brann</span>
-                                                <span class="shrink-0">2.48</span>
-                                            </button>
-                                        </div>
-
-                                        <div class="mt-3 h-4 pl-1 text-xs font-semibold opacity-50">1st half - total</div>
-                                        <div class="grid grid-cols-2 gap-2 mt-2">
-                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">over 0.5</span>
-                                                <span class="shrink-0">1.37</span>
-                                            </button>
-                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">under 0.5</span>
-                                                <span class="shrink-0">2.96</span>
-                                            </button>
-                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">over 1.0</span>
-                                                <span class="shrink-0">1.78</span>
-                                            </button>
-                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">under 1.0</span>
-                                                <span class="shrink-0">1.96</span>
-                                            </button>
-                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">over 1.5</span>
-                                                <span class="shrink-0">2.33</span>
-                                            </button>
-                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">under 1.5</span>
-                                                <span class="shrink-0">1.55</span>
-                                            </button>
-                                        </div>
-
-                                        <div class="mt-3 h-4 pl-1 text-xs font-semibold opacity-50">Handicap</div>
-                                        <div class="grid grid-cols-2 gap-2 mt-2">
-                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">(0) FC Astana</span>
-                                                <span class="shrink-0">2.75</span>
-                                            </button>
-                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">(0) SK Brann</span>
-                                                <span class="shrink-0">2.96</span>
-                                            </button>
-                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">(0.5) FC Astana</span>
-                                                <span class="shrink-0">1.78</span>
-                                            </button>
-                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">(0.5) SK Brann</span>
-                                                <span class="shrink-0">1.96</span>
-                                            </button>
-                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">(-1) FC Astana</span>
-                                                <span class="shrink-0">2.33</span>
-                                            </button>
-                                            <button class="flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">(-1) SK Brann</span>
-                                                <span class="shrink-0">1.55</span>
-                                            </button>
-                                        </div>
-
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sport_item">
-                                <div class="absolute left-0 top-0 w-full h-full py-3 px-2 bg-content rounded-md cursor-pointer">
-                                    <div class="flex items-center justify-between px-2">
-                                        <div class="overflow-hidden flex-1 flex items-center gap-1.5 whitespace-nowrap mask-image opacity-50 hover:opacity-100 text-xs font-semibold">
-                                            <svg class="svg-icon w-4 h-4 shrink-0"><use xlink:href="./dist/images/icon-defs.svg#sport-soccer"></use></svg>
-                                            <p class="flex items-center gap-1">
-                                                <span>Australia</span>
-                                                <svg class="svg-icon w-3 h-3 shrink-0 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg>
-                                                <span>Victoria Premier League, Women </span>
-                                            </p>
-                                        </div>
-                                        <div>
-                                            <button class="shrink-0 opacity-50 hover:opacity-100"><svg class="svg-icon w-4 h-4"><use xlink:href="./dist/images/icon-defs.svg#stat"></use></svg></button>
-                                            <button class="shrink-0 opacity-50 hover:opacity-100 tooltip" title="favorites"><svg class="svg-icon w-4 h-4"><use xlink:href="./dist/images/icon-defs.svg#favorite"></use></svg></button>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-center justify-between mt-2 px-2">
-                                        <p class="flex items-center gap-1 text-xs font-semibold opacity-50">Today, 18:00</p>
-                                    </div>
-                                    <div class="mt-4 px-2">
-                                        <div class="flex items-center justify-between">
-                                            <div class="overflow-hidden flex-1 flex items-center gap-1 whitespace-nowrap mask-image">
-                                                <img class="w-6" src="./dist/images/sports/1984.png" alt="">
-                                                <b>Criciuma EC SC</b>
-                                            </div>
-                                            <b class="shrink-0 flex items-center justify-center w-8 h-6 border border-white border-opacity-10 rounded-lg bg-white bg-opacity-5 font-semibold">1</b>
-                                        </div>
-                                        <div class="flex items-center justify-between mt-1">
-                                            <div class="overflow-hidden flex-1 flex items-center gap-1 whitespace-nowrap mask-image">
-                                                <img class="w-6" src="./dist/images/sports/1999.png" alt="">
-                                                <b>Red Bull Bragantino SP</b>
-                                            </div>
-                                            <b class="shrink-0 flex items-center justify-center w-8 h-6 border border-white border-opacity-10 rounded-lg bg-white bg-opacity-5 font-semibold">0</b>
-                                        </div>
-                                    </div>
-                                    <div class="mt-3">
-                                        <div class="h-4 pl-1 text-xs font-semibold opacity-50">1x2</div>
-                                        <div class="flex items-center gap-2 mt-2">
-                                            <div class="flex-1 grid grid-cols-3 gap-2">
-                                                <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                    <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">1</span>
-                                                    <span class="shrink-0">40.00</span>
-                                                </button>
-                                                <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                    <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">draw</span>
-                                                    <span class="shrink-0">16.00</span>
-                                                </button>
-                                                <button class="flex-1 flex items-center justify-between h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
-                                                    <span class="overflow-hidden flex-1 whitespace-nowrap mask-image text-left opacity-50">2</span>
-                                                    <span class="shrink-0">1.02</span>
-                                                </button>
-                                            </div>
-                                            <button class="flex items-center justify-center h-9 px-2 bg-provider hover:bg-provider-70 rounded-md" onclick="openSportItem(this)">
-                                                <svg class="svg-icon w-4 h-4 open_arrow opacity-50"><use xlink:href="./dist/images/icon-defs.svg#bet-arrow"></use></svg>
+                                        <div class="flex gap-2 mt-2">
+                                            <button class="flex-1 flex items-center justify-center h-9 px-2 bg-provider hover:bg-provider-70 rounded-md text-xs font-bold" onclick="betBtnToggle(this)">
+                                                <span>Go to All Markets</span>
                                             </button>
                                         </div>
                                     </div>
@@ -879,14 +832,20 @@
                             </div>
                         </div>
 
-                        <!-- pager -->
-                        <div class="flex items-center justify-center gap-5 py-5">
-                            <button class="w-8 h-8 flex items-center justify-center bg-white bg-opacity-10 rounded-full" disabled><svg class="svg-icon w-3 h-3 rotate-180"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></button>
-                            <p>1 - 24 of 421</p>
-                            <button class="w-8 h-8 flex items-center justify-center bg-white bg-opacity-10 rounded-full"><svg class="svg-icon w-3 h-3"><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></button>
+
+                        <div class="py-20">
+                            <svg class="mx-auto" width="263" height="110" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M99.979 39.646A17.82 17.82 0 0 0 82.861 26.98a17.82 17.82 0 0 0-17.88 17.881c0 3.695 1.389 6.629 3.517 7.194 2.928.778 13.056 3.83 20.775 6.287.414.132.855.277 1.402.46l1.44.486c.46.155.83.278 1.185.395 2.816.92 4.658 1.355 5.974 1.336 1.166-.017 1.468-.271 1.468-1.257V54.23c-5.084-1.144-7.592-1.782-16.583-4.18-3.29-.878-5.023-2.38-5.023-5.19 0-3.116 2.09-5.215 5.215-5.215H99.98Zm.38 1.49H84.351c-2.3 0-3.725 1.43-3.725 3.725 0 1.983 1.204 3.027 3.917 3.75 8.777 2.342 11.353 2.998 16.199 4.093V44.86c0-1.28-.132-2.525-.383-3.725Zm-11.99 20.046c-7.676-2.443-17.765-5.484-20.636-6.246C63.985 53.94 62 49.749 62 44.86A20.801 20.801 0 0 1 82.861 24a20.801 20.801 0 0 1 20.861 20.861v14.9c0 2.75-1.719 4.2-4.404 4.238-1.754.025-3.82-.462-6.945-1.484-.365-.12-.742-.245-1.21-.403l-1.436-.485c-.534-.179-.96-.32-1.358-.445Zm147.385-17.234-1.315-1.37a.777.777 0 0 1 1.12-1.075l1.196 1.246a58.797 58.797 0 0 1 1.885-2.098l-1.114-1.16a.775.775 0 1 1 1.12-1.075l1.076 1.12.047-.047a55.272 55.272 0 0 1 1.989-1.892l-1.145-1.193a.775.775 0 1 1 1.12-1.075l1.191 1.241c2.339-2 4.858-3.82 7.556-5.456-1.799-1.317-3.607-2.212-5.188-2.625-3.91 1.338-7.936 3.594-11.047 6.705-2.963 2.963-5.155 6.712-6.523 10.402.228 1.737 1.148 3.862 2.664 5.991a69.113 69.113 0 0 1 5.368-7.64Zm1.084 1.128a67.975 67.975 0 0 0-5.435 7.83 23.95 23.95 0 0 0 1.47 1.61c2.637 2.637 5.568 4.36 7.965 4.965 3.871-1.349 7.854-3.612 10.968-6.726 2.965-2.965 5.152-6.76 6.509-10.493-.365-2.532-2.174-5.864-5.137-8.828a24.366 24.366 0 0 0-1.397-1.29 55.933 55.933 0 0 0-7.78 5.548l1.683 1.753a.776.776 0 1 1-1.12 1.075l-1.731-1.803a53.808 53.808 0 0 0-1.966 1.87l-.07.07 1.8 1.875a.776.776 0 1 1-1.12 1.075l-1.761-1.835a57.067 57.067 0 0 0-1.881 2.102l1.675 1.745a.776.776 0 0 1-1.119 1.075l-1.553-1.618ZM226.811 58.1a86.387 86.387 0 0 1 2.712-5.062c-1.187-1.565-2.093-3.168-2.672-4.693-1.037 3.939-1.075 7.557-.04 9.755Zm1.035 1.416c1.896 1.647 5.947 1.85 10.466.722-2.167-.955-4.453-2.54-6.537-4.624a25.357 25.357 0 0 1-1.202-1.287 86.405 86.405 0 0 0-2.727 5.189Zm29.115-31.824c-2.119-.882-5.475-.845-9.146.057 1.354.604 2.751 1.453 4.115 2.514a63.915 63.915 0 0 1 5.031-2.571Zm1.525 1.017a63.077 63.077 0 0 0-5.281 2.618c.361.322.719.66 1.07 1.01 2.293 2.294 3.982 4.831 4.892 7.187 1.22-4.715 1.031-8.96-.681-10.815Zm-33.022 32.828c-5.022-5.023-2.141-19.81 6.586-28.537 8.669-8.67 23.598-11.523 28.536-6.585 4.938 4.938 2.085 19.867-6.585 28.536-8.727 8.727-23.514 11.608-28.537 6.586Z" fill="rgba(255,255,255,0.4)"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M3.03 41.562A17.29 17.29 0 0 0 2.856 44a17.08 17.08 0 0 0 4.642 11.73c2.108-7.982 7.2-14.832 14.08-19.384a31.34 31.34 0 0 0-2.312-2.104 14.212 14.212 0 0 1-7.067 1.9 12.851 12.851 0 0 0-9.17 5.42Zm.708-3a14.266 14.266 0 0 1 9.78-3.92 12.78 12.78 0 0 0 4.523-1.358 29.592 29.592 0 0 0-7.047-3.873 17.19 17.19 0 0 0-7.256 9.15ZM23.804 27.28A17.2 17.2 0 0 0 20 26.857c-2.645 0-5.15.6-7.386 1.669a31.184 31.184 0 0 1 6.752 3.969 12.888 12.888 0 0 0 4.438-5.214Zm1.397.38a14.31 14.31 0 0 1-4.679 5.767 32.844 32.844 0 0 1 2.292 2.137 35.565 35.565 0 0 1 9.108-3.883 17.133 17.133 0 0 0-6.721-4.022Zm-6.027 33.462c.901-1.712 1.54-5.603 1.54-9.98v-1.57a12.12 12.12 0 0 1 4.308-9.136 32.716 32.716 0 0 0-2.444-3.039c-6.926 4.509-11.991 11.428-13.894 19.48a17.072 17.072 0 0 0 10.49 4.245Zm1.563.004a17.071 17.071 0 0 0 10.492-4.173c-.616-5.632-2.513-10.873-5.4-15.328a10.69 10.69 0 0 0-3.686 8.088v1.429c0 4.11-.532 7.813-1.406 9.984ZM36.59 39.668A10.694 10.694 0 0 0 32.857 39c-2.174 0-4.197.648-5.886 1.76 2.852 4.373 4.785 9.474 5.544 14.956A17.083 17.083 0 0 0 37.143 44a17.19 17.19 0 0 0-.552-4.332ZM36.063 38a17.13 17.13 0 0 0-3.025-5.13 34.174 34.174 0 0 0-9.226 3.764c.835.934 1.62 1.918 2.354 2.947a12.086 12.086 0 0 1 6.691-2.009c1.097 0 2.173.146 3.206.428ZM20 64C8.954 64 0 55.046 0 44s8.954-20 20-20 20 8.954 20 20-8.954 20-20 20Z" fill="rgba(255,255,255,0.4)"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M157.667 55.207a21.318 21.318 0 0 0 8.963 2.18l5.273-6.039a21.478 21.478 0 0 0-2.393-10.236l-10.428-2.428a21.454 21.454 0 0 0-4.935 7.7l3.52 8.823Zm-.55 1.718-3.524 2.938A21.35 21.35 0 0 0 168 65.429c1.065 0 2.111-.078 3.134-.228l-4.518-6.027a23.114 23.114 0 0 1-9.499-2.249Zm-10.504-11.577h6.018a23.247 23.247 0 0 1 5.403-8.139v-6.496a21.361 21.361 0 0 0-6.394-.553A21.342 21.342 0 0 0 146.571 44c0 .453.014.902.042 1.348Zm35.786 5.628a21.47 21.47 0 0 0 4.404-6.556l-2.845-9.708a21.281 21.281 0 0 0-7.776-2.233l-4.839 8.306a23.237 23.237 0 0 1 2.339 9.534l8.717.657Zm1.036 1.49v6.398a21.354 21.354 0 0 0 5.943-13.375l-1.015-.178a23.246 23.246 0 0 1-4.928 7.155Zm1.229-21.94a21.417 21.417 0 0 0-12.758-7.6 21.297 21.297 0 0 0-1.954 2.68l5.851 5.052c2.892.192 5.686.916 8.268 2.123l.593-2.255Zm-16.488-5.43a23.03 23.03 0 0 1 1.654-2.448 21.705 21.705 0 0 0-1.83-.077 21.355 21.355 0 0 0-14.62 5.762c1.681.026 3.354.235 4.992.624a.888.888 0 0 1 .231-.133l9.573-3.728ZM168 69c-13.807 0-25-11.193-25-25s11.193-25 25-25 25 11.193 25 25-11.193 25-25 25Z" fill="#ffffff"></path><path d="M101.351 105.649a6.151 6.151 0 0 1 0-8.7l28.124-28.125c-5.391-7.194-8.626-16.09-8.626-25.749C120.849 19.322 140.172 0 163.925 0S207 19.322 207 43.075c0 23.753-19.322 43.076-43.075 43.076-9.659 0-18.556-3.235-25.749-8.626l-28.124 28.124a6.152 6.152 0 0 1-8.701 0Zm101.547-62.574c0-21.49-17.483-38.973-38.973-38.973-21.491 0-38.973 17.483-38.973 38.973s17.482 38.973 38.973 38.973c21.49 0 38.973-17.482 38.973-38.973Z" fill="#957329"></path></svg>
+                            <p class="mt-2 text-lg font-medium text-center">Looking for something special?</p>
                         </div>
 
-                    
+                        <div class="py-20 text-center">
+                            <svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="236" height="110" fill="none" data-editor-id="searchNoResultIcon"><path stroke="#ffffff" stroke-linecap="round" stroke-width="2" d="m153.2 23.1-1 3.5m-11.2 42-.9 3.5m0-49 1 3.5m11.2 42 1 3.5m-24.6-42.4 2.6 2.5M162 63l2.6 2.5M122.2 41l3.5 1m41.9 11.2 3.5 1m-48.9-.1 3.5-.9M167.6 42l3.5-1m-42.4 24.5 2.6-2.6M162 32.2l2.6-2.5m-5.3-4.1-1.8 3.2m-21.7 37.6-1.8 3.1m12.7-47.3V26m0 43.3v3.6M134 25.6l1.8 3.2m21.7 37.6 1.8 3.1M124.7 35l3.2 1.7m37.6 21.7 3.1 1.9m-47.3-12.7h3.6m43.5 0h3.6m-47.3 12.7 3.2-1.9m37.6-21.7 3.1-1.8"></path><path stroke="rgba(255,255,255,0.4)" stroke-linecap="round" stroke-width="2" d="m29.6 30.5-.8 3.1M18.7 71.3l-.9 3.1m0-43.9.9 3.1m10.1 37.7.8 3.1m-21.9-38 2.3 2.3m27.5 27.5 2.3 2.3m-38-21.9 3.1.8m37.6 10.1 3.2.8m-43.9 0 3.1-.8m37.6-10.1 3.2-.8m-38 21.9 2.3-2.3m27.5-27.5 2.3-2.3M35 32.8l-1.5 2.8M14 69.3l-1.6 2.8m11.3-42.4V33m0 39v3.2M12.4 32.8l1.6 2.8m19.5 33.7 1.6 2.8M4 41l3 1.8m33.6 19.4 2.8 1.6M1 52.4h3.2m39 0h3.2M4 63.8l3-1.6m33.6-19.5 2.8-1.6M69.6 7.5l-.5 2m-6.4 24-.6 2m0-28 .6 2m6.3 24 .6 2m-14-24.3 1.5 1.5m17.6 17.6 1.4 1.5m-24.2-14 2 .5m24 6.4 2 .6m-28 0 2-.6m24-6.4 2-.5m-24.3 14 1.5-1.5m17.6-17.6 1.4-1.5m-3-2.2-1 1.7M59.7 32.3l-1 1.8M65.9 7v2m0 25v2M58.6 9l1 1.7M72 32.3l1.1 1.8M53.3 14.3l1.8 1m21.5 12.4 1.8 1m-27-7.2h2m24.9 0h2m-27 7.3 1.8-1m21.5-12.5 1.8-1m134.9 8-.6 2.4M205 53.6l-.7 2.4m0-33.7.7 2.4m7.7 28.9.6 2.4m-16.8-29.2 1.8 1.8m21.1 21.1 1.7 1.8M192 34.7l2.4.6m28.8 7.7 2.5.7m-33.7 0 2.4-.7m28.8-7.7 2.5-.6m-29.2 16.8 1.8-1.8m21.1-21.1 1.7-1.8m-3.6-2.8-1.2 2.2m-15 25.9-1.2 2.2m8.7-32.6v2.5m0 29.9v2.5M200.1 24l1.2 2.2m15 25.9 1.2 2.2m-23.8-23.8 2.2 1.2m25.9 14.9 2.1 1.3m-32.5-8.7h2.5m29.9 0h2.4m-32.5 8.7 2.2-1.3m25.9-14.9 2.1-1.2"></path><path fill="#957329" d="M212.9 105.6a6.2 6.2 0 0 1-8.7 0l-28.1-28a43.1 43.1 0 1 1 8.7-8.7l28 28a6.2 6.2 0 0 1 0 8.7ZM150.3 4.1a39 39 0 1 0 .1 78 39 39 0 0 0 0-78Z"></path><path fill="rgba(255,255,255,0.4)" d="M63 72.2c-.1-3.3-2.7-6-6-6.2a7 7 0 0 0-5 1.7 6.3 6.3 0 0 0-2 4.6c0 .9.7 1.6 1.6 1.6.8 0 1.5-.7 1.5-1.6 0-.9.4-1.7 1-2.3.8-.7 1.7-1 2.7-.9 1.7.1 3 1.6 3 3.2a3 3 0 0 1-1.6 3 6 6 0 0 0-3.3 5.4c0 .9.7 1.6 1.6 1.6.9 0 1.6-.7 1.6-1.6a3 3 0 0 1 1.5-2.7 6.3 6.3 0 0 0 3.4-5.8Zm-6.2 15.2c1.1 0 2-.9 2-2s-.9-2-2-2a2 2 0 0 0-2.1 2c0 1.1 1 2 2 2Z"></path><path fill="#ffffff" d="M153.6 42.8a7 7 0 0 0-6.5-6.8c-2-.1-4 .5-5.5 1.9a6.9 6.9 0 0 0-2.2 5c0 1 .8 1.7 1.7 1.7 1 0 1.7-.7 1.7-1.7s.4-1.9 1.1-2.5c.8-.7 1.8-1 3-1 1.8.1 3.2 1.7 3.3 3.5 0 1.4-.7 2.6-1.9 3.2a6.7 6.7 0 0 0-3.5 6c0 1 .8 1.7 1.7 1.7 1 0 1.7-.8 1.7-1.7 0-1.3.7-2.4 1.7-3a6.9 6.9 0 0 0 3.7-6.3Zm-6.8 16.6c1.2 0 2.3-1 2.3-2.2 0-1.2-1-2.3-2.3-2.3-1.3 0-2.3 1-2.3 2.3 0 1.2 1 2.2 2.3 2.2Z"></path><path fill="rgba(255,255,255,0.4)" d="M100.4 12.5a4.7 4.7 0 0 0-7.9-3.2c-1 .8-1.5 2-1.5 3.3 0 .6.5 1 1.1 1 .6 0 1.1-.4 1.1-1 0-.7.3-1.3.8-1.7.5-.5 1.2-.7 1.9-.7 1.2.1 2.2 1.2 2.2 2.4 0 .9-.4 1.7-1.2 2a4.4 4.4 0 0 0-2.3 4c0 .6.5 1.1 1 1.1.7 0 1.2-.5 1.2-1.1 0-.8.4-1.6 1.1-2a4.5 4.5 0 0 0 2.5-4.1Zm-4.5 10.9c.8 0 1.5-.6 1.5-1.4 0-.9-.7-1.5-1.5-1.5-.9 0-1.5.6-1.5 1.5 0 .8.6 1.4 1.5 1.4ZM235.5 60c-.1-2-1.8-3.8-4-4-1.1 0-2.3.3-3.2 1.1a4 4 0 0 0-1.3 3c0 .6.5 1 1 1 .6 0 1-.4 1-1 0-.5.3-1.1.7-1.5.5-.4 1-.6 1.7-.6 1.1.1 2 1 2 2.1a2 2 0 0 1-1 2 4 4 0 0 0-2.2 3.5c0 .6.5 1 1 1 .6 0 1-.4 1-1a2 2 0 0 1 1-1.8 4.1 4.1 0 0 0 2.3-3.8Zm-4.1 10c.8 0 1.4-.6 1.4-1.3 0-.8-.6-1.4-1.4-1.4-.7 0-1.3.6-1.3 1.4 0 .7.6 1.3 1.3 1.3Z"></path></svg>
+                            <p class="w-96 max-w-full mt-2 mx-auto text-lg font-medium text-center">Ooops, nothing found! Please, try to change the request or go to the Live tab and play!</p>
+                            <button class="btn btn-active mt-7 px-4 border-none text-xs rounded-2xl font-bold">GO TO HOME PAGE</button>
+                        </div>
+
+
+
                         <!-- odd format -->
                         <div class="py-10">
                             <div class="flex items-center justify-center gap-2 mb-4">
@@ -1020,6 +979,7 @@
                         
 
 
+
                     </div>
                 </div>
 
@@ -1039,7 +999,7 @@
         <script src="./dist/js/custom.js"></script>
         <script>
             setTimeout(function(){
-                sportTopMenu('Live')
+                sportTopMenu('search')
             },400)
         </script>
         <!-- END: JS Assets-->

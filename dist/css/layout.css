@@ -75,6 +75,7 @@ button:disabled {opacity:.5; }
 .bg-option {background:var(--option-color); }
 .bg-green {background:var(--green-color); }
 .bg-win {background:var(--win-color);}
+.\!bg-content {background:var(--content-bg) !important; }
 
 .top-shadow {box-shadow:var(--top-shadow); }
 
@@ -148,6 +149,8 @@ button:disabled {opacity:.5; }
         SPORTS_MENU
         SPORTS_SLIDE
         SPORTS_BETSLIP
+
+        CUSTOM_ACCORDION
 
 */
 
@@ -515,7 +518,9 @@ body:not(.logout) .casinoSwiper .arrow.next {right:15px; }
 .custom_select > div {position:absolute; left:0; top:calc(100% + 10px); overflow-y:auto; overflow-x:hidden; display:none; width:100%; max-height:320px; background:var(--provider-color); border-radius:8px; }
 .custom_select ul li {display:flex; align-items:center; justify-content:space-between; padding:8px; min-height:44px; color:var(--light-color); font-weight:700; cursor:pointer; }
 .custom_select ul.sm li {min-height:25px; padding:6px 8px; }
-.custom_select ul li:hover {background-color:var(--option-color);}
+.custom_select ul:not(.hover_color) li:hover {background-color:var(--option-color);}
+.custom_select ul.hover_color li {opacity:0.7; transition:all 0.4s; }
+.custom_select ul.hover_color li:hover {opacity:1; }
 .custom_select.open {z-index:11; }
 .custom_select.open > button .arrow {transform:translateY(-50%) rotate(180deg); }
 .custom_select.open > div {display:block; }
@@ -556,6 +561,8 @@ body:not(.logout) .casinoSwiper .arrow.next {right:15px; }
 .sports_menu a.active.type01 svg {color:#FF603E; }
 .sports_menu a.active.type02 svg {color:#BC4EFF; }
 .sports_menu a.active.type03 svg {color:#FF603E; }
+
+.sports_topall {position:absolute; left:0; top:100%; display:none; width:100%; height:calc(100vh - 152px); background-color:rgba(0,0,0,0.5); }
 
 
 /* ----------------------------------------------
@@ -656,3 +663,10 @@ body:not(.logout) .casinoSwiper .arrow.next {right:15px; }
     .sports_betslip.open {bottom:0; }
     .sports_betslip .tab-content {max-height:65vh; }
 }
+
+
+/* ----------------------------------------------
+            CUSTOM_ACCORDION
+---------------------------------------------- */
+.custom_accordion.open .title .arrow {transform:rotate(180deg); }
+
