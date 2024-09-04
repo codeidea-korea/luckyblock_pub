@@ -538,6 +538,13 @@ const sportTopMenu = (item)=>{
         }
     })
 }
+
+// custom_accordion
+const accordionToggle = (item)=>{
+    $(item).parent('.custom_accordion').toggleClass('open')
+    $(item).next('.cont').slideToggle();
+}
+
 // jquery 모음
 const loadJquery = ()=>{
     // 스와이퍼 공통
