@@ -381,8 +381,49 @@ const sportTopMenu = (item)=>{
 
 // custom_accordion
 const accordionToggle = (item)=>{
-    $(item).parent('.custom_accordion').toggleClass('open')
-    $(item).next('.cont').slideToggle();
+    $(item).parents('.custom_accordion').toggleClass('open')
+    $(item).parents('.custom_accordion').find('> .cont').slideToggle();
+}
+const accordionInToggle = (item)=>{
+    $(item).parents('.custom_inaccordion').toggleClass('open')
+    $(item).parents('.custom_inaccordion').find('> .cont2').slideToggle();
+    let parent = $(item).parents('.custom_inaccordion')
+    if(!parent.hasClass('open')){
+        $(item).find('span').text('SHOW ALL')
+    }else{
+        $(item).find('span').text('HIDE ALL')
+    }
+}
+
+// 스포츠 all menu
+const sportsAllmenu = (item)=>{
+    $(item).find('svg').toggleClass('rotate-180')
+    $('.sports_topall').toggleClass('open')
+}
+
+// 스포츠 all menu 메뉴 토글
+const sportsAllmenuToggle = (item)=>{
+    $(item).find('span').removeClass('opacity-50')
+    $(item).siblings().find('span').addClass('opacity-50')
+
+    // allmenu 닫기
+    $('.sports_topall').removeClass('open')
+    $('.sports_topmenu .allmenu_btn').find('svg').toggleClass('rotate-180')
+}
+
+// 게임 토글
+const gameToggle = (item)=>{
+    $(item).find('.name').removeClass('opacity-50').parents('li').siblings().find('.name').addClass('opacity-50')
+}
+
+// 핀 토글
+const pinToggle = (item)=>{
+    $(item).toggleClass('on')
+}
+
+// 프로필모달
+const profileModalToggle = ()=>{
+    $('.profile_modal').toggleClass('active')
 }
 
 // jquery 모음

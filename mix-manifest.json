@@ -146,5 +146,17 @@
     "/dist/images/flag/international.svg": "/dist/images/flag/international.svg",
     "/dist/images/flag/FRA.svg": "/dist/images/flag/FRA.svg",
     "/dist/images/flag/ITA.svg": "/dist/images/flag/ITA.svg",
-    "/dist/images/flag/PRT.svg": "/dist/images/flag/PRT.svg"
+    "/dist/images/flag/PRT.svg": "/dist/images/flag/PRT.svg",
+    "/dist/images/flag/AZE.svg": "/dist/images/flag/AZE.svg",
+    "/dist/images/flag/SWE.svg": "/dist/images/flag/SWE.svg",
+    "/dist/images/profile/profile.webp": "/dist/images/profile/profile.webp",
+    "/dist/images/profile/activity.png": "/dist/images/profile/activity.png",
+    "/dist/images/profile/bonus.png": "/dist/images/profile/bonus.png",
+    "/dist/images/profile/game.png": "/dist/images/profile/game.png",
+    "/dist/images/profile/home.png": "/dist/images/profile/home.png",
+    "/dist/images/profile/levels.png": "/dist/images/profile/levels.png",
+    "/dist/images/profile/matchx.png": "/dist/images/profile/matchx.png",
+    "/dist/images/profile/missions.png": "/dist/images/profile/missions.png",
+    "/dist/images/profile/saw.png": "/dist/images/profile/saw.png",
+    "/dist/images/profile/tournaments.png": "/dist/images/profile/tournaments.png"
 }

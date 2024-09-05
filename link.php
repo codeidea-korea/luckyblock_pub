@@ -93,13 +93,19 @@ echo txtRecord('./@record/');
 
 		<li class="mt20" data-label="Sports">
 			<ul>
-				<li><a href="./sports.html" target="_blank" class="">sports - highlights</a></li>
-				<li><a href="./sports_schedule.html" target="_blank" class="">sports - schedule</a></li>
-				<li><a href="./sports_bets_feed.html" target="_blank" class="">sports - bets feed</a></li>
+				<li data-label="home">
+					<ul>
+						<li><a href="./sports.html" target="_blank" class="">sports - highlights</a></li>
+						<li><a href="./sports_schedule.html" target="_blank" class="">sports - schedule</a></li>
+						<li><a href="./sports_bets_feed.html" target="_blank" class="">sports - bets feed</a></li>
+					</ul>
+				</li>
 				<li><a href="./sports_live.html" target="_blank" class="">live</a></li>
 				<li><a href="./sports_favorites.html" target="_blank" class="">Favorites</a></li>
 				<li><a href="./sports_bet.html" target="_blank" class="">My bet</a></li>
+				<li><a href="./sports_rapid.html" target="_blank" class="">Rapid betting</a></li>
 				<li><a href="./sports_soccer.html" target="_blank" class="">sports - soccer</a></li>
+				<li><a href="./sports_detail.html" target="_blank" class="">sports - detail</a></li>
 				<li><a href="./sports_search.html" target="_blank" class="">search</a></li>
 			</ul>
 		</li>

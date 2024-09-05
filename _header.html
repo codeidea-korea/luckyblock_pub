@@ -24,7 +24,7 @@
         </div>
 
         <div class="flex items-center gap-1 md:gap-2.5 isLogin">
-            <button class="hover_effect pr_type p-2 rounded-full"><svg viewBox="0 0 20 20" class="svg-icon w-6 h-6"><use xlink:href="./dist/images/icon-defs.svg#brand-ico-gamification01"></use></svg></button>
+            <button class="hover_effect pr_type p-2 rounded-full" onclick="profileModalToggle()"><svg viewBox="0 0 20 20" class="svg-icon w-6 h-6"><use xlink:href="./dist/images/icon-defs.svg#brand-ico-gamification01"></use></svg></button>
             <button class="relative hover_effect p-2 rounded-full" onclick="inboxToggle()"><img class="w-6" src="./dist/images/icon/message.avif" alt=""><span class="absolute right-1 top-1 px-1 fs10 leading-normal bg-primary rounded-full">2</span></button>
             <div class="dropdown" data-tw-placement="bottom">
                 <button class="dropdown-toggle hover_effect p-2 rounded-full" aria-expanded="false" data-tw-toggle="dropdown"><svg viewBox="0 0 20 20" class="svg-icon w-5 h-5 mx-auto"><use xlink:href="./dist/images/icon-defs.svg#brand-ico-account"></use></svg></button>
@@ -185,5 +185,87 @@
         </div>
 
         <button class="flex items-center gap-1 font-semibold"><img class="w-5 img_filter" src="./dist/images/icon/mark-all-read.png" alt="">Mark all as Read</button>
+    </div>
+</div>
+
+<!-- 모달 -->
+<div class="profile_modal">
+    <div class="profile_cont">
+        <div class="close_btn" onclick="profileModalToggle()"><span></span></div>
+        <div class="left_menu">
+            <div class="profile mt-5 mb-3 text-center">
+                <i class="overflow-hidden block w-20 h-20 mx-auto rounded-full"><img src="./dist/images/profile/profile.webp" alt=""></i>
+                <p class="my-2 text-lg">NICKNAME</p>
+                <span class="inline-flex items-center px-3 py-1 text-xs text-black bg-white rounded-xl font-bold">Rookie</span>
+            </div>
+            <div class="pl-2">
+                <ul class="nav nav-tabs vertical-tabs" role="tablist">
+                    <li id="profile-1-tab" class="nav-item flex-1" role="presentation"> 
+                        <button class="nav-link !flex items-center gap-2 w-full py-2 active" data-tw-toggle="pill" data-tw-target="#profile-tab-1" type="button" role="tab" aria-controls="profile-tab-1" aria-selected="true">
+                            <img src="./dist/images/profile/home.png" class="w-7" alt="">
+                            Overview
+                        </button> 
+                    </li>
+                    <li id="profile-2-tab" class="nav-item flex-1" role="presentation"> 
+                        <button class="nav-link !flex items-center gap-2 w-full py-2" data-tw-toggle="pill" data-tw-target="#profile-tab-2" type="button" role="tab" aria-controls="profile-tab-2" aria-selected="false">
+                            <img src="./dist/images/profile/missions.png" class="w-7" alt="">
+                            Missions
+                        </button> 
+                    </li>
+                    <li id="profile-3-tab" class="nav-item flex-1" role="presentation"> 
+                        <button class="nav-link !flex items-center gap-2 w-full py-2" data-tw-toggle="pill" data-tw-target="#profile-tab-3" type="button" role="tab" aria-controls="profile-tab-3" aria-selected="false">
+                            <img src="./dist/images/profile/game.png" class="w-7" alt="">
+                            Game of the Week
+                        </button> 
+                    </li>
+                    <li id="profile-4-tab" class="nav-item flex-1" role="presentation"> 
+                        <button class="nav-link !flex items-center gap-2 w-full py-2" data-tw-toggle="pill" data-tw-target="#profile-tab-4" type="button" role="tab" aria-controls="profile-tab-4" aria-selected="false">
+                            <img src="./dist/images/profile/tournaments.png" class="w-7" alt="">
+                            Tournaments
+                        </button> 
+                    </li>
+                    <li id="profile-5-tab" class="nav-item flex-1" role="presentation"> 
+                        <button class="nav-link !flex items-center gap-2 w-full py-2" data-tw-toggle="pill" data-tw-target="#profile-tab-5" type="button" role="tab" aria-controls="profile-tab-5" aria-selected="false">
+                            <img src="./dist/images/profile/levels.png" class="w-7" alt="">
+                            Levels
+                        </button> 
+                    </li>
+                    <li id="profile-6-tab" class="nav-item flex-1" role="presentation"> 
+                        <button class="nav-link !flex items-center gap-2 w-full py-2" data-tw-toggle="pill" data-tw-target="#profile-tab-6" type="button" role="tab" aria-controls="profile-tab-6" aria-selected="false">
+                            <img src="./dist/images/profile/saw.png" class="w-7" alt="">
+                            Spin The Wheel
+                        </button> 
+                    </li>
+                    <li id="profile-7-tab" class="nav-item flex-1" role="presentation"> 
+                        <button class="nav-link !flex items-center gap-2 w-full py-2" data-tw-toggle="pill" data-tw-target="#profile-tab-7" type="button" role="tab" aria-controls="profile-tab-7" aria-selected="false">
+                            <img src="./dist/images/profile/matchx.png" class="w-7" alt="">
+                            Match X
+                        </button> 
+                    </li>
+                    <li id="profile-8-tab" class="nav-item flex-1" role="presentation"> 
+                        <button class="nav-link !flex items-center gap-2 w-full py-2" data-tw-toggle="pill" data-tw-target="#profile-tab-8" type="button" role="tab" aria-controls="profile-tab-8" aria-selected="false">
+                            <img src="./dist/images/profile/bonus.png" class="w-7" alt="">
+                            Bonuses
+                        </button> 
+                    </li>
+                    <li id="profile-9-tab" class="nav-item flex-1" role="presentation"> 
+                        <button class="nav-link !flex items-center gap-2 w-full py-2" data-tw-toggle="pill" data-tw-target="#profile-tab-9" type="button" role="tab" aria-controls="profile-tab-9" aria-selected="false">
+                            <img src="./dist/images/profile/activity.png" class="w-7" alt="">
+                            Inbox
+                        </button> 
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right_cont">
+            <div class="tab-content">
+                <div id="profile-tab-1" class="tab-pane leading-relaxed p-5 active" role="tabpanel" aria-labelledby="profile-1-tab">
+                    111
+                </div>
+                <div id="profile-tab-2" class="tab-pane leading-relaxed p-5" role="tabpanel" aria-labelledby="profile-2-tab">
+                    222
+                </div>
+            </div>
+        </div>
     </div>
 </div>

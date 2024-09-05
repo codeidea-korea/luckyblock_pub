@@ -54,7 +54,7 @@
             <a href="javascript:;" class="inline-flex p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="formula"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-formula-1"></use></svg></a>
             <a href="javascript:;" class="inline-flex p-2 opacity-50 hover:opacity-100 tooltip" data-placement="bottom" title="alpineskiing"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-alpineskiing"></use></svg></a>
         </div>
-        <button class="absolute right-0 top-0 p-2"><svg class="svg-icon w-4 h-8"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></button>
+        <button class="absolute right-0 top-0 p-2 allmenu_btn" onclick="sportsAllmenu(this)"><svg class="svg-icon w-4 h-8"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></button>
     </div>
     <div class="shrink-0 ml-12">
         <a href="./sports_search.html" class="p-2 opacity-50 hover:opacity-100" title="search"><svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#ic-search"></use></svg></a>
@@ -63,17 +63,599 @@
     <!-- 스포츠 모두보기 -->
     <div class="sports_topall p-2">
         <div class="sports_allmenu bg-provider p-6 rounded-xl">
-            <ul class="nav nav-boxed-tabs" role="tablist">
-                <li id="sports_all-1-tab" class="nav-item flex-1" role="presentation"> 
-                    <button class="nav-link w-full py-2 active" data-tw-toggle="pill" data-tw-target="#sports_all-tab-1" type="button" role="tab" aria-controls="sports_all-tab-1" aria-selected="true"> sports_all Tab 1 </button> 
-                </li>
-                <li id="sports_all-2-tab" class="nav-item flex-1" role="presentation"> 
-                    <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#sports_all-tab-2" type="button" role="tab" aria-controls="sports_all-tab-2" aria-selected="false"> sports_all Tab 2 </button> 
-                </li>
-            </ul>
-            <div class="tab-content mt-5">
-                <div id="sports_all-tab-1" class="tab-pane leading-relaxed active" role="tabpanel" aria-labelledby="sports_all-1-tab"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </div>
-                <div id="sports_all-tab-2" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="sports_all-2-tab"> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). </div>
+            <div class="flex items-center justify-center gap-2 text-center">
+                <ul class="nav nav-boxed-tabs transparent_type gap-1 !inline-flex p-1 bg-content rounded-lg" role="tablist">
+                    <li id="sports_all-1-tab" class="nav-item flex-1" role="presentation"> 
+                        <button class="nav-link w-full py-2 text-xs font-bold active" data-tw-toggle="pill" data-tw-target="#sports_all-tab-1" type="button" role="tab" aria-controls="sports_all-tab-1" aria-selected="true"> Sports </button> 
+                    </li>
+                    <li id="sports_all-2-tab" class="nav-item flex-1" role="presentation"> 
+                        <button class="nav-link w-full py-2 text-xs font-bold" data-tw-toggle="pill" data-tw-target="#sports_all-tab-2" type="button" role="tab" aria-controls="sports_all-tab-2" aria-selected="false"> Esports </button> 
+                    </li>
+                    <li id="sports_all-3-tab" class="nav-item flex-1" role="presentation"> 
+                        <button class="nav-link w-full py-2 text-xs font-bold" data-tw-toggle="pill" data-tw-target="#sports_all-tab-3" type="button" role="tab" aria-controls="sports_all-tab-3" aria-selected="false"> Racing </button> 
+                    </li>
+                </ul>
+                <button class="shrink-0 flex items-center justify-center w-10 h-10 bg-content rounded-xl">
+                    <svg class="bt3000" data-cy="stat" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="fill: currentcolor; color: rgb(255, 96, 62); width: auto; height: 16px;">
+                        <g clip-path="url(#clip0)">
+                            <g opacity="1">
+                                <rect x="3" y="7" width="2" height="5" rx="1"></rect>
+                                <rect x="7" y="3" width="2" height="9" rx="1"></rect>
+                                <rect x="11" y="5" width="2" height="7" rx="1"></rect>
+                            </g>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0">
+                                <rect width="16" height="16"></rect>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </button>
+            </div>
+            <div class="tab-content pb-10 mt-5">
+                <div id="sports_all-tab-1" class="tab-pane leading-relaxed active" role="tabpanel" aria-labelledby="sports_all-1-tab">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 3xl:grid-cols-6 gap-x-2 gap-y-4">
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-soccer"></use></svg>
+                                    soccer
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-tennis"></use></svg>
+                                    tennis
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-basketball"></use></svg>
+                                    basketball
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-tabletennis"></use></svg>
+                                    table tennis
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-americanfootball"></use></svg>
+                                    american football
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-volleyball"></use></svg>
+                                    volleyball
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-handball"></use></svg>
+                                    handball
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-boxing"></use></svg>
+                                    boxing
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-icehockey"></use></svg>
+                                    icehockey
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-counterstrike"></use></svg>
+                                    counterstrike
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-mma"></use></svg>
+                                    mma
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-fifa-b"></use></svg>
+                                    fifa
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-cricket"></use></svg>
+                                    cricket
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-rugby"></use></svg>
+                                    rugby
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-dota2"></use></svg>
+                                    dota2
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-baseball"></use></svg>
+                                    baseball
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-horseracing"></use></svg>
+                                    horseracing
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-snooker"></use></svg>
+                                    snooker
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-darts"></use></svg>
+                                    darts
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-valorant"></use></svg>
+                                    valorant
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-leagueoflegends"></use></svg>
+                                    league of legends
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-fifa-volta"></use></svg>
+                                    fifa:volta
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-ehorseracing"></use></svg>
+                                    ehorse racing
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-e-fighting-b"></use></svg>
+                                    fighting
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-aotennis-b"></use></svg>
+                                    aotennis
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-nba2k-b"></use></svg>
+                                    nba2k
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-chess"></use></svg>
+                                    chess
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-aussierules"></use></svg>
+                                    aussierules
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-ecricket-b"></use></svg>
+                                    ecricket
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-eshooter"></use></svg>
+                                    eshooter
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-futsal"></use></svg>
+                                    futsal
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-rainbow_six"></use></svg>
+                                    rainbow six
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-badminton"></use></svg>
+                                    badminton
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-arena_of_valor"></use></svg>
+                                    arena of valor
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-king-of-glory"></use></svg>
+                                    king of glory
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-mobile-legends"></use></svg>
+                                    mobile legends
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-skirace"></use></svg>
+                                    skirace
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-floorball"></use></svg>
+                                    floorball
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-golf"></use></svg>
+                                    golf
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-cycling"></use></svg>
+                                    cycling
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-specials"></use></svg>
+                                    specials
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-lacrosse"></use></svg>
+                                    lacrosse
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-formula-1"></use></svg>
+                                    formula
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-alpineskiing"></use></svg>
+                                    alpineskiing
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+
+                    </div>
+                </div>
+                <div id="sports_all-tab-2" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="sports_all-2-tab">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 3xl:grid-cols-6 gap-x-2 gap-y-4">
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-counterstrike"></use></svg>
+                                    counterstrike
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-fifa-b"></use></svg>
+                                    fifa
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-dota2"></use></svg>
+                                    dota2
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-valorant"></use></svg>
+                                    valorant
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-leagueoflegends"></use></svg>
+                                    league of legends
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-fifa-volta"></use></svg>
+                                    fifa:volta
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-ehorseracing"></use></svg>
+                                    ehorse racing
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-arena_of_valor"></use></svg>
+                                    arena of valor
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-king-of-glory"></use></svg>
+                                    king of glory
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-mobile-legends"></use></svg>
+                                    mobile legends
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                    </div>
+                </div>
+                <div id="sports_all-tab-3" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="sports_all-3-tab">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 3xl:grid-cols-6 gap-x-2 gap-y-4">
+                        <button class="flex items-center justify-between" onclick="sportsAllmenuToggle(this)">
+                            <p class="flex items-center gap-1.5 font-bold">
+                                <span class="flex items-center gap-1.5 opacity-50">
+                                    <svg class="svg-icon w-8 h-8"><use xlink:href="./dist/images/icon-defs.svg#sport-horseracing"></use></svg>
+                                    horseracing
+                                </span>
+                                <i class="px-2 py-0.5 bg-back text-white text-opacity-70 text-xs font-semibold rounded-xl not-italic">905</i>
+                            </p>
+                            <i class="md:hidden block"><svg class="svg-icon w-3 h-3 -rotate-90"><use xlink:href="./dist/images/icon-defs.svg#ic-rounded-arrow"></use></svg></i>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
