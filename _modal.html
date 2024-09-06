@@ -781,3 +781,139 @@
         </div>
     </div>
 </div>
+
+<!-- Level -->
+<div id="level-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body p-5">
+                <button class="close_btn" onclick="modalClose('level-modal')"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#x"></use></svg></button>
+                
+                <div class="text-center">
+                    <h5 class="my-2 text-lg font-bold">Joker</h5>
+                    <p class="mb-2 font-bold">Level 2</p>
+                    <img src="./dist/images/profile/Level_2.png" class="level_item nohover w-32 mx-auto mb-2" alt="">
+
+                    <div class="mt-4">
+                        <p class="text-base font-semibold">This level requires 900 Levels points</p>
+                        <div class="progress_bar mx-auto my-2"><i style="width:0%;"></i></div>
+                        <span class="inline-flex items-center px-1 py-0.5 bg-white text-black text-xs rounded-md font-bold"><img src="./dist/images/profile/tournaments.png" class="w-4" alt=""> 0 of 900 Points</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Level : active -->
+<div id="level_active-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body !p-0">
+                <button class="close_btn" onclick="modalClose('level_active-modal')"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#x"></use></svg></button>
+                
+                <div class="text-center p-5">
+                    <h5 class="my-2 text-lg font-bold">Rookie</h5>
+                    <p class="mb-2 font-bold">Level 1</p>
+                    <img src="./dist/images/profile/Level_1.png" class="level_item nohover w-32 mx-auto mb-2" alt="">
+                </div>
+
+                <div class="mt-4 p-5 bg-content italic">
+                    This is your current level.<br/>
+                    By collecting points you are progressing towards higher levels that may unlock hidden missions, tournaments and secret store items.<br/>
+                    Don’t worry about spending points, it won’t interfere with your progress through the levels.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- mission -->
+<div id="mission-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body p-5">
+                <button class="close_btn" onclick="modalClose('mission-modal')"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#x"></use></svg></button>
+                
+                <div class="text-center">
+                    <h5 class="my-2 text-lg font-bold">🎯 Sports Daily </h5>
+                    <img src="./dist/images/profile/sports_daily.jpg" class="w-32 mx-auto mb-2" alt="">
+                    <div class="font-bold">
+                        <p class="opacity-50 fs10">TIME LEFT</p>
+                        <p>00:17:34:50</p>
+                    </div>
+                    <div class="mt-3 font-medium">
+                        Bet EUR 50 on any sport
+                    </div>
+                    <button class="btn btn-pending w-2/3 mt-2 font-bold">ok</button>
+                    <div class="flex items-center justify-center gap-1 mt-2 fs10 font-bold">
+                        Terms & Conditions <i class="tooltip" title="Real Money Bet | Min Odds 1.5"><img class="w-4 invert" src="./dist/images/profile/info.png" alt=""></i>
+                    </div>
+
+
+                    <div class="mt-4">
+                        <div class="flex items-center gap-3">
+                            <div class="progress_bar !w-full mx-auto my-2"><i></i></div>
+                            <div class="shrink-0 fs10">0<b class="opacity-50"> / 100%</b></div>
+                        </div>
+                        <div class="inline-flex items-center py-1 px-3 mt-2 border border-white border-opacity-20 text-xs rounded-2xl">
+                            <b>Reward:</b> A EUR 1 Free Bet | All Sports
+                        </div>
+                        <!-- <span class="inline-flex items-center px-1 py-0.5 bg-white text-black text-xs rounded-md font-bold"><img src="./dist/images/profile/tournaments.png" class="w-4" alt=""> 0 of 900 Points</span> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- mission - lock -->
+<div id="mission_lock-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body !p-0">
+                <button class="close_btn" onclick="modalClose('mission_lock-modal')"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#x"></use></svg></button>
+                
+                <div class="p-5 text-center">
+                    <h5 class="my-2 text-lg font-bold">🎰 Game of the Week - Mission 3</h5>
+                    <span class="inline-flex px-2 py-1 mx-auto mb-3 bg-[#d33] font-bold text-xs rounded-lg">LOCKED</span>
+                    <div class="relative">
+                        <img src="./dist/images/profile/game.png" class="w-32 mx-auto mb-2 opacity-40" alt="">
+                        <img src="./dist/images/profile/lock.png" class="z-10 absolute left-0 top-0 right-0 bottom-0 w-10 m-auto" alt="">
+                    </div>
+                    <div class="font-bold">
+                        <p class="opacity-50 fs10">MISSION</p>
+                        <p class="opacity-50 fs10">DURATION</p>
+                        <p>07:00:00:00</p>
+                    </div>
+                    <div class="mt-3 font-medium">
+                        Wager 1,000 EUR on "Dawn of Kings"
+                    </div>
+                    <div class="flex items-center justify-center gap-1 mt-2 fs10 font-bold">
+                        Terms & Conditions <i class="tooltip" title="Real Money Bet | Min Odds 1.5"><img class="w-4 invert" src="./dist/images/profile/info.png" alt=""></i>
+                    </div>
+
+
+                    <div class="mt-4">
+                        <div class="flex items-center gap-3">
+                            <div class="progress_bar !w-full mx-auto my-2"><i></i></div>
+                            <div class="shrink-0 fs10">0<b class="opacity-50"> / 100%</b></div>
+                        </div>
+                        <div class="inline-flex items-center py-1 px-3 mt-2 border border-white border-opacity-20 text-xs rounded-2xl">
+                            <b>Reward:</b> Get 150 Free Spins on "Dawn of Kings"
+                        </div>
+                    </div>
+                </div>
+
+                <div class="py-4 bg-content text-center">
+                    <h6 class="mb-2 font-bold text-base">How do I unlock this mission?</h6>
+                    <p>Complete the Game of the Week - Mission 2</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

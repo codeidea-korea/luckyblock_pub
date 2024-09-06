@@ -1707,6 +1707,16 @@ select{
     --tw-text-opacity: 1;
     color: rgb(var(--color-slate-300) / var(--tw-text-opacity));
 }
+.progress{
+    height: 0.5rem;
+    width: 100%;
+    border-radius: 0.25rem;
+    --tw-bg-opacity: 1;
+    background-color: rgb(var(--color-slate-200) / var(--tw-bg-opacity));
+}
+.progress:is(.dark *){
+    background-color: rgb(0 0 0 / 0.2);
+}
 .nav{
     display: flex;
     width: 100%;
@@ -1921,6 +1931,15 @@ select{
 .\!right-2{
     right: 0.5rem !important;
 }
+.left-2{
+    left: 0.5rem;
+}
+.bottom-1{
+    bottom: 0.25rem;
+}
+.bottom-0{
+    bottom: 0px;
+}
 .z-10{
     z-index: 10;
 }
@@ -1998,6 +2017,10 @@ select{
 .my-1{
     margin-top: 0.25rem;
     margin-bottom: 0.25rem;
+}
+.my-0\.5{
+    margin-top: 0.125rem;
+    margin-bottom: 0.125rem;
 }
 .-ml-5{
     margin-left: -1.25rem;
@@ -2518,6 +2541,9 @@ select{
 .h-\[42px\]{
     height: 42px;
 }
+.h-\[120px\]{
+    height: 120px;
+}
 .max-h-96{
     max-height: 24rem;
 }
@@ -2686,6 +2712,9 @@ select{
 .\!w-96{
     width: 24rem !important;
 }
+.w-2\/3{
+    width: 66.666667%;
+}
 .min-w-5{
     min-width: 1.25rem;
 }
@@ -2826,6 +2855,9 @@ select{
 .gap-6{
     gap: 1.5rem;
 }
+.gap-10{
+    gap: 2.5rem;
+}
 .gap-x-2{
     -moz-column-gap: 0.5rem;
          column-gap: 0.5rem;
@@ -2861,6 +2893,11 @@ select{
 }
 .overflow-x-scroll{
     overflow-x: scroll;
+}
+.truncate{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .text-ellipsis{
     text-overflow: ellipsis;
@@ -3149,6 +3186,22 @@ select{
     --tw-bg-opacity: 1 !important;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
 }
+.bg-\[\#1498af\]{
+    --tw-bg-opacity: 1;
+    background-color: rgb(20 152 175 / var(--tw-bg-opacity));
+}
+.bg-\[\#d33\]{
+    --tw-bg-opacity: 1;
+    background-color: rgb(221 51 51 / var(--tw-bg-opacity));
+}
+.bg-\[\#6b8dce\]{
+    --tw-bg-opacity: 1;
+    background-color: rgb(107 141 206 / var(--tw-bg-opacity));
+}
+.bg-\[\#26a65b\]{
+    --tw-bg-opacity: 1;
+    background-color: rgb(38 166 91 / var(--tw-bg-opacity));
+}
 .bg-opacity-10{
     --tw-bg-opacity: 0.1;
 }
@@ -3320,6 +3373,14 @@ select{
 .py-6{
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+}
+.px-10{
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+.py-12{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 .pb-0{
     padding-bottom: 0px;
@@ -3776,6 +3837,9 @@ select{
 .font-semibold{
     font-weight: 600;
 }
+.italic{
+    font-style: italic;
+}
 .not-italic{
     font-style: normal;
 }
@@ -3790,6 +3854,9 @@ select{
 }
 .leading-tight{
     line-height: 1.25;
+}
+.leading-none{
+    line-height: 1;
 }
 .text-\[\#21a8f7\]{
     --tw-text-opacity: 1;
@@ -3930,6 +3997,12 @@ select{
 .opacity-70{
     opacity: 0.7;
 }
+.opacity-30{
+    opacity: 0.3;
+}
+.opacity-40{
+    opacity: 0.4;
+}
 .shadow{
     --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
     --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
@@ -3942,6 +4015,10 @@ select{
 }
 .grayscale{
     --tw-grayscale: grayscale(100%);
+    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.invert{
+    --tw-invert: invert(100%);
     filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 .filter{

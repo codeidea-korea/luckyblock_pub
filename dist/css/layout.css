@@ -114,6 +114,7 @@ button:disabled {opacity:.5; }
 .fs10 {font-size:10px; }
 .fs11 {font-size:11px; }
 .fs13 {font-size:13px; }
+.fs15 {font-size:15px; }
 
 .mask-image {mask-image:linear-gradient(90deg, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%); }
 
@@ -385,6 +386,11 @@ body:not(.logout) .casinoSwiper .arrow.next {right:15px; }
 .nav.nav-link-tabs.white_type .nav-item .nav-link.active {border-bottom:2px solid #fff; }
 
 .nav.nav-link-tabs.transparent_type .nav-item .nav-link:not(.active) {border-color:transparent; }
+
+.nav.nav-link-tabs.full_type {border-bottom:3px solid rgba(255,255,255,0.1); }
+.nav.nav-link-tabs.full_type .nav-item .nav-link {margin-bottom:-3px; }
+.nav.nav-link-tabs.full_type .nav-item .nav-link:hover {background-color:transparent; }
+.nav.nav-link-tabs.full_type .nav-item .nav-link.active {border-bottom:3px solid #ffdb3d; }
 
 .nav.nav-boxed-tabs .nav-item .nav-link {background-color:var(--provider-color); color:#fff; }
 .nav.nav-boxed-tabs .nav-item .nav-link svg,
@@ -708,9 +714,50 @@ body:not(.logout) .casinoSwiper .arrow.next {right:15px; }
 .profile_modal .profile_cont {position:relative; display:flex; width:1118px; max-width:80%; height:670px; max-height:80vh; box-shadow:0 0 2px 2px #555; border-radius:4px; }
 .profile_modal .profile_cont .close_btn {z-index:10; position:absolute; right:-21px; top:-21px; display:flex; align-items:center; justify-content:center; width:42px; height:42px; background-color:#fff; border-radius:50%; box-shadow:1px 1px 5px rgba(0,0,0,0.1); cursor:pointer; }
 .profile_modal .profile_cont .close_btn span {display:block; width:16px; height:16px; background:#000; clip-path:path("M8,9.4L1.4,16L0,14.6L6.6,8L0,1.4L1.4,0L8,6.6L14.6,0L16,1.4L9.4,8l6.6,6.6L14.6,16L8,9.4z"); -webkit-clip-path:path("M8,9.4L1.4,16L0,14.6L6.6,8L0,1.4L1.4,0L8,6.6L14.6,0L16,1.4L9.4,8l6.6,6.6L14.6,16L8,9.4z");}
+.profile_modal .profile_cont .close span {display:block; width:16px; height:16px; background:#fff; clip-path:path("M8,9.4L1.4,16L0,14.6L6.6,8L0,1.4L1.4,0L8,6.6L14.6,0L16,1.4L9.4,8l6.6,6.6L14.6,16L8,9.4z"); -webkit-clip-path:path("M8,9.4L1.4,16L0,14.6L6.6,8L0,1.4L1.4,0L8,6.6L14.6,0L16,1.4L9.4,8l6.6,6.6L14.6,16L8,9.4z");}
 
-.profile_modal .profile_cont .left_menu {width:20%; background-color:#000;}
-.profile_modal .profile_cont .right_cont {width:80%; background-color:var(--content-bg);}
+.profile_modal .profile_cont .left_menu {overflow-y:auto; width:20%; background-color:#000;}
+.profile_modal .profile_cont .mo_left_menu_bg {display:none; }
+.profile_modal .profile_cont .right_cont {display:flex; flex-direction:column; width:80%; background-color:var(--content-bg);}
+.profile_modal .profile_cont .right_cont .top_box {height:80px; background-color:#151515; box-shadow:0 3px 5px -2px rgba(0,0,0,0.478); }
+.profile_modal .profile_cont .right_cont .tab-content {flex-grow:1; overflow-y:auto; }
 
+/* level */
+.level_item {filter:grayscale(100%) opacity(100%) brightness(.5); border-radius:20px; }
+.level_item.nohover {filter:grayscale(100%) opacity(100%) contrast(.3) brightness(1.5); }
+.level_item.active {filter:drop-shadow(0 0 30px #ff0); }
+.level_item.active:hover {box-shadow:0 0 10px #ff0; }
+.level_item:not(.active):not(.nohover):hover {filter:none; box-shadow:0 0 10px #ff0; }
+.level_item p {font-size:16px; }
+.level_item.active p {font-size:18px; color:#26a65b; }
 
+.emptydance {animation:emptydance 1s linear infinite; }
+.hover-shadow:hover {box-shadow:0 0 6px 3px #ffdb3d; }
+.darkImg {filter:grayscale(100%) opacity(50%); }
 
+@keyframes emptydance {
+    0% {transform:rotate(0deg); }
+    25% {transform:rotate(3deg); }
+    50% {transform:rotate(0deg); }
+    75% {transform:rotate(-3deg); }
+    100% {transform:rotate(0deg); }
+}
+
+@media all and (max-width:767px){
+    .profile_modal .profile_cont {max-width:100%; height:100%; max-height:100%; }
+    .profile_modal .profile_cont .close_btn {display:none; }
+
+    .profile_modal .profile_cont .left_menu {z-index:10; position:absolute; left:-70%; top:0; width:70%; height:100%; transition:all 0.5s; }
+    .profile_modal .profile_cont .left_menu.open {left:0; }
+    .profile_modal .profile_cont .mo_left_menu_bg {z-index:9; position:absolute; left:0; top:0; display:none; width:100%; height:100%; background:rgba(0,0,0,0.7); }
+
+    .profile_modal .profile_cont .right_cont {width:100%; }
+    .profile_modal .profile_cont .right_cont .top_box {height:55px; }
+
+}
+
+/* --------------------------------------
+            PROGRESS
+-------------------------------------- */ 
+.progress_bar {overflow:hidden; position:relative; width:200px; height:9px; background-color:#fff; border-radius:12px; }
+.progress_bar i {position:absolute; left:0; top:0; height:100%; background:linear-gradient(90deg,#ffdb3d,#f1b80c); border-radius:20px; }

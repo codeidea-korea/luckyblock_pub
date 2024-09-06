@@ -426,6 +426,12 @@ const profileModalToggle = ()=>{
     $('.profile_modal').toggleClass('active')
 }
 
+// 프로필모달 모바일 메뉴 
+const profileMenuToggle = ()=>{
+    $('.profile_modal .left_menu').toggleClass('open')
+    $('.profile_modal .mo_left_menu_bg').fadeToggle();
+}
+
 // jquery 모음
 const loadJquery = ()=>{
     // 스와이퍼 공통
@@ -574,6 +580,17 @@ const loadJquery = ()=>{
             }
         })
     });
+
+
+    // 프로필 모달 zoom
+    $(window).on('resize',function(e){
+        let zoom = Math.min(e.target.innerWidth / 1500 ,1)
+        if(e.target.innerWidth >  767){
+            $('.profile_modal .profile_cont').css('zoom',zoom)
+        }else{
+            $('.profile_modal .profile_cont').css('zoom',1)
+        }
+    })
 
   
 }
