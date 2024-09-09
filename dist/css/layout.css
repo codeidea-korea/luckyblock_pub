@@ -3,6 +3,7 @@
 :root {
     --primary-color:#f1c24c;
     --primary-soft-color:#ffdd9a; 
+    --primary-soft2-color:#ffdb3d; 
     --primary-dark-color:#e8a430; 
     --primary-dark2-color:#d0a853; 
     --primary-dark3-color:#957329; 
@@ -45,6 +46,7 @@ button:disabled {opacity:.5; }
 .sports .inner {width:100%; }
 
 .color-softP {color:var(--primary-soft-color); }
+.color-softP2 {color:var(--primary-soft2-color); }
 .color-darkP {color:var(--primary-dark-color); }
 .color-darkP3 {color:var(--primary-dark3-color); }
 .color-sub {color:var(--sub-color); }
@@ -734,6 +736,9 @@ body:not(.logout) .casinoSwiper .arrow.next {right:15px; }
 .emptydance {animation:emptydance 1s linear infinite; }
 .hover-shadow:hover {box-shadow:0 0 6px 3px #ffdb3d; }
 .darkImg {filter:grayscale(100%) opacity(50%); }
+.spin-overlay {position:absolute; left:0; top:0; width:100%; height:100%; background:linear-gradient(0deg,rgba(27,25,62,.75),hsla(0,0%,100%,0)); }
+
+.spin_detail {background:url('../images/profile/spin_detail_bg.webp') no-repeat center center; }
 
 @keyframes emptydance {
     0% {transform:rotate(0deg); }
@@ -755,6 +760,82 @@ body:not(.logout) .casinoSwiper .arrow.next {right:15px; }
     .profile_modal .profile_cont .right_cont .top_box {height:55px; }
 
 }
+
+/* wheel */
+.wheel_area {position:relative; }
+.wheel_area .wheel_ring {z-index:10; position:absolute; left:0; top:0; right:0; bottom:0; width:96%; height:96%; margin:auto; background:url('../images/profile/wheel/wheel_ring.webp') no-repeat center center / cover; }
+.wheel_area .wheel_holder {width:450px; height:450px; }
+.wheel_area .wheel_content {position:absolute; left:0; top:0; right:0; bottom:0; width:87%; height:87%; margin:auto; border-radius:50%; transform:rotate(0deg); transform-origin:center; }
+.wheel_area .wheel_content .wheel_bg {position:absolute; left:-1%; top:-1%; width:102%; height:102%; background:url('../images/profile/wheel/wheel_6.webp') no-repeat center center / cover; transform:rotate(90deg); }
+.wheel_area .wheel_content .wheel-sector {overflow:hidden; z-index:2; position:absolute; width:100%; height:50%; transform-origin:bottom; border-top-right-radius:300px; }
+.wheel_area .wheel_content .wheel-sector .wheel-sector-content {display:flex; flex-direction:column; justify-content:center; width:100%; height:100%; transform:rotate(-90deg); }
+.wheel_area .wheel_content .wheel-sector .wheel-sector-name {display:flex; flex-direction:row; justify-content:space-between; margin-left:37%; width:37%; }
+.wheel_area .wheel_content .wheel-sector .wheel-sector-name .sector-text {overflow:hidden; width:100%; text-align:center; line-height:35px; white-space:nowrap; filter:drop-shadow(1px 1px 2px black); font-weight:600; }
+
+.wheel_area .wheel_holder .spin_btn {z-index:12; position:absolute; left:39.5%; top:39.5%; width:21%; height:21%; background:url('../images/profile/wheel/spin-buton_active.webp') no-repeat center center / cover; animation:spinActive .5s ease infinite; }
+.wheel_area .wheel_holder .spin_pointer {position:absolute; right:-6%; top:40.6%; width:16.83%; height:18.58%; background:url('../images/profile/wheel/wheel_point.webp') no-repeat center center / cover; transform:rotate(90deg); }
+.wheel_area .wheel_holder .wheel_light {z-index:11; position:absolute; left:0; top:0; bottom:0; right:0; width:100%; height:100%; }
+.wheel_area .wheel_holder .wheel_light .light {position:absolute; width:100%; height:100%; }
+.wheel_area .wheel_holder .wheel_light .light .light-icon {position:absolute; }
+.wheel_area .wheel_holder .wheel_light .light .light-icon.static {left:47.5%; top:0.5%; width:5%; height:5%; background:url('../images/profile/wheel/wheel_light_2.png') no-repeat center center / contain; }
+.wheel_area .wheel_holder .wheel_light .light .light-icon.dynamicSmall {left:44.5%; top:-2%; width:11%; height:11%; background:url('../images/profile/wheel/wheel_light_3.png') no-repeat center center / contain; }
+.wheel_area .wheel_holder .wheel_light .light .light-icon.dynamicBig {left:42%; top:-4.5%; width:16%; height:16%; background:url('../images/profile/wheel/wheel_light_1.png') no-repeat center center / contain; }
+
+.wheel_area .wheel_holder .wheel_light .light:nth-of-type(1) {transform:rotate(-5deg); }
+.wheel_area .wheel_holder .wheel_light .light:nth-of-type(2) {transform:rotate(31deg); }
+.wheel_area .wheel_holder .wheel_light .light:nth-of-type(3) {transform:rotate(67deg); }
+.wheel_area .wheel_holder .wheel_light .light:nth-of-type(4) {transform:rotate(103deg); }
+.wheel_area .wheel_holder .wheel_light .light:nth-of-type(5) {transform:rotate(139deg); }
+.wheel_area .wheel_holder .wheel_light .light:nth-of-type(6) {transform:rotate(175deg); }
+.wheel_area .wheel_holder .wheel_light .light:nth-of-type(7) {transform:rotate(211deg); }
+.wheel_area .wheel_holder .wheel_light .light:nth-of-type(8) {transform:rotate(247deg); }
+.wheel_area .wheel_holder .wheel_light .light:nth-of-type(9) {transform:rotate(283deg); }
+.wheel_area .wheel_holder .wheel_light .light:nth-of-type(10) {transform:rotate(319deg); }
+
+.wheel_area .wheel_holder .wheel_light .light:nth-of-type(11) {transform:rotate(5deg); }
+.wheel_area .wheel_holder .wheel_light .light:nth-of-type(12) {transform:rotate(41deg); }
+.wheel_area .wheel_holder .wheel_light .light:nth-of-type(13) {transform:rotate(77deg); }
+.wheel_area .wheel_holder .wheel_light .light:nth-of-type(14) {transform:rotate(113deg); }
+.wheel_area .wheel_holder .wheel_light .light:nth-of-type(15) {transform:rotate(149deg); }
+.wheel_area .wheel_holder .wheel_light .light:nth-of-type(16) {transform:rotate(185deg); }
+.wheel_area .wheel_holder .wheel_light .light:nth-of-type(17) {transform:rotate(221deg); }
+.wheel_area .wheel_holder .wheel_light .light:nth-of-type(18) {transform:rotate(257deg); }
+.wheel_area .wheel_holder .wheel_light .light:nth-of-type(19) {transform:rotate(293deg); }
+.wheel_area .wheel_holder .wheel_light .light:nth-of-type(20) {transform:rotate(90deg); }
+
+.wheel_area .wheel_holder .wheel_light .light:nth-of-type(21) {transform:rotate(126deg); }
+.wheel_area .wheel_holder .wheel_light .light:nth-of-type(22) {transform:rotate(162deg); }
+.wheel_area .wheel_holder .wheel_light .light:nth-of-type(23) {transform:rotate(198deg); }
+.wheel_area .wheel_holder .wheel_light .light:nth-of-type(24) {transform:rotate(234deg); }
+.wheel_area .wheel_holder .wheel_light .light:nth-of-type(25) {transform:rotate(270deg); }
+.wheel_area .wheel_holder .wheel_light .light:nth-of-type(26) {transform:rotate(306deg); }
+.wheel_area .wheel_holder .wheel_light .light:nth-of-type(27) {transform:rotate(342deg); }
+.wheel_area .wheel_holder .wheel_light .light:nth-of-type(28) {transform:rotate(378deg); }
+.wheel_area .wheel_holder .wheel_light .light:nth-of-type(29) {transform:rotate(414deg); }
+
+
+@keyframes spinActive {
+    0% {transform:scale(1)}
+    50% {transform:scale(1.04)}
+    100% {transform:scale(1)}
+}
+
+@keyframes lightRotate {
+    0% {transform:rotate(0deg)}
+    100% {transform:rotate(180deg)}
+}
+
+@keyframes lightOpacity {
+    0% {opacity:1;}
+    50% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@keyframes lightZoom {
+    0% { zoom: 1;}
+    50% { zoom: 2;}
+    100% { zoom: 1;}
+  }
 
 /* --------------------------------------
             PROGRESS

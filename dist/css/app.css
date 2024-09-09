@@ -2879,6 +2879,9 @@ select{
 .gap-y-6{
     row-gap: 1.5rem;
 }
+.gap-y-5{
+    row-gap: 1.25rem;
+}
 .overflow-hidden{
     overflow: hidden;
 }
@@ -3202,6 +3205,10 @@ select{
     --tw-bg-opacity: 1;
     background-color: rgb(38 166 91 / var(--tw-bg-opacity));
 }
+.bg-\[\#888888\]{
+    --tw-bg-opacity: 1;
+    background-color: rgb(136 136 136 / var(--tw-bg-opacity));
+}
 .bg-opacity-10{
     --tw-bg-opacity: 0.1;
 }
@@ -3250,6 +3257,10 @@ select{
 .object-contain{
     -o-object-fit: contain;
        object-fit: contain;
+}
+.object-cover{
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 .object-top{
     -o-object-position: top;

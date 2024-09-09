@@ -179,5 +179,19 @@
     "/dist/images/profile/banner_1.jpg": "/dist/images/profile/banner_1.jpg",
     "/dist/images/profile/banner_2.jpg": "/dist/images/profile/banner_2.jpg",
     "/dist/images/profile/info.png": "/dist/images/profile/info.png",
-    "/dist/images/profile/lock.png": "/dist/images/profile/lock.png"
+    "/dist/images/profile/lock.png": "/dist/images/profile/lock.png",
+    "/dist/images/profile/menu.png": "/dist/images/profile/menu.png",
+    "/dist/images/profile/empty_2.png": "/dist/images/profile/empty_2.png",
+    "/dist/images/profile/spin_bg.png": "/dist/images/profile/spin_bg.png",
+    "/dist/images/profile/streak_2_full.png": "/dist/images/profile/streak_2_full.png",
+    "/dist/images/profile/banner_3.jpg": "/dist/images/profile/banner_3.jpg",
+    "/dist/images/profile/banner_4.jpg": "/dist/images/profile/banner_4.jpg",
+    "/dist/images/profile/spin_detail_bg.webp": "/dist/images/profile/spin_detail_bg.webp",
+    "/dist/images/profile/wheel/spin-buton_active.webp": "/dist/images/profile/wheel/spin-buton_active.webp",
+    "/dist/images/profile/wheel/wheel_6.webp": "/dist/images/profile/wheel/wheel_6.webp",
+    "/dist/images/profile/wheel/wheel_light_1.png": "/dist/images/profile/wheel/wheel_light_1.png",
+    "/dist/images/profile/wheel/wheel_light_2.png": "/dist/images/profile/wheel/wheel_light_2.png",
+    "/dist/images/profile/wheel/wheel_light_3.png": "/dist/images/profile/wheel/wheel_light_3.png",
+    "/dist/images/profile/wheel/wheel_point.webp": "/dist/images/profile/wheel/wheel_point.webp",
+    "/dist/images/profile/wheel/wheel_ring.webp": "/dist/images/profile/wheel/wheel_ring.webp"
 }

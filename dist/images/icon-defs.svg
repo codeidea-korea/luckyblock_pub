@@ -74,6 +74,10 @@
         <polyline points="6 9 12 15 18 9"></polyline>
     </symbol>
 
+    <symbol id="arrow_down_y" viewBox="0 0 24 24" fill="none" stroke="#ffdb3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+    </symbol>
+
     <symbol id="x" focusable="false" color="currentColor" aria-hidden="true" viewBox="0 0 24 24" data-testid="CloseIcon">
         <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
     </symbol>

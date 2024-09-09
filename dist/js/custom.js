@@ -432,6 +432,28 @@ const profileMenuToggle = ()=>{
     $('.profile_modal .mo_left_menu_bg').fadeToggle();
 }
 
+// 프로필모달 > 스핀 상세
+const profileSpinDetail = ()=>{
+    $('.profile_modal .spin_detail').removeClass('hidden')
+    $('.profile_modal .spin_list').addClass('hidden')
+}
+
+const profileSpinList = ()=>{
+    $('.profile_modal .spin_detail').addClass('hidden')
+    $('.profile_modal .spin_list').removeClass('hidden')
+}
+
+// 프로필모달 > 토너먼트 상세
+const profileTourDetail = ()=>{
+    $('.profile_modal .tournament_detail').removeClass('hidden')
+    $('.profile_modal .tournament_list').addClass('hidden')
+}
+
+const profileTourList = ()=>{
+    $('.profile_modal .tournament_detail').addClass('hidden')
+    $('.profile_modal .tournament_list').removeClass('hidden')
+}
+
 // jquery 모음
 const loadJquery = ()=>{
     // 스와이퍼 공통
