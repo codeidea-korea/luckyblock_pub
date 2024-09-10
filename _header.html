@@ -189,7 +189,7 @@
 </div>
 
 <!-- 프로필 모달 -->
-<div class="profile_modal">
+<div class="profile_modal active">
     <div class="profile_cont">
         <div class="close_btn" onclick="profileModalToggle()"><span></span></div>
         <div class="mo_left_menu_bg" onclick="profileMenuToggle()"></div>
@@ -202,55 +202,55 @@
             <div class="pl-2 pb-3">
                 <ul class="nav nav-tabs vertical-tabs" role="tablist">
                     <li id="profile-1-tab" class="nav-item flex-1" role="presentation"> 
-                        <button class="nav-link !flex items-center gap-2 w-full py-2 text-left active" data-tw-toggle="pill" data-tw-target="#profile-tab-1" type="button" role="tab" aria-controls="profile-tab-1" aria-selected="true">
+                        <button class="nav-link !flex items-center gap-2 w-full py-2 text-left active" data-tw-toggle="pill" data-tw-target="#profile-tab-1" type="button" role="tab" aria-controls="profile-tab-1" aria-selected="true" onclick="moMenuClick()">
                             <img src="./dist/images/profile/home.png" class="w-7" alt="">
                             Overview
                         </button> 
                     </li>
                     <li id="profile-2-tab" class="nav-item flex-1" role="presentation"> 
-                        <button class="nav-link !flex items-center gap-2 w-full py-2 text-left" data-tw-toggle="pill" data-tw-target="#profile-tab-2" type="button" role="tab" aria-controls="profile-tab-2" aria-selected="false">
+                        <button class="nav-link !flex items-center gap-2 w-full py-2 text-left" data-tw-toggle="pill" data-tw-target="#profile-tab-2" type="button" role="tab" aria-controls="profile-tab-2" aria-selected="false" onclick="moMenuClick()">
                             <img src="./dist/images/profile/missions.png" class="w-7" alt="">
                             Missions
                         </button> 
                     </li>
                     <li id="profile-3-tab" class="nav-item flex-1" role="presentation"> 
-                        <button class="nav-link !flex items-center gap-2 w-full py-2 text-left" data-tw-toggle="pill" data-tw-target="#profile-tab-3" type="button" role="tab" aria-controls="profile-tab-3" aria-selected="false">
+                        <button class="nav-link !flex items-center gap-2 w-full py-2 text-left" data-tw-toggle="pill" data-tw-target="#profile-tab-3" type="button" role="tab" aria-controls="profile-tab-3" aria-selected="false" onclick="moMenuClick()">
                             <img src="./dist/images/profile/game.png" class="w-7" alt="">
                             Game of the Week
                         </button> 
                     </li>
                     <li id="profile-4-tab" class="nav-item flex-1" role="presentation"> 
-                        <button class="nav-link !flex items-center gap-2 w-full py-2 text-left" data-tw-toggle="pill" data-tw-target="#profile-tab-4" type="button" role="tab" aria-controls="profile-tab-4" aria-selected="false">
+                        <button class="nav-link !flex items-center gap-2 w-full py-2 text-left" data-tw-toggle="pill" data-tw-target="#profile-tab-4" type="button" role="tab" aria-controls="profile-tab-4" aria-selected="false" onclick="moMenuClick()">
                             <img src="./dist/images/profile/tournaments.png" class="w-7" alt="">
                             Tournaments
                         </button> 
                     </li>
                     <li id="profile-5-tab" class="nav-item flex-1" role="presentation"> 
-                        <button class="nav-link !flex items-center gap-2 w-full py-2 text-left" data-tw-toggle="pill" data-tw-target="#profile-tab-5" type="button" role="tab" aria-controls="profile-tab-5" aria-selected="false">
+                        <button class="nav-link !flex items-center gap-2 w-full py-2 text-left" data-tw-toggle="pill" data-tw-target="#profile-tab-5" type="button" role="tab" aria-controls="profile-tab-5" aria-selected="false" onclick="moMenuClick()">
                             <img src="./dist/images/profile/levels.png" class="w-7" alt="">
                             Levels
                         </button> 
                     </li>
                     <li id="profile-6-tab" class="nav-item flex-1" role="presentation"> 
-                        <button class="nav-link !flex items-center gap-2 w-full py-2 text-left" data-tw-toggle="pill" data-tw-target="#profile-tab-6" type="button" role="tab" aria-controls="profile-tab-6" aria-selected="false">
+                        <button class="nav-link !flex items-center gap-2 w-full py-2 text-left" data-tw-toggle="pill" data-tw-target="#profile-tab-6" type="button" role="tab" aria-controls="profile-tab-6" aria-selected="false" onclick="moMenuClick()">
                             <img src="./dist/images/profile/saw.png" class="w-7" alt="">
                             Spin The Wheel
                         </button> 
                     </li>
                     <li id="profile-7-tab" class="nav-item flex-1" role="presentation"> 
-                        <button class="nav-link !flex items-center gap-2 w-full py-2 text-left" data-tw-toggle="pill" data-tw-target="#profile-tab-7" type="button" role="tab" aria-controls="profile-tab-7" aria-selected="false">
+                        <button class="nav-link !flex items-center gap-2 w-full py-2 text-left" data-tw-toggle="pill" data-tw-target="#profile-tab-7" type="button" role="tab" aria-controls="profile-tab-7" aria-selected="false" onclick="moMenuClick()">
                             <img src="./dist/images/profile/matchx.png" class="w-7" alt="">
                             Match X
                         </button> 
                     </li>
                     <li id="profile-8-tab" class="nav-item flex-1" role="presentation"> 
-                        <button class="nav-link !flex items-center gap-2 w-full py-2 text-left" data-tw-toggle="pill" data-tw-target="#profile-tab-8" type="button" role="tab" aria-controls="profile-tab-8" aria-selected="false">
+                        <button class="nav-link !flex items-center gap-2 w-full py-2 text-left" data-tw-toggle="pill" data-tw-target="#profile-tab-8" type="button" role="tab" aria-controls="profile-tab-8" aria-selected="false" onclick="moMenuClick()">
                             <img src="./dist/images/profile/bonus.png" class="w-7" alt="">
                             Bonuses
                         </button> 
                     </li>
                     <li id="profile-9-tab" class="nav-item flex-1" role="presentation"> 
-                        <button class="nav-link !flex items-center gap-2 w-full py-2 text-left" data-tw-toggle="pill" data-tw-target="#profile-tab-9" type="button" role="tab" aria-controls="profile-tab-9" aria-selected="false">
+                        <button class="nav-link !flex items-center gap-2 w-full py-2 text-left" data-tw-toggle="pill" data-tw-target="#profile-tab-9" type="button" role="tab" aria-controls="profile-tab-9" aria-selected="false" onclick="moMenuClick()">
                             <img src="./dist/images/profile/activity.png" class="w-7" alt="">
                             Inbox
                         </button> 
@@ -429,8 +429,8 @@
                     </div>
                 </div>
                 <!-- missions -->
-                <div id="profile-tab-2" class="tab-pane leading-relaxed p-4" role="tabpanel" aria-labelledby="profile-2-tab">
-                    <ul class="nav nav-link-tabs full_type" role="tablist">
+                <div id="profile-tab-2" class="tab-pane leading-relaxed p-2 md:p-4 active" role="tabpanel" aria-labelledby="profile-2-tab">
+                    <ul class="noscrollbar overflow-x-auto nav nav-link-tabs full_type whitespace-nowrap" role="tablist">
                         <li id="mission-1-tab" class="nav-item" role="presentation">
                             <button class="nav-link py-2 active" data-tw-toggle="pill" data-tw-target="#mission-tab-1" type="button" role="tab" aria-controls="mission-tab-1" aria-selected="true"> Overview (7) </button> 
                         </li>
@@ -887,7 +887,7 @@
                     </div>
                 </div>
                 <!-- tournaments -->
-                <div id="profile-tab-4" class="tab-pane leading-relaxed p-4 active" role="tabpanel" aria-labelledby="profile-4-tab">
+                <div id="profile-tab-4" class="tab-pane leading-relaxed p-4 pb-3" role="tabpanel" aria-labelledby="profile-4-tab">
                     <div class="tournament_list hidden">
                         <ul class="nav nav-link-tabs full_type" role="tablist">
                             <li id="tournament-1-tab" class="nav-item" role="presentation">
@@ -1171,7 +1171,8 @@
                             <span class="px-2 py-0.5 bg-[#26a65b] text-xs text-white rounded-xl">STARTED</span>
                         </button>
                         <div class="relative overflow-hidden flex flex-col justify-between h-44 p-3 rounded-lg" style="background:url(./dist/images/profile/long_banner_1.png) no-repeat center center / cover;">
-                            <div class="">
+                            <div class="absolute left-0 top-0 w-full h-full bg-overlay"></div>
+                            <div class="relative z-10">
                                 <div class="inline-block px-2 py-1 bg-back3 rounded">
                                     <p class="text-xs font-semibold">Finishing</p>
                                     <div class="flex items-center justify-between gap-4 text-base">
@@ -1179,17 +1180,179 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex items-end justify-between">
+                            <div class="relative z-10 flex items-end justify-between">
                                 <div>
                                     <p class="font-bold">September 6 - September 13</p>
                                     <div class="flex items-center gap-2">
-                                        <div>
+                                        <div class="px-2 py-1 border border-white border-opacity-30 rounded">
                                             <p class="fs10 opacity-50">Buy In</p>
                                             <b>Free</b>
                                         </div>
+                                        <div class="px-2 py-1 border border-white border-opacity-30 rounded">
+                                            <p class="fs10 opacity-50">Registered</p>
+                                            <b>316 / 5000</b>
+                                        </div>
+                                        <div class="px-2 py-1 border border-white border-opacity-30 rounded">
+                                            <p class="fs10 opacity-50">Duration</p>
+                                            <b>7 days</b>
+                                        </div>
                                     </div>
                                 </div>
-                                <button class="btn btn-pending">Join Tournament</button>
+                                <button class="btn btn-pending w-64 font-bold">Join Tournament</button>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-2">
+                            <div class="overflow-x-hidden overflow-y-auto h-[340px] w-3/5 noscrollbar">
+                                <ul class="z-10 sticky top-0 nav nav-link-tabs big_type bg-content" role="tablist">
+                                    <li id="tournament_detail-5-tab" class="nav-item flex-1" role="presentation"> 
+                                        <button class="nav-link w-full py-3 active" data-tw-toggle="pill" data-tw-target="#tournament_detail-tab-5" type="button" role="tab" aria-controls="tournament_detail-tab-5" aria-selected="true"> Rules </button> 
+                                    </li>
+                                    <li id="tournament_detail-6-tab" class="nav-item flex-1" role="presentation"> 
+                                        <button class="nav-link w-full py-3" data-tw-toggle="pill" data-tw-target="#tournament_detail-tab-6" type="button" role="tab" aria-controls="tournament_detail-tab-6" aria-selected="false"> Leaderboard </button> 
+                                    </li>
+                                </ul>
+                                <div class="tab-content mt-5">
+                                    <div id="tournament_detail-tab-5" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="tournament_detail-5-tab">
+                                        <p>Every week this football season you could win huge cash prizes, and there's €100,000 to be won.</p>
+                                        <p><b>Duration:</b> every Friday from 00:00 to Thursday 23:59 UTC until 22.05.25.</p>
+                                        <p> Here's how to enter:</p>
+                                        <p>Opt in here, and then every winning bet of €20 or more on odds of 1.5 or above will earn you points. Bets have to be on football events.</p>
+                                        <p>The more you win, the higher you'll climb in our weekly leaderboard. Longer odds get you more points, and if you finish in the top ten, you'll take home a cash prize!</p>
+                                    </div>
+                                    <div id="tournament_detail-tab-6" class="tab-pane leading-relaxed active" role="tabpanel" aria-labelledby="tournament_detail-6-tab">
+                                        <div class="relative podium_box h-24">
+                                            <div class="first inline-flex flex-col items-center gap-1">
+                                                <div class="relative w-24"><img src="./dist/images/profile/529.webp" class="relative z-10 w-12 mx-auto" alt=""><img src="./dist/images/profile/first-place-frame.png" class="absolute left-0 top-0 w-full" alt=""></div>
+                                                <p class="font-bold text-xs">Prima*****</p>
+                                                <span class="px-2 font-bold bg-pending rounded-xl">136103</span>
+                                            </div>
+                                            <div class="second inline-flex flex-col items-center gap-1">
+                                                <div class="relative w-24"><img src="./dist/images/profile/710.webp" class="w-12 mx-auto" alt=""></div>
+                                                <p class="font-bold text-xs">bigb*****</p>
+                                                <span class="px-2 font-bold bg-pending rounded-xl">20118</span>
+                                            </div>
+                                            <div class="third inline-flex flex-col items-center gap-1">
+                                                <div class="relative w-24"><img src="./dist/images/profile/68795917.webp" class="w-12 mx-auto" alt=""></div>
+                                                <p class="font-bold text-xs">Upto*****</p>
+                                                <span class="px-2 font-bold bg-pending rounded-xl">12580</span>
+                                            </div>
+                                        </div>
+                                        <div><img src="./dist/images/profile/tournament-podium.png" class="w-4/5 mx-auto" alt=""></div>
+                                        <div>
+                                            <div class="flex items-center text-xs font-semibold py-2">
+                                                <div class="w-1/5 px-3 text-center">Rank</div>
+                                                <div class="w-3/5 px-3">Player</div>
+                                                <div class="w-1/5 px-3 text-right">Score</div>
+                                            </div>
+                                            <div class="flex items-center text-base font-semibold py-1 px-2 mb-2 bg-inbox rounded">
+                                                <div class="w-1/5 px-3 text-center">04</div>
+                                                <div class="flex items-center gap-1 w-3/5 px-3"><img src="./dist/images/profile/131231143.webp" class="w-6" alt="">Godf******</div>
+                                                <div class="w-1/5 px-3 text-right">8745</div>
+                                            </div>   
+                                            <div class="flex items-center text-base font-semibold py-1 px-2 mb-2 bg-inbox rounded">
+                                                <div class="w-1/5 px-3 text-center">05</div>
+                                                <div class="flex items-center gap-1 w-3/5 px-3"><img src="./dist/images/profile/131231143.webp" class="w-6" alt="">Nico*****</div>
+                                                <div class="w-1/5 px-3 text-right">8064</div>
+                                            </div>   
+                                            <div class="flex items-center text-base font-semibold py-1 px-2 mb-2 bg-inbox rounded">
+                                                <div class="w-1/5 px-3 text-center">06</div>
+                                                <div class="flex items-center gap-1 w-3/5 px-3"><img src="./dist/images/profile/131231143.webp" class="w-6" alt="">MadM*****</div>
+                                                <div class="w-1/5 px-3 text-right">5502</div>
+                                            </div>     
+                                            <div class="flex items-center text-base font-semibold py-1 px-2 mb-2 bg-inbox rounded">
+                                                <div class="w-1/5 px-3 text-center">07</div>
+                                                <div class="flex items-center gap-1 w-3/5 px-3"><img src="./dist/images/profile/131231143.webp" class="w-6" alt="">MadM*****</div>
+                                                <div class="w-1/5 px-3 text-right">5502</div>
+                                            </div>     
+                                            <div class="flex items-center text-base font-semibold py-1 px-2 mb-2 bg-inbox rounded">
+                                                <div class="w-1/5 px-3 text-center">08</div>
+                                                <div class="flex items-center gap-1 w-3/5 px-3"><img src="./dist/images/profile/131231143.webp" class="w-6" alt="">MadM*****</div>
+                                                <div class="w-1/5 px-3 text-right">5502</div>
+                                            </div> 
+                                            <div class="flex items-center text-base font-semibold py-1 px-2 mb-2 bg-inbox rounded">
+                                                <div class="w-1/5 px-3 text-center">09</div>
+                                                <div class="flex items-center gap-1 w-3/5 px-3"><img src="./dist/images/profile/131231143.webp" class="w-6" alt="">MadM*****</div>
+                                                <div class="w-1/5 px-3 text-right">5502</div>
+                                            </div>     
+                                            <div class="flex items-center text-base font-semibold py-1 px-2 mb-2 bg-inbox rounded">
+                                                <div class="w-1/5 px-3 text-center">10</div>
+                                                <div class="flex items-center gap-1 w-3/5 px-3"><img src="./dist/images/profile/131231143.webp" class="w-6" alt="">MadM*****</div>
+                                                <div class="w-1/5 px-3 text-right">5502</div>
+                                            </div>                                              
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-2/5 pt-4">
+                                <div class="overflow-y-auto h-80 p-3 bg-back3 rounded noscrollbar">
+                                    <div class="sticky top-0 bg-back3 pb-2">
+                                        <h5 class="mb-1 text-lg font-bold">Prize pool</h5>
+                                        <p class="flex items-center justify-between px-2 py-1 rounded bg-content text-xs font-bold"><span>Rank</span><span>Prize</span></p>
+                                    </div>
+                                    <div class="">
+                                        <div class="flex items-center justify-between px-2 py-1 mb-1.5 bg-white rounded">
+                                            <div class="flex itesm-center gap-2">
+                                                <b class="flex items-center justify-center w-6 h-6 bg-pending bg-opacity-20 text-black text-xs text-opacity-50 rounded-full text-center">1</b>
+                                            </div>
+                                            <div class="flex items-center gap-2">
+                                                <img src="./dist/images/profile/bonus.png" class="w-8" alt="">
+                                                <b class="px-2 font-bold bg-pending rounded-xl">€800 | Cash</b>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center justify-between px-2 py-1 mb-1.5 bg-white rounded">
+                                            <div class="flex itesm-center gap-2">
+                                                <b class="flex items-center justify-center w-6 h-6 bg-pending bg-opacity-20 text-black text-xs text-opacity-50 rounded-full text-center">2</b>
+                                            </div>
+                                            <div class="flex items-center gap-2">
+                                                <img src="./dist/images/profile/bonus.png" class="w-8" alt="">
+                                                <b class="px-2 font-bold bg-pending rounded-xl">€800 | Cash</b>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center justify-between px-2 py-1 mb-1.5 bg-white rounded">
+                                            <div class="flex itesm-center gap-2">
+                                                <b class="flex items-center justify-center w-6 h-6 bg-pending bg-opacity-20 text-black text-xs text-opacity-50 rounded-full text-center">3</b>
+                                            </div>
+                                            <div class="flex items-center gap-2">
+                                                <img src="./dist/images/profile/bonus.png" class="w-8" alt="">
+                                                <b class="px-2 font-bold bg-pending rounded-xl">€800 | Cash</b>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center justify-between px-2 py-1 mb-1.5 bg-white rounded">
+                                            <div class="flex items-center gap-2">
+                                                <b class="flex items-center justify-center w-6 h-6 bg-pending bg-opacity-20 text-black text-xs text-opacity-50 rounded-full text-center">4</b>
+                                                <img src="./dist/images/profile/arrows-slim-right.png" class="w-4" alt="">
+                                                <b class="flex items-center justify-center w-6 h-6 bg-pending bg-opacity-20 text-black text-xs text-opacity-50 rounded-full text-center">5</b>
+                                            </div>
+                                            <div class="flex items-center gap-2">
+                                                <img src="./dist/images/profile/bonus.png" class="w-8" alt="">
+                                                <b class="px-2 font-bold bg-pending rounded-xl">€800 | Cash</b>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center justify-between px-2 py-1 mb-1.5 bg-white rounded">
+                                            <div class="flex items-center gap-2">
+                                                <b class="flex items-center justify-center w-6 h-6 bg-pending bg-opacity-20 text-black text-xs text-opacity-50 rounded-full text-center">6</b>
+                                                <img src="./dist/images/profile/arrows-slim-right.png" class="w-4" alt="">
+                                                <b class="flex items-center justify-center w-6 h-6 bg-pending bg-opacity-20 text-black text-xs text-opacity-50 rounded-full text-center">8</b>
+                                            </div>
+                                            <div class="flex items-center gap-2">
+                                                <img src="./dist/images/profile/bonus.png" class="w-8" alt="">
+                                                <b class="px-2 font-bold bg-pending rounded-xl">€800 | Cash</b>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center justify-between px-2 py-1 mb-1.5 bg-white rounded">
+                                            <div class="flex items-center gap-2">
+                                                <b class="flex items-center justify-center w-6 h-6 bg-pending bg-opacity-20 text-black text-xs text-opacity-50 rounded-full text-center">9</b>
+                                                <img src="./dist/images/profile/arrows-slim-right.png" class="w-4" alt="">
+                                                <b class="flex items-center justify-center w-6 h-6 bg-pending bg-opacity-20 text-black text-xs text-opacity-50 rounded-full text-center">10</b>
+                                            </div>
+                                            <div class="flex items-center gap-2">
+                                                <img src="./dist/images/profile/bonus.png" class="w-8" alt="">
+                                                <b class="px-2 font-bold bg-pending rounded-xl">€800 | Cash</b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -1358,7 +1521,95 @@
                     </div>
                 </div>
                 <!-- inbox -->
-                <div id="profile-tab-9" class="tab-pane leading-relaxed p-4" role="tabpanel" aria-labelledby="profile-9-tab">
+                <div id="profile-tab-9" class="tab-pane leading-relaxed p-0 h-full" role="tabpanel" aria-labelledby="profile-9-tab">
+                    <div class="flex flex-col h-full">
+                        <div class="shrink-0 bg-inbox">
+                            <ul class="nav nav-link-tabs white_type" role="tablist">
+                                <li id="inbox-5-tab" class="nav-item" role="presentation"> 
+                                    <button class="nav-link h-full active" data-tw-toggle="pill" data-tw-target="#inbox-tab-5" type="button" role="tab" aria-controls="inbox-tab-5" aria-selected="true"> All </button> 
+                                </li>
+                                <li id="inbox-6-tab" class="nav-item" role="presentation"> 
+                                    <button class="nav-link h-full" data-tw-toggle="pill" data-tw-target="#inbox-tab-6" type="button" role="tab" aria-controls="inbox-tab-6" aria-selected="false"> Favorite </button> 
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex-1 overflow-y-auto">
+                            <div class="tab-content h-full">
+                                <div id="inbox-tab-5" class="tab-pane leading-relaxed flex h-full active" role="tabpanel" aria-labelledby="inbox-5-tab">
+                                    <div class="overflow-y-auto scrollbar w-1/3 h-full border-r-2 border-white border-opacity-30">
+                                        <button class="flex items-center gap-2 w-full p-3 bg-white bg-opacity-5">
+                                            <img class="w-14" src="./dist/images/profile/inbox_img.avif" alt="">
+                                            <div class="font-medium">
+                                                <div class="flex items-start justify-between">
+                                                    <p class="leading-tight text-left font-semibold">Game of the Week Missions!</p>
+                                                    <p class="shrink-0 opacity-70 text-xs ">6 days ago</p>
+                                                </div>
+                                                <div class="w-full mt-2 truncate-2 leading-tight text-xs opacity-50 text-left">Earn up to 230 free spins and 75 super spins by playing Yeti Quest!</div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                    <div class="relative overflow-y-auto scrollbar w-2/3 h-full bg-white bg-opacity-5">
+                                        <div class="z-10 sticky top-0 flex items-center gap-2 w-full px-3 py-5 bg-[#333]">
+                                            <img class="w-14" src="./dist/images/profile/inbox_img.avif" alt="">
+                                            <div class="flex-1 font-medium">
+                                                <div class="flex items-start justify-between">
+                                                    <p class="leading-tight text-left font-semibold">Game of the Week Missions!</p>
+                                                    <p class="shrink-0 opacity-50 text-xs ">6 days ago</p>
+                                                </div>
+                                                <div class="w-full mt-2 truncate-2 leading-tight text-xs opacity-70 text-left">Earn up to 230 free spins and 75 super spins by playing Yeti Quest!</div>
+                                                <div class="flex items-center justify-end gap-3">
+                                                    <button><img class="w-5" src="./dist/images/profile/delete-btn.png" alt=""></button>
+                                                    <button><img class="w-5 invert" src="./dist/images/profile/inbox_favor.png" alt=""></button>
+                                                    <button><img class="w-5" src="./dist/images/profile/inbox_favor_active.png" alt=""></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="p-3 opacity-70">Earn up to 230 free spins and 75 super spins by playing Yeti Quest!</div>
+                                        <button class="z-10 sticky left-3 bottom-3 btn btn-pending">SEE MISSIONS</button>
+                                    </div>
+                                </div>
+                                <div id="inbox-tab-6" class="tab-pane leading-relaxed flex h-full" role="tabpanel" aria-labelledby="inbox-6-tab">
+                                    <div class="overflow-y-auto scrollbar w-1/3 h-full border-r-2 border-white border-opacity-30">
+                                        <button class="flex items-center gap-2 w-full p-3 bg-white bg-opacity-5">
+                                            <img class="w-14" src="./dist/images/profile/inbox_img.avif" alt="">
+                                            <div class="font-medium">
+                                                <div class="flex items-start justify-between">
+                                                    <p class="leading-tight text-left font-semibold">Game of the Week Missions!</p>
+                                                    <p class="shrink-0 opacity-70 text-xs ">6 days ago</p>
+                                                </div>
+                                                <div class="w-full mt-2 truncate-2 leading-tight text-xs opacity-50 text-left">Earn up to 230 free spins and 75 super spins by playing Yeti Quest!</div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                    <div class="relative overflow-y-auto scrollbar w-2/3 h-full bg-white bg-opacity-5">
+                                        <div class="z-10 sticky top-0 flex items-center gap-2 w-full px-3 py-5 bg-[#333]">
+                                            <img class="w-14" src="./dist/images/profile/inbox_img.avif" alt="">
+                                            <div class="flex-1 font-medium">
+                                                <div class="flex items-start justify-between">
+                                                    <p class="leading-tight text-left font-semibold">Game of the Week Missions!</p>
+                                                    <p class="shrink-0 opacity-50 text-xs ">6 days ago</p>
+                                                </div>
+                                                <div class="w-full mt-2 truncate-2 leading-tight text-xs opacity-70 text-left">Earn up to 230 free spins and 75 super spins by playing Yeti Quest!</div>
+                                                <div class="flex items-center justify-end gap-3">
+                                                    <button><img class="w-5" src="./dist/images/profile/delete-btn.png" alt=""></button>
+                                                    <button><img class="w-5" src="./dist/images/profile/inbox_favor_active.png" alt=""></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="p-3 opacity-70">Earn up to 230 free spins and 75 super spins by playing Yeti Quest!</div>
+                                        <button class="z-10 sticky left-3 bottom-3 btn btn-pending">SEE MISSIONS</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between shrink-0 h-12 px-3 bg-inbox">
+                            <div class="form-check form-switch type02"> 
+                                <input id="inbox-check-switch" class="form-check-input" type="checkbox"> 
+                                <label class="form-check-label font-bold" for="inbox-check-switch">Show unread</label> 
+                            </div>
+                            <button class="flex items-center gap-1 font-bold"><img src="./dist/images/profile/mark-all-read.png" class="w-5 invert" alt="">Mark all as Read</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

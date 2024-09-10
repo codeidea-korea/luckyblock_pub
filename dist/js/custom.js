@@ -454,6 +454,13 @@ const profileTourList = ()=>{
     $('.profile_modal .tournament_list').removeClass('hidden')
 }
 
+// 프로필 모달 > 모바일에서 메뉴 클릭시
+const moMenuClick = ()=>{
+    if($(window).innerWidth() < 767){
+        profileMenuToggle();
+    }
+}
+
 // jquery 모음
 const loadJquery = ()=>{
     // 스와이퍼 공통
